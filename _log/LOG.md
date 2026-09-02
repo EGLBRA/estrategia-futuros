@@ -1,5 +1,10 @@
 # Log de Sessões — Estratégia
 
+## [2026-09-02 11:40] Pesquisa Custos e Preços Públicos de Foresight — v1
+- Pedido: pesquisa web de preços públicos do mundo de foresight (formações IFTF/Houston/CIFS/Hyper Island BR/ESPM/FDC, plataformas ITONICS/FIBRES/Shaping Tomorrow/TrendWatching/WGSN/Springwise, salários BR e consultoria de cenários), sempre com URL onde o número aparece; sem dado = n/d.
+- Feito: preços verificados na fonte — IFTF US$ 6.500/4.000, Houston US$ 2.000 (virtual), CIFS €2.600 + IVA, Hyper Island BR R$ 2.990, ESPM R$ 21.103, FDC R$ 16.000, FIBRES €6.900–19.800/ano, Shaping Tomorrow US$ 19.800/10 licenças, TrendWatching US$ 490/mês; ITONICS, Springwise, THNK, PUCRS e futurista Glassdoor = n/d (bloqueio/login/sem preço público). Salários BR via Robert Half, Salario.com.br (CAGED) e Indeed. Consultoria de cenários = n/d (só faixas genéricas V-Strategy). Entregue como resposta Markdown com ~20 URLs datadas de 2026-09-02.
+- Arquivos: -
+
 ## [2026-09-02 10:48] Pesquisa Templates de Foresight Governamental — v1
 - Pedido: pesquisa web de templates e estruturas públicas de artefatos de foresight de 6 unidades (UK Futures Toolkit, CSF Singapura, OCDE, Comissão Europeia, UNDP, Finlândia), com estrutura interna de cada artefato, aterrissagem em decisão, URL específica e selos Verificado/Inferência.
 - Feito: estruturas extraídas das fontes primárias (PDFs baixados e lidos com PyMuPDF): Futures Toolkit 2024 (12 ferramentas, 7 pathways, passos de horizon scanning/driver mapping/cenários/stress-testing), OCDE toolkit 2025 (5 módulos, 25 disruptions com campos, guias de facilitação), UNDP Playbook 2022 (5 focos de ferramentas, 4 fases do horizon scanning), CSF (Foresight bienal, DF Cards 2040, Thinking About Tomorrow 2026), SFR 2025 da CE (capítulos do COM(2025)484) e Finlândia (relatório em 2 partes, 4 cenários 2045). "Foresight primer" de Singapura: não encontrado com esse nome (n/d). Entregue como resposta Markdown com ~20 URLs datadas.
