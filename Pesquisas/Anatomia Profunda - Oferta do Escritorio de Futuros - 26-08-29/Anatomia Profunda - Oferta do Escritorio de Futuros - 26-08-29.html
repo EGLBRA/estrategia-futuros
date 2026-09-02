@@ -26,8 +26,8 @@ a{color:#1a5276;text-decoration:none}a:hover{text-decoration:underline}
 .tab:hover{color:#1a1a1a}
 .tabr{position:absolute;width:0;height:0;opacity:0;pointer-events:none}
 .pane{display:none}
-#r-dest:checked~#p-dest,#r-entenda:checked~#p-entenda,#r-click:checked~#p-click,#r-clientes:checked~#p-clientes,#r-prob:checked~#p-prob,#r-serv:checked~#p-serv,#r-ofertas:checked~#p-ofertas,#r-arte:checked~#p-arte,#r-quick:checked~#p-quick,#r-plano:checked~#p-plano,#r-dif:checked~#p-dif,#r-oper:checked~#p-oper,#r-comp:checked~#p-comp,#r-custo:checked~#p-custo,#r-met:checked~#p-met,#r-risco:checked~#p-risco,#r-cem:checked~#p-cem,#r-gloss:checked~#p-gloss,#r-check:checked~#p-check,#r-fontes:checked~#p-fontes{display:block}
-#r-dest:checked~.tabs [for=r-dest],#r-entenda:checked~.tabs [for=r-entenda],#r-click:checked~.tabs [for=r-click],#r-clientes:checked~.tabs [for=r-clientes],#r-prob:checked~.tabs [for=r-prob],#r-serv:checked~.tabs [for=r-serv],#r-ofertas:checked~.tabs [for=r-ofertas],#r-arte:checked~.tabs [for=r-arte],#r-quick:checked~.tabs [for=r-quick],#r-plano:checked~.tabs [for=r-plano],#r-dif:checked~.tabs [for=r-dif],#r-oper:checked~.tabs [for=r-oper],#r-comp:checked~.tabs [for=r-comp],#r-custo:checked~.tabs [for=r-custo],#r-met:checked~.tabs [for=r-met],#r-risco:checked~.tabs [for=r-risco],#r-cem:checked~.tabs [for=r-cem],#r-gloss:checked~.tabs [for=r-gloss],#r-check:checked~.tabs [for=r-check],#r-fontes:checked~.tabs [for=r-fontes]{color:#1a1a1a;border-bottom-color:#b71c1c;font-weight:700}
+#r-dest:checked~#p-dest,#r-entenda:checked~#p-entenda,#r-click:checked~#p-click,#r-clientes:checked~#p-clientes,#r-prob:checked~#p-prob,#r-serv:checked~#p-serv,#r-ofertas:checked~#p-ofertas,#r-arte:checked~#p-arte,#r-quick:checked~#p-quick,#r-plano:checked~#p-plano,#r-dif:checked~#p-dif,#r-oper:checked~#p-oper,#r-comp:checked~#p-comp,#r-custo:checked~#p-custo,#r-met:checked~#p-met,#r-risco:checked~#p-risco,#r-cem:checked~#p-cem,#r-gloss:checked~#p-gloss,#r-check:checked~#p-check,#r-fontes:checked~#p-fontes,#r-negocio:checked~#p-negocio,#r-stake:checked~#p-stake,#r-arq:checked~#p-arq,#r-etapas:checked~#p-etapas,#r-zero:checked~#p-zero,#r-refs:checked~#p-refs{display:block}
+#r-dest:checked~.tabs [for=r-dest],#r-entenda:checked~.tabs [for=r-entenda],#r-click:checked~.tabs [for=r-click],#r-clientes:checked~.tabs [for=r-clientes],#r-prob:checked~.tabs [for=r-prob],#r-serv:checked~.tabs [for=r-serv],#r-ofertas:checked~.tabs [for=r-ofertas],#r-arte:checked~.tabs [for=r-arte],#r-quick:checked~.tabs [for=r-quick],#r-plano:checked~.tabs [for=r-plano],#r-dif:checked~.tabs [for=r-dif],#r-oper:checked~.tabs [for=r-oper],#r-comp:checked~.tabs [for=r-comp],#r-custo:checked~.tabs [for=r-custo],#r-met:checked~.tabs [for=r-met],#r-risco:checked~.tabs [for=r-risco],#r-cem:checked~.tabs [for=r-cem],#r-gloss:checked~.tabs [for=r-gloss],#r-check:checked~.tabs [for=r-check],#r-fontes:checked~.tabs [for=r-fontes],#r-negocio:checked~.tabs [for=r-negocio],#r-stake:checked~.tabs [for=r-stake],#r-arq:checked~.tabs [for=r-arq],#r-etapas:checked~.tabs [for=r-etapas],#r-zero:checked~.tabs [for=r-zero],#r-refs:checked~.tabs [for=r-refs]{color:#1a1a1a;border-bottom-color:#b71c1c;font-weight:700}
 .card{background:#f9f9f9;border:1px solid #e8e8e8;border-radius:4px;padding:10px 14px;margin-bottom:8px}
 .tl{position:relative;padding-left:24px;margin:16px 0}
 .tl::before{content:"";position:absolute;left:7px;top:0;bottom:0;width:2px;background:#ddd}
@@ -78,28 +78,40 @@ sup{color:#999;font-size:.72em}
 <input class="tabr" type="radio" name="tab" id="r-gloss">
 <input class="tabr" type="radio" name="tab" id="r-check">
 <input class="tabr" type="radio" name="tab" id="r-fontes">
+<input class="tabr" type="radio" name="tab" id="r-negocio">
+<input class="tabr" type="radio" name="tab" id="r-stake">
+<input class="tabr" type="radio" name="tab" id="r-arq">
+<input class="tabr" type="radio" name="tab" id="r-etapas">
+<input class="tabr" type="radio" name="tab" id="r-zero">
+<input class="tabr" type="radio" name="tab" id="r-refs">
 
 <p class="lbl">A Anatomia Profunda &middot; Diagnóstico funcional &middot; Uso interno</p>
 <h1>A oferta do escritório de futuros: venda respostas com data, não métodos com sigla</h1>
-<p class="meta">Última atualização 2026-09-02 &middot; v3, reescrita profunda com pesquisa dedicada: o método do Foundation Sprint na fonte oficial, os gabaritos públicos de artefatos (Reino Unido, OCDE, Singapura, PNUD), o bench do que 11 casas de foresight vendem e por quanto, e os custos reais de montar a função no Brasil &middot; 44 fontes com URL e data &middot; Documento irmão de "Escritório de Foresight, Inteligência e Tendências" (o organismo) e de "Design de Futuros e Foresight" (a disciplina)</p>
+<p class="meta">Última atualização 2026-09-02 &middot; v4, aprofundada pela crítica do leitor: seis abas novas (perguntas do negócio, stakeholders por nível, arquitetura funcional, as etapas, do zero, referências) e a escada de valor dos entregáveis, sobre a base da v3 com pesquisa dedicada: o método do Foundation Sprint na fonte oficial, os gabaritos públicos de artefatos (Reino Unido, OCDE, Singapura, PNUD), o bench do que 11 casas de foresight vendem e por quanto, e os custos reais de montar a função no Brasil &middot; 45 fontes &middot; Documento irmão de "Escritório de Foresight, Inteligência e Tendências" (o organismo) e de "Design de Futuros e Foresight" (a disciplina)</p>
 
 <nav class="tabs">
   <label class="tab" for="r-dest">Destaque</label>
   <label class="tab" for="r-entenda">Entenda</label>
   <label class="tab" for="r-click">O Clique</label>
+  <label class="tab" for="r-negocio">Perguntas do negócio</label>
+  <label class="tab" for="r-stake">Stakeholders</label>
   <label class="tab" for="r-clientes">Clientes</label>
   <label class="tab" for="r-prob">Problemas</label>
   <label class="tab" for="r-serv">Serviços</label>
   <label class="tab" for="r-ofertas">Bench de ofertas</label>
   <label class="tab" for="r-arte">Artefatos</label>
+  <label class="tab" for="r-arq">Arquitetura</label>
+  <label class="tab" for="r-etapas">As etapas</label>
   <label class="tab" for="r-quick">Quick wins</label>
   <label class="tab" for="r-plano">90 dias</label>
+  <label class="tab" for="r-zero">Do zero</label>
   <label class="tab" for="r-dif">Diferenciação</label>
   <label class="tab" for="r-oper">Operação</label>
   <label class="tab" for="r-comp">Competências</label>
   <label class="tab" for="r-custo">Custo</label>
   <label class="tab" for="r-met">Métricas</label>
   <label class="tab" for="r-risco">Riscos</label>
+  <label class="tab" for="r-refs">Referências</label>
   <label class="tab" for="r-cem">Cem perguntas</label>
   <label class="tab" for="r-gloss">Glossário</label>
   <label class="tab" for="r-check">Check</label>
@@ -127,6 +139,8 @@ sup{color:#999;font-size:.72em}
 <li><strong>Que datas do calendário já são suas.</strong> Duas datas no ciclo de planejamento e um item fixo de pauta valem mais que qualquer software. Quem sobrevive no bench é quem tem calendário: a Embrapa amarra a Visão ao Plano Diretor, a Finlândia amarra o relatório de futuro à legislatura.<sup>14, 43</sup> <span class="sel sel-i">Inferência</span></li>
 </ol>
 
+<h2>O que a v4 acrescentou (a crítica que a gerou)</h2>
+<p>A leitura da v3 apontou a lacuna certa: profundidade de método sem profundidade de DESTINO. Faltava dizer para quem vai cada coisa e o que cada nível espera (aba Stakeholders, com a matriz por nível e a regra das três altitudes), quais respostas a área deve ao negócio (aba Perguntas do negócio, o contrato de 24), a arquitetura funcional da máquina (aba própria, com o diagrama de seis camadas), as etapas da disciplina comparadas aos frameworks de mercado (aba As etapas: TAIDA, PFIA, SP+, OCDE e o funil da casa), o passo a passo de montar do zero (aba Do zero, as dez decisões de desenho), as práticas e a biblioteca de referência (aba Referências) e, acima de tudo, a resposta à pergunta "o radar basta?": não, e a escada de valor na aba Artefatos mostra os quatro degraus acima dele. <span class="sel sel-i">Inferência</span></p>
 <h2>O que mudou da v2 para a v3</h2>
 <p>A v2 confessava no próprio Check: o bench era reciclado e o método vinha de memória. A v3 fecha as duas dívidas com pesquisa dedicada de 2026-09-02: o Foundation Sprint agora vem do guia oficial da Character Capital com os 18 exercícios, horários, a mecânica de decisão e as Magic Lenses que faltavam<sup>1</sup>; os artefatos ganharam gabaritos campo a campo extraídos dos manuais públicos mais respeitados do mundo<sup>9, 10, 11, 13</sup>; a aba nova de Bench de ofertas mostra o que 11 casas vendem, como chamam e quanto cobram<sup>15 a 26</sup>; e a aba Custo saiu do qualitativo: cada número tem URL e data.<sup>27 a 34</sup> <span class="sel sel-v">Verificado</span> nas fontes; seleção e síntese <span class="sel sel-i">Inferência</span></p>
 <div class="alerta"><strong>Aviso de honestidade intelectual.</strong> Este é um documento de projeto: prescreve, não descreve. O que é fato carrega selo e fonte numerada com data de acesso; todo o desenho da oferta é síntese própria e está selado como Inferência. Nenhum número foi inventado; onde a fonte não abriu, está escrito n/d.</div>
@@ -373,6 +387,21 @@ sup{color:#999;font-size:.72em}
 <div class="gab"><h4>Gabarito 7. Página do conselho (o padrão dos ritos nacionais)</h4>
 <p>Os dois exemplos institucionais de insumo de futuro para instância máxima: o relatório de prospectiva anual da Comissão Europeia, que abastece as prioridades do ciclo político e foi seguido de perto pelo discurso de estado da União do dia seguinte<sup>12</sup>; e o relatório finlandês, entregue uma vez por legislatura, com horizonte de 20 anos e resposta formal do Comitê do Futuro do parlamento.<sup>14</sup> <span class="sel sel-v">Verificado</span> A página semestral do conselho comprime o princípio: formato imutável com três blocos (o que mudou desde a última; o que estamos monitorando com gatilho; o que pedimos), e a resposta do conselho registrada na memória de decisão. <span class="sel sel-i">Inferência</span></p></div>
 
+<h3>A escada de valor: por que o radar é o piso, não o teto</h3>
+<p><strong>Radar era a primeira ideia, e é a ideia certa no degrau errado: ele informa, e informação é o degrau mais baixo da escada.</strong> O valor de um entregável de futuros cresce na razão direta da proximidade com a assinatura: quanto mais perto da decisão (e da decisão PRÉ-tomada), mais raro, mais defensável e mais lembrado. A escada abaixo ordena o portfólio; a área saudável tem produção nos cinco degraus, com o esforço migrando para cima a cada trimestre. <span class="sel sel-i">Inferência</span></p>
+<table>
+<thead><tr><th>Degrau</th><th>O que faz</th><th>Entregáveis</th><th>Quem entrega igual no mercado</th><th>Teste de valor</th></tr></thead>
+<tbody>
+<tr><td><strong>1. INFORMA</strong><br>(o piso)</td><td>Mostra o que está mudando</td><td>Radar vN; resenhas de curadoria; fichas de sinal</td><td>Todo mundo: é o degrau das assinaturas de US$ 490/mês e dos radares públicos gratuitos<sup>32, 36</sup></td><td>Foi lido? (métrica fraca: leitura não muda nada)</td></tr>
+<tr><td><strong>2. ORIENTA</strong></td><td>Diz o que isso significa PARA NÓS</td><td>Dossiê temático; memo de implicações por área; deep dive de comportamento</td><td>Consultorias por projeto; o Structural Shift Brief da FTSG<sup>23</sup></td><td>A área citou em reunião própria?</td></tr>
+<tr><td><strong>3. DECIDE</strong></td><td>Entra na sala onde a assinatura acontece</td><td>Matriz de túnel de vento; one-pager de decisão travada; mapa de apostas com opções; memorando no rito</td><td>Quase ninguém interno; é o Rapid Decision Support que a FTSG vende no topo do catálogo<sup>23</sup></td><td>Uma decisão mudou, com ata?</td></tr>
+<tr><td><strong>4. PRÉ-DECIDE</strong><br>(o degrau nobre)</td><td>Deixa a resposta combinada ANTES do evento</td><td>Planilha de gatilhos "se X, então Y" com dono; playbooks de wild card; simulação de movimento de concorrente (war-game leve); resposta ensaiada do conselho</td><td>Raríssimo: é o elo que a Deutsche Telekom automatizou e que Singapura formaliza no monitoramento<sup>11, 38</sup></td><td>Quando X aconteceu, a casa executou Y sem reunião de emergência?</td></tr>
+<tr><td><strong>5. CAPITALIZA</strong><br>(o patrimônio)</td><td>Transforma o ciclo em ativo permanente</td><td>Memória de decisão (com as recusas); balanço de acerto retrospectivo; perguntas focais renovadas; letramento que multiplica sensores</td><td>Ninguém vende: só existe dentro de casa, e por isso é o mais defensável de todos</td><td>A casa parou de rediscutir o mesmo futuro? O balanço anual saiu com os erros?</td></tr>
+</tbody>
+</table>
+<div class="alerta"><strong>A conta política da escada:</strong> um ano inteiro no degrau 1 custa a reputação da área ("mandam relatório"); UMA entrega no degrau 3 ou 4 (a decisão de capital testada no túnel, o gatilho que disparou com resposta pronta) compra o ano seguinte. Por isso os 90 dias forçam um one-pager de decisão real já no primeiro mês, e por isso o balanço do dia 90 conta degraus, não páginas. <span class="sel sel-i">Inferência</span></div>
+
+
 <h3>As três regras de fabricação</h3>
 <ol>
 <li><strong>Uma página é o formato padrão; tudo acima disso precisa justificar o tamanho.</strong> O decisor lê a página; o anexo existe para a auditoria da confiança. Os gabaritos oficiais confirmam: o scan britânico é 1 página, o handout de cenário é 1 página, o resumo de abordagem do sprint é 1 página.<sup>1, 9</sup> <span class="sel sel-i">Inferência</span></li>
@@ -380,6 +409,314 @@ sup{color:#999;font-size:.72em}
 <li><strong>Versão de teste antes de versão institucional:</strong> planilha antes de plataforma, piloto para uma diretoria antes do rito completo. É o protótipo fake do método, aplicado à fabricação.<sup>1, 6</sup> <span class="sel sel-i">Inferência</span></li>
 </ol>
 </section>
+
+<!-- ============================== PERGUNTAS DO NEGÓCIO ============================== -->
+<section id="p-negocio" class="pane">
+<h2>As respostas que a área deve ao negócio: o contrato de valor em 24 perguntas</h2>
+<p><strong>Uma área de futuros não se justifica pelo que produz; justifica-se pelas perguntas de negócio que só ela responde.</strong> As 24 abaixo são o contrato: cada uma tem dono típico, o serviço e artefato que a respondem, e o horizonte. Se uma pergunta destas chega à casa e a resposta improvisa, o escritório falhou; se nenhuma delas é feita, o trabalho número um é plantá-las (a aba Stakeholders diz como, público a público). <span class="sel sel-i">Inferência</span></p>
+
+<h3>Mercado e cliente</h3>
+<table>
+<thead><tr><th>#</th><th>A pergunta</th><th>Quem pergunta</th><th>Serviço e artefato que respondem</th><th>Horizonte</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Quem será nosso cliente em 2035, e o que ele vai exigir que hoje ninguém pede?</td><td>Comercial, produto, presidência</td><td>S4 deep dive de comportamento: dossiê com implicações de oferta</td><td>H3</td></tr>
+<tr><td>2</td><td>Que canal que hoje não existe (ou é marginal) pode dominar a distribuição do setor?</td><td>Comercial, estratégia</td><td>S2 radar (camada H2/H3) + S5 cenário focal de canal</td><td>H2-H3</td></tr>
+<tr><td>3</td><td>Qual concorrente de FORA do setor pode entrar, por onde, e o que faríamos na semana seguinte?</td><td>Board, estratégia</td><td>S5 com simulação de movimento (war-game leve): playbook de resposta</td><td>H2</td></tr>
+<tr><td>4</td><td>Que mercado adjacente se abre para nós se a tendência X se confirmar?</td><td>Estratégia, inovação</td><td>S6 brief de território com hipóteses testáveis</td><td>H2-H3</td></tr>
+</tbody>
+</table>
+
+<h3>Portfólio e produto</h3>
+<table>
+<thead><tr><th>#</th><th>A pergunta</th><th>Quem pergunta</th><th>Serviço e artefato</th><th>Horizonte</th></tr></thead>
+<tbody>
+<tr><td>5</td><td>Quais produtos do portfólio atual morrem primeiro, e em qual cenário?</td><td>Diretorias de negócio</td><td>S5 túnel de vento aplicado ao portfólio: matriz produto x cenário</td><td>H2</td></tr>
+<tr><td>6</td><td>Onde apostar além do incremental: quais territórios do horizonte 3 valem experimento?</td><td>Inovação, board</td><td>S6 territórios: briefs com critério de sucesso</td><td>H3</td></tr>
+<tr><td>7</td><td>O que testar barato AGORA que nos daria uma opção valiosa em 5 anos?</td><td>Inovação, financeiro</td><td>S6 + mapa de apostas com opções reais e gatilho de abandono</td><td>H1 (o teste), H3 (a opção)</td></tr>
+<tr><td>8</td><td>Que capacidade que não temos será bilhete de entrada do jogo em 5 anos?</td><td>Presidência, RH</td><td>S4 dossiê de capacidades + implicações de build/buy/partner</td><td>H2-H3</td></tr>
+</tbody>
+</table>
+
+<h3>Capital e investimento</h3>
+<table>
+<thead><tr><th>#</th><th>A pergunta</th><th>Quem pergunta</th><th>Serviço e artefato</th><th>Horizonte</th></tr></thead>
+<tbody>
+<tr><td>9</td><td>A decisão de capital X (que está travada na mesa) sobrevive aos futuros plausíveis?</td><td>Board, financeiro</td><td>S10 one-pager de decisão: 2 ou 3 futuros relevantes + recomendação com gatilho</td><td>O da decisão</td></tr>
+<tr><td>10</td><td>Que ativo hoje estratégico vira passivo em qual cenário, e qual é o sinal antecedente?</td><td>Financeiro, riscos</td><td>S5 túnel + S7 gatilho armado sobre o sinal</td><td>H2-H3</td></tr>
+<tr><td>11</td><td>Quando abandonamos a aposta Y? Qual número, em que data, decidido por quem?</td><td>Board, financeiro</td><td>Mapa de apostas: gatilho de reforço e de abandono por aposta</td><td>H1-H2</td></tr>
+<tr><td>12</td><td>Quanto vale esperar? O que ganhamos e perdemos adiando a decisão Z um ano?</td><td>Financeiro</td><td>S10 one-pager com o custo da espera explícito nos 2 futuros</td><td>H1-H2</td></tr>
+</tbody>
+</table>
+
+<h3>Regulação e risco</h3>
+<table>
+<thead><tr><th>#</th><th>A pergunta</th><th>Quem pergunta</th><th>Serviço e artefato</th><th>Horizonte</th></tr></thead>
+<tbody>
+<tr><td>13</td><td>Que virada regulatória nos pegaria sem resposta pronta, e o que pré-combinamos hoje?</td><td>Jurídico, riscos, board</td><td>S7 gatilhos regulatórios + playbook de resposta pré-combinada</td><td>H1-H2</td></tr>
+<tr><td>14</td><td>Quais riscos SEM histórico as matrizes de risco não enxergam por construção?</td><td>Riscos, auditoria</td><td>S1/S2 nota de riscos emergentes com fronteira combinada com GRC</td><td>H2-H3</td></tr>
+<tr><td>15</td><td>Se o wild card Z acontecer na sexta-feira, qual é o playbook de segunda de manhã?</td><td>Presidência, operações</td><td>Playbook de wild card: resposta ensaiada, dono, primeira ação<sup>11</sup></td><td>Qualquer</td></tr>
+<tr><td>16</td><td>O que o relato climático/de sustentabilidade exige de cenário, e o que isso muda no portfólio (não só no relatório)?</td><td>Sustentabilidade, RI</td><td>S5 cenário climático acoplado a decisão de ativo<sup>44</sup></td><td>H2-H3</td></tr>
+</tbody>
+</table>
+
+<h3>Talento e organização</h3>
+<table>
+<thead><tr><th>#</th><th>A pergunta</th><th>Quem pergunta</th><th>Serviço e artefato</th><th>Horizonte</th></tr></thead>
+<tbody>
+<tr><td>17</td><td>Que competências faltarão em 3 anos, quantos formar, em quê, a partir de quando?</td><td>RH, diretorias</td><td>S4 dossiê estilo Mapa do Trabalho: variável de decisão única<sup>44</sup></td><td>H1-H2</td></tr>
+<tr><td>18</td><td>Que função de hoje encolhe ou desaparece, e qual é o plano para as pessoas?</td><td>RH, presidência</td><td>S4 + memo de implicações com trilhas de transição</td><td>H2</td></tr>
+</tbody>
+</table>
+
+<h3>Modelo e estratégia</h3>
+<table>
+<thead><tr><th>#</th><th>A pergunta</th><th>Quem pergunta</th><th>Serviço e artefato</th><th>Horizonte</th></tr></thead>
+<tbody>
+<tr><td>19</td><td>Quais premissas do plano estratégico envelheceram, e qual delas quebra o plano se cair?</td><td>Estratégia, board</td><td>S5 túnel de vento: lista de premissas com veredito por cenário<sup>9</sup></td><td>H1-H2</td></tr>
+<tr><td>20</td><td>Em que futuros a nossa estratégia PERDE, e o que faríamos em cada um?</td><td>Board</td><td>S5 memorando: o capítulo "onde perdemos" que consultoria não escreve</td><td>H2-H3</td></tr>
+<tr><td>21</td><td>Qual posição queremos defender daqui a 10 anos que ainda é alcançável saindo de hoje?</td><td>Presidência, board</td><td>S5 + visão com backcasting: o caminho de trás para frente</td><td>H3</td></tr>
+<tr><td>22</td><td>O que o board precisa decidir ESTE ano para que o 2035 desejado continue possível?</td><td>Board</td><td>Página do conselho: a seção "o que pedimos"</td><td>H1 (a decisão), H3 (o efeito)</td></tr>
+<tr><td>23</td><td>O que recusamos no ano passado que os sinais mandam revisitar?</td><td>Estratégia</td><td>S12 memória de decisão + gatilho de reabertura</td><td>H1</td></tr>
+<tr><td>24</td><td>O que a concorrência está vendo que nós não estamos? (E como saberíamos?)</td><td>Todos</td><td>S2 radar confrontado com radares públicos do setor + taxa de descarte declarada<sup>36, 37</sup></td><td>H1-H2</td></tr>
+</tbody>
+</table>
+
+<div class="alerta"><strong>Como usar o contrato:</strong> na fundação, escolha 3 destas perguntas com o patrocinador (uma de capital, uma de mercado, uma de risco) e prometa respondê-las no trimestre. A área que responde 3 perguntas destas com data vale mais que a que "monitora 200 tendências". E a cada rito, a lista é revisitada: pergunta sem dono morre, pergunta nova entra com dono. <span class="sel sel-i">Inferência</span></div>
+</section>
+
+<!-- ============================== STAKEHOLDERS ============================== -->
+<section id="p-stake" class="pane">
+<h2>Stakeholders: o que cada nível espera, em que formato, e o que muda o jogo para cada um</h2>
+<p><strong>O mesmo conteúdo em três altitudes diferentes: essa é a regra que separa área respeitada de área tolerada.</strong> Board compra ausência de surpresa; vice-presidência compra defesa perante o conselho; diretor compra implicação no próprio resultado; gerente compra instrução que o faça brilhar. Errar a altitude (mandar radar bruto para cima, cenário sem tradução para baixo) queima o mesmo conteúdo nas duas direções. <span class="sel sel-i">Inferência</span></p>
+
+<h3>A matriz por nível: expectativa, formato, cadência e o que muda o jogo</h3>
+<div style="overflow-x:auto">
+<table>
+<thead><tr><th>Nível</th><th>O que ele espera (de verdade)</th><th>Formato que consome</th><th>Cadência</th><th>O que MUDA O JOGO para ele</th><th>O que NUNCA mandar</th></tr></thead>
+<tbody>
+<tr><td><strong>Conselho / Board</strong></td><td>Não ser pego de surpresa em público; registro de que perguntou e foi respondido; convicção de que alguém olha o depois do mandato</td><td>Página do conselho (1 página, formato imutável: o que mudou, o que monitoramos, o que pedimos); resposta em 24h quando a pauta exigir</td><td>Semestral fixa + ad hoc</td><td>Um gatilho armado citado em ata: "se X passar de N, a administração fará Y". O conselho passa de espectador a coautor da antecipação</td><td>Radar bruto, metodologia, apresentação de 40 lâminas, jargão (backcasting, STEEP)</td></tr>
+<tr><td><strong>Presidência</strong></td><td>Opções reais que caibam no mandato; narrativa de futuro para usar dentro e fora; não descobrir pelo conselho o que a própria casa produziu</td><td>Túnel de vento da estratégia + mapa de 3 apostas com trade-offs explícitos; conversa reservada ANTES de qualquer sala</td><td>Trimestral (conversa) + anual (rodada)</td><td>Uma decisão de legado ancorada em cenário: a presidência que diz "decidimos X porque nos futuros A e B ele vence" virou patrocinadora vitalícia</td><td>Tendência de palco; qualquer material que chegue ao conselho sem passar por ela</td></tr>
+<tr><td><strong>Vice-presidência / diretoria estatutária</strong></td><td>Defesa pronta diante do conselho; implicação de capital da área dela; saber ANTES: a regra de ouro política</td><td>Memorando de cenários (5 páginas) + one-pager por decisão de capital; pré-leitura individual antes do rito coletivo</td><td>Anual (rodada) + sob demanda (decisões)</td><td>Uma premissa do plano REVISADA formalmente por causa do túnel: o plano dela fica mais defensável e o crédito é compartilhado</td><td>Surpresa em sala: implicação da área dela apresentada a terceiros antes dela; ranking público de "área mais exposta"</td></tr>
+<tr><td><strong>Diretor executivo de área</strong></td><td>"O que muda no MEU resultado em 24 a 36 meses?"; munição para o próprio planejamento; antecipação dos riscos do território dele</td><td>Memo de implicações de 1 página NA LÍNGUA DA ÁREA + oficina de gatilhos de 2h com o time dele</td><td>Anual (memo) + trimestral (radar comentado da área)</td><td>Um gatilho que disparou e a área dele TINHA resposta pré-combinada enquanto os pares improvisavam. É o dia em que ele vira vendedor interno do escritório</td><td>Cenário global sem tradução; tendência sem implicação; pedido de dados sem devolver leitura</td></tr>
+<tr><td><strong>Gerente</strong></td><td>Instrução acionável; material que o faça brilhar com o diretor; participar sem virar trabalho extra sem crédito</td><td>Radar com a camada da área destacada + planilha de gatilhos com dono + kit de oficina pronto para ele replicar com o time</td><td>Trimestral</td><td>Blindagem da decisão local: o gerente que justificou um investimento citando o radar e foi aprovado replica o gesto para sempre</td><td>PDF de 60 páginas; convite para "pensar o futuro" sem pauta nem saída definida</td></tr>
+<tr><td><strong>Coordenação e linha de frente</strong></td><td>Canal simples para subir o que vê; crédito nominal; prova de que o que mandou foi lido</td><td>Formulário de sinal de 3 campos + resposta padrão do que virou (classificado, monitorado, virou alerta)</td><td>Contínua</td><td>O nome dela no alerta que subiu à diretoria: sensor reconhecido recruta outros sensores, é o motor do modelo SONAR<sup>37</sup></td><td>Silêncio depois do envio: mata o canal na segunda semana</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>A regra das três altitudes (um assunto, três formatos)</h3>
+<p>Todo assunto relevante nasce em três versões simultâneas, escritas nessa ordem: <strong>a página C-level</strong> (decisão, implicação, pedido: para conselho, presidência e VPs), <strong>o memorando executivo</strong> (3 a 5 páginas com a lógica, a evidência selada e as opções: para diretoria e estratégia) e <strong>o kit operacional</strong> (radar da área, gatilhos, oficina: para gerentes e times). Quem escreve primeiro a versão longa nunca chega na curta; quem escreve a curta primeiro descobre se tem o que dizer. <span class="sel sel-i">Inferência</span></p>
+
+<h3>Roteamento: que artefato vai para quem, por qual canal</h3>
+<table>
+<thead><tr><th>Artefato</th><th>Board</th><th>Presidência</th><th>VP / estatutária</th><th>Diretor de área</th><th>Gerente</th><th>Canal</th></tr></thead>
+<tbody>
+<tr><td>Página do conselho</td><td><strong>Destinatário</strong></td><td>Valida antes</td><td>Cópia</td><td>Não</td><td>Não</td><td>Pauta do conselho</td></tr>
+<tr><td>Memorando de cenários</td><td>Sumário</td><td><strong>Destinatária</strong></td><td><strong>Destinatária</strong> (pré-leitura)</td><td>Versão traduzida</td><td>Não</td><td>Rito de planejamento</td></tr>
+<tr><td>Matriz de túnel de vento</td><td>Veredito em 1 slide</td><td><strong>Destinatária</strong></td><td><strong>Destinatária</strong></td><td>Linha da área dele</td><td>Não</td><td>Oficina fechada</td></tr>
+<tr><td>Memo de implicações por área</td><td>Não</td><td>Cópia</td><td>Da área dela</td><td><strong>Destinatário</strong></td><td>Recebe do diretor</td><td>Reunião de diretoria da área</td></tr>
+<tr><td>One-pager de decisão</td><td>Se a alçada for dele</td><td>Se a alçada for dela</td><td><strong>Quem pediu</strong></td><td><strong>Quem pediu</strong></td><td>Não</td><td>Direto ao solicitante, 5 dias úteis</td></tr>
+<tr><td>Radar único vN</td><td>Não (só o delta na página)</td><td>Sumário de 1 página</td><td>Sumário</td><td><strong>Camada da área</strong></td><td><strong>Destinatário</strong></td><td>Publicação trimestral + oficina</td></tr>
+<tr><td>Planilha de gatilhos</td><td>Os 3 críticos, em ata</td><td>Os 10 do topo</td><td>Os da área</td><td><strong>Dono</strong></td><td><strong>Operador</strong></td><td>Viva, revisão trimestral</td></tr>
+<tr><td>Brief de território H3</td><td>Não</td><td>Cópia</td><td>Inovação</td><td>Se o território tocar a área</td><td>Não</td><td>Comitê de inovação</td></tr>
+<tr><td>Nota de alerta</td><td>Se crítico</td><td><strong>Sempre</strong></td><td>Área afetada</td><td>Área afetada</td><td>Área afetada</td><td>Direto, em 48h do sinal</td></tr>
+<tr><td>Balanço de acerto retrospectivo</td><td>Sumário anual</td><td><strong>Destinatária</strong></td><td>Cópia</td><td>Cópia</td><td>Cópia</td><td>Publicação anual interna</td></tr>
+</tbody>
+</table>
+<p class="note">A coluna "canal" é tão importante quanto a do destinatário: material certo no canal errado (memorando por e-mail em vez de pré-leitura de rito; alerta em newsletter em vez de mensagem direta) perde o efeito. E a regra política que atravessa a matriz inteira: ninguém de nível N descobre em sala o que o nível N+1 ainda não viu. <span class="sel sel-i">Inferência</span></p>
+</section>
+
+<!-- ============================== ARQUITETURA ============================== -->
+<section id="p-arq" class="pane">
+<h2>Arquitetura funcional: as seis camadas da máquina</h2>
+<p><strong>A área funciona como uma refinaria: matéria bruta entra por baixo, decisão sai por cima, e cada camada tem função, dono e falha típica.</strong> O desenho abaixo consolida a blueprint operacional do projeto (raias, reuniões e ritos) na visão de camadas; os processos públicos maduros têm a mesma espinha: os 5 módulos da OCDE e os 6 componentes do Scenario Planning Plus de Singapura vão do foco ao monitoramento pela mesma escada.<sup>10, 11, 44</sup> <span class="sel sel-i">Inferência</span> no desenho</p>
+
+<figure style="margin:18px 0">
+<svg viewBox="0 0 900 560" role="img" aria-label="Arquitetura funcional em seis camadas: captação, triagem, síntese, tradução, decisão e memória, com o fluxo subindo pelas camadas e a memória realimentando a captação por meio das perguntas focais." style="max-width:100%;height:auto;display:block;margin:0 auto">
+<defs><marker id="arq-ar" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8a5a1f"/></marker></defs>
+<g font-family="system-ui,sans-serif">
+<rect x="120" y="470" width="560" height="70" rx="6" fill="#f9f9f9" stroke="#b71c1c" stroke-width="1.5"/>
+<text x="140" y="498" font-size="14" font-weight="700" fill="#1a1a1a">1. CAPTAÇÃO (sensores)</text>
+<text x="140" y="518" font-size="12" fill="#555">fontes externas &middot; linha de frente &middot; acervo curado &middot; ficha de sinal</text>
+<rect x="120" y="382" width="560" height="70" rx="6" fill="#f9f9f9" stroke="#b71c1c" stroke-width="1.5"/>
+<text x="140" y="410" font-size="14" font-weight="700" fill="#1a1a1a">2. TRIAGEM (comitê mensal)</text>
+<text x="140" y="430" font-size="12" fill="#555">matriz importância x certeza &middot; descarte declarado &middot; bastão com IM</text>
+<rect x="120" y="294" width="560" height="70" rx="6" fill="#f9f9f9" stroke="#b71c1c" stroke-width="1.5"/>
+<text x="140" y="322" font-size="14" font-weight="700" fill="#1a1a1a">3. SÍNTESE (inteligência)</text>
+<text x="140" y="342" font-size="12" fill="#555">radar único vN &middot; deep dives &middot; cenários e incertezas críticas</text>
+<rect x="120" y="206" width="560" height="70" rx="6" fill="#f9f9f9" stroke="#b71c1c" stroke-width="1.5"/>
+<text x="140" y="234" font-size="14" font-weight="700" fill="#1a1a1a">4. TRADUÇÃO (produtos por altitude)</text>
+<text x="140" y="254" font-size="12" fill="#555">página C-level &middot; memorando &middot; memos por área &middot; one-pagers &middot; túnel</text>
+<rect x="120" y="118" width="560" height="70" rx="6" fill="#fdf6ec" stroke="#8a5a1f" stroke-width="2"/>
+<text x="140" y="146" font-size="14" font-weight="700" fill="#1a1a1a">5. DECISÃO (ritos)</text>
+<text x="140" y="166" font-size="12" fill="#555">planejamento estratégico &middot; tático &middot; conselho &middot; comitê de inovação</text>
+<rect x="120" y="30" width="560" height="70" rx="6" fill="#f4f7f4" stroke="#1b6b39" stroke-width="2"/>
+<text x="140" y="58" font-size="14" font-weight="700" fill="#1a1a1a">6. MEMÓRIA E APRENDIZADO</text>
+<text x="140" y="78" font-size="12" fill="#555">memória de decisão &middot; gatilhos armados &middot; acerto retrospectivo</text>
+<line x1="400" y1="470" x2="400" y2="456" stroke="#8a5a1f" stroke-width="2" marker-end="url(#arq-ar)"/>
+<line x1="400" y1="382" x2="400" y2="368" stroke="#8a5a1f" stroke-width="2" marker-end="url(#arq-ar)"/>
+<line x1="400" y1="294" x2="400" y2="280" stroke="#8a5a1f" stroke-width="2" marker-end="url(#arq-ar)"/>
+<line x1="400" y1="206" x2="400" y2="192" stroke="#8a5a1f" stroke-width="2" marker-end="url(#arq-ar)"/>
+<line x1="400" y1="118" x2="400" y2="104" stroke="#8a5a1f" stroke-width="2" marker-end="url(#arq-ar)"/>
+<path d="M 680 65 L 790 65 L 790 505 L 684 505" fill="none" stroke="#1b6b39" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arq-ar)"/>
+<text x="800" y="280" font-size="12" fill="#1b6b39" transform="rotate(90 800 280)" text-anchor="middle">decisões e recusas viram perguntas focais</text>
+<line x1="60" y1="505" x2="112" y2="505" stroke="#555" stroke-width="1.5" marker-end="url(#arq-ar)"/>
+<text x="56" y="490" font-size="11" fill="#555" text-anchor="end">mundo</text>
+<line x1="60" y1="153" x2="112" y2="153" stroke="#555" stroke-width="1.5" marker-end="url(#arq-ar)"/>
+<text x="56" y="138" font-size="11" fill="#555" text-anchor="end">IM: linha de base</text>
+</g>
+</svg>
+<figcaption class="note">A refinaria de seis camadas: o fluxo sobe da captação à decisão; a memória (camada 6) realimenta a captação com as perguntas focais do próximo ciclo. A Inteligência de Mercado entra com a linha de base direto na camada de decisão, e co-assina a síntese.</figcaption>
+</figure>
+
+<h3>Camada a camada: função, dono, sistema mínimo e falha típica</h3>
+<div style="overflow-x:auto">
+<table>
+<thead><tr><th>Camada</th><th>Função</th><th>Entra</th><th>Sai</th><th>Reunião dona</th><th>Sistema mínimo (ano 1)</th><th>Falha típica</th></tr></thead>
+<tbody>
+<tr><td><strong>1. Captação</strong></td><td>Perceber cedo, nas margens</td><td>Fontes, sinais da ponta, acervo</td><td>Fichas de sinal (gabarito 1)</td><td>Nenhuma: é contínua</td><td>Planilha + formulário</td><td>Coletar pelo interessante, não pela pergunta focal</td></tr>
+<tr><td><strong>2. Triagem</strong></td><td>Separar o que importa e dar destino</td><td>Fichas da semana</td><td>Sinais classificados; descarte declarado; bastão H2</td><td>Comitê de Sinais (mensal, 1h)</td><td>A mesma planilha, com a matriz do gabarito 2<sup>9</sup></td><td>Tudo "importante": sem descarte, a camada 3 afoga</td></tr>
+<tr><td><strong>3. Síntese</strong></td><td>Transformar sinal em sentido</td><td>Sinais classificados; acervo; especialistas</td><td>Radar vN; dossiês; cenários</td><td>Revisão do Radar (trimestral); rodada anual</td><td>Documentos nos gabaritos 3 e 5</td><td>Síntese que descreve e não aponta: relatório sem "e daí"</td></tr>
+<tr><td><strong>4. Tradução</strong></td><td>Reescrever por altitude e por área</td><td>Síntese</td><td>Página C-level; memorando; memos; one-pagers</td><td>Nenhuma: é ofício de escrita</td><td>Os formatos fixos da aba Artefatos</td><td>Um formato só para todos os públicos</td></tr>
+<tr><td><strong>5. Decisão</strong></td><td>Aterrissar em assinatura</td><td>Produtos traduzidos, no timing</td><td>Apostas, direcionadores, gatilhos aprovados</td><td>Os 2 ritos + conselho + comitê de inovação</td><td>O calendário da casa</td><td>Insumo entregue durante o rito, não antes</td></tr>
+<tr><td><strong>6. Memória</strong></td><td>Registrar, medir e recomeçar</td><td>Atas, decisões, recusas, realidade</td><td>Memória; acerto retrospectivo; novas perguntas focais</td><td>Balanço trimestral + anual</td><td>Registro datado simples</td><td>Não registrar recusas: a casa rediscute o mesmo futuro todo ano</td></tr>
+</tbody>
+</table>
+</div>
+<p class="note">O detalhe operacional completo (raias por ator, as 8 reuniões com entra e sai, o diagrama funcional com verbos) está na blueprint do projeto e no documento irmão do escritório.<sup>44</sup></p>
+</section>
+
+<!-- ============================== AS ETAPAS ============================== -->
+<section id="p-etapas" class="pane">
+<h2>As etapas de tendências e futuros: os frameworks do mercado e o funil da casa</h2>
+<p><strong>Todos os métodos sérios do campo têm a mesma espinha em quatro tempos: perceber, entender, imaginar, agir.</strong> A tabela compara os cinco frameworks de referência com o funil de seis etapas da casa; a equivalência importa porque libera o escritório de brigar por sigla: qualquer consultor que chegue com TAIDA ou PFIA encaixa no funil sem retrabalho. <span class="sel sel-v">Verificado</span> nos frameworks; funil <span class="sel sel-i">Inferência</span></p>
+
+<h3>A tabela de equivalência</h3>
+<div style="overflow-x:auto">
+<table>
+<thead><tr><th>Tempo</th><th>Funil da casa (6 etapas)</th><th>Kairos TAIDA<sup>16</sup></th><th>IFTF PFIA<sup>19</sup></th><th>Singapura SP+<sup>11</sup></th><th>OCDE (5 módulos)<sup>10</sup></th><th>Reino Unido<sup>9</sup></th></tr></thead>
+<tbody>
+<tr><td><strong>Focar</strong></td><td>1. Enquadrar (pergunta focal)</td><td>(implícito no escopo)</td><td>Prepare</td><td>Defining Focus (Cynefin)</td><td>(seleção de disrupções)</td><td>Scoping question</td></tr>
+<tr><td><strong>Perceber</strong></td><td>2. Varrer (sinais)</td><td>Tracking</td><td rowspan="2">Foresight</td><td>Environmental Scanning</td><td>Explore Disruptions</td><td rowspan="2">What is changing?</td></tr>
+<tr><td><strong>Entender</strong></td><td>3. Interpretar (radar, drivers)</td><td>Analyzing</td><td>Sense Making</td><td>Imagine Interactions</td></tr>
+<tr><td><strong>Imaginar</strong></td><td>4. Prospectar (cenários, túnel)</td><td>Imaging</td><td>Insight</td><td>Developing Possible Futures</td><td>Create Scenarios</td><td>So what for our futures?</td></tr>
+<tr><td><strong>Agir</strong></td><td>5. Traduzir (implicações por altitude) e 6. Aterrissar (ritos, gatilhos)</td><td>Deciding + Acting</td><td>Action</td><td>Designing Strategies + Monitoring</td><td>Envision and Strategise + Recommend Policies</td><td>Now what do we do?</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>O funil da casa, etapa a etapa</h3>
+
+<div class="card"><h4>Etapa 1. Enquadrar</h4>
+<p><strong>Objetivo:</strong> transformar ansiedade difusa em pergunta focal com dono. <strong>Perguntas-guia:</strong> qual decisão esta rodada alimenta? quem assina? qual horizonte? <strong>Técnicas:</strong> as 24 perguntas do contrato (aba própria); entrevista de 30 min com o decisor; o passo zero do PNUD, avaliar como a liderança decide antes de coletar qualquer coisa.<sup>13</sup> <strong>Entregável:</strong> a pergunta focal em uma frase + critério do que conta como resposta. <strong>Duração:</strong> dias. <strong>Erro comum:</strong> pular direto para a coleta; rodada sem pergunta vira colecionismo.</p></div>
+
+<div class="card"><h4>Etapa 2. Varrer</h4>
+<p><strong>Objetivo:</strong> captar sinais fracos nas margens, além do que a mídia de negócios já mastigou. <strong>Técnicas:</strong> scanning por categorias STEEP e variantes<sup>9, 13</sup>; o filtro CIPHER de Amy Webb para reconhecer sinal (contradições, inflexões, práticas, gambiarras, extremos, raridades)<sup>45</sup>; canal da linha de frente<sup>37</sup>; curadoria dos seriados públicos (SONAR, radar DHL, SFR).<sup>12, 36, 37</sup> <strong>Entregável:</strong> fichas de sinal no gabarito 1. <strong>Cadência:</strong> semanal, 2h protegidas. <strong>Erro comum:</strong> só fontes do próprio setor: o sinal que muda o jogo costuma nascer num setor vizinho.</p></div>
+
+<div class="card"><h4>Etapa 3. Interpretar</h4>
+<p><strong>Objetivo:</strong> agrupar sinais em tendências e drivers, com maturidade, horizonte e força. <strong>Técnicas:</strong> clusterização; matriz importância x certeza (gabarito 2)<sup>9</sup>; cruzamento de impactos em pares (o Imagine Interactions da OCDE)<sup>10</sup>; radar em camadas com a IM. <strong>Entregável:</strong> radar vN + lista de incertezas críticas. <strong>Cadência:</strong> mensal (comitê) e trimestral (radar). <strong>Erro comum:</strong> radar como fim: tendência bonita sem incerteza crítica não alimenta a etapa 4.</p></div>
+
+<div class="card"><h4>Etapa 4. Prospectar</h4>
+<p><strong>Objetivo:</strong> converter incertezas em futuros plausíveis e testar a estratégia neles. <strong>Técnicas:</strong> cenários 2x2 pelo gabarito 3<sup>9</sup>; arquétipos de Dator (crescimento, restrição, colapso, transformação, o método do curso do IFTF)<sup>20</sup>; wild cards com playbook<sup>11</sup>; túnel de vento minuto a minuto (gabarito 4)<sup>9</sup>; backcasting da posição de 10 anos. <strong>Entregável:</strong> memorando de cenários + matriz de túnel + mapa de apostas. <strong>Cadência:</strong> anual (rodada) + cenários focais sob demanda. <strong>Erro comum:</strong> quatro cenários e nenhum em que a casa perde: cenário que só elogia é decoração.</p></div>
+
+<div class="card"><h4>Etapa 5. Traduzir</h4>
+<p><strong>Objetivo:</strong> reescrever a mesma verdade em três altitudes (regra da aba Stakeholders) e na língua de cada área. <strong>Técnicas:</strong> os campos gêmeos da OCDE, "opções no futuro" e "opções hoje"<sup>10</sup>; formato fixo; selo de origem em toda afirmação. <strong>Entregável:</strong> página C-level, memorando, memos por área, one-pagers. <strong>Erro comum:</strong> traduzir só para cima: o gerente sem kit vira resistência silenciosa.</p></div>
+
+<div class="card"><h4>Etapa 6. Aterrissar</h4>
+<p><strong>Objetivo:</strong> virar assinatura: decisão, gatilho armado, aposta com dono. <strong>Técnicas:</strong> insumo pronto 2 a 3 meses antes do rito; gatilhos "se X, então Y" com limiar; memória de decisão incluindo recusas; scorecard trimestral. <strong>Entregável:</strong> decisões em ata + planilha de gatilhos + memória atualizada. <strong>Erro comum:</strong> considerar entregue quando o documento foi apresentado: entregue é quando a decisão mudou ou o gatilho foi armado.</p></div>
+
+<div class="alerta"><strong>A regra de proporção entre as etapas:</strong> quem está começando gasta 80% do tempo nas etapas 2 e 3 e se frustra; a área madura inverte: enquadramento e aterrissagem (1, 5 e 6) são onde o valor nasce e morre. O radar é a etapa 3; ele é o meio do funil, nunca o produto final. <span class="sel sel-i">Inferência</span></div>
+</section>
+
+<!-- ============================== DO ZERO ============================== -->
+<section id="p-zero" class="pane">
+<h2>Montando do zero: as dez decisões de desenho antes do primeiro sinal</h2>
+<p><strong>Área nova não morre por falta de método; morre por decisão de desenho não tomada no início.</strong> As dez abaixo são o "dia zero": cada uma com a recomendação e o porquê. Depois delas, o plano de 90 dias assume (aba própria). <span class="sel sel-i">Inferência</span></p>
+
+<table>
+<thead><tr><th>#</th><th>Decisão</th><th>Recomendação</th><th>Por quê</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>Para onde a área reporta</strong></td><td>Estratégia (1ª opção) ou presidência (2ª); nunca comunicação/marketing</td><td>O valor mora no acoplamento aos ritos; reporte a estratégia dá o assento. O bench confirma: as práticas que sobreviveram moram perto do plano (Shell, Petrobras, Embrapa) e as que moraram longe viraram publicação e morreram (Siemens)<sup>41, 42, 43, 44</sup></td></tr>
+<tr><td>2</td><td><strong>Mandato escrito</strong></td><td>Uma página assinada pelo patrocinador: horizonte (H2-H3), as 3 perguntas do trimestre, assento nos 2 ritos, acesso ao conselho 2x/ano</td><td>Mandato verbal evapora na primeira reorganização; o obituário da Siemens é o caso de escola<sup>41</sup></td></tr>
+<tr><td>3</td><td><strong>Nome da área</strong></td><td>Nome que prometa DECISÃO, não pesquisa ("Futuros e Estratégia", "Antecipação Estratégica"); evitar "observatório" e "tendências"</td><td>Nome de biblioteca atrai pedido de biblioteca; a FTSG nomeia até serviço por resultado<sup>23</sup></td></tr>
+<tr><td>4</td><td><strong>Fronteiras assinadas</strong></td><td>Termo de 1 página com IM (horizonte), Riscos (provável x plausível) e Inovação (antecipa x testa), com a matriz de bastão como regra<sup>9</sup></td><td>Fronteira não escrita vira guerra na primeira sobreposição de pauta</td></tr>
+<tr><td>5</td><td><strong>Cliente fundador e 3 perguntas</strong></td><td>Uma diretoria, três perguntas do contrato de 24, prazo de resposta no trimestre</td><td>É o exercício 1 e 2 do sprint de fundação<sup>1</sup>; área que nasce "para todos" nasce para ninguém</td></tr>
+<tr><td>6</td><td><strong>Equipe inicial</strong></td><td>1 dedicado sênior (o dono) + 3 a 5 parciais das áreas vizinhas (o time estendido); segunda contratação só com painel verde</td><td>A régua de mercado do papel está na aba Custo<sup>33</sup>; inchar antes da tração é a morte financeira (risco 2)</td></tr>
+<tr><td>7</td><td><strong>Ferramenta</strong></td><td>Planilha e formulário no ano 1; plataforma só depois de 4 radares publicados</td><td>Régua de preço na aba Custo<sup>31</sup>; hábito antes de ferramenta<sup>1</sup></td></tr>
+<tr><td>8</td><td><strong>Calendário antes de conteúdo</strong></td><td>Duas datas nos ritos + item semestral do conselho negociados na semana 1</td><td>Calendário é o ativo que não se compra; conteúdo sem data vira arquivo</td></tr>
+<tr><td>9</td><td><strong>Formatos congelados</strong></td><td>Os 15 artefatos com formato fixo desde o dia 1 (gabaritos da aba Artefatos); versão de teste em planilha</td><td>Marca é reconhecimento; a taxonomia estável da DHL é o caso<sup>36</sup></td></tr>
+<tr><td>10</td><td><strong>Critério de morte</strong></td><td>Escrever no mandato: "se em 2 ciclos o scorecard não mostrar decisão influenciada, a área é repensada"</td><td>O critério de abandono que a área exige das apostas vale para ela mesma; é a cláusula que compra credibilidade com o financeiro</td></tr>
+</tbody>
+</table>
+
+<h3>Os cinco erros de fundação mais comuns</h3>
+<ol>
+<li><strong>Nascer como projeto de relatório:</strong> o primeiro entregável prometido é um "estudo de tendências" em vez de uma resposta a pergunta de negócio. Corrige-se com o contrato de 24 perguntas.</li>
+<li><strong>Nascer grande:</strong> plataforma, assinatura e equipe antes do primeiro cliente retido. A régua da aba Custo mostra o tamanho do desperdício.<sup>31, 32</sup></li>
+<li><strong>Nascer sem fronteira:</strong> a primeira pauta sobreposta com IM ou Riscos vira disputa política que consome o trimestre.</li>
+<li><strong>Nascer para o palco:</strong> aceitar a palestra inaugural para "lançar a área". Posiciona como entretenimento (o mercado cobra caro por isso e sabe o que está vendendo<sup>17</sup>).</li>
+<li><strong>Nascer sem morte definida:</strong> sem critério de encerramento, a área vira zumbi institucional no segundo ano, viva no organograma e morta na decisão. <span class="sel sel-i">Inferência</span></li>
+</ol>
+</section>
+
+<!-- ============================== REFERÊNCIAS ============================== -->
+<section id="p-refs" class="pane">
+<h2>Referências: as práticas que o mercado consagrou e a biblioteca essencial</h2>
+<p><strong>Oito práticas com dono verificado, vinte e poucos livros com o porquê de cada um, e os seriados gratuitos que valem assinatura paga.</strong> <span class="sel sel-v">Verificado</span> nas práticas; curadoria <span class="sel sel-i">Inferência</span></p>
+
+<h3>As oito práticas consagradas, e quem as faz</h3>
+<table>
+<thead><tr><th>Prática</th><th>Quem faz, verificado</th><th>O que provar antes de copiar</th></tr></thead>
+<tbody>
+<tr><td><strong>1. Radar serial com taxonomia fixa</strong></td><td>DHL (bienal, 40 tendências)<sup>36</sup>; Singapura (baralho a cada 3-5 anos)<sup>11</sup></td><td>Que existe comitê consumindo; radar sem rito é pôster</td></tr>
+<tr><td><strong>2. Cenários acoplados ao plano</strong></td><td>Shell (50 anos; edição Brasil 2024)<sup>42</sup>; Petrobras (PE 2050 + plano quinquenal)<sup>44</sup>; Finlândia (por legislatura)<sup>14</sup></td><td>Data no rito 2-3 meses antes; sem isso vira literatura</td></tr>
+<tr><td><strong>3. Funil do sinal ao negócio</strong></td><td>BASF (foresight, scouting, incubação, expansão)<sup>40</sup></td><td>Que a Inovação aceita o brief como insumo formal</td></tr>
+<tr><td><strong>4. Sensores distribuídos com crédito</strong></td><td>Swiss Re SONAR (subscritores como fonte)<sup>37</sup></td><td>Canal + resposta + crédito nominal; sem os três não roda</td></tr>
+<tr><td><strong>5. Recorrência como produto</strong></td><td>Kairos TrendWatch contínuo<sup>15</sup>; CIFS Futures Partnership<sup>18</sup>; IFTF Vantage<sup>21</sup></td><td>A versão interna é cadência de comitês e publicações</td></tr>
+<tr><td><strong>6. Certificação/letramento em escala</strong></td><td>IFTF (com Train-the-Trainer)<sup>19, 21</sup>; Kairos Academy<sup>16</sup>; W Futurismo (200 certificados declarados)<sup>25</sup></td><td>Oficinas com os artefatos da casa, não com genéricos</td></tr>
+<tr><td><strong>7. Transferência embutida em consultoria</strong></td><td>Z_punkt (processos entregues ao cliente)<sup>24</sup></td><td>Cláusula com nome de quem será treinado, na proposta</td></tr>
+<tr><td><strong>8. Vitrine anual honesta</strong></td><td>FTSG Convergence Outlook (gratuito)<sup>23</sup>; Inova What's Next desde 2012<sup>26</sup>; CE, relatório anual<sup>12</sup></td><td>A versão interna superior: o balanço de acerto retrospectivo</td></tr>
+</tbody>
+</table>
+
+<h3>A biblioteca essencial, com o porquê de cada livro<sup>45</sup></h3>
+<h4>Fundação e método de cenários</h4>
+<ul>
+<li><strong>Pierre Wack, "Scenarios: Uncharted Waters Ahead" (HBR, 1985):</strong> o texto fundador da prática na Shell; a tese de que cenário serve para mudar o mapa mental do decisor, não para acertar o futuro.</li>
+<li><strong>Peter Schwartz, "The Art of the Long View" (1991):</strong> o manual clássico de construção de cenários; o capítulo sobre conversas estratégicas vale o livro.</li>
+<li><strong>Kees van der Heijden, "Scenarios: The Art of Strategic Conversation":</strong> a ponte entre cenário e processo decisório organizacional; leitura do dono do S5.</li>
+<li><strong>Ramírez e Wilkinson, "Strategic Reframing" (Oxford):</strong> a escola de Oxford; cenários como reenquadramento em ambientes turbulentos.</li>
+<li><strong>Herman Kahn / Hugh Courtney, "20/20 Foresight":</strong> níveis de incerteza e que ferramenta usar em cada um; o antídoto contra usar cenário para tudo.</li>
+</ul>
+<h4>Sinais, tendências e vigilância</h4>
+<ul>
+<li><strong>Amy Webb, "The Signals Are Talking" (2016):</strong> o método CIPHER de reconhecimento de sinais e a fronteira entre tendência e moda; a autora que depois aposentou o próprio relatório anual.<sup>23</sup></li>
+<li><strong>Day e Schoemaker, "Peripheral Vision":</strong> por que organizações não veem o que está na margem, e o desenho organizacional que corrige.</li>
+<li><strong>Paul Saffo, "Six Rules for Effective Forecasting" (HBR, 2007):</strong> as seis regras em 12 páginas; distribuir para todo decisor que pedir "previsão".</li>
+</ul>
+<h4>Estudos de futuros como disciplina</h4>
+<ul>
+<li><strong>Bishop e Hines, "Thinking about the Future":</strong> o guia de referência das técnicas, organizado por atividade; o manual de cabeceira do ofício.</li>
+<li><strong>Sohail Inayatullah, "Six Pillars" e a Causal Layered Analysis:</strong> a profundidade além do dado: mito, metáfora e visão de mundo por trás das tendências.</li>
+<li><strong>Jim Dator:</strong> os quatro arquétipos de futuro (crescimento, restrição, colapso, transformação) que o IFTF ensina até hoje.<sup>20</sup></li>
+<li><strong>Wendell Bell / Edward Cornish, "Futuring":</strong> o panorama histórico e ético da disciplina.</li>
+</ul>
+<h4>Decisão, julgamento e risco</h4>
+<ul>
+<li><strong>Tetlock e Gardner, "Superforecasting":</strong> o que separa quem prevê bem, e por que a prática de registrar e conferir (o acerto retrospectivo) melhora qualquer área.</li>
+<li><strong>Nassim Taleb, "A Lógica do Cisne Negro":</strong> os limites da previsão e o desenho para robustez; leitura obrigatória antes de prometer qualquer coisa a conselho.</li>
+<li><strong>J. Peter Scoblic, "Learning from the Future" (HBR, 2020):</strong> o caso contemporâneo de institucionalizar foresight em ciclos de decisão.</li>
+</ul>
+<h4>Fundação da área como produto</h4>
+<ul>
+<li><strong>Knapp e Zeratsky, "Click" (2025) e "Sprint" (2016):</strong> a lente de fundação e teste desta oferta inteira.<sup>1, 2</sup></li>
+<li><strong>René Rohrbeck, "Corporate Foresight" (Springer):</strong> a base acadêmica: maturidade, acoplamento e a evidência de valor.<sup>35</sup></li>
+</ul>
+
+<h3>Os seriados gratuitos que valem mais que assinatura</h3>
+<p>Para a rotina do S11 (curadoria), os de maior densidade por página: o <strong>Futures Toolkit</strong> britânico e o <strong>toolkit da OCDE</strong> (método)<sup>9, 10</sup>; o <strong>SONAR</strong> da Swiss Re e o <strong>Logistics Trend Radar</strong> da DHL (radares seriados de referência)<sup>36, 37</sup>; o <strong>relatório de prospectiva da Comissão Europeia</strong> e o <strong>Foresight</strong> de Singapura (Estado da arte institucional)<sup>11, 12</sup>; o <strong>Convergence Outlook</strong> da FTSG e o <strong>What's Next</strong> da Inova (vitrines anuais gratuitas)<sup>23, 26</sup>; e os brasileiros <strong>Agropensa</strong> e <strong>PNE 2050</strong> (acoplamento público exemplar)<sup>43</sup>. O mapa completo de comunidades, formações e quem seguir está no Atlas de Futuros do projeto.<sup>44</sup> <span class="sel sel-i">Inferência</span> na curadoria</p>
+</section>
+
 
 <!-- ============================== QUICK WINS ============================== -->
 <section id="p-quick" class="pane">
@@ -799,6 +1136,12 @@ sup{color:#999;font-size:.72em}
 <h3>Nota de densidade e conformidade</h3>
 <p class="note">Ataque de superficialidade aplicado aba a aba: cada linha de catálogo tem colunas completas; cada gabarito tem fonte; cada analogia acompanha o fato. Selos: juízos e agregados como Inferência; fatos com fonte numerada e data 2026-09-02 (as fontes 35 a 44 herdam verificações de 2026-08-29, documentadas nos irmãos). Travessão, meia-risca e seta: zero. Todas as 44 fontes citadas ao menos uma vez. Pesquisa desta versão: 4 frentes paralelas, 7 PDFs oficiais baixados como evidência (pasta de trabalho), harvest consolidado registrado.</p>
 
+<h3>Adendo da rodada 4 (2026-09-02): a crítica do leitor</h3>
+<div class="card">
+<p><strong>A acusação veio do leitor, não do advogado, e estava certa:</strong> a v3 aprofundou método e mercado e continuou rasa no destino do trabalho. Faltavam as expectativas por nível hierárquico com formato e cadência, o contrato de perguntas de negócio, a arquitetura funcional, o mapa de etapas da disciplina, o roteiro de fundação do zero, a bibliografia de referência e a hierarquia de valor entre entregáveis (o radar tratado como produto quando é insumo).</p>
+<p><strong>A correção:</strong> seis abas novas e a escada de valor, todas amarradas ao que já existia (as 24 perguntas apontam serviços do catálogo; a matriz de stakeholders roteia os 15 artefatos; as etapas mapeiam os frameworks verificados nas fontes 9 a 19). Ressalva honesta: as expectativas por nível e a escada de valor são síntese de experiência e bench, seladas como Inferência; a biblioteca é curadoria com entradas bibliográficas sem URL, no padrão da casa (fonte 45). <span class="sel sel-i">Inferência</span></p>
+</div>
+
 <h3>Lista de verificação da oferta</h3>
 <table>
 <thead><tr><th>&nbsp;</th><th>Item</th><th>Se a resposta for não</th></tr></thead>
@@ -886,6 +1229,10 @@ sup{color:#999;font-size:.72em}
 <li>Shell Brasil. Cenários dedicados ao Brasil (Sky 2050 e Arquipélagos, 2024). <a href="https://www.shell.com.br/imprensa/press-releases-2024/cenarios-da-shell-tracam-possiveis-caminhos-para-o-brasil-atingir-metas-climaticas.html">shell.com.br</a></li>
 <li>Embrapa (Agropensa alimentando o Plano Diretor) e EPE (PNE 2050 desdobrado em decenais): o acoplamento público brasileiro. <a href="https://www.embrapa.br/en/agropensa/sistema-agropensa">embrapa.br</a>, <a href="https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/Plano-Nacional-de-Energia-2050">epe.gov.br</a></li>
 <li>Documentos irmãos deste projeto (26-08-29 a 26-09-01, pasta Pesquisas): <em>Design de Futuros e Foresight</em> (bench de 27 casas, CVM 193/244, estatísticas de horizonte, casos BB, Petrobras, BNDES, Natura, Boticário, venture como radar), <em>Escritório de Foresight, Inteligência e Tendências</em> (o organismo e a conta da versão barata) e o Atlas de Futuros (rede, formações, associações).</li>
+</ol>
+<h3>Biblioteca</h3>
+<ol start="45">
+<li>Biblioteca essencial do campo (entradas bibliográficas, curadoria própria; o porquê de cada obra está na aba Referências): Wack, Scenarios: Uncharted Waters Ahead (HBR, 1985); Schwartz, The Art of the Long View (1991); van der Heijden, Scenarios: The Art of Strategic Conversation; Ramírez e Wilkinson, Strategic Reframing (Oxford); Courtney, 20/20 Foresight; Webb, The Signals Are Talking (2016, método CIPHER); Day e Schoemaker, Peripheral Vision; Saffo, Six Rules for Effective Forecasting (HBR, 2007); Bishop e Hines, Thinking about the Future; Inayatullah, Six Pillars e Causal Layered Analysis; Dator, arquétipos de futuros; Cornish, Futuring; Tetlock e Gardner, Superforecasting; Taleb, A Lógica do Cisne Negro; Scoblic, Learning from the Future (HBR, 2020).</li>
 </ol>
 </section>
 

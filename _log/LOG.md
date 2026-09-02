@@ -1,5 +1,10 @@
 # Log de Sessões — Estratégia
 
+## [2026-09-02] Anatomia Profunda Oferta do Escritorio de Futuros — v4
+- Pedido: crítica do Eric à v3 ("extremamente rasa"): faltavam stakeholders (o que diretor/VP/gerente esperam, formato, o que muda o jogo), respostas ao negócio, arquitetura funcional, etapas de tendências e futuros, montar do zero, práticas e livros de referência, e entregáveis de mais valor que o radar.
+- Feito: 6 abas novas (Perguntas do negócio: contrato de 24 com dono/artefato/horizonte; Stakeholders: matriz por nível + regra das 3 altitudes + roteamento artefato x persona x canal; Arquitetura: 6 camadas com SVG e tabela camada a camada; As etapas: equivalência TAIDA/PFIA/SP+/OCDE/UK + funil da casa detalhado; Do zero: 10 decisões de desenho + 5 erros de fundação; Referências: 8 práticas com dono verificado + biblioteca de ~16 obras + seriados gratuitos) + escada de valor de 5 degraus na aba Artefatos (radar = piso). 20 para 26 abas, 187 KB, fonte 45 (biblioteca). Adendo rodada 4 no Check. QA: 26 casadas, 45/45 fontes, travessão/seta-texto zero.
+- Arquivos: Pesquisas\Anatomia Profunda - Oferta do Escritorio de Futuros - 26-08-29\ (.html); Pesquisas\_trabalho\Oferta v3 26-09-02\ (frag_v4_novas_abas.html, frag_v4_escada.html); scratchpad\patch_v4.py
+
 ## [2026-09-02] Repositório GitHub estrategia-futuros — v1
 - Pedido: "sobe para o meu github"; conta EGLBRA escolhida via pergunta; travas sucessivas (gh sem rede IPv6 no token, device flow morto 2x, Eric sem conseguir criar o repo no site).
 - Feito: git init local com .gitignore (EBF_Acervo 5,5 GB e pdfs de evidência fora), 3 commits (inicial 139 arquivos; log; v3 da Oferta); gh CLI instalado via winget mas login inviável pela rota IPv6/NAT64 da rede; solução final: repo privado criado via extensão Claude no Chrome do Eric (página /new pré-preenchida, dono EGLBRA, Private, 1 clique com autorização explícita dele) e push com a credencial EGLBRA já salva no Windows. Confirmado no site: 3 commits, todas as pastas.
