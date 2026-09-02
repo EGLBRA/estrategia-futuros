@@ -1,5 +1,10 @@
 # Log de Sessões — Estratégia
 
+## [2026-09-02] Repositório GitHub estrategia-futuros — v1
+- Pedido: "sobe para o meu github"; conta EGLBRA escolhida via pergunta; travas sucessivas (gh sem rede IPv6 no token, device flow morto 2x, Eric sem conseguir criar o repo no site).
+- Feito: git init local com .gitignore (EBF_Acervo 5,5 GB e pdfs de evidência fora), 3 commits (inicial 139 arquivos; log; v3 da Oferta); gh CLI instalado via winget mas login inviável pela rota IPv6/NAT64 da rede; solução final: repo privado criado via extensão Claude no Chrome do Eric (página /new pré-preenchida, dono EGLBRA, Private, 1 clique com autorização explícita dele) e push com a credencial EGLBRA já salva no Windows. Confirmado no site: 3 commits, todas as pastas.
+- Arquivos: .gitignore; repo https://github.com/EGLBRA/estrategia-futuros (privado)
+
 ## [2026-09-02] Anatomia Profunda Oferta do Escritorio de Futuros — v3
 - Pedido: "refaça tudo, nível profundo"; depois "só quero o HTML" (sem espelho .md, Miro e GitHub em espera).
 - Feito: reescrita completa (20 abas, 138 KB) com 4 frentes de pesquisa dedicadas de 2026-09-02: método Foundation Sprint na fonte oficial (18 exercícios com horário, nota-e-voto, Decider, 8 pares de diferenciação, Magic Lenses, template exato da hipótese, scorecard 3 cores, críticas públicas); aba nova "Bench de ofertas" (11 casas com catálogo comercial e preços públicos); 7 gabaritos oficiais de artefato campo a campo (UK Futures Toolkit, OCDE, CSF Singapura, PNUD, CE, Finlândia; 7 PDFs baixados como evidência); aba Custo com números reais (formações R$ 2.990-21.103; FIBRES €6.900-19.800/ano; salários CAGED/Robert Half). 44 fontes com URL e data, 0 órfã (2 corrigidas no QA: 4 e 42); advogado rodada 3 no Check (5 acusações/defesas); QA 20 radios=labels=painéis, travessão/seta zero. Espelho .md NÃO gerado por instrução do Eric.
