@@ -1,0 +1,295 @@
+<title>Blueprint SUSEP da Estratégia à Entrega</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@87.5,500;87.5,700;100,400&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --ink:#14232B; --paper:#F7F9F8; --panel:#FFFFFF; --line:#C9D3D2; --muted:#5E6B6E;
+    --teal:#0E7C7B; --teal-soft:#DCEEEC; --amber:#C77D1F; --amber-soft:#F6E9D6; --slate:#3E5A63;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:#E6ECEB; --paper:#101A1E; --panel:#172329; --line:#2E3F45; --muted:#9AAAAE;
+      --teal:#4FB8B3; --teal-soft:#153A3B; --amber:#E2A257; --amber-soft:#3C2B14; --slate:#9DB6BE;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#E6ECEB; --paper:#101A1E; --panel:#172329; --line:#2E3F45; --muted:#9AAAAE;
+    --teal:#4FB8B3; --teal-soft:#153A3B; --amber:#E2A257; --amber-soft:#3C2B14; --slate:#9DB6BE;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Source Sans 3",system-ui,sans-serif;font-size:16px;line-height:1.5}
+  .wrap{max-width:1180px;margin:0 auto;padding:32px 28px 64px}
+  h1,h2,h3{font-family:Archivo,"Source Sans 3",sans-serif;font-stretch:87.5%;font-weight:700;line-height:1.1;margin:0;text-wrap:balance}
+  h1{font-size:34px;letter-spacing:-.3px}
+  h2{font-size:22px;margin:40px 0 10px;padding-top:14px;border-top:2px solid var(--ink)}
+  h3{font-size:16px;margin:18px 0 6px}
+  p{margin:8px 0;max-width:68ch}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .titleblock{display:grid;grid-template-columns:1fr auto;gap:18px;border:1.5px solid var(--ink);padding:18px 22px;background:var(--panel)}
+  .titleblock dl{display:grid;grid-template-columns:auto auto;gap:4px 14px;margin:0;font-size:13px;align-content:start}
+  .titleblock dt{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .titleblock dd{margin:0}
+  .lede{font-size:17px;margin-top:10px}
+  .scroll{overflow-x:auto;border:1px solid var(--line);background:var(--panel);padding:14px;margin:14px 0}
+  figure{margin:0}
+  figure svg{display:block;min-width:1180px;width:100%;height:auto}
+  figcaption{font-size:13px;color:var(--muted);margin-top:8px;max-width:80ch}
+  table{border-collapse:collapse;width:100%;font-size:14px;margin:12px 0}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{font-family:Archivo,sans-serif;font-stretch:87.5%;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;background:var(--teal-soft);color:var(--ink)}
+  td.n{font-family:"IBM Plex Mono",monospace;font-size:13px;white-space:nowrap;color:var(--teal);font-weight:500}
+  .code{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--teal)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin:12px 0}
+  .card{border:1px solid var(--line);background:var(--panel);padding:12px 14px}
+  .card b{font-family:Archivo,sans-serif;font-stretch:87.5%;display:block;margin-bottom:4px}
+  .card small{color:var(--muted);display:block;font-size:13px}
+  .tag{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:11px;padding:1px 7px;border:1px solid var(--line);margin-right:4px}
+  .tag.disc{border-color:var(--amber);color:var(--amber)}
+  .rules{columns:2;column-gap:28px;font-size:14.5px;padding-left:20px}
+  .rules li{break-inside:avoid;margin:0 0 6px}
+  .note{border-left:3px solid var(--amber);background:var(--amber-soft);padding:10px 14px;font-size:14px;margin:14px 0}
+  footer{margin-top:40px;border-top:1px solid var(--line);padding-top:10px;font-size:12.5px;color:var(--muted)}
+  @media (max-width:700px){.titleblock{grid-template-columns:1fr}.rules{columns:1}}
+</style>
+
+<div class="wrap">
+  <div class="titleblock">
+    <div>
+      <div class="eyebrow">Blueprint organizacional · exemplo · macroprocesso linear</div>
+      <h1>Da estratégia à entrega: um fluxo, oito etapas, um lugar por onde tudo entra e sai</h1>
+      <p class="lede">Um artefato para discutir, não um modelo fechado. Ele mostra como um desafio nasce no planejamento, vira demanda, passa por discovery, é decidido num fórum com alçada, é executado por uma squad com braço reservado e volta ao planejamento com resultado medido.</p>
+    </div>
+    <dl>
+      <dt>Recorte</dt><dd>Frente SUSEP Vida e RE, Seguros Unimed</dd>
+      <dt>Versão</dt><dd>0.1, exemplo para discussão</dd>
+      <dt>Data</dt><dd>1º de setembro de 2026</dd>
+      <dt>Autor</dt><dd>Eric Leite</dd>
+      <dt>Status</dt><dd>Proposta; valores e cadências a calibrar com o time</dd>
+      <dt>Lê-se</dt><dd>Da esquerda para a direita; a seta de retorno fecha o ciclo</dd>
+    </dl>
+  </div>
+
+  <h2>1. O macroprocesso</h2>
+  <p>Três faixas: em cima, os fóruns e ritos que governam cada etapa; no meio, as oito etapas do fluxo; embaixo, o artefato que sai de cada uma e quem tem alçada para aprová-lo. O discovery está em âmbar porque é a etapa que hoje não existe como rito.</p>
+
+  <div class="scroll">
+  <figure>
+  <svg viewBox="0 0 1600 640" role="img" aria-label="Fluxo linear em oito etapas, da estratégia à entrega, com os fóruns acima, os artefatos e alçadas abaixo, e uma seta de retorno da medição para o planejamento" xmlns="http://www.w3.org/2000/svg" style="color:var(--ink)">
+    <defs>
+      <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+      </marker>
+      <marker id="arwt" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="var(--teal)"/>
+      </marker>
+    </defs>
+
+    <!-- faixas -->
+    <text x="20" y="34" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="2" fill="var(--muted)">FÓRUNS E RITOS</text>
+    <line x1="20" y1="42" x2="1580" y2="42" stroke="var(--line)" stroke-width="1"/>
+    <text x="20" y="212" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="2" fill="var(--muted)">MACROPROCESSO</text>
+    <line x1="20" y1="220" x2="1580" y2="220" stroke="var(--line)" stroke-width="1"/>
+    <text x="20" y="432" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="2" fill="var(--muted)">ARTEFATO QUE SAI</text>
+    <line x1="20" y1="440" x2="1580" y2="440" stroke="var(--line)" stroke-width="1"/>
+    <text x="20" y="552" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="2" fill="var(--muted)">QUEM APROVA (ALÇADA)</text>
+    <line x1="20" y1="560" x2="1580" y2="560" stroke="var(--line)" stroke-width="1"/>
+
+    <!-- foruns (topo) -->
+    <g font-family="Source Sans 3, sans-serif" font-size="12.5" fill="currentColor">
+      <rect x="30" y="60" width="170" height="70" rx="3" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <text x="115" y="84" text-anchor="middle" font-weight="600">Planejamento estratégico</text>
+      <text x="115" y="102" text-anchor="middle" fill="var(--muted)">anual · diretoria, superint.,</text>
+      <text x="115" y="118" text-anchor="middle" fill="var(--muted)">Estratégia · PIE trimestral</text>
+
+      <rect x="225" y="60" width="170" height="70" rx="3" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <text x="310" y="84" text-anchor="middle" font-weight="600">Kick-off da esteira</text>
+      <text x="310" y="102" text-anchor="middle" fill="var(--muted)">por ciclo · líder da esteira,</text>
+      <text x="310" y="118" text-anchor="middle" fill="var(--muted)">mentor, facilitação</text>
+
+      <rect x="420" y="60" width="170" height="70" rx="3" fill="var(--teal-soft)" stroke="var(--teal)" stroke-width="1.6"/>
+      <text x="505" y="84" text-anchor="middle" font-weight="600">Fórum de Negócio SUSEP</text>
+      <text x="505" y="102" text-anchor="middle" fill="var(--muted)">mensal · porta única de entrada</text>
+      <text x="505" y="118" text-anchor="middle" fill="var(--muted)">+ triagem quinzenal (30 min)</text>
+
+      <rect x="615" y="60" width="170" height="70" rx="3" fill="var(--amber-soft)" stroke="var(--amber)" stroke-width="1.6"/>
+      <text x="700" y="84" text-anchor="middle" font-weight="600">Sala de discovery</text>
+      <text x="700" y="102" text-anchor="middle" fill="var(--muted)">4 a 8 semanas por desafio</text>
+      <text x="700" y="118" text-anchor="middle" fill="var(--muted)">dono + Produtos, TI, IM, externos</text>
+
+      <rect x="810" y="60" width="170" height="70" rx="3" fill="var(--teal-soft)" stroke="var(--teal)" stroke-width="1.6"/>
+      <text x="895" y="84" text-anchor="middle" font-weight="600">Comitê de priorização</text>
+      <text x="895" y="102" text-anchor="middle" fill="var(--muted)">mensal · decide na alçada;</text>
+      <text x="895" y="118" text-anchor="middle" fill="var(--muted)">acima dela, Fórum de Gestão</text>
+
+      <rect x="1005" y="60" width="170" height="70" rx="3" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <text x="1090" y="84" text-anchor="middle" font-weight="600">Revisão da squad</text>
+      <text x="1090" y="102" text-anchor="middle" fill="var(--muted)">quinzenal · demonstração;</text>
+      <text x="1090" y="118" text-anchor="middle" fill="var(--muted)">sala de guerra para críticos</text>
+
+      <rect x="1200" y="60" width="170" height="70" rx="3" fill="var(--teal-soft)" stroke="var(--teal)" stroke-width="1.6"/>
+      <text x="1285" y="84" text-anchor="middle" font-weight="600">Fórum de Negócio SUSEP</text>
+      <text x="1285" y="102" text-anchor="middle" fill="var(--muted)">mensal · rito de entrega</text>
+      <text x="1285" y="118" text-anchor="middle" fill="var(--muted)">com checklist de pronto</text>
+
+      <rect x="1395" y="60" width="180" height="70" rx="3" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <text x="1485" y="84" text-anchor="middle" font-weight="600">Fórum de Gestão + PIE</text>
+      <text x="1485" y="102" text-anchor="middle" fill="var(--muted)">leitura em 30 e 90 dias;</text>
+      <text x="1485" y="118" text-anchor="middle" fill="var(--muted)">fechamento do ciclo no PIE</text>
+    </g>
+
+    <!-- conectores forum -> etapa -->
+    <g stroke="var(--line)" stroke-width="1" stroke-dasharray="3 3">
+      <line x1="115" y1="130" x2="115" y2="248"/><line x1="310" y1="130" x2="310" y2="248"/><line x1="505" y1="130" x2="505" y2="248"/><line x1="700" y1="130" x2="700" y2="248"/>
+      <line x1="895" y1="130" x2="895" y2="248"/><line x1="1090" y1="130" x2="1090" y2="248"/><line x1="1285" y1="130" x2="1285" y2="248"/><line x1="1485" y1="130" x2="1485" y2="248"/>
+    </g>
+
+    <!-- etapas (meio) -->
+    <g font-family="Source Sans 3, sans-serif" fill="currentColor">
+      <!-- 1 -->
+      <rect x="30" y="250" width="170" height="120" rx="4" fill="var(--panel)" stroke="var(--teal)" stroke-width="2"/>
+      <text x="44" y="272" font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--teal)">01</text>
+      <text x="115" y="296" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="15">Direção</text>
+      <text x="115" y="318" text-anchor="middle" font-size="12">Visão 2028 vira objetivos</text>
+      <text x="115" y="334" text-anchor="middle" font-size="12">e KRs por esteira (Vida, RE),</text>
+      <text x="115" y="350" text-anchor="middle" font-size="12">reconciliados com Controladoria</text>
+      <!-- 2 -->
+      <rect x="225" y="250" width="170" height="120" rx="4" fill="var(--panel)" stroke="var(--teal)" stroke-width="2"/>
+      <text x="239" y="272" font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--teal)">02</text>
+      <text x="310" y="296" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="15">Desdobramento</text>
+      <text x="310" y="318" text-anchor="middle" font-size="12">Cada esteira recebe seus</text>
+      <text x="310" y="334" text-anchor="middle" font-size="12">desafios, capacidade por nome</text>
+      <text x="310" y="350" text-anchor="middle" font-size="12">e um mentor patrocinador</text>
+      <!-- 3 -->
+      <rect x="420" y="250" width="170" height="120" rx="4" fill="var(--panel)" stroke="var(--teal)" stroke-width="2"/>
+      <text x="434" y="272" font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--teal)">03</text>
+      <text x="505" y="296" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="15">Entrada e triagem</text>
+      <text x="505" y="318" text-anchor="middle" font-size="12">Ficha única; classifica em</text>
+      <text x="505" y="334" text-anchor="middle" font-size="12">Estrutural, BAU, Adequação,</text>
+      <text x="505" y="350" text-anchor="middle" font-size="12">Oportunidade; dá nota</text>
+      <!-- 4 -->
+      <rect x="615" y="250" width="170" height="120" rx="4" fill="var(--amber-soft)" stroke="var(--amber)" stroke-width="2"/>
+      <text x="629" y="272" font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--amber)">04</text>
+      <text x="700" y="296" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="15">Discovery</text>
+      <text x="700" y="318" text-anchor="middle" font-size="12">Enquadra o problema, ouve a</text>
+      <text x="700" y="334" text-anchor="middle" font-size="12">ponta, olha o mercado, decupa</text>
+      <text x="700" y="350" text-anchor="middle" font-size="12">o escopo com a TI; gera opções</text>
+      <!-- 5 -->
+      <rect x="810" y="250" width="170" height="120" rx="4" fill="var(--panel)" stroke="var(--teal)" stroke-width="2"/>
+      <text x="824" y="272" font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--teal)">05</text>
+      <text x="895" y="296" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="15">Decisão</text>
+      <text x="895" y="318" text-anchor="middle" font-size="12">Escolhe a opção e ordena a</text>
+      <text x="895" y="334" text-anchor="middle" font-size="12">fila contra a capacidade real;</text>
+      <text x="895" y="350" text-anchor="middle" font-size="12">dono, prazo, braço, indicador</text>
+      <!-- 6 -->
+      <rect x="1005" y="250" width="170" height="120" rx="4" fill="var(--panel)" stroke="var(--teal)" stroke-width="2"/>
+      <text x="1019" y="272" font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--teal)">06</text>
+      <text x="1090" y="296" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="15">Execução</text>
+      <text x="1090" y="318" text-anchor="middle" font-size="12">Squad com núcleo fixo (TI,</text>
+      <text x="1090" y="334" text-anchor="middle" font-size="12">Processos, Dados) e volantes;</text>
+      <text x="1090" y="350" text-anchor="middle" font-size="12">incrementos quinzenais</text>
+      <!-- 7 -->
+      <rect x="1200" y="250" width="170" height="120" rx="4" fill="var(--panel)" stroke="var(--teal)" stroke-width="2"/>
+      <text x="1214" y="272" font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--teal)">07</text>
+      <text x="1285" y="296" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="15">Entrega e adoção</text>
+      <text x="1285" y="318" text-anchor="middle" font-size="12">Em produção com jornada</text>
+      <text x="1285" y="334" text-anchor="middle" font-size="12">completa, comunicação à ponta</text>
+      <text x="1285" y="350" text-anchor="middle" font-size="12">e operação preparada</text>
+      <!-- 8 -->
+      <rect x="1395" y="250" width="180" height="120" rx="4" fill="var(--panel)" stroke="var(--teal)" stroke-width="2"/>
+      <text x="1409" y="272" font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--teal)">08</text>
+      <text x="1485" y="296" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="15">Medição e aprendizado</text>
+      <text x="1485" y="318" text-anchor="middle" font-size="12">Lê o resultado, registra os</text>
+      <text x="1485" y="334" text-anchor="middle" font-size="12">não-ganhos e fecha cada item:</text>
+      <text x="1485" y="350" text-anchor="middle" font-size="12">resolvido, recusado, estacionado</text>
+    </g>
+
+    <!-- setas entre etapas com rotulo -->
+    <g stroke="var(--teal)" stroke-width="2" fill="none" marker-end="url(#arwt)">
+      <line x1="200" y1="310" x2="223" y2="310"/><line x1="395" y1="310" x2="418" y2="310"/><line x1="590" y1="310" x2="613" y2="310"/><line x1="785" y1="310" x2="808" y2="310"/>
+      <line x1="980" y1="310" x2="1003" y2="310"/><line x1="1175" y1="310" x2="1198" y2="310"/><line x1="1370" y1="310" x2="1393" y2="310"/>
+    </g>
+    <g font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--muted)" text-anchor="middle">
+      <text x="212" y="392">mapa</text><text x="407" y="392">backlog</text><text x="602" y="392">ficha</text><text x="797" y="392">opções</text>
+      <text x="992" y="392">decisão</text><text x="1187" y="392">incremento</text><text x="1382" y="392">produção</text>
+    </g>
+
+    <!-- desvio BAU -->
+    <path d="M505,370 L505,405 L560,405" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 3" marker-end="url(#arw)"/>
+    <text x="566" y="409" font-family="Source Sans 3, sans-serif" font-size="11.5" fill="currentColor">BAU sai aqui: sustentação com cota e SLA, sem passar pelo fluxo</text>
+
+    <!-- retorno 08 -> 01 -->
+    <path d="M1485,250 L1485,180 L115,180 L115,248" stroke="var(--teal)" stroke-width="1.6" fill="none" stroke-dasharray="6 4" marker-end="url(#arwt)"/>
+    <text x="800" y="172" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="12" fill="var(--teal)">resultado medido e lições voltam ao planejamento; itens estacionados voltam à triagem com data</text>
+
+    <!-- artefatos -->
+    <g font-family="IBM Plex Mono, monospace" font-size="11.5" fill="currentColor" text-anchor="middle">
+      <text x="115" y="466">A1 Mapa estratégico</text><text x="115" y="482" fill="var(--muted)">objetivos + KRs por esteira</text>
+      <text x="310" y="466">A2 Backlog da esteira</text><text x="310" y="482" fill="var(--muted)">desafios + capacidade</text>
+      <text x="505" y="466">A3 Ficha carimbada</text><text x="505" y="482" fill="var(--muted)">tipo + nota + destino</text>
+      <text x="700" y="466" fill="var(--amber)">A4 Síntese do discovery</text><text x="700" y="482" fill="var(--muted)">problema, valor, opções, esforço</text>
+      <text x="895" y="466">A5 Ata de decisão</text><text x="895" y="482" fill="var(--muted)">dono, prazo, braço, indicador</text>
+      <text x="1090" y="466">A6 Incremento</text><text x="1090" y="482" fill="var(--muted)">demonstrado, não em slide</text>
+      <text x="1285" y="466">A7 Checklist de pronto</text><text x="1285" y="482" fill="var(--muted)">jornada, comunicação, operação</text>
+      <text x="1485" y="466">A8 Registro de saída</text><text x="1485" y="482" fill="var(--muted)">resultado + lições</text>
+    </g>
+
+    <!-- alçadas -->
+    <g font-family="Source Sans 3, sans-serif" font-size="12" fill="currentColor" text-anchor="middle">
+      <text x="115" y="586">Diretoria</text><text x="115" y="602" fill="var(--muted)">com Controladoria</text>
+      <text x="310" y="586">Mentor da esteira</text><text x="310" y="602" fill="var(--muted)">aloca gente por nome</text>
+      <text x="505" y="586">Time de triagem</text><text x="505" y="602" fill="var(--muted)">recusa e estaciona</text>
+      <text x="700" y="586">Dono do desafio</text><text x="700" y="602" fill="var(--muted)">fecha o estudo no prazo</text>
+      <text x="895" y="586">Comitê (dentro da alçada)</text><text x="895" y="602" fill="var(--muted)">exceção sobe com uma recomendação</text>
+      <text x="1090" y="586">Líder da squad</text><text x="1090" y="602" fill="var(--muted)">protege a cota de sustentação</text>
+      <text x="1285" y="586">Produtos + Operação</text><text x="1285" y="602" fill="var(--muted)">assinam o pronto</text>
+      <text x="1485" y="586">Estratégia mede</text><text x="1485" y="602" fill="var(--muted)">o dono responde pelo número</text>
+    </g>
+  </svg>
+  <figcaption>Cada etapa tem um rito que a governa, um artefato que sai dela e alguém com alçada para aprová-lo. A linha tracejada de retorno fecha o ciclo: nada termina sem voltar ao planejamento como resultado ou lição.</figcaption>
+  </figure>
+  </div>
+
+  <h2>2. Etapa a etapa: o que entra, o que sai, quem decide</h2>
+  <table>
+    <thead><tr><th>Etapa</th><th>Pergunta que responde</th><th>Entra</th><th>Rito ou fórum</th><th>Sai (artefato)</th><th>Alçada</th><th>Gate para a próxima</th></tr></thead>
+    <tbody>
+      <tr><td class="n">01 Direção</td><td>Para onde vamos e com que números?</td><td>Visão 2028, orçamento, diretrizes dos mentores</td><td>Planejamento estratégico (anual); PIE (trimestral)</td><td><span class="code">A1</span> Mapa estratégico com objetivos e KRs por esteira</td><td>Diretoria com Controladoria</td><td>KRs assinados, número-base único, abertos por ramo e produto</td></tr>
+      <tr><td class="n">02 Desdobramento</td><td>Quem cuida de quê, com quanto braço?</td><td>Mapa estratégico</td><td>Kick-off da esteira (Vida; RE)</td><td><span class="code">A2</span> Backlog da esteira e matriz de dedicação</td><td>Mentor da esteira</td><td>Capacidade alocada por nome; suplente por frente crítica</td></tr>
+      <tr><td class="n">03 Entrada e triagem</td><td>O que é isso e merece atenção?</td><td>Ficha de demanda de qualquer origem (áreas, S&amp;OP, diagnóstico, parceiros, TI, Marketing)</td><td>Fórum de Negócio SUSEP (porta única) + triagem quinzenal</td><td><span class="code">A3</span> Ficha carimbada: tipo, nota de relevância, destino</td><td>Time de triagem</td><td>Ficha completa; BAU e Adequação já encaminhados; máximo de itens abertos respeitado</td></tr>
+      <tr><td class="n">04 Discovery</td><td>Qual é o problema de verdade e quais são as opções?</td><td>Ficha relevante (Estrutural ou Oportunidade)</td><td>Sala de discovery, 4 a 8 semanas: assessment fechado, discovery aberto, olhar de mercado, decupagem com TI</td><td><span class="code">A4</span> Síntese: causa raiz, valor, opções (construir, comprar, parceiro, paliativo, não fazer), esforço estimado</td><td>Dono do desafio</td><td>Pelo menos duas opções com esforço de TI estimado e recomendação escrita</td></tr>
+      <tr><td class="n">05 Decisão</td><td>Fazemos, com quem, até quando, medindo o quê?</td><td>Síntese do discovery; capacidade disponível das esteiras executoras</td><td>Comitê de priorização (mensal); Fórum de Gestão para o que excede a alçada; RDS/COMEX acima</td><td><span class="code">A5</span> Ata de decisão: opção, dono, prazo, braço, indicador, patrocinador</td><td>Comitê dentro da alçada</td><td>Decisão sem dono, prazo, braço e indicador não é decisão</td></tr>
+      <tr><td class="n">06 Execução</td><td>Está saindo do papel no ritmo combinado?</td><td>Ata de decisão; épicos decupados</td><td>Revisão da squad (quinzenal); sala de guerra para temas críticos</td><td><span class="code">A6</span> Incremento demonstrado</td><td>Líder da squad com TI</td><td>Emergências dentro da cota de sustentação; desvios reportados ao comitê</td></tr>
+      <tr><td class="n">07 Entrega e adoção</td><td>A ponta e a operação conseguem usar?</td><td>Incremento pronto</td><td>Fórum de Negócio SUSEP (rito de entrega)</td><td><span class="code">A7</span> Checklist de pronto assinado</td><td>Produtos e Operação</td><td>Operação e ponta validaram; comunicação e FAQ enviados; sustentação sabe</td></tr>
+      <tr><td class="n">08 Medição e aprendizado</td><td>Funcionou? O que aprendemos?</td><td>Indicador definido na decisão; não-ganhos registrados</td><td>Fórum de Gestão (leitura em 30 e 90 dias); PIE (fechamento do ciclo)</td><td><span class="code">A8</span> Registro de saída: resolvido, recusado ou estacionado com data; lições</td><td>Estratégia mede; dono responde</td><td>Toda demanda do ciclo com saída explícita antes do próximo PIE</td></tr>
+    </tbody>
+  </table>
+
+  <h2>3. Os fóruns, por cadência</h2>
+  <div class="grid">
+    <div class="card"><b>Planejamento estratégico</b><small>Anual, com PIE trimestral. Diretoria, superintendentes, Estratégia.</small>Define direção e reconcilia meta com orçamento. Fecha o ciclo anterior com as saídas explícitas de cada item.</div>
+    <div class="card"><b>Fórum de Negócio SUSEP</b><small>Mensal. Líderes de esteira, Produtos, Atuarial, Operação, TI, Canais, IM, Estratégia; mentor convidado.</small>Duas funções no mesmo rito: porta de entrada (o que chegou, o que foi triado) e rito de entrega (o que entrou em produção). Substitui as três agendas paralelas.</div>
+    <div class="card"><b>Triagem</b><small>Quinzenal, 30 minutos. Facilitação, donos de esteira, Produtos, Atuarial, TI, IM, Canais, VMO.</small>Classifica, pontua, encaminha, recusa ou estaciona. Não executa.</div>
+    <div class="card"><b>Sala de discovery</b><small>Por desafio, 4 a 8 semanas. Dono do desafio com apoio de Produtos, TI, IM e gente de fora quando falta método.</small><span class="tag disc">discovery</span> Único rito novo. Termina com opções, não com uma solução pronta.</div>
+    <div class="card"><b>Comitê de priorização</b><small>Mensal, 1 hora. Mesmo núcleo do Fórum de Negócio, com a capacidade das esteiras executoras em números.</small>Ordena a fila contra braço real e decide dentro da alçada. O que excede sobe com uma recomendação única.</div>
+    <div class="card"><b>Revisão da squad</b><small>Quinzenal, 45 minutos. Squad e dono do desafio.</small>Demonstração do incremento; desvio reportado. Sala de guerra quando o tema é crítico: poucas pautas, conclusão em semanas.</div>
+    <div class="card"><b>Fórum de Gestão + mentoria</b><small>Mensal, 1 hora, mais 1 hora por tema denso. Diretoria executiva e mentores.</small>Decide as exceções, remove barreiras, lê os indicadores de 30 e 90 dias.</div>
+    <div class="card"><b>RDS e COMEX</b><small>Conforme a governança corporativa.</small>Só o que muda política da companhia ou envolve mais de um negócio.</div>
+  </div>
+
+  <h2>4. Regras que sustentam o fluxo</h2>
+  <ol class="rules">
+    <li>Sem ficha, não entra.</li>
+    <li>Sem tipo e nota, não vai a fórum.</li>
+    <li>BAU tem fila própria, cota e SLA; não passa pelo discovery.</li>
+    <li>Todo discovery começa com pergunta, modo, prazo e saída definidos.</li>
+    <li>Sempre pelo menos duas opções, uma delas "não fazer".</li>
+    <li>Decisão sem dono, prazo, braço e indicador não é decisão.</li>
+    <li>Emergência não rouba a fila de projeto sem o comitê.</li>
+    <li>Nada entra em produção sem a operação e a ponta terem visto.</li>
+    <li>Insumos de fórum até 48 horas antes; sem insumo, o tema sai da pauta.</li>
+    <li>Toda demanda sai por Resolvido, Recusado ou Estacionado com data.</li>
+  </ol>
+
+  <div class="note">Números (cadências, 4 a 8 semanas, 48 horas, limites de itens abertos) são pontos de partida para calibrar com o time, não recomendações fechadas. O fluxo é linear na leitura, mas cíclico na prática: a seta de retorno é a parte mais importante do desenho.</div>
+
+  <footer>Blueprint da estratégia à entrega · exemplo para discussão · frente SUSEP Vida e RE · 1º de setembro de 2026 · sem travessão</footer>
+</div>

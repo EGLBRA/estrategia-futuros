@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Anatomia Profunda: Design de Futuros e Foresight</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,'Times New Roman',serif;font-size:15px;line-height:1.7;color:#1a1a1a;background:#fff}
+.W{max-width:1140px;margin:0 auto;padding:2.5rem 2rem 4rem}
+h1{font-size:26px;font-weight:700;line-height:1.2;margin-bottom:6px;letter-spacing:-.5px}
+h2{font-size:19px;font-weight:700;margin:24px 0 10px;padding-bottom:6px;border-bottom:1px solid #e0e0e0}
+h3{font-size:15px;font-weight:700;margin:16px 0 6px}
+.lbl{font-family:system-ui,-apple-system,sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#999;margin-bottom:2px}
+.meta{font-family:system-ui,sans-serif;font-size:12px;color:#999;margin-bottom:24px}
+a{color:#1a5276;text-decoration:none}a:hover{text-decoration:underline}
+.red{color:#b71c1c}
+.accent{border-left:3px solid #b71c1c;padding-left:12px;margin:10px 0}
+.num{font-family:system-ui,sans-serif;font-size:30px;font-weight:700;color:#b71c1c;display:block;line-height:1.1;margin:4px 0}
+.src{font-family:system-ui,sans-serif;font-size:11px;color:#999}
+.tabs{display:grid;grid-template-columns:repeat(9,max-content);justify-content:center;column-gap:22px;row-gap:3px;border-bottom:2px solid #1a1a1a;margin:0 0 28px;padding-bottom:8px;background:#fff;position:sticky;top:0;z-index:10}
+@media(max-width:900px){.tabs{grid-template-columns:repeat(5,max-content);column-gap:18px}}
+@media(max-width:560px){.tabs{grid-template-columns:repeat(3,max-content);column-gap:14px}}
+.tab{font-family:system-ui,sans-serif;font-size:13.5px;font-weight:500;padding:2px 0;background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap;color:#777;transition:.15s;display:inline-block}
+.tab:hover{color:#1a1a1a}
+.tabr{position:absolute;width:0;height:0;opacity:0;pointer-events:none}
+.pane{display:none}
+#r-dest:checked~#p-dest,#r-entenda:checked~#p-entenda,#r-ecos:checked~#p-ecos,#r-proc:checked~#p-proc,#r-montar:checked~#p-montar,#r-gov:checked~#p-gov,#r-prod:checked~#p-prod,#r-normas:checked~#p-normas,#r-cargos:checked~#p-cargos,#r-forcas:checked~#p-forcas,#r-atores:checked~#p-atores,#r-brasil:checked~#p-brasil,#r-casos:checked~#p-casos,#r-bench:checked~#p-bench,#r-cliente:checked~#p-cliente,#r-steep:checked~#p-steep,#r-sist:checked~#p-sist,#r-bmc:checked~#p-bmc,#r-w5:checked~#p-w5,#r-risco:checked~#p-risco,#r-swot:checked~#p-swot,#r-sut:checked~#p-sut,#r-gloss:checked~#p-gloss,#r-cem:checked~#p-cem,#r-check:checked~#p-check,#r-fontes:checked~#p-fontes{display:block}
+#r-dest:checked~.tabs [for=r-dest],#r-entenda:checked~.tabs [for=r-entenda],#r-ecos:checked~.tabs [for=r-ecos],#r-proc:checked~.tabs [for=r-proc],#r-montar:checked~.tabs [for=r-montar],#r-gov:checked~.tabs [for=r-gov],#r-prod:checked~.tabs [for=r-prod],#r-normas:checked~.tabs [for=r-normas],#r-cargos:checked~.tabs [for=r-cargos],#r-forcas:checked~.tabs [for=r-forcas],#r-atores:checked~.tabs [for=r-atores],#r-brasil:checked~.tabs [for=r-brasil],#r-casos:checked~.tabs [for=r-casos],#r-bench:checked~.tabs [for=r-bench],#r-cliente:checked~.tabs [for=r-cliente],#r-steep:checked~.tabs [for=r-steep],#r-sist:checked~.tabs [for=r-sist],#r-bmc:checked~.tabs [for=r-bmc],#r-w5:checked~.tabs [for=r-w5],#r-risco:checked~.tabs [for=r-risco],#r-swot:checked~.tabs [for=r-swot],#r-sut:checked~.tabs [for=r-sut],#r-gloss:checked~.tabs [for=r-gloss],#r-cem:checked~.tabs [for=r-cem],#r-check:checked~.tabs [for=r-check],#r-fontes:checked~.tabs [for=r-fontes]{color:#1a1a1a;border-bottom-color:#b71c1c;font-weight:700}
+.card{background:#f9f9f9;border:1px solid #e8e8e8;border-radius:4px;padding:10px 14px;margin-bottom:8px}
+.card-sm{background:#f9f9f9;border:1px solid #e8e8e8;border-radius:4px;padding:8px 12px;margin-bottom:6px;font-size:14px}
+.bar-row{display:flex;align-items:center;margin-bottom:8px;font-family:system-ui,sans-serif;font-size:13px}
+.bar-label{width:210px;text-align:right;padding-right:10px;font-weight:600;flex-shrink:0}
+.bar-track{flex:1;background:#eee;border-radius:3px;height:18px;position:relative;overflow:hidden}
+.bar-fill{height:100%;border-radius:3px;background:#b71c1c}
+.bar-val{position:absolute;right:6px;top:1px;font-size:11px;font-weight:700;color:#fff}
+.dot{display:inline-block;width:8px;height:8px;border-radius:4px;margin-right:4px;vertical-align:middle}
+details{margin-top:6px}
+summary{font-family:system-ui,sans-serif;font-size:12px;font-weight:600;color:#1a5276;cursor:pointer}
+.tl{position:relative;padding-left:24px;margin:16px 0}
+.tl::before{content:"";position:absolute;left:7px;top:0;bottom:0;width:2px;background:#ddd}
+.tl-item{position:relative;margin-bottom:12px;padding-left:4px}
+.tl-dot{position:absolute;left:-21px;top:7px;width:12px;height:12px;border-radius:6px;background:#b71c1c;border:2px solid #fff;box-shadow:0 0 0 1px #ddd}
+.tl-dot.done{background:#2e7d32}.tl-dot.now{background:#e65100}.tl-dot.wait{background:#999}
+blockquote{border-left:3px solid #ddd;padding:8px 16px;margin:12px 0;color:#444;font-style:italic;font-size:14px}
+.loop{max-width:540px;margin:16px auto}
+.loop-step{background:#f9f9f9;border:1px solid #ddd;border-radius:6px;padding:9px 14px;text-align:center;margin-bottom:4px;font-size:13px}
+.loop-step strong{display:block;font-size:14px}
+.loop-arrow{text-align:center;font-size:18px;color:#999;line-height:1.1}
+.loop-return{background:#b71c1c;color:#fff;border-radius:6px;padding:8px;text-align:center;font-family:system-ui,sans-serif;font-size:13px;font-weight:700}
+footer{margin-top:3rem;padding-top:1rem;border-top:1px solid #e0e0e0;font-family:system-ui,sans-serif;font-size:11px;color:#999;text-align:center}
+ul{padding-left:1.3rem;margin-bottom:10px}li{margin-bottom:6px}
+ol{padding-left:1.4rem;margin-bottom:10px}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:13px;font-family:system-ui,sans-serif;line-height:1.45}
+th,td{border:1px solid #e6e6e6;padding:6px 9px;text-align:left;vertical-align:top}
+thead th{background:#1a1a1a;color:#fff;font-weight:700;border-color:#1a1a1a}
+tbody tr:nth-child(even){background:#f9f9f9}
+.kpi{background:#fff;border:1px solid #e8e8e8;border-radius:6px;padding:12px 14px;text-align:center}
+.kpi small{font-family:system-ui,sans-serif;font-size:11px;color:#666;display:block;line-height:1.35;margin-top:2px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}
+.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+@media(max-width:600px){.g4{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}}
+.sel{display:inline-block;font-family:system-ui,sans-serif;font-size:9px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:1px 6px;border-radius:10px;vertical-align:1px;white-space:nowrap}
+.sel-v{background:#e6f2ea;color:#1b6b39}.sel-i{background:#eaf0fb;color:#28477f}.sel-e{background:#f4eee6;color:#8a5a1f}
+sup{color:#999;font-size:.72em}
+.note{font-family:system-ui,sans-serif;font-size:12px;color:#888;margin-top:4px}
+.alerta{background:#fdf6ec;border:1px solid #e8d9c0;border-left:3px solid #8a5a1f;border-radius:4px;padding:9px 13px;margin:12px 0;font-family:system-ui,sans-serif;font-size:12.5px;color:#5c4114}
+</style>
+</head>
+<body>
+<div class="W">
+
+<input class="tabr" type="radio" name="tab" id="r-dest" checked>
+<input class="tabr" type="radio" name="tab" id="r-entenda">
+<input class="tabr" type="radio" name="tab" id="r-ecos">
+<input class="tabr" type="radio" name="tab" id="r-proc">
+<input class="tabr" type="radio" name="tab" id="r-montar">
+<input class="tabr" type="radio" name="tab" id="r-gov">
+<input class="tabr" type="radio" name="tab" id="r-prod">
+<input class="tabr" type="radio" name="tab" id="r-normas">
+<input class="tabr" type="radio" name="tab" id="r-cargos">
+<input class="tabr" type="radio" name="tab" id="r-forcas">
+<input class="tabr" type="radio" name="tab" id="r-atores">
+<input class="tabr" type="radio" name="tab" id="r-brasil">
+<input class="tabr" type="radio" name="tab" id="r-casos">
+<input class="tabr" type="radio" name="tab" id="r-bench">
+<input class="tabr" type="radio" name="tab" id="r-cliente">
+<input class="tabr" type="radio" name="tab" id="r-steep">
+<input class="tabr" type="radio" name="tab" id="r-sist">
+<input class="tabr" type="radio" name="tab" id="r-bmc">
+<input class="tabr" type="radio" name="tab" id="r-w5">
+<input class="tabr" type="radio" name="tab" id="r-risco">
+<input class="tabr" type="radio" name="tab" id="r-swot">
+<input class="tabr" type="radio" name="tab" id="r-sut">
+<input class="tabr" type="radio" name="tab" id="r-gloss">
+<input class="tabr" type="radio" name="tab" id="r-cem">
+<input class="tabr" type="radio" name="tab" id="r-check">
+<input class="tabr" type="radio" name="tab" id="r-fontes">
+
+<p class="lbl">A Anatomia Profunda &middot; Diagn&oacute;stico funcional</p>
+<h1>Foresight n&atilde;o &eacute; um relat&oacute;rio: &eacute; um calend&aacute;rio de decis&atilde;o com dono, or&ccedil;amento e gatilho</h1>
+<p class="meta">&Uacute;ltima atualiza&ccedil;&atilde;o 2026-08-29 &middot; v2 &middot; Recorte: a disciplina de design de futuros e foresight dentro da empresa, corte Brasil, com bench de casas atuantes no pa&iacute;s (Petrobras, Vale, Sicredi, DHL e outras)</p>
+
+<nav class="tabs">
+  <label class="tab" for="r-dest">Destaque</label>
+  <label class="tab" for="r-entenda">Entenda</label>
+  <label class="tab" for="r-ecos">Ecossistema</label>
+  <label class="tab" for="r-proc">Processos</label>
+  <label class="tab" for="r-montar">Montar</label>
+  <label class="tab" for="r-gov">Governan&ccedil;a</label>
+  <label class="tab" for="r-prod">Produtos</label>
+  <label class="tab" for="r-normas">Normas</label>
+  <label class="tab" for="r-cargos">Cargos</label>
+  <label class="tab" for="r-forcas">For&ccedil;as</label>
+  <label class="tab" for="r-atores">Atores</label>
+  <label class="tab" for="r-brasil">Brasil</label>
+  <label class="tab" for="r-casos">Casos</label>
+  <label class="tab" for="r-bench">Bench Brasil</label>
+  <label class="tab" for="r-cliente">Cliente</label>
+  <label class="tab" for="r-steep">STEEPLEDI</label>
+  <label class="tab" for="r-sist">Sist&ecirc;mica</label>
+  <label class="tab" for="r-bmc">Modelo</label>
+  <label class="tab" for="r-w5">5W2H</label>
+  <label class="tab" for="r-risco">Riscos</label>
+  <label class="tab" for="r-swot">Cen&aacute;rios</label>
+  <label class="tab" for="r-sut">Sutilezas</label>
+  <label class="tab" for="r-gloss">Gloss&aacute;rio</label>
+  <label class="tab" for="r-cem">Cem perguntas</label>
+  <label class="tab" for="r-check">Check</label>
+  <label class="tab" for="r-fontes">Fontes</label>
+</nav>
+
+
+<section id="p-dest" class="pane">
+<p class="accent" style="font-size:17px"><strong>A tese:</strong> foresight corporativo n&atilde;o falha por falta de m&eacute;todo nem por falta de dado. Falha porque a maioria das empresas compra um <em>estudo</em> quando precisa instalar um <em>calend&aacute;rio</em>. O que separa quem ganha dinheiro com futuro de quem s&oacute; gasta com futuro n&atilde;o &eacute; a qualidade do cen&aacute;rio: &eacute; existir uma data no ano em que algu&eacute;m com poder de assinatura precisa responder ao cen&aacute;rio, e um gatilho combinado que dispara a decis&atilde;o quando o mundo se mexe.</p>
+
+<div class="g4">
+  <div class="kpi"><span class="num">33%</span><small>mais lucrativas: as empresas classificadas como vigilantes tiveram 16% de lucratividade contra 12% da m&eacute;dia do setor, em 83 empresas medidas em 2008 e reavaliadas em 2015<sup>1</sup></small></div>
+  <div class="kpi"><span class="num">42%</span><small>das grandes empresas mant&ecirc;m unidade dedicada de foresight com or&ccedil;amento e gente pr&oacute;prios; outras 36% penduram a fun&ccedil;&atilde;o em quem j&aacute; tem outro cargo<sup>3</sup></small></div>
+  <div class="kpi"><span class="num">1,2%</span><small>&eacute; a fatia de empresas que planeja al&eacute;m de dez anos. Cerca de 64% ficam entre tr&ecirc;s e dez anos<sup>3</sup></small></div>
+  <div class="kpi"><span class="num">5%</span><small>de ganho de desempenho financeiro associado a sair de um foresight padr&atilde;o para um estado da arte, em pesquisa com executivos de 500 organiza&ccedil;&otilde;es<sup>5, 6</sup></small></div>
+</div>
+
+<h2>Seis verdades inconfort&aacute;veis</h2>
+<ol>
+  <li><strong>A prova de retorno existe, mas &eacute; menor e mais antiga do que os vendedores sugerem.</strong> O estudo mais citado do campo acompanhou 83 empresas: as vigilantes cresceram 75% em valor de mercado entre 2008 e 2015, contra 25% da m&eacute;dia da amostra, e o pior grupo, o das empresas que olham muito e decidem pouco, encolheu 6%.<sup>1</sup> &Eacute; uma base pequena, europeia e de outra d&eacute;cada. Quem apresenta isso ao conselho como lei da f&iacute;sica est&aacute; exagerando. <span class="sel sel-v">Verificado</span></li>
+  <li><strong>Quase todo mundo faz. Quase ningu&eacute;m usa para o que importa.</strong> Cerca de 81% das empresas usam foresight para definir metas, atividade de curto prazo, mas s&oacute; 43% o aplicam a planejamento adaptativo de longo prazo e 40% a eventos explorat&oacute;rios.<sup>4</sup> Ou seja: a ferramenta do longo prazo virou insumo do or&ccedil;amento do ano que vem. <span class="sel sel-v">Verificado</span></li>
+  <li><strong>O horizonte real da empresa m&eacute;dia n&atilde;o alcan&ccedil;a o problema.</strong> Riscos clim&aacute;ticos, demogr&aacute;ficos e de infraestrutura maturam em vinte ou trinta anos, e apenas 1,2% das empresas planejam al&eacute;m de dez.<sup>3</sup> A conta n&atilde;o fecha por constru&ccedil;&atilde;o. <span class="sel sel-v">Verificado</span></li>
+  <li><strong>O produto que popularizou o campo foi morto por quem o criou.</strong> Em mar&ccedil;o de 2026, no SXSW, a Future Today Strategy Group aposentou o relat&oacute;rio anual de tend&ecirc;ncias que publicava havia quase duas d&eacute;cadas e o substituiu por um material organizado em converg&ecirc;ncias, com o argumento de que um compilado de tend&ecirc;ncias em PDF deixou de ser &uacute;til.<sup>17, 18</sup> Se o mais famoso do mundo desistiu do formato, a sua &aacute;rea interna tamb&eacute;m deveria. <span class="sel sel-v">Verificado</span></li>
+  <li><strong>No Brasil, o empurr&atilde;o regulat&oacute;rio que ia obrigar cen&aacute;rio de longo prazo nas companhias abertas foi desligado antes de valer.</strong> A Resolu&ccedil;&atilde;o CVM 193, de 2023, colocou o pa&iacute;s como o primeiro do mundo a tornar obrigat&oacute;rios os relat&oacute;rios IFRS S1 e S2 a partir de 2026. Em 29 de maio de 2026 a Resolu&ccedil;&atilde;o CVM 244 revogou a obrigatoriedade e tornou tudo volunt&aacute;rio.<sup>37, 38, 63</sup> Quem estava montando &aacute;rea de futuros sustentada s&oacute; no argumento de conformidade perdeu o argumento. <span class="sel sel-v">Verificado</span></li>
+  <li><strong>O executivo se acha mais preparado do que est&aacute;.</strong> Na pesquisa do BCG com 500 organiza&ccedil;&otilde;es, a confian&ccedil;a declarada na gest&atilde;o de riscos estrat&eacute;gicos aparece bem acima da pr&aacute;tica observada, e a fatia que se qualifica como l&iacute;der em foresight &eacute; de um d&iacute;gito.<sup>5, 6</sup> <span class="sel sel-i">Infer&ecirc;ncia</span></li>
+</ol>
+
+<h2>Se voc&ecirc; s&oacute; ler uma p&aacute;gina</h2>
+<div class="card">
+<p><strong>Monte a fun&ccedil;&atilde;o em quatro pe&ccedil;as, nessa ordem:</strong> (1) uma c&eacute;lula pequena e permanente que capta sinais toda quinzena; (2) um comit&ecirc; mensal onde estrat&eacute;gia e inova&ccedil;&atilde;o sentam juntas e transformam sinal em implica&ccedil;&atilde;o; (3) duas datas fixas no ciclo de planejamento, uma antes do or&ccedil;amento e outra depois, em que a diretoria &eacute; obrigada a responder; (4) uma carteira de apostas em que cada aposta tem um diretor dono, um gatilho num&eacute;rico e um valor reservado. Sem a pe&ccedil;a 3 e a pe&ccedil;a 4, as pe&ccedil;as 1 e 2 viram um clube de leitura caro. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+</div>
+<p class="note">O detalhamento das quatro pe&ccedil;as, com calend&aacute;rio de doze meses, matriz de responsabilidade e m&eacute;tricas, est&aacute; nas abas Montar e Governan&ccedil;a.</p>
+</section>
+
+<section id="p-entenda" class="pane">
+<h2>O que &eacute;, em uma p&aacute;gina</h2>
+<p>Previs&atilde;o do tempo diz que amanh&atilde; chove 30 mil&iacute;metros. Engenharia de barragem pergunta outra coisa: qual chuva a barragem precisa aguentar mesmo que ningu&eacute;m saiba quando ela vem. Foresight &eacute; a engenharia de barragem. N&atilde;o serve para acertar o futuro, serve para dimensionar a empresa contra futuros que ainda n&atilde;o aconteceram.<sup>8</sup> <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+
+<h3>A defini&ccedil;&atilde;o de trabalho</h3>
+<p>Foresight corporativo &eacute; a capacidade permanente de uma empresa de perceber mudan&ccedil;as no ambiente antes que elas virem fato consumado, de traduzir essas mudan&ccedil;as em implica&ccedil;&otilde;es concretas para o neg&oacute;cio e de converter essas implica&ccedil;&otilde;es em decis&otilde;es tomadas hoje. A literatura resume em tr&ecirc;s verbos: perceber, prospectar e apostar.<sup>1, 2</sup> <span class="sel sel-v">Verificado</span></p>
+
+<div class="g2">
+<div class="card"><strong>Perceber</strong><br>Captar sinal fraco, not&iacute;cia de fronteira, patente, movimento de regulador, comportamento estranho de cliente. &Eacute; trabalho de coleta e de curadoria, cont&iacute;nuo, chato e barato.<sup>2</sup></div>
+<div class="card"><strong>Prospectar</strong><br>Transformar sinal em sentido: para onde isso puxa o setor, que premissa da nossa estrat&eacute;gia isso amea&ccedil;a, em que prazo. &Eacute; onde entram cen&aacute;rios e mapas de tend&ecirc;ncia.<sup>2</sup></div>
+<div class="card"><strong>Apostar</strong><br>Colocar dinheiro, gente ou parceria em op&ccedil;&otilde;es pequenas que s&oacute; valem se um dos futuros vier. &Eacute; a parte que quase todo mundo pula, e &eacute; a &uacute;nica que gera retorno.<sup>2</sup></div>
+<div class="card"><strong>Governar</strong><br>A pe&ccedil;a que a literatura acad&ecirc;mica sup&otilde;e e a pr&aacute;tica esquece: quem decide, quando decide, com que or&ccedil;amento e sob qual gatilho.<sup>5, 6</sup></div>
+</div>
+
+<h3>O que foresight n&atilde;o &eacute;</h3>
+<table>
+<thead><tr><th>N&atilde;o &eacute;</th><th>Por que confundem</th><th>A diferen&ccedil;a pr&aacute;tica</th></tr></thead>
+<tbody>
+<tr><td>Previs&atilde;o</td><td>Ambos falam de futuro</td><td>Previs&atilde;o entrega um n&uacute;mero &uacute;nico e &eacute; avaliada por acerto. Foresight entrega um conjunto de futuros e &eacute; avaliado por decis&atilde;o tomada<sup>8</sup></td></tr>
+<tr><td>Pesquisa de tend&ecirc;ncia de consumo</td><td>Muitas consultorias vendem as duas coisas com o mesmo nome</td><td>Tend&ecirc;ncia de consumo olha comportamento em um a tr&ecirc;s anos, para marca e produto. Foresight olha estrutura em cinco a vinte anos, para modelo de neg&oacute;cio<sup>47</sup></td></tr>
+<tr><td>Inova&ccedil;&atilde;o</td><td>Costumam viver na mesma diretoria</td><td>Inova&ccedil;&atilde;o testa e entrega solu&ccedil;&atilde;o. Foresight define quais perguntas merecem teste. Um &eacute; o funil, o outro &eacute; a boca do funil<sup>9</sup></td></tr>
+<tr><td>Gest&atilde;o de riscos</td><td>Ambos falam de amea&ccedil;a</td><td>Risco trata do conhecido com probabilidade estim&aacute;vel. Foresight trata do plaus&iacute;vel sem base hist&oacute;rica<sup>7</sup></td></tr>
+<tr><td>Planejamento estrat&eacute;gico</td><td>Entram no mesmo ciclo</td><td>Planejamento escolhe um caminho. Foresight testa o caminho escolhido contra mundos que n&atilde;o vieram ainda<sup>8</sup></td></tr>
+</tbody>
+</table>
+
+<h3>Os tr&ecirc;s horizontes, e por que a empresa m&eacute;dia s&oacute; enxerga um</h3>
+<ul>
+<li><strong>Horizonte 1, at&eacute; 18 meses.</strong> Or&ccedil;amento, meta, campanha. &Eacute; onde 81% do foresight declarado est&aacute; sendo gasto hoje.<sup>4</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Horizonte 2, de dois a cinco anos.</strong> Portf&oacute;lio, canal, parceria, capacidade. &Eacute; onde a briga por or&ccedil;amento fica mais dura, porque o resultado n&atilde;o cabe no ano fiscal. <span class="sel sel-i">Infer&ecirc;ncia</span></li>
+<li><strong>Horizonte 3, de cinco a vinte anos.</strong> Modelo de neg&oacute;cio, licen&ccedil;a social, demografia, clima. Praticamente vazio: apenas 1,2% das empresas planejam al&eacute;m de dez anos.<sup>3</sup> <span class="sel sel-v">Verificado</span></li>
+</ul>
+
+<h3>Por que virou pauta agora</h3>
+<p>Tr&ecirc;s empurr&otilde;es simult&acirc;neos. O primeiro &eacute; de incerteza: 2025 registrou um salto expressivo nas men&ccedil;&otilde;es de incerteza por executivos, e o tema seguiu em 2026.<sup>5</sup> O segundo &eacute; institucional: a Uni&atilde;o Europeia publica desde 2020 um relat&oacute;rio anual de prospectiva estrat&eacute;gica, com centro de compet&ecirc;ncia pr&oacute;prio dentro do seu bra&ccedil;o cient&iacute;fico, e o governo brasileiro entregou em outubro de 2025 a Estrat&eacute;gia Brasil 2050, seu primeiro instrumento de planejamento de longo prazo participativo.<sup>11, 12, 26</sup> O terceiro &eacute; normativo: existe desde 2021 uma norma internacional que descreve como estruturar intelig&ecirc;ncia estrat&eacute;gica dentro do sistema de gest&atilde;o da inova&ccedil;&atilde;o.<sup>9</sup> <span class="sel sel-v">Verificado</span></p>
+</section>
+
+<section id="p-ecos" class="pane">
+<h2>O ecossistema: quem faz, quem compra, quem forma, quem legitima</h2>
+<p>O campo de futuros n&atilde;o tem conselho profissional, registro obrigat&oacute;rio nem reserva de mercado. Qualquer pessoa pode se chamar futurista amanh&atilde;. Isso explica tanto a vitalidade quanto a bagun&ccedil;a do setor: a barreira de entrada &eacute; reputacional, n&atilde;o legal. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+
+<table>
+<thead><tr><th>Camada</th><th>Quem est&aacute; nela</th><th>O que faz de fato</th><th>Lastro</th></tr></thead>
+<tbody>
+<tr><td>Normalizador</td><td>ISO, com a norma 56006 de 2021 dentro da fam&iacute;lia 56000 de gest&atilde;o da inova&ccedil;&atilde;o</td><td>Descreve o ciclo de intelig&ecirc;ncia estrat&eacute;gica, do dado bruto &agrave; intelig&ecirc;ncia para a alta dire&ccedil;&atilde;o, e serve inclusive para escrever especifica&ccedil;&atilde;o de compra quando a empresa terceiriza<sup>9, 10</sup></td><td><span class="sel sel-v">Verificado</span></td></tr>
+<tr><td>Institui&ccedil;&atilde;o p&uacute;blica supranacional</td><td>Comiss&atilde;o Europeia e seu centro de compet&ecirc;ncia em prospectiva<sup>11, 12</sup></td><td>Publica relat&oacute;rio anual de prospectiva estrat&eacute;gica desde 2020; a edi&ccedil;&atilde;o de 2025 trata de resili&ecirc;ncia<sup>11</sup></td><td><span class="sel sel-v">Verificado</span></td></tr>
+<tr><td>Estado brasileiro</td><td>Secretaria Nacional de Planejamento do Minist&eacute;rio do Planejamento e Or&ccedil;amento; Ipea; CGEE, ligado ao Minist&eacute;rio da Ci&ecirc;ncia e Tecnologia<sup>26, 27, 29, 60</sup></td><td>Estrat&eacute;gia Brasil 2050, cen&aacute;rios Brasil 2035, estudos prospectivos de ci&ecirc;ncia e tecnologia</td><td><span class="sel sel-v">Verificado</span></td></tr>
+<tr><td>Rede global de pesquisa</td><td>The Millennium Project, fundado em 1996, com 72 n&oacute;s no mundo e n&oacute; brasileiro formado em 2000<sup>24, 25</sup></td><td>Publica o State of the Future, na vers&atilde;o 20, com cerca de 500 p&aacute;ginas<sup>25</sup></td><td><span class="sel sel-v">Verificado</span></td></tr>
+<tr><td>Associa&ccedil;&atilde;o profissional</td><td>Association of Professional Futurists, fundada em 2002, com mais de 600 membros em 60 pa&iacute;ses<sup>23</sup></td><td>Comunidade, padr&otilde;es informais de pr&aacute;tica, premia&ccedil;&atilde;o. N&atilde;o certifica nem habilita<sup>23</sup></td><td><span class="sel sel-v">Verificado</span></td></tr>
+<tr><td>Think tank independente</td><td>Copenhagen Institute for Futures Studies, sem fins lucrativos, fundado em 1969 por Thorkil Kristensen, ex-secret&aacute;rio-geral da OCDE<sup>21, 22</sup>; Institute for the Future</td><td>Pesquisa de longo prazo, cen&aacute;rios, cursos, think tanks multiparte<sup>21</sup></td><td><span class="sel sel-v">Verificado</span></td></tr>
+<tr><td>Consultoria de estrat&eacute;gia</td><td>BCG e seu instituto de pesquisa; Monitor Deloitte e o Center for the Long View, criado em 2015 na Alemanha<sup>5, 6, 15</sup></td><td>Cen&aacute;rios ligados a decis&atilde;o de portf&oacute;lio e a pesquisa pr&oacute;pria que sustenta a venda</td><td><span class="sel sel-v">Verificado</span></td></tr>
+<tr><td>Casa de pesquisa por assinatura</td><td>Gartner, com a metodologia de ciclo de expectativa; Forrester<sup>56, 57</sup></td><td>Vende acesso cont&iacute;nuo a analista e a mapas de maturidade tecnol&oacute;gica</td><td><span class="sel sel-v">Verificado</span></td></tr>
+<tr><td>Boutique de futuros</td><td>Future Today Strategy Group; 4CF; Event Horizon Strategies, de Peter Scoblic<sup>8, 13, 17</sup></td><td>Projeto fechado, oficina, publica&ccedil;&atilde;o de marca</td><td><span class="sel sel-v">Verificado</span></td></tr>
+<tr><td>Plataforma de software</td><td>ITONICS e similares, reconhecida pela Gartner em quatro categorias de inova&ccedil;&atilde;o no ciclo de 2024<sup>20</sup></td><td>Radar de sinais, gest&atilde;o de tend&ecirc;ncias e liga&ccedil;&atilde;o com portf&oacute;lio</td><td><span class="sel sel-v">Verificado</span></td></tr>
+<tr><td>Academia</td><td>Universidade de Houston, escola de refer&ecirc;ncia na forma&ccedil;&atilde;o de futuristas; N&uacute;cleo de Estudos do Futuro da PUC-SP<sup>48, 49</sup></td><td>Forma o quadro t&eacute;cnico e d&aacute; lastro conceitual</td><td><span class="sel sel-v">Verificado</span></td></tr>
+<tr><td>Comprador corporativo</td><td>Diretoria de estrat&eacute;gia, de inova&ccedil;&atilde;o, de riscos, de sustentabilidade e o pr&oacute;prio conselho</td><td>Paga a conta. Em 42% das grandes empresas com or&ccedil;amento pr&oacute;prio para a fun&ccedil;&atilde;o<sup>3</sup></td><td><span class="sel sel-v">Verificado</span></td></tr>
+</tbody>
+</table>
+
+<h3>A cadeia de valor, do sinal ao dinheiro</h3>
+<p>O valor caminha por seis elos. Quem captura margem &eacute; sempre quem est&aacute; mais perto do elo 5. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+<ol>
+<li><strong>Fonte bruta.</strong> Patente, artigo, edital, minuta de norma, balan&ccedil;o, vaga de emprego de concorrente, reclama&ccedil;&atilde;o de cliente. Custo pr&oacute;ximo de zero, valor pr&oacute;ximo de zero.</li>
+<li><strong>Cura&ccedil;&atilde;o.</strong> Algu&eacute;m separa o que interessa. Aqui entra a plataforma de radar e o est&aacute;gi&aacute;rio bem treinado.<sup>20</sup></li>
+<li><strong>S&iacute;ntese.</strong> Sinal vira tend&ecirc;ncia nomeada, com for&ccedil;a motriz e incerteza cr&iacute;tica. Aqui entra a consultoria e a casa de pesquisa.</li>
+<li><strong>Cen&aacute;rio.</strong> Tend&ecirc;ncias viram mundos internamente coerentes. &Eacute; o produto mais vendido e o mais desperdi&ccedil;ado.</li>
+<li><strong>Implica&ccedil;&atilde;o e decis&atilde;o.</strong> O cen&aacute;rio vira: se o mundo B vier, a nossa margem cai X e a resposta &eacute; Y, e quem decide &eacute; fulano. &Eacute; o elo escasso.</li>
+<li><strong>Aposta monitorada.</strong> Dinheiro alocado com gatilho definido. &Eacute; onde o retorno da literatura aparece.<sup>1</sup></li>
+</ol>
+<div class="alerta">Observa&ccedil;&atilde;o honesta: quase toda a ind&uacute;stria de foresight fatura nos elos 3 e 4, e quase todo o valor para o cliente est&aacute; nos elos 5 e 6. Esse desalinhamento &eacute; a causa raiz da m&aacute; fama do campo, e explica o la&ccedil;o vicioso descrito na aba Sist&ecirc;mica.</div>
+</section>
+
+<section id="p-proc" class="pane">
+<h2>Como a m&aacute;quina roda por dentro</h2>
+<p>Existe uma norma internacional que descreve isso sem misticismo. A ISO 56006, de 2021, trata da gest&atilde;o da intelig&ecirc;ncia estrat&eacute;gica dentro do sistema de gest&atilde;o da inova&ccedil;&atilde;o e organiza o trabalho em uma escada de quatro degraus: dado bruto, informa&ccedil;&atilde;o organizada, conhecimento interpretado e intelig&ecirc;ncia acion&aacute;vel para quem decide.<sup>9, 10</sup> A maior parte das &aacute;reas de futuros no Brasil para no segundo degrau e chama isso de relat&oacute;rio. <span class="sel sel-v">Verificado</span></p>
+
+<h3>Os quatro degraus, com exemplo real</h3>
+<table>
+<thead><tr><th>Degrau</th><th>O que &eacute;</th><th>Exemplo no setor de sa&uacute;de suplementar</th><th>Quem faz</th></tr></thead>
+<tbody>
+<tr><td>1. Dado</td><td>Fato solto, sem contexto</td><td>A ANS publicou uma consulta p&uacute;blica sobre rol de procedimentos</td><td>Analista j&uacute;nior, rob&ocirc; de coleta, plataforma de radar<sup>20</sup></td></tr>
+<tr><td>2. Informa&ccedil;&atilde;o</td><td>Dado organizado e datado</td><td>&Eacute; a terceira consulta em 18 meses puxando na mesma dire&ccedil;&atilde;o, e tr&ecirc;s operadoras grandes j&aacute; se manifestaram a favor</td><td>Analista pleno</td></tr>
+<tr><td>3. Conhecimento</td><td>Informa&ccedil;&atilde;o interpretada contra o neg&oacute;cio</td><td>Se essa dire&ccedil;&atilde;o virar norma, a nossa sinistralidade sobe entre 2 e 4 pontos e o produto X perde margem</td><td>Especialista com acesso a n&uacute;mero interno</td></tr>
+<tr><td>4. Intelig&ecirc;ncia</td><td>Conhecimento com recomenda&ccedil;&atilde;o, dono e prazo</td><td>Recomenda&ccedil;&atilde;o: reprecificar X at&eacute; setembro ou aceitar a perda. Dono: diretor comercial. Gatilho: publica&ccedil;&atilde;o da minuta</td><td>Lideran&ccedil;a da fun&ccedil;&atilde;o, junto com o dono da decis&atilde;o</td></tr>
+</tbody>
+</table>
+<div class="alerta">O salto do degrau 3 para o 4 &eacute; o &uacute;nico que a &aacute;rea de futuros n&atilde;o consegue dar sozinha. Ele exige que algu&eacute;m com poder de assinatura esteja na sala. Toda vez que a &aacute;rea tenta subir esse degrau por conta pr&oacute;pria, ela produz recomenda&ccedil;&atilde;o &oacute;rf&atilde;.</div>
+
+<h3>O ciclo anual em quatro tempos</h3>
+<p>A literatura descreve o processo maduro como perceber, prospectar e apostar.<sup>1, 2</sup> Na pr&aacute;tica de uma empresa brasileira de porte m&eacute;dio ou grande, isso vira um calend&aacute;rio com quatro momentos fixos. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+<div class="g2">
+<div class="card"><strong>Tempo 1, cont&iacute;nuo: varredura</strong><br>Quinzenal. Duas a quatro pessoas, uma a duas horas cada. Sa&iacute;da: cinco a dez sinais novos catalogados, com fonte e data. Custo baixo. O erro cl&aacute;ssico &eacute; catalogar not&iacute;cia em vez de sinal: not&iacute;cia &eacute; o que j&aacute; aconteceu, sinal &eacute; o que sugere mudan&ccedil;a de dire&ccedil;&atilde;o.</div>
+<div class="card"><strong>Tempo 2, mensal: leitura de implica&ccedil;&atilde;o</strong><br>Duas horas com estrat&eacute;gia, inova&ccedil;&atilde;o, riscos e um convidado da opera&ccedil;&atilde;o. Cada sinal relevante recebe uma frase de implica&ccedil;&atilde;o e um n&iacute;vel de urg&ecirc;ncia. Sa&iacute;da: lista curta de temas quentes. O erro cl&aacute;ssico &eacute; virar apresenta&ccedil;&atilde;o em vez de discuss&atilde;o.</div>
+<div class="card"><strong>Tempo 3, anual: cen&aacute;rios e teste de estrat&eacute;gia</strong><br>De seis a dez semanas, uma vez por ano, encaixado <em>antes</em> do ciclo or&ccedil;ament&aacute;rio. Constr&oacute;i tr&ecirc;s ou quatro mundos e passa a estrat&eacute;gia vigente por dentro de cada um. &Eacute; a t&eacute;cnica de t&uacute;nel de vento: n&atilde;o se pergunta qual mundo vem, pergunta-se onde o plano atual quebra.<sup>8</sup></div>
+<div class="card"><strong>Tempo 4, trimestral: revis&atilde;o da carteira</strong><br>Uma hora por trimestre com a diretoria. Cada aposta tem indicador de gatilho. A revis&atilde;o decide: manter, aumentar ou matar. &Eacute; a &uacute;nica reuni&atilde;o do ciclo em que dinheiro se move, e por isso &eacute; a que sustenta a fun&ccedil;&atilde;o quando o or&ccedil;amento aperta.</div>
+</div>
+
+<h3>Os m&eacute;todos que realmente se usam</h3>
+<p>O campo tem dezenas de t&eacute;cnicas catalogadas. Na pr&aacute;tica corporativa, seis carregam quase todo o peso.</p>
+<table>
+<thead><tr><th>M&eacute;todo</th><th>Pergunta que responde</th><th>Esfor&ccedil;o t&iacute;pico</th><th>Erro mais comum</th></tr></thead>
+<tbody>
+<tr><td>Varredura de horizonte</td><td>O que est&aacute; se mexendo na borda do nosso mundo?</td><td>Cont&iacute;nuo, baixo</td><td>Confundir volume com cobertura. Mil sinais mal curados valem menos que trinta bem escolhidos</td></tr>
+<tr><td>An&aacute;lise de tend&ecirc;ncias</td><td>Que movimentos t&ecirc;m for&ccedil;a e dura&ccedil;&atilde;o?</td><td>Semanas</td><td>Nomear tend&ecirc;ncia bonita sem for&ccedil;a motriz por tr&aacute;s. Se voc&ecirc; n&atilde;o sabe o motor, &eacute; moda</td></tr>
+<tr><td>Cen&aacute;rios</td><td>Que mundos coerentes s&atilde;o poss&iacute;veis?</td><td>6 a 10 semanas</td><td>Produzir quatro mundos em que tr&ecirc;s s&atilde;o &oacute;bvios e um &eacute; apocalipse. Cen&aacute;rio bom &eacute; o que muda decis&atilde;o</td></tr>
+<tr><td>T&uacute;nel de vento</td><td>Onde a nossa estrat&eacute;gia atual quebra?</td><td>1 a 2 semanas, ap&oacute;s os cen&aacute;rios</td><td>Pular esta etapa. &Eacute; a mais barata e a que mais gera decis&atilde;o<sup>8</sup></td></tr>
+<tr><td>Mapa de rota tecnol&oacute;gica</td><td>Em que ordem precisamos construir capacidade?</td><td>4 a 8 semanas</td><td>Virar cronograma de TI e perder a liga&ccedil;&atilde;o com o mercado</td></tr>
+<tr><td>Consulta estruturada a especialistas</td><td>Onde o conhecimento disperso converge?</td><td>4 a 12 semanas</td><td>Chamar sempre os mesmos e confundir consenso com verdade</td></tr>
+</tbody>
+</table>
+<p class="note">Ferramentas de radar e gest&atilde;o de tend&ecirc;ncias sustentam os dois primeiros m&eacute;todos e j&aacute; aparecem em an&aacute;lises de mercado de inova&ccedil;&atilde;o.<sup>20</sup> Nenhuma delas resolve o degrau 4.</p>
+
+<h3>Como o valor entra, cresce e sai</h3>
+<p>Do lado de quem vende, a receita entra por projeto fechado, por assinatura de pesquisa, por oficina e por reten&ccedil;&atilde;o de conselho. O modelo de assinatura &eacute; o mais est&aacute;vel e o mais amea&ccedil;ado: &eacute; exatamente o formato de relat&oacute;rio anual que a Future Today Strategy Group aposentou em 2026.<sup>17, 18</sup> Do lado de quem compra, o valor sai em tr&ecirc;s formas: risco evitado, op&ccedil;&atilde;o comprada barata antes de o mercado precificar, e velocidade de decis&atilde;o quando o choque chega. As duas primeiras s&atilde;o dif&iacute;ceis de provar; a terceira &eacute; med&iacute;vel e quase ningu&eacute;m mede. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+</section>
+
+<section id="p-montar" class="pane">
+<h2>Montar a fun&ccedil;&atilde;o do zero, em doze meses</h2>
+<p>O caminho abaixo assume uma empresa de m&eacute;dio ou grande porte, sem &aacute;rea formal de futuros, com um patrocinador de n&iacute;vel diretoria disposto a defender a agenda. Sem esse patrocinador, n&atilde;o comece: monte primeiro o patroc&iacute;nio. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+
+<h3>Fase 0, semanas 1 a 4: descobrir o que j&aacute; existe</h3>
+<ul>
+<li>Mapeie quem j&aacute; faz futuro sem chamar assim: intelig&ecirc;ncia de mercado, riscos, regulat&oacute;rio, pesquisa e desenvolvimento, sustentabilidade. Quase sempre h&aacute; tr&ecirc;s ou quatro focos dispersos e nenhum conversa.</li>
+<li>Levante as tr&ecirc;s &uacute;ltimas surpresas estrat&eacute;gicas da empresa e reconstitua: o sinal existia? quem viu? por que n&atilde;o virou decis&atilde;o? Esse exerc&iacute;cio &eacute; a melhor pe&ccedil;a de venda interna que existe, porque usa a dor da pr&oacute;pria casa.</li>
+<li>Descubra a data exata em que o or&ccedil;amento do ano seguinte come&ccedil;a a ser montado. Todo o calend&aacute;rio da fun&ccedil;&atilde;o vai ser ancorado nessa data.</li>
+</ul>
+<p class="note">Entreg&aacute;vel da fase: um documento de tr&ecirc;s p&aacute;ginas com o diagn&oacute;stico e a proposta de mandato. N&atilde;o fa&ccedil;a cen&aacute;rio nesta fase.</p>
+
+<h3>Fase 1, meses 2 e 3: c&eacute;lula m&iacute;nima e primeiro radar</h3>
+<ul>
+<li><strong>Equipe m&iacute;nima vi&aacute;vel:</strong> uma pessoa dedicada em tempo integral, com senioridade suficiente para sentar com diretor, mais tr&ecirc;s a cinco pessoas em regime parcial vindas de &aacute;reas diferentes. Cerca de 42% das grandes empresas t&ecirc;m unidade dedicada; 36% penduram a fun&ccedil;&atilde;o em quem j&aacute; tem outro cargo, e &eacute; nesse segundo grupo que a fun&ccedil;&atilde;o morre primeiro.<sup>3</sup> <span class="sel sel-v">Verificado</span></li>
+<li>Defina de cinco a sete dom&iacute;nios de vigil&acirc;ncia, usando uma grade estruturada como a STEEPLEDI, e d&ecirc; um dono a cada dom&iacute;nio.</li>
+<li>Comece o radar com planilha. S&oacute; compre plataforma no m&ecirc;s nove, quando j&aacute; houver volume que justifique. Comprar software antes de ter rotina &eacute; o modo mais r&aacute;pido de gastar or&ccedil;amento e n&atilde;o ter nada para mostrar.</li>
+</ul>
+
+<h3>Fase 2, meses 4 a 6: primeiro ciclo de cen&aacute;rios</h3>
+<ul>
+<li>Escolha uma pergunta focal estreita e dolorosa, do tipo: como ser&aacute; a nossa margem no produto X em 2033. Pergunta larga produz cen&aacute;rio bonito e in&uacute;til.</li>
+<li>Tr&ecirc;s ou quatro mundos, nunca mais. Cada mundo com nome curto, uma p&aacute;gina de descri&ccedil;&atilde;o e tr&ecirc;s indicadores observ&aacute;veis que dizem se estamos caminhando para ele.</li>
+<li>Rode o t&uacute;nel de vento com a diretoria: passe a estrat&eacute;gia vigente pelos quatro mundos e anote onde ela quebra.<sup>8</sup> Essa sess&atilde;o &eacute; o produto real, n&atilde;o o documento.</li>
+</ul>
+
+<h3>Fase 3, meses 7 a 9: acoplar ao or&ccedil;amento</h3>
+<ul>
+<li>Encaixe uma sess&atilde;o obrigat&oacute;ria de implica&ccedil;&otilde;es 30 dias antes do in&iacute;cio do ciclo or&ccedil;ament&aacute;rio. Sem data no calend&aacute;rio corporativo, n&atilde;o existe.</li>
+<li>Exija que cada &aacute;rea responda por escrito a uma &uacute;nica pergunta: que premissa do seu plano falha no mundo B, e o que voc&ecirc; faria. Uma p&aacute;gina por &aacute;rea.</li>
+<li>Este &eacute; o ponto de maior mortalidade do projeto. Se a fun&ccedil;&atilde;o n&atilde;o entrar no or&ccedil;amento at&eacute; aqui, ela vira comunica&ccedil;&atilde;o interna e some no primeiro corte.</li>
+</ul>
+
+<h3>Fase 4, meses 10 a 12: carteira de apostas</h3>
+<ul>
+<li>Reserve entre 1% e 3% do or&ccedil;amento de investimento como verba de op&ccedil;&atilde;o, separada do or&ccedil;amento de inova&ccedil;&atilde;o corrente. Verba misturada &eacute; verba capturada.</li>
+<li>Cada aposta recebe: diretor dono, tese em uma frase, valor, gatilho num&eacute;rico de refor&ccedil;o e gatilho num&eacute;rico de abandono. Aposta sem crit&eacute;rio de abandono nunca morre e envenena a carteira.</li>
+<li>Publique a carteira. Visibilidade &eacute; o que transforma a fun&ccedil;&atilde;o de custo em ativo aos olhos do conselho.</li>
+</ul>
+
+<h3>Ordem de grandeza de custo</h3>
+<table>
+<thead><tr><th>Item</th><th>Natureza</th><th>Observa&ccedil;&atilde;o</th></tr></thead>
+<tbody>
+<tr><td>Pessoa dedicada, senioridade de ger&ecirc;ncia</td><td>O maior item isolado</td><td>N&atilde;o economize aqui. Foresight conduzido por j&uacute;nior n&atilde;o entra na sala onde se decide</td></tr>
+<tr><td>Rede parcial de 3 a 5 pessoas</td><td>Custo de oportunidade, n&atilde;o de caixa</td><td>Precisa estar no acordo de metas delas, sen&atilde;o some</td></tr>
+<tr><td>Consultoria externa, primeiro ciclo</td><td>Projeto fechado</td><td>Compre m&eacute;todo e facilita&ccedil;&atilde;o, n&atilde;o compre a conclus&atilde;o. A conclus&atilde;o precisa ser da casa</td></tr>
+<tr><td>Assinatura de pesquisa</td><td>Recorrente</td><td>&Uacute;til no ano 1, question&aacute;vel no ano 3. Reavalie sempre<sup>17, 18</sup></td></tr>
+<tr><td>Plataforma de radar</td><td>Recorrente por usu&aacute;rio</td><td>Compre s&oacute; depois de ter rotina<sup>20</sup></td></tr>
+<tr><td>Verba de op&ccedil;&atilde;o</td><td>1% a 3% do investimento</td><td>&Eacute; o item que converte a fun&ccedil;&atilde;o em retorno<sup>1</sup></td></tr>
+</tbody>
+</table>
+
+<div class="alerta"><strong>Os cinco erros que matam a montagem.</strong> (1) Come&ccedil;ar pelo cen&aacute;rio bonito em vez do diagn&oacute;stico das surpresas passadas. (2) Comprar software antes de ter rotina. (3) Deixar a fun&ccedil;&atilde;o fora do calend&aacute;rio or&ccedil;ament&aacute;rio. (4) Contratar consultoria para entregar a conclus&atilde;o em vez do m&eacute;todo. (5) N&atilde;o ter verba de op&ccedil;&atilde;o, o que reduz tudo a opini&atilde;o bem formatada. <span class="sel sel-i">Infer&ecirc;ncia</span></div>
+</section>
+
+<section id="p-gov" class="pane">
+<h2>Governan&ccedil;a: quem decide, quando, com que dinheiro</h2>
+<p>Foresight sem governan&ccedil;a &eacute; jornalismo interno. A pesquisa que sustenta o retorno do campo separa as empresas justamente pela capacidade de converter percep&ccedil;&atilde;o em aposta, e o grupo com pior desempenho, que encolheu 6% em valor de mercado, &eacute; o que percebe muito e decide pouco.<sup>1</sup> <span class="sel sel-v">Verificado</span></p>
+
+<h3>Matriz de responsabilidade</h3>
+<table>
+<thead><tr><th>Atividade</th><th>Executa</th><th>Aprova</th><th>&Eacute; consultado</th><th>&Eacute; informado</th></tr></thead>
+<tbody>
+<tr><td>Varredura quinzenal</td><td>C&eacute;lula de futuros</td><td>Lideran&ccedil;a da fun&ccedil;&atilde;o</td><td>Donos de dom&iacute;nio</td><td>Comit&ecirc; mensal</td></tr>
+<tr><td>Leitura mensal de implica&ccedil;&otilde;es</td><td>Lideran&ccedil;a da fun&ccedil;&atilde;o</td><td>Diretor patrocinador</td><td>Estrat&eacute;gia, riscos, inova&ccedil;&atilde;o</td><td>Diretoria</td></tr>
+<tr><td>Ciclo anual de cen&aacute;rios</td><td>C&eacute;lula mais apoio externo</td><td>Comit&ecirc; executivo</td><td>Todas as diretorias</td><td>Conselho</td></tr>
+<tr><td>T&uacute;nel de vento da estrat&eacute;gia</td><td>Estrat&eacute;gia com a c&eacute;lula</td><td>Presid&ecirc;ncia</td><td>Diretoria completa</td><td>Conselho</td></tr>
+<tr><td>Aloca&ccedil;&atilde;o da verba de op&ccedil;&atilde;o</td><td>Diretor dono da aposta</td><td>Comit&ecirc; executivo</td><td>Financeiro</td><td>Conselho</td></tr>
+<tr><td>Matar uma aposta</td><td>Diretor dono</td><td>Comit&ecirc; executivo</td><td>Lideran&ccedil;a da fun&ccedil;&atilde;o</td><td>Diretoria</td></tr>
+</tbody>
+</table>
+<p class="note">Regra pr&aacute;tica: a fun&ccedil;&atilde;o de futuros nunca aprova nada sozinha. Ela &eacute; dona do processo, n&atilde;o da decis&atilde;o. Quando ela vira dona da decis&atilde;o, a empresa passa a trat&aacute;-la como concorrente das diretorias de linha e ela perde acesso. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+
+<h3>Onde a fun&ccedil;&atilde;o deve ficar no organograma</h3>
+<table>
+<thead><tr><th>Local</th><th>Vantagem</th><th>Risco</th></tr></thead>
+<tbody>
+<tr><td>Sob estrat&eacute;gia</td><td>Acesso direto ao ciclo de planejamento e ao or&ccedil;amento</td><td>O horizonte encolhe para 12 meses e vira insumo de meta, o padr&atilde;o dos 81%<sup>4</sup></td></tr>
+<tr><td>Sob inova&ccedil;&atilde;o</td><td>Liga&ccedil;&atilde;o natural com experimenta&ccedil;&atilde;o e portf&oacute;lio</td><td>Vira vitrine de tecnologia e perde as dimens&otilde;es social, regulat&oacute;ria e demogr&aacute;fica</td></tr>
+<tr><td>Sob riscos</td><td>Disciplina de gatilho e de monitoramento j&aacute; existe</td><td>Tudo vira amea&ccedil;a; a agenda de oportunidade desaparece</td></tr>
+<tr><td>Direto na presid&ecirc;ncia</td><td>Autoridade e horizonte preservados</td><td>Depende de uma pessoa. Troca de presidente mata a fun&ccedil;&atilde;o</td></tr>
+</tbody>
+</table>
+<p>N&atilde;o h&aacute; posi&ccedil;&atilde;o &oacute;tima. A configura&ccedil;&atilde;o mais resistente &eacute; reporte formal a estrat&eacute;gia, com assento garantido em riscos e um item fixo na pauta do conselho duas vezes por ano. O item fixo no conselho &eacute; o que protege a fun&ccedil;&atilde;o da troca de executivo. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+
+<h3>M&eacute;tricas que funcionam e m&eacute;tricas de vaidade</h3>
+<div class="g2">
+<div class="card"><strong>Medir isto</strong><br>Decis&otilde;es tomadas por causa de um sinal, com data e dono. Tempo entre detec&ccedil;&atilde;o do sinal e decis&atilde;o. Percentual de premissas estrat&eacute;gicas com indicador de monitoramento ativo. N&uacute;mero de apostas vivas com gatilho definido. Apostas mortas por crit&eacute;rio de abandono, e n&atilde;o por esquecimento. Acerto retrospectivo anual: dos sinais marcados como quentes h&aacute; 24 meses, quantos se materializaram.</div>
+<div class="card"><strong>N&atilde;o medir isto</strong><br>N&uacute;mero de relat&oacute;rios publicados. N&uacute;mero de sinais catalogados. Participantes em oficina. Satisfa&ccedil;&atilde;o com a apresenta&ccedil;&atilde;o. Downloads. Todas medem atividade da &aacute;rea, nenhuma mede efeito na empresa, e todas s&atilde;o exatamente as que aparecem em relat&oacute;rio de fim de ano quando a fun&ccedil;&atilde;o est&aacute; morrendo.</div>
+</div>
+
+<h3>Gatilhos: o mecanismo que dispensa convencimento</h3>
+<p>Gatilho &eacute; um n&uacute;mero acordado antes que, quando cruzado, obriga uma reuni&atilde;o de decis&atilde;o em prazo definido. Exemplo: se a participa&ccedil;&atilde;o do canal digital passar de 18%, o comit&ecirc; executivo re&uacute;ne em 30 dias para decidir sobre a rede f&iacute;sica. O valor do gatilho n&atilde;o est&aacute; na previs&atilde;o, est&aacute; em ter combinado a resposta enquanto ningu&eacute;m estava sob press&atilde;o. Sem gatilho, cada mudan&ccedil;a de mundo exige uma nova rodada de convencimento pol&iacute;tico, e a empresa chega tarde por constru&ccedil;&atilde;o. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+
+<h3>Como a fun&ccedil;&atilde;o morre, e como evitar</h3>
+<ul>
+<li><strong>Morte por troca de patrocinador.</strong> Ant&iacute;doto: item fixo na pauta do conselho e mandato escrito, n&atilde;o verbal.</li>
+<li><strong>Morte por corte de custo.</strong> Ant&iacute;doto: mostrar decis&atilde;o, n&atilde;o entreg&aacute;vel. &Aacute;rea que lista relat&oacute;rios &eacute; cortada; &aacute;rea que lista decis&otilde;es tomadas e apostas com retorno n&atilde;o &eacute;.</li>
+<li><strong>Morte por irrelev&acirc;ncia.</strong> Ant&iacute;doto: pergunta focal estreita e dolorosa a cada ciclo.</li>
+<li><strong>Morte por captura do curto prazo.</strong> Ant&iacute;doto: separar formalmente o produto de horizonte 1 do de horizonte 3, com reuni&otilde;es distintas.</li>
+<li><strong>Morte por desregulamenta&ccedil;&atilde;o.</strong> Quem sustentou a fun&ccedil;&atilde;o s&oacute; no argumento de conformidade clim&aacute;tica perdeu o ch&atilde;o quando a Resolu&ccedil;&atilde;o CVM 244 tornou facultativo, em maio de 2026, o que a Resolu&ccedil;&atilde;o CVM 193 havia tornado obrigat&oacute;rio.<sup>37, 38, 63</sup> Ant&iacute;doto: nunca ancorar a justificativa em uma &uacute;nica norma. <span class="sel sel-v">Verificado</span></li>
+</ul>
+</section>
+
+<section id="p-prod" class="pane">
+<h2>O que o mercado vende de fato</h2>
+<p>Existem sete produtos, e s&oacute; tr&ecirc;s deles costumam sobreviver ao teste de utilidade dois anos depois da compra. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+
+<table>
+<thead><tr><th>Produto</th><th>O que &eacute;</th><th>Quem vende</th><th>Vale a pena?</th></tr></thead>
+<tbody>
+<tr><td>Relat&oacute;rio anual de tend&ecirc;ncias</td><td>Compilado de 50 a 200 tend&ecirc;ncias, publica&ccedil;&atilde;o de marca, gratuito ou de baixo custo</td><td>Boutiques, ag&ecirc;ncias, consultorias<sup>17</sup></td><td><strong>Em decl&iacute;nio.</strong> A pr&oacute;pria criadora do formato mais famoso o aposentou em mar&ccedil;o de 2026, alegando que o compilado deixou de ser &uacute;til<sup>17, 18</sup></td></tr>
+<tr><td>Assinatura de pesquisa e analista</td><td>Acesso cont&iacute;nuo a analista, notas, mapas de maturidade tecnol&oacute;gica</td><td>Gartner, Forrester e similares<sup>56, 57</sup></td><td><strong>Sim, com prazo.</strong> Alto valor no ano 1, retorno decrescente a partir do ano 3, quando a equipe interna j&aacute; deveria produzir a mesma leitura</td></tr>
+<tr><td>Projeto de cen&aacute;rios sob medida</td><td>6 a 12 semanas, entrevistas, oficinas, tr&ecirc;s a quatro mundos, teste da estrat&eacute;gia</td><td>BCG, Monitor Deloitte com seu centro de longo prazo, boutiques<sup>5, 15</sup></td><td><strong>Sim, uma vez.</strong> Compre para aprender o m&eacute;todo, n&atilde;o para receber a conclus&atilde;o. Na segunda vez, fa&ccedil;a por dentro com facilita&ccedil;&atilde;o leve</td></tr>
+<tr><td>Oficina de letramento em futuros</td><td>1 a 3 dias, formar vocabul&aacute;rio e postura na lideran&ccedil;a</td><td>Institutos, academia, consultorias<sup>21, 48</sup></td><td><strong>Sim, como pr&eacute;-requisito.</strong> Barato e desbloqueia as demais compras. Sem vocabul&aacute;rio comum, cen&aacute;rio vira debate de opini&atilde;o</td></tr>
+<tr><td>Plataforma de radar e gest&atilde;o de tend&ecirc;ncias</td><td>Software para capturar sinal, classificar e ligar ao portf&oacute;lio</td><td>ITONICS e concorrentes, reconhecidos em an&aacute;lises de mercado de inova&ccedil;&atilde;o<sup>20</sup></td><td><strong>Depois da rotina.</strong> Comprado antes de existir h&aacute;bito de varredura, vira base de dados vazia com licen&ccedil;a paga</td></tr>
+<tr><td>Reten&ccedil;&atilde;o de conselheiro</td><td>Um especialista s&ecirc;nior dispon&iacute;vel algumas horas por m&ecirc;s</td><td>Boutiques e independentes<sup>13</sup></td><td><strong>Subestimado.</strong> Barato, alta densidade, sem entreg&aacute;vel para encher. &Eacute; o formato de melhor rela&ccedil;&atilde;o entre custo e efeito para empresa que j&aacute; tem c&eacute;lula interna</td></tr>
+<tr><td>Palestra de futurista</td><td>60 a 90 minutos em conven&ccedil;&atilde;o ou reuni&atilde;o de lideran&ccedil;a</td><td>Circuito de palestrantes</td><td><strong>N&atilde;o como estrat&eacute;gia.</strong> Serve para abrir conversa. Nunca confunda energia de plateia com capacidade instalada</td></tr>
+</tbody>
+</table>
+
+<h3>Como comprar sem ser enganado</h3>
+<ul>
+<li><strong>Pe&ccedil;a o caso em que o cen&aacute;rio mudou uma decis&atilde;o de or&ccedil;amento.</strong> N&atilde;o pe&ccedil;a portf&oacute;lio de clientes, pe&ccedil;a a decis&atilde;o. Quem n&atilde;o tem esse caso vive no elo 4 da cadeia de valor e nunca chegou ao 5.</li>
+<li><strong>Exija transfer&ecirc;ncia de m&eacute;todo no contrato.</strong> Ao fim do projeto, a sua equipe precisa saber refazer sozinha. Escreva isso como entreg&aacute;vel, com nome de quem ser&aacute; treinado.</li>
+<li><strong>Rejeite cen&aacute;rio sem indicador observ&aacute;vel.</strong> Mundo sem sinal de aproxima&ccedil;&atilde;o &eacute; fic&ccedil;&atilde;o corporativa. Cada mundo precisa de tr&ecirc;s indicadores que voc&ecirc; consiga acompanhar sem contratar ningu&eacute;m.</li>
+<li><strong>Use a norma como especifica&ccedil;&atilde;o de compra.</strong> A ISO 56006 descreve o ciclo esperado e serve de linguagem neutra no edital, inclusive quando a empresa terceiriza a fun&ccedil;&atilde;o.<sup>9, 10</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Desconfie de quem promete acerto.</strong> A promessa correta &eacute; prepara&ccedil;&atilde;o e velocidade de decis&atilde;o, n&atilde;o pontaria.</li>
+</ul>
+</section>
+
+<section id="p-normas" class="pane">
+<h2>O que existe de norma, e o que ela obriga de verdade</h2>
+<p>Resposta curta: quase nada obriga. O campo &eacute; regido por normas volunt&aacute;rias, e o &uacute;nico empurr&atilde;o com for&ccedil;a de lei que o Brasil chegou a ter foi desligado em 2026. Saber disso &eacute; o que separa a montagem honesta de uma fun&ccedil;&atilde;o de futuros da venda de medo regulat&oacute;rio. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+
+<table>
+<thead><tr><th>Instrumento</th><th>O que trata</th><th>For&ccedil;a</th><th>Situa&ccedil;&atilde;o</th></tr></thead>
+<tbody>
+<tr><td>ISO 56006, de 2021</td><td>Gest&atilde;o da intelig&ecirc;ncia estrat&eacute;gica na inova&ccedil;&atilde;o: ciclo do dado &agrave; intelig&ecirc;ncia<sup>9, 10</sup></td><td>Volunt&aacute;ria, orientativa</td><td>&Eacute; a refer&ecirc;ncia t&eacute;cnica mais direta do campo. N&atilde;o certifica empresa; serve de guia e de linguagem de contrato <span class="sel sel-v">Verificado</span></td></tr>
+<tr><td>Fam&iacute;lia ISO 56000</td><td>Sistema de gest&atilde;o da inova&ccedil;&atilde;o, no qual a 56006 se encaixa<sup>9</sup></td><td>Volunt&aacute;ria</td><td>Ancora a fun&ccedil;&atilde;o de futuros dentro de um sistema j&aacute; reconhecido pela alta dire&ccedil;&atilde;o <span class="sel sel-v">Verificado</span></td></tr>
+<tr><td>ISO 31000</td><td>Gest&atilde;o de riscos</td><td>Volunt&aacute;ria</td><td>Trata do risco com probabilidade estim&aacute;vel. N&atilde;o cobre o plaus&iacute;vel sem base hist&oacute;rica, que &eacute; o territ&oacute;rio do foresight <span class="sel sel-i">Infer&ecirc;ncia</span></td></tr>
+<tr><td>IFRS S1 e S2</td><td>Divulga&ccedil;&atilde;o de informa&ccedil;&otilde;es financeiras relacionadas &agrave; sustentabilidade e ao clima, com an&aacute;lise de cen&aacute;rio clim&aacute;tico<sup>37</sup></td><td>Depende da jurisdi&ccedil;&atilde;o</td><td>&Eacute; o &uacute;nico lugar em que an&aacute;lise de cen&aacute;rio de longo prazo chegou perto de virar obriga&ccedil;&atilde;o corporativa em escala <span class="sel sel-v">Verificado</span></td></tr>
+<tr><td>Resolu&ccedil;&atilde;o CVM 193, de 2023</td><td>Adotou IFRS S1 e S2 no Brasil, com obrigatoriedade a partir de 2026<sup>37</sup></td><td>Era obrigat&oacute;ria</td><td>Colocou o Brasil como primeiro pa&iacute;s a tornar o padr&atilde;o obrigat&oacute;rio <span class="sel sel-v">Verificado</span></td></tr>
+<tr><td>Resolu&ccedil;&atilde;o CVM 244, de 29 de maio de 2026</td><td>Revogou a obrigatoriedade e tornou a divulga&ccedil;&atilde;o volunt&aacute;ria<sup>38, 63</sup></td><td>Vigente</td><td>Desligou o empurr&atilde;o regulat&oacute;rio antes de ele produzir efeito pr&aacute;tico <span class="sel sel-v">Verificado</span></td></tr>
+<tr><td>Relat&oacute;rio de Prospectiva Estrat&eacute;gica da Uni&atilde;o Europeia</td><td>Publica&ccedil;&atilde;o anual desde 2020, com centro de compet&ecirc;ncia pr&oacute;prio<sup>11, 12</sup></td><td>Pol&iacute;tica p&uacute;blica, n&atilde;o regula empresa</td><td>Funciona como refer&ecirc;ncia de m&eacute;todo e como sinal de que o tema entrou na m&aacute;quina p&uacute;blica <span class="sel sel-v">Verificado</span></td></tr>
+<tr><td>Estrat&eacute;gia Brasil 2050</td><td>Primeiro instrumento brasileiro de planejamento de longo prazo participativo, entregue em outubro de 2025<sup>26</sup></td><td>Orientativa</td><td>D&aacute; base p&uacute;blica de cen&aacute;rio de longo prazo para uso corporativo <span class="sel sel-v">Verificado</span></td></tr>
+<tr><td>Letramento em futuros da UNESCO</td><td>Trata a capacidade de imaginar futuros como compet&ecirc;ncia a ser desenvolvida</td><td>Conceitual</td><td>&Uacute;til como argumento de forma&ccedil;&atilde;o interna; sem efeito normativo <span class="sel sel-i">Infer&ecirc;ncia</span></td></tr>
+</tbody>
+</table>
+
+<div class="alerta"><strong>Consequ&ecirc;ncia pr&aacute;tica para quem est&aacute; montando a fun&ccedil;&atilde;o agora.</strong> A justificativa n&atilde;o pode ser conformidade. Precisa ser econ&ocirc;mica: risco evitado, op&ccedil;&atilde;o barata comprada cedo, velocidade de decis&atilde;o. Quem montou &aacute;rea de futuros no Brasil em 2024 e 2025 apoiado na Resolu&ccedil;&atilde;o CVM 193 perdeu o argumento em maio de 2026 e precisa refazer a tese interna antes do pr&oacute;ximo or&ccedil;amento.<sup>37, 38, 63</sup></div>
+
+<h3>N&atilde;o existe registro profissional</h3>
+<p>N&atilde;o h&aacute; conselho, exame, registro nem reserva de mercado para futurista. A Association of Professional Futurists, fundada em 2002, re&uacute;ne mais de 600 membros em 60 pa&iacute;ses e funciona como comunidade e refer&ecirc;ncia de boa pr&aacute;tica, mas n&atilde;o habilita ningu&eacute;m a exercer nada.<sup>23</sup> A credencial real do campo &eacute; forma&ccedil;&atilde;o espec&iacute;fica, como a da Universidade de Houston, somada a hist&oacute;rico verific&aacute;vel de projeto.<sup>48</sup> Isso significa que a diligencia de contrata&ccedil;&atilde;o &eacute; inteiramente sua. <span class="sel sel-v">Verificado</span></p>
+</section>
+
+<section id="p-cargos" class="pane">
+<h2>Quem faz esse trabalho, e como esse profissional se parece</h2>
+<p>O campo n&atilde;o tem carreira formal. As pessoas chegam por tr&ecirc;s portas: estrat&eacute;gia e planejamento, pesquisa e inova&ccedil;&atilde;o, ou ci&ecirc;ncias sociais e design. Cada porta traz uma for&ccedil;a e um ponto cego previs&iacute;vel. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+
+<table>
+<thead><tr><th>Cargo</th><th>O que faz na pr&aacute;tica</th><th>Perfil que d&aacute; certo</th><th>Sinal de contrata&ccedil;&atilde;o errada</th></tr></thead>
+<tbody>
+<tr><td>Analista de sinais</td><td>Varredura, cataloga&ccedil;&atilde;o, primeira triagem. &Eacute; o degrau 1 e 2 do ciclo<sup>9</sup></td><td>Curioso, disciplinado, escreve curto. Bom leitor de fonte prim&aacute;ria</td><td>Traz volume e nenhuma sele&ccedil;&atilde;o. Confunde not&iacute;cia com sinal</td></tr>
+<tr><td>Especialista em cen&aacute;rios</td><td>Conduz o ciclo anual, facilita oficina, escreve os mundos</td><td>Facilitador forte, tolera ambiguidade, sabe fechar. Formado no m&eacute;todo<sup>48</sup></td><td>Ama o processo e nunca converge. Entrega quatro mundos e nenhuma implica&ccedil;&atilde;o</td></tr>
+<tr><td>Lideran&ccedil;a da fun&ccedil;&atilde;o</td><td>Faz a ponte com a diretoria, garante o degrau 4, protege o or&ccedil;amento</td><td>Senioridade pol&iacute;tica, fluente em n&uacute;mero de neg&oacute;cio, credibilidade interna anterior</td><td>Especialista t&eacute;cnico promovido sem tr&acirc;nsito. N&atilde;o consegue marcar reuni&atilde;o com diretor</td></tr>
+<tr><td>Dono de dom&iacute;nio, tempo parcial</td><td>Vigia um dom&iacute;nio, do regulat&oacute;rio ao demogr&aacute;fico, dentro da &aacute;rea de origem</td><td>Gente da linha, com pele no jogo, escolhida por interesse real</td><td>Indicado pelo chefe sem consulta. Nunca aparece na reuni&atilde;o mensal</td></tr>
+<tr><td>Consultor externo</td><td>Traz m&eacute;todo, neutralidade e capacidade de dizer o que ningu&eacute;m interno diz</td><td>Tem caso concreto de decis&atilde;o mudada, n&atilde;o s&oacute; portf&oacute;lio de logotipos</td><td>Vende o mesmo relat&oacute;rio para o setor inteiro e chama de exclusivo</td></tr>
+</tbody>
+</table>
+
+<h3>As tr&ecirc;s portas de entrada</h3>
+<div class="g2">
+<div class="card"><strong>Vindo da estrat&eacute;gia</strong><br>For&ccedil;a: entende or&ccedil;amento, fala a l&iacute;ngua do comit&ecirc; executivo, sabe onde a decis&atilde;o acontece. Ponto cego: encurta o horizonte por reflexo e transforma cen&aacute;rio em premissa de plano de tr&ecirc;s anos, reproduzindo o padr&atilde;o dos 81%.<sup>4</sup></div>
+<div class="card"><strong>Vindo da pesquisa e da inova&ccedil;&atilde;o</strong><br>For&ccedil;a: rigor de m&eacute;todo, conforto com incerteza t&eacute;cnica, boa leitura de patente e de artigo. Ponto cego: viciado em tecnologia, subestima regula&ccedil;&atilde;o, demografia e comportamento social, que costumam ser as for&ccedil;as mais lentas e mais decisivas.</div>
+<div class="card"><strong>Vindo das ci&ecirc;ncias sociais e do design</strong><br>For&ccedil;a: enxerga for&ccedil;a motriz que o n&uacute;mero n&atilde;o mostra, constr&oacute;i narrativa que a lideran&ccedil;a lembra. Ponto cego: dificuldade em amarrar a narrativa a n&uacute;mero de neg&oacute;cio, o que trava exatamente o degrau 4.</div>
+<div class="card"><strong>A combina&ccedil;&atilde;o que funciona</strong><br>Uma lideran&ccedil;a vinda da estrat&eacute;gia, com credibilidade pr&eacute;via na casa, apoiada por um especialista de m&eacute;todo vindo de pesquisa ou de design. A troca inversa, especialista liderando e estrategista apoiando, produz material melhor e decis&atilde;o pior. <span class="sel sel-i">Infer&ecirc;ncia</span></div>
+</div>
+
+<h3>Onde se forma</h3>
+<ul>
+<li><strong>Universidade de Houston,</strong> refer&ecirc;ncia internacional na forma&ccedil;&atilde;o de futuristas, com programa dedicado a estudos do futuro.<sup>48</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>N&uacute;cleo de Estudos do Futuro da PUC-SP,</strong> principal p&oacute;lo acad&ecirc;mico brasileiro do campo.<sup>49</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Copenhagen Institute for Futures Studies,</strong> instituto sem fins lucrativos fundado em 1969 por Thorkil Kristensen, ex-secret&aacute;rio-geral da OCDE, que oferece pesquisa e forma&ccedil;&atilde;o.<sup>21, 22</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>The Millennium Project,</strong> rede com 72 n&oacute;s no mundo e n&oacute; brasileiro desde 2000, que publica o State of the Future e serve como porta de entrada em rede internacional.<sup>24, 25</sup> <span class="sel sel-v">Verificado</span></li>
+</ul>
+<p class="note">Para uma empresa que est&aacute; come&ccedil;ando, o caminho mais barato n&atilde;o &eacute; contratar futurista de fora: &eacute; escolher algu&eacute;m interno com credibilidade e financiar a forma&ccedil;&atilde;o dessa pessoa. Credibilidade interna leva anos para construir e m&eacute;todo leva meses para aprender. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+</section>
+
+<section id="p-forcas" class="pane">
+<h2>As cinco for&ccedil;as do setor de foresight</h2>
+<p>Aqui a an&aacute;lise olha para a ind&uacute;stria que <em>vende</em> futuro, n&atilde;o para o setor do cliente. Entender essa estrutura explica por que o pre&ccedil;o cai, por que o produto se comoditiza e onde ainda existe margem defens&aacute;vel. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+
+<h3>1. Rivalidade entre os concorrentes: alta e crescente</h3>
+<p>Concorrem no mesmo or&ccedil;amento consultorias de estrat&eacute;gia com pesquisa pr&oacute;pria, casas de assinatura, boutiques de futuros, institutos sem fins lucrativos, ag&ecirc;ncias de tend&ecirc;ncia, academia e palestrantes independentes.<sup>5, 13, 15, 21, 56</sup> A rivalidade &eacute; agravada por dois fatores: n&atilde;o h&aacute; padr&atilde;o de qualidade que permita comparar propostas, e o produto mais vis&iacute;vel do setor, o relat&oacute;rio anual de tend&ecirc;ncias, foi distribu&iacute;do de gra&ccedil;a por anos como isca de marca, corroendo a percep&ccedil;&atilde;o de valor de tudo o que vem depois. <span class="sel sel-v">Verificado</span></p>
+
+<h3>2. Amea&ccedil;a de entrantes: muito alta</h3>
+<p>N&atilde;o existe registro profissional, exame, licen&ccedil;a nem reserva de mercado.<sup>23</sup> O capital necess&aacute;rio para abrir uma pr&aacute;tica de futuros &eacute; uma pessoa cr&iacute;vel e um computador. A &uacute;nica barreira real &eacute; reputacional, e reputa&ccedil;&atilde;o em um campo sem m&eacute;trica de acerto &eacute; construida por visibilidade, n&atilde;o por resultado verificado. Isso favorece o comunicador sobre o metod&oacute;logo e explica boa parte da m&aacute; fama do setor. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+
+<h3>3. Poder do comprador: alto e subindo</h3>
+<p>O comprador &eacute; sofisticado, tem alternativas abundantes e nenhum custo de troca relevante. Pior: ele pode simplesmente n&atilde;o comprar, porque o gasto n&atilde;o &eacute; obrigat&oacute;rio em nenhuma jurisdi&ccedil;&atilde;o relevante, e no Brasil o &uacute;nico gancho de conformidade foi desligado em maio de 2026.<sup>38, 63</sup> Quando o or&ccedil;amento aperta, foresight compete com iniciativas de retorno vis&iacute;vel no mesmo ano e perde. <span class="sel sel-v">Verificado</span></p>
+
+<h3>4. Poder do fornecedor: baixo, com uma exce&ccedil;&atilde;o</h3>
+<p>Os insumos s&atilde;o quase todos p&uacute;blicos e baratos: artigo, patente, edital, minuta de norma, dado estat&iacute;stico, relat&oacute;rio de organismo internacional. A exce&ccedil;&atilde;o &eacute; o talento s&ecirc;nior cr&iacute;vel, que &eacute; escasso e caro, e cuja sa&iacute;da leva a rela&ccedil;&atilde;o com o cliente junto. Em boutique, o fornecedor cr&iacute;tico &eacute; o s&oacute;cio, e isso limita estruturalmente a escala do modelo. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+
+<h3>5. Amea&ccedil;a de substitutos: a for&ccedil;a decisiva</h3>
+<table>
+<thead><tr><th>Substituto</th><th>O que substitui</th><th>Gravidade</th></tr></thead>
+<tbody>
+<tr><td>Modelo de linguagem de uso geral</td><td>Varredura, s&iacute;ntese, primeira vers&atilde;o de cen&aacute;rio, redu&ccedil;&atilde;o do custo dos elos 1 a 3 da cadeia de valor</td><td><strong>Severa.</strong> Ataca exatamente onde o setor fatura</td></tr>
+<tr><td>Equipe interna de intelig&ecirc;ncia</td><td>Assinatura de pesquisa, a partir do ano 3</td><td>Alta</td></tr>
+<tr><td>Publica&ccedil;&atilde;o p&uacute;blica gratuita</td><td>Relat&oacute;rio de tend&ecirc;ncias pago: prospectiva da Uni&atilde;o Europeia, State of the Future, Estrat&eacute;gia Brasil 2050<sup>11, 25, 26</sup></td><td>Alta</td></tr>
+<tr><td>Gest&atilde;o de riscos existente</td><td>Parte da agenda de amea&ccedil;a, com or&ccedil;amento j&aacute; aprovado</td><td>M&eacute;dia</td></tr>
+<tr><td>Simplesmente n&atilde;o fazer</td><td>Tudo. &Eacute; o substituto mais escolhido do mercado</td><td><strong>Severa.</strong> Apenas 1,2% das empresas planejam al&eacute;m de dez anos<sup>3</sup></td></tr>
+</tbody>
+</table>
+
+<div class="alerta"><strong>Conclus&atilde;o estrutural.</strong> A margem est&aacute; migrando dos elos 3 e 4, s&iacute;ntese e cen&aacute;rio, para os elos 5 e 6, implica&ccedil;&atilde;o e aposta monitorada. Quem vende documento vai ser comoditizado. Quem se posiciona dentro da governan&ccedil;a do cliente, ajudando a instalar calend&aacute;rio, gatilho e carteira, sobrevive. O aposentamento do relat&oacute;rio anual pela Future Today Strategy Group em mar&ccedil;o de 2026 &eacute; o primeiro movimento p&uacute;blico e claro dessa migra&ccedil;&atilde;o.<sup>17, 18</sup> <span class="sel sel-i">Infer&ecirc;ncia</span></div>
+</section>
+
+<section id="p-atores" class="pane">
+<h2>Mapa de atores: interesse, poder e o que cada um quer de verdade</h2>
+<table>
+<thead><tr><th>Ator</th><th>O que diz querer</th><th>O que quer de verdade</th><th>Poder</th><th>Como engajar</th></tr></thead>
+<tbody>
+<tr><td>Conselho de administra&ccedil;&atilde;o</td><td>Visibilidade sobre riscos de longo prazo</td><td>N&atilde;o ser pego de surpresa em p&uacute;blico, e ter defesa documentada de que perguntou</td><td>Decisivo</td><td>Item fixo na pauta duas vezes por ano, com uma p&aacute;gina, n&atilde;o com apresenta&ccedil;&atilde;o de quarenta</td></tr>
+<tr><td>Presid&ecirc;ncia</td><td>Vis&atilde;o de longo prazo</td><td>Op&ccedil;&otilde;es reais para o pr&oacute;prio mandato, que costuma ser mais curto que o horizonte 3</td><td>Decisivo</td><td>Ligar cada cen&aacute;rio a uma decis&atilde;o que cabe no mandato</td></tr>
+<tr><td>Diretoria financeira</td><td>Disciplina e retorno</td><td>N&atilde;o abrir linha de custo sem contrapartida med&iacute;vel</td><td>Alto, poder de veto</td><td>Verba de op&ccedil;&atilde;o com gatilho de abandono. &Eacute; a linguagem que ela respeita</td></tr>
+<tr><td>Diretoria de estrat&eacute;gia</td><td>Insumo para o plano</td><td>Manter a autoria do plano. Teme que a fun&ccedil;&atilde;o de futuros vire estrat&eacute;gia paralela</td><td>Alto</td><td>Posicionar como servi&ccedil;o que testa o plano dela, nunca como plano concorrente</td></tr>
+<tr><td>Diretoria de inova&ccedil;&atilde;o</td><td>Pauta de experimenta&ccedil;&atilde;o</td><td>Or&ccedil;amento e narrativa. Pode ver a fun&ccedil;&atilde;o como concorrente pelo mesmo dinheiro</td><td>M&eacute;dio</td><td>Separar formalmente as verbas: op&ccedil;&atilde;o n&atilde;o &eacute; inova&ccedil;&atilde;o corrente</td></tr>
+<tr><td>Diretoria de riscos</td><td>Cobertura de amea&ccedil;as emergentes</td><td>Preservar o pr&oacute;prio m&eacute;todo e n&atilde;o ser auditada por um vizinho novo</td><td>M&eacute;dio</td><td>Dividir o territ&oacute;rio de forma expl&iacute;cita: risco cuida do prov&aacute;vel, futuros cuida do plaus&iacute;vel</td></tr>
+<tr><td>Diretoria de sustentabilidade</td><td>Cen&aacute;rio clim&aacute;tico e relato</td><td>Sobreviver ao esvaziamento causado pela Resolu&ccedil;&atilde;o CVM 244<sup>38, 63</sup></td><td>Caiu em 2026</td><td>Alian&ccedil;a natural. Ambos precisam agora de tese econ&ocirc;mica, n&atilde;o de tese de conformidade</td></tr>
+<tr><td>Ger&ecirc;ncias de linha</td><td>Nada. N&atilde;o pediram isso</td><td>N&atilde;o ganhar mais uma reuni&atilde;o e mais um formul&aacute;rio</td><td>Baixo individual, alto coletivo</td><td>Entrar pelo problema delas. Foresight que resolve dor concreta ganha aliado; foresight gen&eacute;rico ganha inimigo silencioso</td></tr>
+<tr><td>Consultoria externa</td><td>Parceria de longo prazo</td><td>Renovar contrato</td><td>M&eacute;dio</td><td>Contratar m&eacute;todo com transfer&ecirc;ncia obrigat&oacute;ria, nunca depend&ecirc;ncia</td></tr>
+<tr><td>Regulador</td><td>Previsibilidade do mercado</td><td>Depende do ciclo pol&iacute;tico, e o ciclo virou em 2026<sup>38, 63</sup></td><td>Alto, mas vol&aacute;til</td><td>Monitorar, nunca depender</td></tr>
+</tbody>
+</table>
+<p class="note">O ator mais subestimado da lista &eacute; a ger&ecirc;ncia de linha. Ela n&atilde;o consegue aprovar a fun&ccedil;&atilde;o, mas consegue esvazi&aacute;-la simplesmente n&atilde;o comparecendo. Quase toda &aacute;rea de futuros que morreu no Brasil morreu de aus&ecirc;ncia, n&atilde;o de veto. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+</section>
+
+<section id="p-brasil" class="pane">
+<h2>O quadro brasileiro</h2>
+<p>O Brasil tem tradi&ccedil;&atilde;o p&uacute;blica s&oacute;lida em prospectiva e pr&aacute;tica corporativa rala. A capacidade instalada existe, s&oacute; que quase toda dentro do Estado e da academia. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+
+<h3>O que o Estado brasileiro constr&oacute;i</h3>
+<ul>
+<li><strong>Estrat&eacute;gia Brasil 2050.</strong> Entregue em outubro de 2025 pelo Minist&eacute;rio do Planejamento e Or&ccedil;amento, &eacute; descrita como o primeiro instrumento de planejamento de longo prazo participativo do pa&iacute;s.<sup>26</sup> Para a empresa, &eacute; base p&uacute;blica e gratuita de cen&aacute;rio de longo prazo. <span class="sel sel-v">Verificado</span></li>
+<li><strong>Ipea.</strong> Produz estudos prospectivos e cen&aacute;rios de refer&ecirc;ncia para pol&iacute;tica p&uacute;blica, incluindo o trabalho de cen&aacute;rios Brasil.<sup>27, 29</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>CGEE.</strong> Organiza&ccedil;&atilde;o ligada ao Minist&eacute;rio da Ci&ecirc;ncia, Tecnologia e Inova&ccedil;&atilde;o, dedicada a estudos prospectivos em ci&ecirc;ncia e tecnologia.<sup>60</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>N&oacute; brasileiro do The Millennium Project,</strong> formado em 2000, conectando o pa&iacute;s a uma rede de 72 n&oacute;s.<sup>24</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>N&uacute;cleo de Estudos do Futuro da PUC-SP,</strong> p&oacute;lo acad&ecirc;mico de forma&ccedil;&atilde;o e pesquisa.<sup>49</sup> <span class="sel sel-v">Verificado</span></li>
+</ul>
+
+<h3>O que mudou em 2026, e por que importa</h3>
+<p>A Resolu&ccedil;&atilde;o CVM 193, de 2023, tinha colocado o Brasil na dianteira mundial ao tornar obrigat&oacute;ria a partir de 2026 a divulga&ccedil;&atilde;o segundo os padr&otilde;es IFRS S1 e S2, que incluem an&aacute;lise de cen&aacute;rio clim&aacute;tico.<sup>37</sup> Em 29 de maio de 2026, a Resolu&ccedil;&atilde;o CVM 244 revogou a obrigatoriedade e tornou o regime volunt&aacute;rio.<sup>38, 63</sup> <span class="sel sel-v">Verificado</span></p>
+<div class="alerta">Efeito pr&aacute;tico: a companhia aberta brasileira que estava montando capacidade de cen&aacute;rio de longo prazo por for&ccedil;a de norma deixou de ter essa obriga&ccedil;&atilde;o. Quem continuar fazendo passa a fazer por convic&ccedil;&atilde;o econ&ocirc;mica, o que &eacute; mais fr&aacute;gil politicamente no curto prazo e mais s&oacute;lido no longo. Para o profissional da &aacute;rea, a tese de venda interna precisa ser reescrita antes do pr&oacute;ximo ciclo or&ccedil;ament&aacute;rio.</div>
+
+<h3>As tr&ecirc;s dificuldades espec&iacute;ficas do pa&iacute;s</h3>
+<ol>
+<li><strong>Volatilidade macro treina o m&uacute;sculo errado.</strong> D&eacute;cadas de choque cambial, infla&ccedil;&atilde;o e virada regulat&oacute;ria produziram empresas excelentes em reagir r&aacute;pido e p&eacute;ssimas em se preparar devagar. A compet&ecirc;ncia de sobreviv&ecirc;ncia compete diretamente com a compet&ecirc;ncia de antecipa&ccedil;&atilde;o, porque as duas disputam a mesma aten&ccedil;&atilde;o executiva. <span class="sel sel-i">Infer&ecirc;ncia</span></li>
+<li><strong>Ciclo pol&iacute;tico de quatro anos contra horizonte de vinte.</strong> Vale para o Estado e contamina o setor privado regulado, que ajusta o pr&oacute;prio horizonte ao do regulador. O caso da CVM em 2026 &eacute; a demonstra&ccedil;&atilde;o exata disso.<sup>37, 38</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Concentra&ccedil;&atilde;o da capacidade fora da empresa.</strong> A prospectiva brasileira madura est&aacute; no Ipea, no CGEE, na PUC-SP e no Minist&eacute;rio do Planejamento.<sup>26, 27, 49, 60</sup> A empresa que quiser montar a fun&ccedil;&atilde;o tem excelente material p&uacute;blico dispon&iacute;vel e um mercado raso de gente formada para contratar. <span class="sel sel-i">Infer&ecirc;ncia</span></li>
+</ol>
+
+<h3>A oportunidade que ningu&eacute;m est&aacute; pegando</h3>
+<p>O material p&uacute;blico brasileiro de longo prazo &eacute; gratuito, bem feito e praticamente n&atilde;o lido por empresa. Uma c&eacute;lula de duas pessoas que leia sistematicamente Brasil 2050, os estudos do Ipea e do CGEE, e traduza tudo em implica&ccedil;&otilde;es para o pr&oacute;prio setor, entrega em seis meses mais valor do que a maioria dos projetos de consultoria contratados no pa&iacute;s, por uma fra&ccedil;&atilde;o do custo.<sup>26, 27, 60</sup> <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+</section>
+
+<section id="p-casos" class="pane">
+<h2>Casos: o que os n&uacute;meros mostram e o que a lenda esconde</h2>
+
+<h3>Caso 1. As vigilantes, e o grupo que perdeu dinheiro olhando</h3>
+<p>O estudo mais citado do campo classificou 83 empresas por maturidade de foresight em 2008 e reavaliou o desempenho em 2015. As classificadas como vigilantes chegaram a 16% de lucratividade contra 12% da m&eacute;dia do setor, cerca de 33% a mais, e cresceram 75% em valor de mercado contra 25% da amostra.<sup>1</sup> O achado menos citado &eacute; o mais &uacute;til: o grupo com pior desempenho, que encolheu 6% em valor de mercado, n&atilde;o foi o que ignorava o futuro. Foi o que percebia bastante e n&atilde;o convertia em aposta.<sup>1</sup> <span class="sel sel-v">Verificado</span></p>
+<p><strong>Li&ccedil;&atilde;o:</strong> montar capacidade de percep&ccedil;&atilde;o sem capacidade de decis&atilde;o &eacute; pior do que n&atilde;o montar nada, porque consome recurso, gera falsa seguran&ccedil;a e produz a sensa&ccedil;&atilde;o de que o assunto est&aacute; coberto. <strong>Ressalva honesta:</strong> 83 empresas, base europeia, medi&ccedil;&atilde;o de uma d&eacute;cada atr&aacute;s. &Eacute; a melhor evid&ecirc;ncia dispon&iacute;vel, n&atilde;o &eacute; evid&ecirc;ncia definitiva.</p>
+
+<h3>Caso 2. O relat&oacute;rio de tend&ecirc;ncias que se matou</h3>
+<p>Em mar&ccedil;o de 2026, no SXSW, a Future Today Strategy Group anunciou o fim do relat&oacute;rio anual de tend&ecirc;ncias que publicava havia quase duas d&eacute;cadas, substituindo-o por um material organizado por converg&ecirc;ncias, sob o argumento de que um compilado de tend&ecirc;ncias em PDF perdeu utilidade.<sup>17, 18</sup> <span class="sel sel-v">Verificado</span></p>
+<p><strong>Li&ccedil;&atilde;o:</strong> o produto mais visto do setor foi descontinuado por quem mais se beneficiava dele. Se a sua &aacute;rea interna mede sucesso por publicar um documento anual de tend&ecirc;ncias, voc&ecirc; est&aacute; operando um formato que o pr&oacute;prio mercado abandonou. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+
+<h3>Caso 3. A institucionaliza&ccedil;&atilde;o europeia</h3>
+<p>A Comiss&atilde;o Europeia publica relat&oacute;rio anual de prospectiva estrat&eacute;gica desde 2020, com centro de compet&ecirc;ncia dedicado dentro do seu bra&ccedil;o cient&iacute;fico, e a edi&ccedil;&atilde;o de 2025 trata de resili&ecirc;ncia.<sup>11, 12</sup> <span class="sel sel-v">Verificado</span></p>
+<p><strong>Li&ccedil;&atilde;o:</strong> a sobreviv&ecirc;ncia veio da periodicidade fixa e do encaixe no ciclo de decis&atilde;o, n&atilde;o da genialidade do conte&uacute;do. Calend&aacute;rio bate brilhantismo. &Eacute; exatamente o que uma empresa deve copiar. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+
+<h3>Caso 4. O Brasil que avan&ccedil;ou e recuou</h3>
+<p>Em 2023 o pa&iacute;s tornou obrigat&oacute;rios os padr&otilde;es IFRS S1 e S2 a partir de 2026, posicionando-se na dianteira global.<sup>37</sup> Em maio de 2026, tornou tudo volunt&aacute;rio.<sup>38, 63</sup> No mesmo per&iacute;odo, entregou a Estrat&eacute;gia Brasil 2050, seu primeiro instrumento de planejamento participativo de longo prazo.<sup>26</sup> <span class="sel sel-v">Verificado</span></p>
+<p><strong>Li&ccedil;&atilde;o:</strong> capacidade t&eacute;cnica e obriga&ccedil;&atilde;o legal se movem em dire&ccedil;&otilde;es independentes. Construa a fun&ccedil;&atilde;o apoiada na primeira, nunca na segunda. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+
+<h3>Caso 5. O caso que todo mundo cita e quase ningu&eacute;m entendeu</h3>
+<p>A hist&oacute;ria da petroleira que sobreviveu ao choque do petr&oacute;leo de 1973 por causa de cen&aacute;rios &eacute; a lenda fundadora do campo, contada em toda apresenta&ccedil;&atilde;o comercial. O que a lenda omite &eacute; que o valor n&atilde;o esteve no documento de cen&aacute;rio: esteve no fato de o corpo executivo ter ensaiado a resposta antes, de modo que quando o choque veio a decis&atilde;o j&aacute; estava mentalmente tomada. <span class="sel sel-e">Especulativo</span></p>
+<p><strong>Li&ccedil;&atilde;o:</strong> o produto do foresight n&atilde;o &eacute; o cen&aacute;rio, &eacute; o ensaio. Empresa que recebe cen&aacute;rio pronto de fora e n&atilde;o ensaia comprou a capa do livro. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+
+<div class="alerta"><strong>O padr&atilde;o comum aos cinco casos.</strong> Em todos, o diferencial n&atilde;o foi enxergar melhor. Foi ter, antes do choque, um lugar combinado onde a decis&atilde;o seria tomada e algu&eacute;m com autoridade sentado nele. Percep&ccedil;&atilde;o &eacute; barata e abundante; conex&atilde;o entre percep&ccedil;&atilde;o e assinatura &eacute; cara e rara.</div>
+</section>
+
+<section id="p-bench" class="pane">
+<h2>Bench Brasil: onde o futuro realmente mora nas empresas que operam no pa&iacute;s</h2>
+<p class="accent" style="font-size:16px"><strong>O achado central:</strong> depois de varrer sites, relat&oacute;rios e imprensa de 27 casas, quase nenhuma empresa atuante no Brasil tem &aacute;rea de foresight com nome pr&oacute;prio. O futuro mora em quatro endere&ccedil;os: dentro do rito de planejamento sem marca pr&oacute;pria (Petrobras, Banco do Brasil), dentro do risco clim&aacute;tico por obriga&ccedil;&atilde;o de relato (minera&ccedil;&atilde;o, papel e qu&iacute;mica), dentro do bra&ccedil;o de venture capital como sensor de disrup&ccedil;&atilde;o (quase todas), ou num exerc&iacute;cio pontual bem feito que nunca virou cad&ecirc;ncia (Sicredi, Botic&aacute;rio, BNDES). O radar serial e p&uacute;blico, ao estilo DHL ou Swiss Re, n&atilde;o foi localizado em nenhuma casa brasileira. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+<p class="note">Varredura feita em 29 de agosto de 2026, empresa a empresa, com URL espec&iacute;fica em cada afirma&ccedil;&atilde;o (aba Fontes, itens 64 a 95). Onde o site bloqueou acesso direto e o conte&uacute;do veio de resultado indexado de busca, a linha diz isso e o selo rebaixa para Infer&ecirc;ncia. Onde n&atilde;o foi encontrado nada, est&aacute; escrito n/d: aus&ecirc;ncia de evid&ecirc;ncia p&uacute;blica, n&atilde;o prova de aus&ecirc;ncia.</p>
+
+<h3>Energia e ind&uacute;stria pesada</h3>
+<div style="overflow-x:auto">
+<table>
+<thead><tr><th>Casa</th><th>Onde o futuro mora</th><th>Pr&aacute;tica ou produto p&uacute;blico</th><th>Horizonte</th><th>Cad&ecirc;ncia</th></tr></thead>
+<tbody>
+<tr><td><strong>Shell Brasil</strong></td><td>Equipe global de Cen&aacute;rios, com patroc&iacute;nio da presid&ecirc;ncia local</td><td>Primeiro estudo de cen&aacute;rios da Shell dedicado a um &uacute;nico pa&iacute;s em mais de 50 anos de pr&aacute;tica: Sky 2050 e Arquip&eacute;lagos, lan&ccedil;ado no Rio em junho de 2024<sup>64</sup> <span class="sel sel-v">Verificado</span></td><td>2050 e al&eacute;m</td><td>Plurianual, por fam&iacute;lia de cen&aacute;rios</td></tr>
+<tr><td><strong>Petrobras</strong></td><td>Estrat&eacute;gia corporativa, com aprova&ccedil;&atilde;o do Conselho</td><td>Plano Estrat&eacute;gico 2050 aprovado em novembro de 2024, testado contra cen&aacute;rios de estresse (Brent de equil&iacute;brio de US$ 28), mais o exerc&iacute;cio Vis&atilde;o de Futuro de 2020 com especialistas internos e externos<sup>65, 66, 67</sup> <span class="sel sel-v">Verificado</span></td><td>2050</td><td>PE de longo prazo + Plano de Neg&oacute;cios quinquenal revisado todo ano</td></tr>
+<tr><td><strong>Embraer</strong></td><td>Intelig&ecirc;ncia de mercado da Avia&ccedil;&atilde;o Comercial</td><td>Market Outlook de 20 anos, com demanda projetada por regi&atilde;o (edi&ccedil;&atilde;o atual: 8.500 jatos at&eacute; 2045, US$ 650 bi); explora&ccedil;&atilde;o disruptiva mora em ve&iacute;culo separado, a EmbraerX, que gerou a Eve<sup>68</sup> <span class="sel sel-v">Verificado</span></td><td>20 anos</td><td>Anual</td></tr>
+<tr><td><strong>Vale</strong></td><td>Riscos e sustentabilidade, n&atilde;o em estrat&eacute;gia</td><td>Cen&aacute;rios clim&aacute;ticos da AIE aplicados &agrave; resili&ecirc;ncia da estrat&eacute;gia, sob TCFD; Vale Ventures com US$ 100 milh&otilde;es como radar de disrup&ccedil;&atilde;o<sup>69, 70</sup> <span class="sel sel-v">Verificado</span></td><td>2030, 2035, 2050</td><td>Relatos anuais</td></tr>
+<tr><td><strong>Suzano</strong></td><td>P&amp;D (cen&aacute;rios f&iacute;sicos) + estrat&eacute;gia (avenidas de longo prazo)</td><td>Quatro cen&aacute;rios IPCC em quatro janelas de tempo at&eacute; 2081-2100 alimentando modelos de plantio e colheita; cinco avenidas estrat&eacute;gicas; Suzano Ventures com US$ 70 milh&otilde;es<sup>71, 72</sup> <span class="sel sel-v">Verificado</span></td><td>At&eacute; 2100 no clima</td><td>Relatos anuais</td></tr>
+<tr><td><strong>Braskem</strong></td><td>Riscos corporativos e sustentabilidade</td><td>Estudos de risco clim&aacute;tico em 2015 e 2022, Plano de Transi&ccedil;&atilde;o Clim&aacute;tica pelo padr&atilde;o TPT; Oxygea com US$ 150 milh&otilde;es<sup>73, 74</sup> <span class="sel sel-v">Verificado</span></td><td>2030 e 2050</td><td>Relatos anuais</td></tr>
+<tr><td><strong>Gerdau</strong></td><td>Riscos, sem executivo &uacute;nico respons&aacute;vel</td><td>Dois cen&aacute;rios IPCC (SSP1-2.6 e SSP3-7.0) no Relat&oacute;rio Anual 2025; rota de descarboniza&ccedil;&atilde;o at&eacute; 2050; Gerdau Next Ventures com mandato de identificar tend&ecirc;ncias disruptivas<sup>75, 76</sup> <span class="sel sel-v">Verificado</span></td><td>2031 e 2050</td><td>Anual</td></tr>
+<tr><td><strong>WEG</strong></td><td>P&amp;D e engenharia</td><td>Comit&ecirc; Cient&iacute;fico e Tecnol&oacute;gico (registrado em 1997 na linha do tempo oficial) e ades&atilde;o ao programa de liga&ccedil;&atilde;o industrial do MIT em 2023; antecipa por tecnologia, n&atilde;o por cen&aacute;rio<sup>77</sup> <span class="sel sel-i">Infer&ecirc;ncia</span> (site bloqueou acesso direto; conte&uacute;do via busca e PDF da CNI)</td><td>n/d</td><td>n/d</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Financeiro e consumo</h3>
+<div style="overflow-x:auto">
+<table>
+<thead><tr><th>Casa</th><th>Onde o futuro mora</th><th>Pr&aacute;tica ou produto p&uacute;blico</th><th>Horizonte</th><th>Cad&ecirc;ncia</th></tr></thead>
+<tbody>
+<tr><td><strong>Sicredi</strong></td><td>Lab de Inova&ccedil;&atilde;o (sist&ecirc;mico) e estrat&eacute;gia de cooperativa singular</td><td>Estudo O Futuro do Cooperativismo com a Box1824 (2024); e o caso mais metodol&oacute;gico do bench: o relat&oacute;rio p&uacute;blico de foresight da Sicredi Pioneira, com 6 cen&aacute;rios, 27 tend&ecirc;ncias, 32 sinais fracos, 37 cisnes negros mundiais e 11 locais, constru&iacute;do em 45 workshops com cerca de 980 pessoas<sup>78, 79</sup> <span class="sel sel-v">Verificado</span></td><td>Pr&oacute;ximos anos, sem ano-alvo</td><td>Pontual, sem s&eacute;rie</td></tr>
+<tr><td><strong>Banco do Brasil</strong></td><td>Diretoria de Estrat&eacute;gia, dentro do rito</td><td>Etapa formal Tend&ecirc;ncias e Panoramas na constru&ccedil;&atilde;o da Estrat&eacute;gia Corporativa 2026-2030: pesquisa com o corpo funcional, Semana Estrat&eacute;gica com cerca de 1.000 participantes, 13 mesas tem&aacute;ticas, aprova&ccedil;&atilde;o por Conselho<sup>80</sup> <span class="sel sel-v">Verificado</span></td><td>5 anos</td><td>Revis&atilde;o anual do plano quinquenal</td></tr>
+<tr><td><strong>Bradesco</strong></td><td>inovabra, ecossistema de inova&ccedil;&atilde;o</td><td>Relat&oacute;rio trimestral Follow the Money, mapeando movimentos de investimento em inova&ccedil;&atilde;o; frente de pesquisa em IA avan&ccedil;ada e computa&ccedil;&atilde;o qu&acirc;ntica<sup>81</sup> <span class="sel sel-v">Verificado</span></td><td>Presente estendido</td><td>Trimestral</td></tr>
+<tr><td><strong>Ita&uacute;</strong></td><td>Distribu&iacute;do: estrat&eacute;gia, Cubo e research</td><td>Radar Deep Tech LatAm anual em parceria com a Emerge via Cubo; leitura de tend&ecirc;ncias descrita na fun&ccedil;&atilde;o de estrat&eacute;gia; sem centro de futuros p&uacute;blico<sup>82</sup> <span class="sel sel-v">Verificado</span></td><td>1 a 3 anos</td><td>Anual (radar)</td></tr>
+<tr><td><strong>Natura</strong></td><td>Sustentabilidade, com patroc&iacute;nio do CEO</td><td>Vis&atilde;o 2050 desde 2014, atualizada em julho de 2025 para a tese do neg&oacute;cio 100% regenerativo, com metas 2030 e objetivos 2050<sup>83</sup> <span class="sel sel-v">Verificado</span></td><td>2050, o mais longo do bench privado</td><td>Revis&otilde;es pontuais (2014, 2025)</td></tr>
+<tr><td><strong>Grupo Botic&aacute;rio</strong></td><td>P&amp;D e inova&ccedil;&atilde;o</td><td>Roadmap tecnol&oacute;gico Futuro da Beleza com a consultoria Inventta desde 2017; atualiza&ccedil;&atilde;o recente mapeou 12 macrotend&ecirc;ncias com score de prioriza&ccedil;&atilde;o<sup>84</sup> <span class="sel sel-i">Infer&ecirc;ncia</span> (p&aacute;gina do case fora do ar; conte&uacute;do via Forbes e busca)</td><td>Plurianual, 2030</td><td>Ciclos de revis&atilde;o pontuais</td></tr>
+<tr><td><strong>Ambev</strong></td><td>ZX Ventures e hubs de tecnologia</td><td>Antecipa&ccedil;&atilde;o via venturing desde 2015; os produtos da leitura de tend&ecirc;ncias s&atilde;o neg&oacute;cios (Z&eacute; Delivery, Bees), n&atilde;o relat&oacute;rios<sup>85</sup> <span class="sel sel-v">Verificado</span></td><td>Curto e m&eacute;dio</td><td>Cont&iacute;nua, via portf&oacute;lio</td></tr>
+<tr><td><strong>Renner</strong></td><td>&Aacute;rea de Estilo</td><td>Pesquisa de tend&ecirc;ncias de moda e comportamento h&aacute; mais de 20 anos, com camada de dados para pesar cada tend&ecirc;ncia; horizonte de cole&ccedil;&atilde;o, n&atilde;o de futuros<sup>95</sup> <span class="sel sel-v">Verificado</span></td><td>Esta&ccedil;&atilde;o</td><td>Cont&iacute;nua</td></tr>
+<tr><td><strong>XP e Nubank</strong></td><td>n/d</td><td>Nenhuma pr&aacute;tica p&uacute;blica de foresight corporativo localizada; o que a XP publica &eacute; research de investimentos com horizonte de 12 meses, coisa diferente <span class="sel sel-i">Infer&ecirc;ncia</span></td><td>n/d</td><td>n/d</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Multinacionais e prospectiva setorial p&uacute;blica</h3>
+<div style="overflow-x:auto">
+<table>
+<thead><tr><th>Casa</th><th>Onde o futuro mora</th><th>Pr&aacute;tica ou produto p&uacute;blico</th><th>Horizonte</th><th>Cad&ecirc;ncia</th></tr></thead>
+<tbody>
+<tr><td><strong>DHL</strong></td><td>Trend Research, dentro de Customer Solutions &amp; Innovation</td><td>Logistics Trend Radar 7.0 (setembro de 2024): 40 tend&ecirc;ncias com impacto e prazo de ado&ccedil;&atilde;o, alimentado por Innovation Centers que recebem mais de 13.000 visitantes por ano; divulgado em portugu&ecirc;s no Brasil a cada edi&ccedil;&atilde;o<sup>86</sup> <span class="sel sel-v">Verificado</span></td><td>Uma d&eacute;cada</td><td>Aproximadamente bienal (edi&ccedil;&otilde;es 2020, 2022, 2024)</td></tr>
+<tr><td><strong>Siemens</strong></td><td>Hoje: gabinete do CTO, via portf&oacute;lio de tecnologias centrais</td><td>O c&eacute;lebre Pictures of the Future (cen&aacute;rios de 10 a 20 anos, extrapola&ccedil;&atilde;o mais retropola&ccedil;&atilde;o, duas edi&ccedil;&otilde;es por ano desde 2001) sumiu das p&aacute;ginas da empresa por volta de 2017-2019, sem an&uacute;ncio de encerramento<sup>87</sup> <span class="sel sel-i">Infer&ecirc;ncia</span> na descontinua&ccedil;&atilde;o; metodologia <span class="sel sel-v">Verificado</span></td><td>10 a 20 anos (no PoF)</td><td>Extinta como publica&ccedil;&atilde;o</td></tr>
+<tr><td><strong>Unilever</strong></td><td>Fun&ccedil;&atilde;o de insights (CMI), embutido</td><td>Foresight descrito nas pr&oacute;prias vagas como insumo de triagem de M&amp;A e avalia&ccedil;&atilde;o de portf&oacute;lio; relat&oacute;rio anual Future Menus com edi&ccedil;&atilde;o brasileira<sup>88</sup> <span class="sel sel-v">Verificado</span></td><td>n/d interno; anual no produto</td><td>Anual (Future Menus)</td></tr>
+<tr><td><strong>BASF</strong></td><td>Empresa separada: BASF New Business GmbH</td><td>Industry Foresight Team como primeira etapa de um funil formal que vai do foresight ao scouting, &agrave; incuba&ccedil;&atilde;o (Chemovator) e &agrave; expans&atilde;o de neg&oacute;cio; no Brasil, a plataforma AgroStart como sensor do agro<sup>89</sup> <span class="sel sel-v">Verificado</span></td><td>Longo prazo, sem n&uacute;mero p&uacute;blico</td><td>Processo cont&iacute;nuo, n&atilde;o editorial</td></tr>
+<tr><td><strong>Embrapa</strong></td><td>Agropensa, sistema de intelig&ecirc;ncia estrat&eacute;gica com marca e equipe</td><td>Documento Vis&atilde;o (2014-2034; Vis&atilde;o 2030 em 2018) alimentando o Plano Diretor seguinte; desde 2022, vis&atilde;o de futuro em plataforma digital de atualiza&ccedil;&atilde;o cont&iacute;nua<sup>90</sup> <span class="sel sel-v">Verificado</span></td><td>12 a 20 anos</td><td>Por ciclo estrat&eacute;gico, agora cont&iacute;nua</td></tr>
+<tr><td><strong>EPE</strong></td><td>Empresa p&uacute;blica de planejamento energ&eacute;tico</td><td>Plano Nacional de Energia 2050 (aprovado em dezembro de 2020) desdobrado em planos decenais, com painel p&uacute;blico de acompanhamento das recomenda&ccedil;&otilde;es<sup>91</sup> <span class="sel sel-v">Verificado</span></td><td>30 anos</td><td>Quinquenal declarada em portaria, a confirmar</td></tr>
+<tr><td><strong>Fiocruz</strong></td><td>Centro de Estudos Estrat&eacute;gicos + rede Sa&uacute;de Amanh&atilde;</td><td>Agenda normativa (Estrat&eacute;gia 2030) separada da prospec&ccedil;&atilde;o explorat&oacute;ria (Sa&uacute;de Amanh&atilde;, horizonte m&oacute;vel de 20 anos)<sup>92</sup> <span class="sel sel-v">Verificado</span></td><td>2030 e 20 anos m&oacute;vel</td><td>Cont&iacute;nua por projeto</td></tr>
+<tr><td><strong>SENAI e CNI</strong></td><td>Observat&oacute;rio Nacional da Ind&uacute;stria</td><td>Mapa do Trabalho Industrial 2025-2027: prospectiva com uma vari&aacute;vel de decis&atilde;o &uacute;nica e clara, quantos formar, em qu&ecirc; e onde, com desdobramento estadual; m&eacute;todo citado pela OCDE como exemplo no G20<sup>93</sup> <span class="sel sel-v">Verificado</span></td><td>3 a 4 anos</td><td>Por janela, aproximadamente trienal</td></tr>
+<tr><td><strong>BNDES</strong></td><td>Pesquisa econ&ocirc;mica, sem unidade permanente</td><td>Vis&atilde;o 2035 (2018): tr&ecirc;s cen&aacute;rios aplicados a 17 setores, sem edi&ccedil;&atilde;o sucessora at&eacute; hoje<sup>94</sup> <span class="sel sel-v">Verificado</span></td><td>17 anos</td><td>Exerc&iacute;cio &uacute;nico, sem s&eacute;rie</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Os cinco padr&otilde;es que a varredura revela</h3>
+<ol>
+<li><strong>Cen&aacute;rio nomeado e p&uacute;blico &eacute; artigo raro.</strong> S&oacute; Shell (agora com edi&ccedil;&atilde;o dedicada ao Brasil) e Petrobras (cen&aacute;rios embutidos no par PE 2050 mais Plano de Neg&oacute;cios anual) mant&ecirc;m a pr&aacute;tica cl&aacute;ssica com visibilidade.<sup>64, 65</sup> As duas s&atilde;o do mesmo setor, o que tem hist&oacute;rico de choque de pre&ccedil;o como professor. <span class="sel sel-i">Infer&ecirc;ncia</span></li>
+<li><strong>O clima virou a porta de entrada do cen&aacute;rio no Brasil corporativo.</strong> Vale, Suzano, Braskem e Gerdau fazem an&aacute;lise de cen&aacute;rios de verdade, com IPCC e AIE, mas ela mora em riscos e sustentabilidade e serve ao relato, n&atilde;o &agrave; estrat&eacute;gia.<sup>69, 71, 73, 75</sup> A capacidade t&eacute;cnica existe dentro dessas casas; o que falta &eacute; algu&eacute;m lig&aacute;-la &agrave; decis&atilde;o de portf&oacute;lio. E com a Resolu&ccedil;&atilde;o CVM 244 tornando o relato volunt&aacute;rio, essa capacidade perdeu o patrono regulat&oacute;rio.<sup>38, 63</sup> <span class="sel sel-i">Infer&ecirc;ncia</span></li>
+<li><strong>O bra&ccedil;o de venture &eacute; o radar de facto do Brasil corporativo.</strong> Vale Ventures, Suzano Ventures, Oxygea, Gerdau Next, ZX Ventures, EmbraerX: o padr&atilde;o dominante &eacute; terceirizar a antecipa&ccedil;&atilde;o para o portf&oacute;lio de startups.<sup>70, 72, 74, 76, 85</sup> Funciona como sensor, mas s&oacute; enxerga o futuro que j&aacute; virou empresa investi&aacute;vel, e isso deixa de fora exatamente o horizonte 3. <span class="sel sel-i">Infer&ecirc;ncia</span></li>
+<li><strong>O acoplamento ao rito de planejamento &eacute; mais maduro no setor p&uacute;blico que no privado.</strong> Agropensa alimenta o Plano Diretor da Embrapa; o PNE 2050 desdobra em plano decenal com painel de acompanhamento; o Banco do Brasil tem etapa formal de tend&ecirc;ncias dentro do rito da estrat&eacute;gia.<sup>80, 90, 91</sup> Quem quiser copiar um modelo brasileiro de foresight acoplado &agrave; decis&atilde;o deve olhar primeiro para essas tr&ecirc;s, n&atilde;o para o setor privado. <span class="sel sel-i">Infer&ecirc;ncia</span></li>
+<li><strong>Exerc&iacute;cio pontual sem cad&ecirc;ncia &eacute; o modo de falha nacional.</strong> Sicredi fez um dos melhores relat&oacute;rios de foresight participativo do pa&iacute;s e n&atilde;o publicou segunda edi&ccedil;&atilde;o; o BNDES fez o Vis&atilde;o 2035 e parou; a Natura revisita a vis&atilde;o a cada d&eacute;cada.<sup>78, 83, 94</sup> O contraste com a DHL (edi&ccedil;&atilde;o a cada dois anos h&aacute; mais de uma d&eacute;cada) &eacute; a li&ccedil;&atilde;o inteira: o valor n&atilde;o est&aacute; no documento, est&aacute; na s&eacute;rie.<sup>86</sup> <span class="sel sel-i">Infer&ecirc;ncia</span></li>
+</ol>
+
+<h3>Os quatro casos que mais ensinam a quem monta a fun&ccedil;&atilde;o</h3>
+<div class="g2">
+<div class="card"><strong>DHL: o radar como subproduto de conversa.</strong> As 40 tend&ecirc;ncias do Logistics Trend Radar n&atilde;o nascem de desk research: nascem das intera&ccedil;&otilde;es dos Innovation Centers com mais de 13.000 visitantes por ano, e voltam para esses mesmos clientes em workshops que priorizam solu&ccedil;&otilde;es.<sup>86</sup> O radar &eacute; ao mesmo tempo instrumento interno e ativo comercial. Taxonomia est&aacute;vel, n&uacute;mero fixo de tend&ecirc;ncias, cad&ecirc;ncia previs&iacute;vel: &eacute; isso que transforma um PDF em moeda reconhec&iacute;vel. <span class="sel sel-v">Verificado</span></div>
+<div class="card"><strong>Sicredi Pioneira: prova de que d&aacute; para fazer com profundidade no interior do pa&iacute;s.</strong> Uma cooperativa singular rodou 45 workshops com cerca de 980 pessoas de todos os p&uacute;blicos, clusterizou 4.200 linhas de contribui&ccedil;&atilde;o e publicou 6 cen&aacute;rios com sinais fracos e cisnes negros nomeados, chamando o m&eacute;todo de estrat&eacute;gia antecipativa.<sup>78</sup> &Eacute; o &uacute;nico relat&oacute;rio p&uacute;blico do bench privado brasileiro com vocabul&aacute;rio t&eacute;cnico completo de foresight. A fraqueza: sem segunda edi&ccedil;&atilde;o, vira retrato. <span class="sel sel-v">Verificado</span></div>
+<div class="card"><strong>BASF: foresight com cliente interno permanente.</strong> O Industry Foresight Team &eacute; a primeira esta&ccedil;&atilde;o de um funil formal: o que ele identifica passa por scouting e avalia&ccedil;&atilde;o, entra em incuba&ccedil;&atilde;o na Chemovator e sai como neg&oacute;cio.<sup>89</sup> Cada tend&ecirc;ncia tem um caminho pr&eacute;-definido at&eacute; virar dinheiro, e a unidade vive em empresa separada, protegida do resultado trimestral. &Eacute; o ant&iacute;doto estrutural contra o foresight que termina em relat&oacute;rio. <span class="sel sel-v">Verificado</span></div>
+<div class="card"><strong>Siemens: o obitu&aacute;rio que vale um manual.</strong> O Pictures of the Future foi refer&ecirc;ncia mundial por quinze anos, com m&eacute;todo pr&oacute;prio de extrapola&ccedil;&atilde;o mais retropola&ccedil;&atilde;o, e desapareceu quando a unidade que o abrigava foi reorganizada, sem sequer um an&uacute;ncio de encerramento.<sup>87</sup> Prest&iacute;gio externo n&atilde;o protege pr&aacute;tica interna: quem n&atilde;o tem dono institucional e assento no or&ccedil;amento morre na primeira reestrutura&ccedil;&atilde;o. <span class="sel sel-i">Infer&ecirc;ncia</span></div>
+</div>
+
+<h3>O que este bench muda no desenho da sua fun&ccedil;&atilde;o</h3>
+<ul>
+<li><strong>N&atilde;o h&aacute; concorrente interno de refer&ecirc;ncia no pa&iacute;s a copiar inteiro:</strong> o desenho tem de ser composto. A cad&ecirc;ncia vem da DHL, o acoplamento ao rito vem da Embrapa e do Banco do Brasil, o funil de sa&iacute;da vem da BASF, o m&eacute;todo participativo vem da Pioneira. <span class="sel sel-i">Infer&ecirc;ncia</span></li>
+<li><strong>A capacidade de cen&aacute;rio j&aacute; existe escondida nas empresas grandes,</strong> dentro do risco clim&aacute;tico. Quem monta a fun&ccedil;&atilde;o deve mapear e recrutar essa compet&ecirc;ncia interna antes de contratar fora.<sup>69, 71, 73, 75</sup> <span class="sel sel-i">Infer&ecirc;ncia</span></li>
+<li><strong>Se a fun&ccedil;&atilde;o s&oacute; produzir um estudo inaugural, ela entra para a estat&iacute;stica dominante do pa&iacute;s:</strong> o exerc&iacute;cio pontual que n&atilde;o vira s&eacute;rie. A primeira decis&atilde;o de desenho &eacute; a cad&ecirc;ncia, n&atilde;o o m&eacute;todo.<sup>86, 94</sup> <span class="sel sel-i">Infer&ecirc;ncia</span></li>
+</ul>
+</section>
+
+<section id="p-cliente" class="pane">
+<h2>Quem compra, por que compra e o que realmente contrata</h2>
+
+<h3>Os quatro compradores, e o gatilho de cada um</h3>
+<table>
+<thead><tr><th>Comprador</th><th>Gatilho de compra</th><th>Tarefa que quer resolver</th><th>Como ele mede sucesso</th></tr></thead>
+<tbody>
+<tr><td>Conselho e presid&ecirc;ncia</td><td>Levou um susto p&uacute;blico, ou um par do setor levou</td><td>N&atilde;o ser pego de novo, e ter registro de que perguntou</td><td>Aus&ecirc;ncia de surpresa e conforto na pr&oacute;xima reuni&atilde;o</td></tr>
+<tr><td>Diretoria de estrat&eacute;gia</td><td>Ciclo de planejamento come&ccedil;ando, premissas envelhecidas</td><td>Testar o plano antes de defend&ecirc;-lo</td><td>Plano que sobrevive &agrave; pergunta dif&iacute;cil do conselho</td></tr>
+<tr><td>Diretoria de inova&ccedil;&atilde;o</td><td>Portf&oacute;lio disperso, dificuldade de justificar aposta</td><td>Ter crit&eacute;rio para escolher onde apostar</td><td>Portf&oacute;lio defens&aacute;vel diante do financeiro</td></tr>
+<tr><td>Sustentabilidade e riscos</td><td>Exig&ecirc;ncia de relato ou press&atilde;o de investidor</td><td>Produzir an&aacute;lise de cen&aacute;rio com m&eacute;todo defens&aacute;vel<sup>37</sup></td><td>Relat&oacute;rio aceito. <strong>Enfraquecido em 2026 pela Resolu&ccedil;&atilde;o CVM 244</strong><sup>38, 63</sup></td></tr>
+</tbody>
+</table>
+
+<h3>A tarefa real por tr&aacute;s da compra</h3>
+<p>Ningu&eacute;m compra cen&aacute;rio porque quer cen&aacute;rio. Compra por uma destas cinco tarefas, e o vendedor que erra a tarefa perde a venda mesmo entregando material excelente. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+<div class="g2">
+<div class="card"><strong>Me d&ecirc; cobertura</strong><br>Preciso poder mostrar que a casa olhou. &Eacute; a tarefa mais comum e a menos confessada. Produz compra de relat&oacute;rio caro que ningu&eacute;m l&ecirc;.</div>
+<div class="card"><strong>Resolva minha briga interna</strong><br>Duas diretorias discordam e ningu&eacute;m cede. Um terceiro neutro com m&eacute;todo destrava. O produto vendido &eacute; cen&aacute;rio; o produto entregue &eacute; arbitragem.</div>
+<div class="card"><strong>Me d&ecirc; vocabul&aacute;rio</strong><br>Sei que algo est&aacute; mudando e n&atilde;o consigo nomear. Oficina de letramento resolve barato o que projeto de 12 semanas resolve caro.</div>
+<div class="card"><strong>Me ajude a decidir uma coisa espec&iacute;fica</strong><br>Tenho uma decis&atilde;o de capital travada. &Eacute; a tarefa de maior valor e a que mais raramente aparece no edital, porque revela fraqueza.</div>
+</div>
+
+<h3>A jornada de compra, e onde ela trava</h3>
+<ol>
+<li><strong>Fa&iacute;sca.</strong> Susto externo, troca de executivo ou palestra bem feita. Sem fa&iacute;sca, n&atilde;o h&aacute; compra. &Eacute; por isso que palestrantes seguem existindo apesar do baixo valor t&eacute;cnico.</li>
+<li><strong>Explora&ccedil;&atilde;o difusa.</strong> Lideran&ccedil;a l&ecirc; relat&oacute;rio gratuito, conversa com pares. Dura de tr&ecirc;s a doze meses. Aqui o material gratuito faz o trabalho de convencimento.</li>
+<li><strong>Formata&ccedil;&atilde;o do pedido.</strong> Nasce um edital normalmente mal escrito, pedindo entreg&aacute;vel em vez de resultado. <strong>&Eacute; a trava principal:</strong> o cliente pede documento porque n&atilde;o sabe pedir mudan&ccedil;a de decis&atilde;o.</li>
+<li><strong>Compara&ccedil;&atilde;o.</strong> Tr&ecirc;s a cinco propostas incompar&aacute;veis entre si, porque n&atilde;o existe padr&atilde;o de qualidade no setor.<sup>23</sup> Vence pre&ccedil;o ou marca, raramente m&eacute;todo.</li>
+<li><strong>Execu&ccedil;&atilde;o.</strong> Seis a doze semanas, energia alta, oficinas boas.</li>
+<li><strong>Entrega e vazio.</strong> Apresenta&ccedil;&atilde;o aplaudida, documento arquivado. <strong>&Eacute; a segunda trava:</strong> ningu&eacute;m contratou o que vem depois da entrega, porque o depois n&atilde;o cabia no escopo.</li>
+</ol>
+<div class="alerta">As duas travas t&ecirc;m a mesma cura e ela &eacute; contratual: escreva no escopo que o entreg&aacute;vel final n&atilde;o &eacute; o documento, e sim uma lista de decis&otilde;es com dono, prazo e gatilho, aprovada em reuni&atilde;o de diretoria. Se o fornecedor recusar essa cl&aacute;usula, ele vive no elo 4 e voc&ecirc; precisa do elo 5. <span class="sel sel-i">Infer&ecirc;ncia</span></div>
+
+<h3>Objec&ccedil;&otilde;es que voc&ecirc; vai ouvir, e a resposta honesta</h3>
+<table>
+<thead><tr><th>Objec&ccedil;&atilde;o</th><th>Resposta honesta</th></tr></thead>
+<tbody>
+<tr><td>Ningu&eacute;m acerta o futuro</td><td>Correto, e n&atilde;o &eacute; a proposta. A proposta &eacute; reduzir o tempo entre o choque e a decis&atilde;o, o que &eacute; med&iacute;vel</td></tr>
+<tr><td>J&aacute; temos gest&atilde;o de riscos</td><td>Riscos cuida do que tem hist&oacute;rico e probabilidade. Sobra o plaus&iacute;vel sem base hist&oacute;rica, que &eacute; onde vieram as suas tr&ecirc;s &uacute;ltimas surpresas</td></tr>
+<tr><td>N&atilde;o d&aacute; para medir retorno</td><td>Parcialmente verdade. D&aacute; para medir tempo at&eacute; a decis&atilde;o, premissas monitoradas e apostas com gatilho. O resto &eacute; argumento, e a melhor evid&ecirc;ncia dispon&iacute;vel &eacute; de 83 empresas europeias medidas at&eacute; 2015<sup>1</sup></td></tr>
+<tr><td>Isso &eacute; luxo de empresa grande</td><td>A vers&atilde;o cara &eacute;. A vers&atilde;o m&iacute;nima s&atilde;o duas pessoas, uma reuni&atilde;o mensal e uma data no or&ccedil;amento</td></tr>
+<tr><td>N&atilde;o &eacute; mais obrigat&oacute;rio</td><td>Verdade desde maio de 2026<sup>38, 63</sup>. Por isso a decis&atilde;o agora &eacute; econ&ocirc;mica, e n&atilde;o de conformidade</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="p-steep" class="pane">
+<h2>STEEPLEDI: as nove for&ccedil;as que movem o pr&oacute;prio setor de foresight</h2>
+<p>A grade abaixo &eacute; aplicada &agrave; ind&uacute;stria de futuros, n&atilde;o ao cliente. Serve tamb&eacute;m como modelo de dom&iacute;nios de vigil&acirc;ncia para quem vai montar a c&eacute;lula descrita na aba Montar.</p>
+
+<h3>S, Social</h3>
+<p>A confian&ccedil;a em institui&ccedil;&otilde;es e em especialistas caiu, e com ela a autoridade de quem fala sobre o futuro. Ao mesmo tempo, a ansiedade coletiva sobre o amanh&atilde; aumentou a demanda por narrativa que organize o caos. O resultado &eacute; contradit&oacute;rio: mais procura por futurismo e menos cr&eacute;dito para futuristas. Isso empurra o setor para o formato espet&aacute;culo, que vende bem e entrega pouco. <span class="sel sel-e">Especulativo</span></p>
+
+<h3>T, Tecnol&oacute;gico</h3>
+<p>A for&ccedil;a mais violenta da lista. Modelos de linguagem de uso geral executam varredura, s&iacute;ntese e primeira vers&atilde;o de cen&aacute;rio a custo pr&oacute;ximo de zero, exatamente os elos 1 a 3 da cadeia de valor onde o setor fatura. Plataformas de radar j&aacute; s&atilde;o reconhecidas em an&aacute;lises de mercado de inova&ccedil;&atilde;o.<sup>20</sup> A consequ&ecirc;ncia &eacute; a comoditiza&ccedil;&atilde;o do documento e a valoriza&ccedil;&atilde;o da facilita&ccedil;&atilde;o presencial e da governan&ccedil;a, que n&atilde;o se automatizam. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+
+<h3>E, Econ&ocirc;mico</h3>
+<p>Or&ccedil;amento apertado corta primeiro o que n&atilde;o tem retorno no mesmo ano. Foresight &eacute; sempre candidato natural ao corte. Contrapeso: a incerteza elevada aumenta a disposi&ccedil;&atilde;o de pagar por prepara&ccedil;&atilde;o, e as men&ccedil;&otilde;es executivas a incerteza cresceram fortemente a partir de 2025.<sup>5</sup> As duas for&ccedil;as brigam, e quem decide o empate &eacute; a exist&ecirc;ncia ou n&atilde;o de m&eacute;trica de decis&atilde;o. <span class="sel sel-v">Verificado</span></p>
+
+<h3>E, Ecol&oacute;gico</h3>
+<p>Clima foi por anos o principal motor de demanda por cen&aacute;rio de longo prazo, via IFRS S1 e S2.<sup>37</sup> No Brasil, esse motor perdeu for&ccedil;a legal em maio de 2026 com a Resolu&ccedil;&atilde;o CVM 244.<sup>38, 63</sup> O fen&ocirc;meno f&iacute;sico continua; a obriga&ccedil;&atilde;o de olhar para ele, n&atilde;o. <span class="sel sel-v">Verificado</span></p>
+
+<h3>P, Pol&iacute;tico</h3>
+<p>Governos institucionalizaram prospectiva: relat&oacute;rio anual europeu desde 2020 com centro de compet&ecirc;ncia dedicado, e Estrat&eacute;gia Brasil 2050 entregue em 2025.<sup>11, 12, 26</sup> Isso legitima o campo e, ao mesmo tempo, produz material p&uacute;blico gratuito que compete com o produto pago. <span class="sel sel-v">Verificado</span></p>
+
+<h3>L, Legal</h3>
+<p>Quase nada obriga. As normas relevantes s&atilde;o volunt&aacute;rias, com a ISO 56006 no papel de refer&ecirc;ncia t&eacute;cnica.<sup>9, 10</sup> O &uacute;nico vetor obrigat&oacute;rio existente no pa&iacute;s foi revertido em 2026.<sup>38, 63</sup> Consequ&ecirc;ncia: a demanda &eacute; inteiramente discricion&aacute;ria. <span class="sel sel-v">Verificado</span></p>
+
+<h3>E, &Eacute;tico</h3>
+<p>Um campo sem certifica&ccedil;&atilde;o, sem m&eacute;trica de acerto e com incentivo a vender confian&ccedil;a &eacute; estruturalmente vulner&aacute;vel ao charlatanismo. A associa&ccedil;&atilde;o profissional existente re&uacute;ne mais de 600 membros em 60 pa&iacute;ses mas n&atilde;o habilita nem fiscaliza.<sup>23</sup> A pergunta &eacute;tica central do setor: &eacute; leg&iacute;timo cobrar por confian&ccedil;a que voc&ecirc; n&atilde;o pode justificar? <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+
+<h3>D, Demogr&aacute;fico</h3>
+<p>Envelhecimento popula&ccedil;&atilde;o &eacute; a for&ccedil;a mais previs&iacute;vel e mais ignorada do planejamento corporativo, porque matura em vinte a trinta anos e apenas 1,2% das empresas planejam al&eacute;m de dez.<sup>3</sup> &Eacute; o melhor exemplo de uma certeza que ningu&eacute;m usa. <span class="sel sel-v">Verificado</span></p>
+
+<h3>I, Infraestrutural</h3>
+<p>Energia, conectividade, log&iacute;stica e capacidade computacional determinam o que &eacute; poss&iacute;vel fazer. Para o pr&oacute;prio setor de foresight, a infraestrutura relevante &eacute; o acesso barato a modelo computacional e a fonte p&uacute;blica estruturada, o que baixa ainda mais a barreira de entrada j&aacute; baixa. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+
+<div class="alerta"><strong>Leitura combinada das nove.</strong> Tecnologia derruba o custo de produzir o produto tradicional. Legal e ecol&oacute;gico acabam de reduzir a obrigatoriedade no Brasil. Pol&iacute;tico aumenta a legitimidade mas oferece substituto gratuito. Econ&ocirc;mico puxa nos dois sentidos. Social e &eacute;tico corroem a credibilidade do vendedor. Demogr&aacute;fico oferece a certeza que ningu&eacute;m usa. O saldo &eacute; claro: o setor n&atilde;o vai crescer vendendo documento. Vai crescer, se crescer, vendendo instala&ccedil;&atilde;o de capacidade dentro do cliente.</div>
+</section>
+
+<section id="p-sist" class="pane">
+<h2>A vis&atilde;o sist&ecirc;mica: por que o campo n&atilde;o sai do lugar</h2>
+<p>H&aacute; d&eacute;cadas o campo produz boa evid&ecirc;ncia, bons m&eacute;todos e boa literatura, e mesmo assim apenas 1,2% das empresas planejam al&eacute;m de dez anos.<sup>3</sup> Isso n&atilde;o &eacute; falta de convencimento. &Eacute; um sistema com tr&ecirc;s la&ccedil;os que se sustentam mutuamente. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+
+<h3>La&ccedil;o 1, vicioso: o la&ccedil;o do documento</h3>
+<p><em>Cliente n&atilde;o sabe pedir resultado, ent&atilde;o pede documento &rarr; fornecedor entrega documento, porque foi o que foi comprado &rarr; documento n&atilde;o muda decis&atilde;o &rarr; cliente conclui que foresight n&atilde;o funciona &rarr; corta or&ccedil;amento e reduz o pr&oacute;ximo escopo &rarr; escopo menor s&oacute; cabe documento.</em></p>
+<p>Este la&ccedil;o se acelera sozinho e explica a maior parte da frustra&ccedil;&atilde;o do mercado. <strong>Ponto de ruptura:</strong> mudar o entreg&aacute;vel contratado, de documento para lista de decis&otilde;es com dono e gatilho. &Eacute; uma mudan&ccedil;a de uma frase no escopo e ela quebra o la&ccedil;o inteiro.</p>
+
+<h3>La&ccedil;o 2, vicioso: o la&ccedil;o da credibilidade</h3>
+<p><em>Campo sem m&eacute;trica de acerto &rarr; reputa&ccedil;&atilde;o se constr&oacute;i por visibilidade &rarr; visibilidade premia quem afirma com confian&ccedil;a &rarr; profissionais confiantes dominam a vitrine &rarr; previs&otilde;es confiantes falham publicamente &rarr; credibilidade do campo cai &rarr; comprador exige ainda mais confian&ccedil;a para justificar o gasto.</em></p>
+<p>A aus&ecirc;ncia de certifica&ccedil;&atilde;o mant&eacute;m o la&ccedil;o girando: a associa&ccedil;&atilde;o profissional re&uacute;ne comunidade mas n&atilde;o habilita ningu&eacute;m.<sup>23</sup> <strong>Ponto de ruptura:</strong> acerto retrospectivo publicado. Uma casa que publicasse anualmente o que previu h&aacute; 24 meses e o que aconteceu quebraria o la&ccedil;o em benef&iacute;cio pr&oacute;prio, e nenhuma faz. <span class="sel sel-e">Especulativo</span></p>
+
+<h3>La&ccedil;o 3, vicioso: o la&ccedil;o do horizonte</h3>
+<p><em>Mandato executivo curto &rarr; incentivo concentrado em resultado de curto prazo &rarr; foresight &eacute; puxado para o horizonte 1, sustentando os 81% que o usam para definir metas<sup>4</sup> &rarr; a fun&ccedil;&atilde;o deixa de tratar o horizonte 3 &rarr; empresa &eacute; surpreendida por mudan&ccedil;a estrutural &rarr; troca de executivo &rarr; mandato ainda mais curto.</em></p>
+<p><strong>Ponto de ruptura:</strong> separar formalmente os produtos por horizonte, com reuni&otilde;es, m&eacute;tricas e verbas distintas, e ancorar o horizonte 3 no conselho, cujo mandato &eacute; mais longo que o da diretoria.</p>
+
+<h3>La&ccedil;o 4, virtuoso: o &uacute;nico que fecha</h3>
+<p><em>Gatilho definido antes do choque &rarr; choque chega e a decis&atilde;o dispara sem nova rodada de convencimento &rarr; decis&atilde;o r&aacute;pida gera resultado vis&iacute;vel &rarr; resultado vis&iacute;vel protege o or&ccedil;amento da fun&ccedil;&atilde;o &rarr; or&ccedil;amento permite mais gatilhos.</em></p>
+<p>&Eacute; o &uacute;nico la&ccedil;o de refor&ccedil;o positivo dispon&iacute;vel, e ele explica a diferen&ccedil;a entre as vigilantes e o grupo que percebe muito e decide pouco.<sup>1</sup> Note que a entrada do la&ccedil;o n&atilde;o &eacute; qualidade de an&aacute;lise: &eacute; exist&ecirc;ncia de gatilho. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+
+<h3>Alavancas, da mais fraca para a mais forte</h3>
+<table>
+<thead><tr><th>Alavanca</th><th>For&ccedil;a</th><th>Por qu&ecirc;</th></tr></thead>
+<tbody>
+<tr><td>Melhorar a qualidade do cen&aacute;rio</td><td>Fraca</td><td>N&atilde;o toca nenhum dos tr&ecirc;s la&ccedil;os viciosos. Cen&aacute;rio melhor entra no mesmo arquivo</td></tr>
+<tr><td>Comprar plataforma de radar</td><td>Fraca</td><td>Acelera os elos 1 e 2, que j&aacute; n&atilde;o eram o gargalo<sup>20</sup></td></tr>
+<tr><td>Contratar consultoria de marca forte</td><td>M&eacute;dia</td><td>Compra aten&ccedil;&atilde;o executiva temporariamente. Some com o fim do contrato</td></tr>
+<tr><td>Colocar datas fixas no ciclo or&ccedil;ament&aacute;rio</td><td>Forte</td><td>Ataca o la&ccedil;o do horizonte na raiz do incentivo</td></tr>
+<tr><td>Mudar o entreg&aacute;vel contratado</td><td>Forte</td><td>Quebra o la&ccedil;o do documento com uma cl&aacute;usula</td></tr>
+<tr><td>Criar verba de op&ccedil;&atilde;o com gatilho</td><td>M&aacute;xima</td><td>Liga o la&ccedil;o virtuoso, o &uacute;nico que se sustenta sozinho<sup>1</sup></td></tr>
+</tbody>
+</table>
+<p class="note">Repare que as tr&ecirc;s alavancas mais fortes custam pouco dinheiro e muito capital pol&iacute;tico, enquanto as tr&ecirc;s mais fracas custam muito dinheiro e pouco capital pol&iacute;tico. &Eacute; exatamente por isso que a maioria das empresas escolhe as fracas. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+</section>
+
+<section id="p-bmc" class="pane">
+<h2>O modelo de neg&oacute;cio, dos dois lados do balc&atilde;o</h2>
+
+<h3>Lado A: a consultoria de foresight como neg&oacute;cio</h3>
+<table>
+<thead><tr><th>Bloco</th><th>Conte&uacute;do</th></tr></thead>
+<tbody>
+<tr><td>Proposta de valor</td><td>Reduzir a chance de ser surpreendido e aumentar a velocidade de decis&atilde;o quando o choque chega. Na pr&aacute;tica, muitas vendas s&atilde;o de cobertura pol&iacute;tica e de arbitragem interna, n&atilde;o de antecipa&ccedil;&atilde;o</td></tr>
+<tr><td>Segmentos</td><td>Conselho e presid&ecirc;ncia; estrat&eacute;gia; inova&ccedil;&atilde;o; riscos e sustentabilidade; setor p&uacute;blico. As grandes empresas com unidade dedicada, cerca de 42%, s&atilde;o o alvo priorit&aacute;rio<sup>3</sup></td></tr>
+<tr><td>Canais</td><td>Publica&ccedil;&atilde;o gratuita de marca, palco de evento, indica&ccedil;&atilde;o de par, academia, rede profissional<sup>23, 24</sup></td></tr>
+<tr><td>Relacionamento</td><td>Alta intensidade humana. Baseado em confian&ccedil;a pessoal com o s&oacute;cio, o que limita a escala</td></tr>
+<tr><td>Receita</td><td>Projeto fechado, assinatura de pesquisa, oficina, reten&ccedil;&atilde;o de conselheiro, palestra. A assinatura &eacute; a mais est&aacute;vel e a mais amea&ccedil;ada<sup>17, 18, 56</sup></td></tr>
+<tr><td>Recursos-chave</td><td>Reputa&ccedil;&atilde;o do s&oacute;cio s&ecirc;nior, m&eacute;todo propriet&aacute;rio, base de sinais, rede de especialistas</td></tr>
+<tr><td>Atividades-chave</td><td>Pesquisa, facilita&ccedil;&atilde;o, publica&ccedil;&atilde;o, venda relacional</td></tr>
+<tr><td>Parcerias</td><td>Academia, institutos, plataformas de software, redes internacionais<sup>20, 21, 24, 48</sup></td></tr>
+<tr><td>Custos</td><td>Folha s&ecirc;nior, produ&ccedil;&atilde;o de publica&ccedil;&atilde;o gratuita, presen&ccedil;a em evento, viagem</td></tr>
+</tbody>
+</table>
+<div class="alerta"><strong>A fragilidade estrutural do lado A.</strong> O ativo principal, a reputa&ccedil;&atilde;o do s&oacute;cio, n&atilde;o &eacute; transfer&iacute;vel nem escal&aacute;vel, e o produto principal, o documento, est&aacute; sendo comoditizado por ferramenta de uso geral. &Eacute; um modelo com teto baixo e ch&atilde;o instavel. <span class="sel sel-i">Infer&ecirc;ncia</span></div>
+
+<h3>Lado B: a fun&ccedil;&atilde;o interna de futuros como unidade</h3>
+<table>
+<thead><tr><th>Bloco</th><th>Conte&uacute;do</th></tr></thead>
+<tbody>
+<tr><td>Proposta de valor</td><td>Tr&ecirc;s coisas, e s&oacute; tr&ecirc;s: risco estrutural evitado, op&ccedil;&atilde;o comprada barata antes do mercado precificar, e tempo menor entre choque e decis&atilde;o</td></tr>
+<tr><td>Clientes internos</td><td>Conselho, presid&ecirc;ncia, estrat&eacute;gia, inova&ccedil;&atilde;o, riscos, ger&ecirc;ncias de linha</td></tr>
+<tr><td>Canais</td><td>Comit&ecirc; mensal, sess&atilde;o pr&eacute;-or&ccedil;ament&aacute;ria, item fixo no conselho, revis&atilde;o trimestral de carteira</td></tr>
+<tr><td>Receita</td><td>N&atilde;o tem. Por isso precisa de m&eacute;trica de decis&atilde;o, ou vira centro de custo indefens&aacute;vel no primeiro aperto</td></tr>
+<tr><td>Recursos-chave</td><td>Uma pessoa dedicada e cr&iacute;vel, rede parcial de donos de dom&iacute;nio, acesso a n&uacute;mero interno, mandato escrito</td></tr>
+<tr><td>Atividades-chave</td><td>Varredura quinzenal, leitura mensal de implica&ccedil;&atilde;o, ciclo anual de cen&aacute;rios, t&uacute;nel de vento, gest&atilde;o da carteira de apostas</td></tr>
+<tr><td>Parcerias</td><td>Fontes p&uacute;blicas gratuitas de alta qualidade: Brasil 2050, Ipea, CGEE, prospectiva europeia, State of the Future<sup>11, 25, 26, 27, 60</sup></td></tr>
+<tr><td>Custos</td><td>Folha, consultoria pontual, assinatura, plataforma e, o item que define tudo, a verba de op&ccedil;&atilde;o de 1% a 3% do investimento</td></tr>
+</tbody>
+</table>
+<p class="note">A diferen&ccedil;a decisiva entre os dois lados: o lado A precisa de reputa&ccedil;&atilde;o para vender, o lado B precisa de calend&aacute;rio e verba para existir. Comprar reputa&ccedil;&atilde;o &eacute; f&aacute;cil e caro; instalar calend&aacute;rio &eacute; barato e dif&iacute;cil. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+</section>
+
+<section id="p-w5" class="pane">
+<h2>5W2H: a fun&ccedil;&atilde;o de foresight em sete perguntas</h2>
+<table>
+<thead><tr><th>Pergunta</th><th>Resposta</th></tr></thead>
+<tbody>
+<tr><td><strong>O qu&ecirc;</strong></td><td>Uma capacidade permanente de perceber mudan&ccedil;a, traduzi-la em implica&ccedil;&atilde;o e convert&ecirc;-la em decis&atilde;o e aposta. N&atilde;o &eacute; um relat&oacute;rio, n&atilde;o &eacute; um projeto, n&atilde;o &eacute; uma previs&atilde;o<sup>1, 2</sup></td></tr>
+<tr><td><strong>Por qu&ecirc;</strong></td><td>Porque a evid&ecirc;ncia dispon&iacute;vel associa vigil&acirc;ncia madura a 16% de lucratividade contra 12% da m&eacute;dia do setor e a 75% de crescimento em valor de mercado contra 25%, em 83 empresas medidas at&eacute; 2015<sup>1</sup>. E porque, no Brasil, a justificativa de conformidade deixou de existir em maio de 2026<sup>38, 63</sup></td></tr>
+<tr><td><strong>Quem</strong></td><td>Uma pessoa dedicada e s&ecirc;nior, tr&ecirc;s a cinco donos de dom&iacute;nio em tempo parcial, um diretor patrocinador e um assento garantido no conselho duas vezes por ano</td></tr>
+<tr><td><strong>Onde</strong></td><td>Reporte formal a estrat&eacute;gia, com presen&ccedil;a obrigat&oacute;ria em riscos. Nenhuma posi&ccedil;&atilde;o &eacute; &oacute;tima; esta &eacute; a mais resistente a troca de executivo</td></tr>
+<tr><td><strong>Quando</strong></td><td>Varredura quinzenal, comit&ecirc; mensal, ciclo de cen&aacute;rios anual encaixado 30 dias antes do or&ccedil;amento, revis&atilde;o de carteira trimestral, conselho semestral. As datas s&atilde;o a fun&ccedil;&atilde;o; o resto &eacute; conte&uacute;do</td></tr>
+<tr><td><strong>Como</strong></td><td>Escada de quatro degraus, do dado &agrave; intelig&ecirc;ncia, conforme a ISO 56006<sup>9, 10</sup>, com seis m&eacute;todos: varredura, an&aacute;lise de tend&ecirc;ncias, cen&aacute;rios, t&uacute;nel de vento, mapa de rota e consulta a especialistas</td></tr>
+<tr><td><strong>Quanto</strong></td><td>Uma folha s&ecirc;nior, mais consultoria pontual no primeiro ciclo, mais assinatura revis&aacute;vel, mais plataforma s&oacute; a partir do m&ecirc;s nove, mais verba de op&ccedil;&atilde;o de 1% a 3% do investimento. A verba de op&ccedil;&atilde;o &eacute; o item n&atilde;o negoci&aacute;vel: sem ela, os outros gastos n&atilde;o t&ecirc;m como gerar retorno</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="p-risco" class="pane">
+<h2>Riscos de montar e de operar a fun&ccedil;&atilde;o</h2>
+<table>
+<thead><tr><th>Risco</th><th>Probabilidade</th><th>Impacto</th><th>Sinal de alerta precoce</th><th>Mitiga&ccedil;&atilde;o</th></tr></thead>
+<tbody>
+<tr><td>Vira clube de leitura: percebe muito, decide nada</td><td>Muito alta</td><td>Alto. &Eacute; o perfil do grupo que encolheu 6% em valor de mercado<sup>1</sup></td><td>Reuni&otilde;es cheias e nenhuma decis&atilde;o registrada com dono</td><td>Verba de op&ccedil;&atilde;o com gatilho de refor&ccedil;o e de abandono</td></tr>
+<tr><td>Captura pelo curto prazo</td><td>Muito alta. &Eacute; o padr&atilde;o dos 81%<sup>4</sup></td><td>M&eacute;dio</td><td>Toda pauta vira insumo de meta do ano</td><td>Reuni&otilde;es, verbas e m&eacute;tricas separadas por horizonte</td></tr>
+<tr><td>Morte por troca de patrocinador</td><td>Alta</td><td>Alto</td><td>Mandato apenas verbal; nenhum registro em ata</td><td>Mandato escrito e item fixo na pauta do conselho</td></tr>
+<tr><td>Corte no primeiro aperto de or&ccedil;amento</td><td>Alta</td><td>Alto</td><td>Relat&oacute;rio anual da &aacute;rea lista entreg&aacute;veis, n&atilde;o decis&otilde;es</td><td>Medir tempo at&eacute; a decis&atilde;o e apostas com gatilho desde o m&ecirc;s 1</td></tr>
+<tr><td>Perda do argumento regulat&oacute;rio</td><td><strong>J&aacute; ocorreu no Brasil</strong>, em maio de 2026<sup>38, 63</sup></td><td>Alto para quem dependia dele</td><td>A tese interna cita norma como justificativa principal</td><td>Reescrever a tese em termos econ&ocirc;micos antes do pr&oacute;ximo or&ccedil;amento</td></tr>
+<tr><td>Comoditiza&ccedil;&atilde;o do produto por ferramenta de uso geral</td><td>Alta</td><td>Alto para fornecedor, baixo para cliente</td><td>Proposta comercial que vende s&iacute;ntese e volume</td><td>Migrar o valor para facilita&ccedil;&atilde;o e governan&ccedil;a, que n&atilde;o se automatizam</td></tr>
+<tr><td>Compra de plataforma antes de existir rotina</td><td>M&eacute;dia</td><td>M&eacute;dio</td><td>Licen&ccedil;a contratada com base vazia depois de tr&ecirc;s meses</td><td>Planilha at&eacute; o m&ecirc;s nove<sup>20</sup></td></tr>
+<tr><td>Conflito territorial com riscos ou inova&ccedil;&atilde;o</td><td>M&eacute;dia</td><td>M&eacute;dio</td><td>Diretorias vizinhas param de indicar gente para o comit&ecirc;</td><td>Divis&atilde;o explicita: risco cuida do prov&aacute;vel, futuros do plaus&iacute;vel; verbas separadas</td></tr>
+<tr><td>Aus&ecirc;ncia silenciosa das ger&ecirc;ncias de linha</td><td>Alta</td><td>Alto, e pouco vis&iacute;vel</td><td>Presen&ccedil;a caindo m&ecirc;s a m&ecirc;s sem que ningu&eacute;m reclame</td><td>Entrar sempre por dor concreta da &aacute;rea, nunca por pauta gen&eacute;rica</td></tr>
+<tr><td>Depend&ecirc;ncia de consultor externo</td><td>M&eacute;dia</td><td>M&eacute;dio</td><td>Segundo ciclo contratado igual ao primeiro</td><td>Transfer&ecirc;ncia de m&eacute;todo como entreg&aacute;vel contratual, com nome de quem ser&aacute; treinado</td></tr>
+<tr><td>Excesso de confian&ccedil;a na pr&oacute;pria capacidade</td><td>M&eacute;dia</td><td>M&eacute;dio</td><td>A casa se declara preparada sem nunca ter medido acerto retrospectivo<sup>5, 6</sup></td><td>Publicar internamente, uma vez por ano, o que se marcou como quente h&aacute; 24 meses e o que de fato ocorreu</td></tr>
+</tbody>
+</table>
+<p class="note">Os tr&ecirc;s primeiros riscos da tabela respondem por quase toda a mortalidade observada da fun&ccedil;&atilde;o, e os tr&ecirc;s t&ecirc;m mitiga&ccedil;&atilde;o barata. Nenhum deles &eacute; um problema de an&aacute;lise. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+</section>
+
+<section id="p-swot" class="pane">
+<h2>Diagn&oacute;stico e cen&aacute;rios do pr&oacute;prio campo at&eacute; 2032</h2>
+
+<h3>Diagn&oacute;stico em quatro quadrantes</h3>
+<div class="g2">
+<div class="card"><strong>For&ccedil;as</strong><br>M&eacute;todo maduro e documentado, com norma internacional de refer&ecirc;ncia<sup>9</sup>. Evid&ecirc;ncia emp&iacute;rica de retorno, ainda que limitada<sup>1</sup>. Legitima&ccedil;&atilde;o por institui&ccedil;&otilde;es p&uacute;blicas relevantes<sup>11, 26</sup>. Custo de entrada baixo para o cliente.</div>
+<div class="card"><strong>Fraquezas</strong><br>Sem certifica&ccedil;&atilde;o nem m&eacute;trica de acerto<sup>23</sup>. Evid&ecirc;ncia principal antiga e de amostra pequena<sup>1</sup>. Produto principal comoditiz&aacute;vel. Depend&ecirc;ncia de reputa&ccedil;&atilde;o pessoal n&atilde;o escal&aacute;vel. Confus&atilde;o cr&ocirc;nica com previs&atilde;o.</div>
+<div class="card"><strong>Oportunidades</strong><br>Incerteza executiva elevada desde 2025<sup>5</sup>. Material p&uacute;blico gratuito e de qualidade praticamente n&atilde;o utilizado por empresas<sup>26, 27, 60</sup>. Espa&ccedil;o aberto no elo de governan&ccedil;a, que ningu&eacute;m ocupa. Automa&ccedil;&atilde;o barateia a coleta e libera tempo para o que importa.</div>
+<div class="card"><strong>Amea&ccedil;as</strong><br>Rever&ccedil;&atilde;o regulat&oacute;ria brasileira em 2026<sup>38, 63</sup>. Substitui&ccedil;&atilde;o dos elos 1 a 3 por ferramenta de uso geral. Corte or&ccedil;ament&aacute;rio em ciclo de aperto. Desgaste reputacional acumulado do termo futurista.</div>
+</div>
+
+<h3>Tr&ecirc;s cen&aacute;rios para 2032</h3>
+<p>Os dois eixos de maior incerteza s&atilde;o: quanto a decis&atilde;o corporativa fica mais disciplinada por gatilho, e quanto a produ&ccedil;&atilde;o de an&aacute;lise se automatiza. Deles saem tr&ecirc;s mundos. <span class="sel sel-e">Especulativo</span></p>
+
+<div class="card">
+<p><strong>Mundo 1. A fun&ccedil;&atilde;o vira encanamento.</strong> A coleta e a s&iacute;ntese se automatizam quase por completo. O cargo de analista de sinais desaparece. Sobra a fun&ccedil;&atilde;o de governan&ccedil;a: quem instala calend&aacute;rio, gatilho e carteira. O mercado encolhe em faturamento e cresce em relev&acirc;ncia. Boutiques de documento fecham; praticantes de instala&ccedil;&atilde;o prosperam.</p>
+<p><em>Indicadores de aproxima&ccedil;&atilde;o:</em> mais casas aposentando relat&oacute;rio anual, como j&aacute; ocorreu em 2026<sup>17, 18</sup>; editais corporativos passando a pedir decis&atilde;o em vez de documento; queda no pre&ccedil;o m&eacute;dio do projeto de cen&aacute;rios.</p>
+</div>
+
+<div class="card">
+<p><strong>Mundo 2. O espet&aacute;culo vence.</strong> A automa&ccedil;&atilde;o inunda o mercado de conte&uacute;do sobre futuro, a diferencia&ccedil;&atilde;o migra para carisma, e o campo se aproxima do circuito de palestras. A evid&ecirc;ncia de retorno permanece antiga e ningu&eacute;m produz nova. A fun&ccedil;&atilde;o interna perde credibilidade por associa&ccedil;&atilde;o e vira comunica&ccedil;&atilde;o corporativa.</p>
+<p><em>Indicadores de aproxima&ccedil;&atilde;o:</em> aus&ecirc;ncia de novo estudo emp&iacute;rico de porte substituindo a base de 2015; crescimento do formato palestra sobre o formato projeto; &aacute;reas internas migrando para dentro de marketing.</p>
+</div>
+
+<div class="card">
+<p><strong>Mundo 3. A disciplina chega.</strong> Alguma combina&ccedil;&atilde;o de press&atilde;o de investidor, choque relevante e amadurecimento do conselho torna o gatilho pr&aacute;tica corrente. A fun&ccedil;&atilde;o passa a ser medida por tempo at&eacute; a decis&atilde;o. A associa&ccedil;&atilde;o profissional, ou algo que a substitua, come&ccedil;a a publicar acerto retrospectivo. O campo ganha o que sempre lhe faltou: r&eacute;gua.</p>
+<p><em>Indicadores de aproxima&ccedil;&atilde;o:</em> apari&ccedil;&atilde;o de m&eacute;tricas de decis&atilde;o em relat&oacute;rio anual de companhia aberta; alguma casa publicando o pr&oacute;prio acerto; retorno de exig&ecirc;ncia regulat&oacute;ria de cen&aacute;rio, revertendo o movimento de 2026<sup>38, 63</sup>.</p>
+</div>
+
+<div class="alerta"><strong>O que fazer em qualquer um dos tr&ecirc;s.</strong> Instalar calend&aacute;rio, gatilho e verba de op&ccedil;&atilde;o &eacute; a &uacute;nica decis&atilde;o que funciona nos tr&ecirc;s mundos. Comprar documento falha nos tr&ecirc;s. Quando uma a&ccedil;&atilde;o vence em todos os cen&aacute;rios, ela deixou de ser aposta e virou dever de casa. <span class="sel sel-i">Infer&ecirc;ncia</span></div>
+</section>
+
+<section id="p-sut" class="pane">
+<h2>Sutilezas: o que s&oacute; se aprende depois de errar</h2>
+
+<h3>Sobre a pr&aacute;tica</h3>
+<ul>
+<li><strong>O produto n&atilde;o &eacute; o cen&aacute;rio, &eacute; o ensaio.</strong> O valor nasce na sala, quando o corpo executivo se v&ecirc; obrigado a responder o que faria. Empresa que recebe cen&aacute;rio pronto de fora e n&atilde;o ensaia comprou a capa do livro.</li>
+<li><strong>Cen&aacute;rio bom incomoda.</strong> Se os quatro mundos deixam a lideran&ccedil;a confort&aacute;vel, algum deles foi censurado no caminho. O mundo que ningu&eacute;m quer discutir &eacute; quase sempre o mais informativo.</li>
+<li><strong>Quatro mundos &eacute; o teto.</strong> Acima disso a discuss&atilde;o se dispersa e a diretoria escolhe mentalmente o do meio. Tr&ecirc;s costuma ser melhor que quatro.</li>
+<li><strong>Nunca apresente probabilidade em cen&aacute;rio.</strong> No instante em que um mundo recebe 60%, os outros deixam de existir e a empresa volta a fazer previs&atilde;o com nome novo.</li>
+<li><strong>Sinal n&atilde;o &eacute; not&iacute;cia.</strong> Not&iacute;cia relata o que aconteceu; sinal sugere mudan&ccedil;a de dire&ccedil;&atilde;o. A maior parte das bases de radar corporativas &eacute; um arquivo de not&iacute;cias com nome bonito.</li>
+<li><strong>A melhor pergunta de varredura n&atilde;o &eacute; o que est&aacute; crescendo.</strong> &Eacute;: o que est&aacute; ficando barato, o que est&aacute; ficando proibido e o que est&aacute; ficando socialmente inaceit&aacute;vel. As tr&ecirc;s antecipam mudan&ccedil;a estrutural melhor que curva de ado&ccedil;&atilde;o.</li>
+</ul>
+
+<h3>Sobre pol&iacute;tica interna</h3>
+<ul>
+<li><strong>A fun&ccedil;&atilde;o morre de aus&ecirc;ncia, n&atilde;o de veto.</strong> Ningu&eacute;m mata uma &aacute;rea de futuros em reuni&atilde;o. As pessoas apenas param de comparecer, e seis meses depois n&atilde;o h&aacute; mais o que defender.</li>
+<li><strong>Nunca vire dona da decis&atilde;o.</strong> No dia em que a fun&ccedil;&atilde;o passa a recomendar contra uma diretoria de linha em vez de com ela, perde acesso ao n&uacute;mero interno, que &eacute; o insumo do degrau 3.</li>
+<li><strong>O diagn&oacute;stico das tr&ecirc;s &uacute;ltimas surpresas vale mais que qualquer benchmark.</strong> Reconstituir se o sinal existia, quem viu e por que n&atilde;o virou decis&atilde;o &eacute; a &uacute;nica pe&ccedil;a de venda interna que a lideran&ccedil;a n&atilde;o consegue rebater, porque a dor &eacute; da pr&oacute;pria casa.</li>
+<li><strong>Encaixe a fun&ccedil;&atilde;o no calend&aacute;rio antes de encaix&aacute;-la no organograma.</strong> Uma data obrigat&oacute;ria vale mais que uma caixinha no desenho.</li>
+<li><strong>O conselho protege melhor que a presid&ecirc;ncia.</strong> O mandato do conselho &eacute; mais longo. Item fixo na pauta duas vezes por ano &eacute; o seguro mais barato contra troca de executivo.</li>
+</ul>
+
+<h3>Sobre compra e venda</h3>
+<ul>
+<li><strong>Pergunte pela decis&atilde;o, n&atilde;o pelo cliente.</strong> Portf&oacute;lio de logotipos n&atilde;o diz nada. Um caso concreto de decis&atilde;o de or&ccedil;amento alterada diz tudo.</li>
+<li><strong>Compre m&eacute;todo, n&atilde;o conclus&atilde;o.</strong> Conclus&atilde;o trazida de fora n&atilde;o &eacute; defendida por ningu&eacute;m internamente quando o assunto fica caro.</li>
+<li><strong>Reten&ccedil;&atilde;o de conselheiro &eacute; o formato mais subestimado do mercado.</strong> Poucas horas por m&ecirc;s de algu&eacute;m s&ecirc;nior, sem entreg&aacute;vel para encher, costuma render mais que projeto de doze semanas.</li>
+<li><strong>Desconfie da exclusividade.</strong> Muita casa vende ao setor inteiro a mesma leitura e chama de an&aacute;lise dedicada. Pergunte quantos concorrentes seus receberam o mesmo material.</li>
+<li><strong>A assinatura tem prazo de validade.</strong> Alto valor no ano 1, question&aacute;vel no ano 3. Se sua equipe n&atilde;o consegue produzir sozinha a mesma leitura ap&oacute;s dois anos, o problema n&atilde;o &eacute; a assinatura.</li>
+</ul>
+
+<h3>Sobre o pr&oacute;prio campo</h3>
+<ul>
+<li><strong>O termo futurista atrapalha mais do que ajuda no Brasil.</strong> Em ambiente corporativo, intelig&ecirc;ncia estrat&eacute;gica, prospectiva ou an&aacute;lise de cen&aacute;rios abre mais portas com o mesmo conte&uacute;do.</li>
+<li><strong>A evid&ecirc;ncia de retorno do campo &eacute; boa, mas &eacute; uma s&oacute;.</strong> Quem apresenta os 33% ao conselho sem dizer que s&atilde;o 83 empresas europeias medidas at&eacute; 2015 est&aacute; construindo credibilidade sobre areia<sup>1</sup>.</li>
+<li><strong>Nenhuma casa publica o pr&oacute;prio acerto retrospectivo.</strong> A primeira que publicar vai constranger o setor inteiro e ganhar uma vantagem competitiva que ningu&eacute;m consegue copiar rapidamente.</li>
+<li><strong>Conformidade nunca foi um bom alicerce.</strong> Quem construiu a tese sobre a Resolu&ccedil;&atilde;o CVM 193 descobriu isso em 29 de maio de 2026<sup>38, 63</sup>.</li>
+</ul>
+</section>
+
+<section id="p-gloss" class="pane">
+<h2>Gloss&aacute;rio</h2>
+<table>
+<thead><tr><th>Termo</th><th>O que significa, sem jarg&atilde;o</th></tr></thead>
+<tbody>
+<tr><td>Foresight corporativo</td><td>Capacidade permanente de perceber mudan&ccedil;a, traduzi-la em implica&ccedil;&atilde;o e convert&ecirc;-la em decis&atilde;o. N&atilde;o &eacute; previs&atilde;o<sup>1, 2</sup></td></tr>
+<tr><td>Prospectiva</td><td>Termo de origem francesa, usado no setor p&uacute;blico brasileiro e europeu como sin&ocirc;nimo pr&aacute;tico de foresight<sup>11, 26</sup></td></tr>
+<tr><td>Previs&atilde;o</td><td>Estimativa &uacute;nica sobre o futuro, avaliada por acerto. &Eacute; o oposto do m&eacute;todo de cen&aacute;rios</td></tr>
+<tr><td>Sinal fraco</td><td>Ind&iacute;cio precoce e amb&iacute;guo de mudan&ccedil;a poss&iacute;vel. Vira relevante quando se repete em fontes independentes</td></tr>
+<tr><td>Carta selvagem</td><td>Evento de baix&iacute;ssima probabilidade e impacto enorme. N&atilde;o se prev&ecirc;; ensaia-se a resposta</td></tr>
+<tr><td>For&ccedil;a motriz</td><td>Mecanismo que faz uma tend&ecirc;ncia acontecer. Tend&ecirc;ncia sem for&ccedil;a motriz identificada &eacute; moda</td></tr>
+<tr><td>Incerteza cr&iacute;tica</td><td>Vari&aacute;vel de alto impacto cujo desfecho ningu&eacute;m controla. S&atilde;o os eixos que geram os cen&aacute;rios</td></tr>
+<tr><td>Cen&aacute;rio</td><td>Descri&ccedil;&atilde;o internamente coerente de um futuro poss&iacute;vel, usada para testar decis&atilde;o. Nunca recebe probabilidade</td></tr>
+<tr><td>T&uacute;nel de vento</td><td>Passar a estrat&eacute;gia vigente por dentro de cada cen&aacute;rio para descobrir onde ela quebra. Etapa mais barata e mais decisiva<sup>8</sup></td></tr>
+<tr><td>Varredura de horizonte</td><td>Busca sistem&aacute;tica e cont&iacute;nua por sinais na borda do ambiente de neg&oacute;cio</td></tr>
+<tr><td>Horizontes 1, 2 e 3</td><td>Curto, m&eacute;dio e longo prazo. Cerca de 64% das empresas ficam entre tr&ecirc;s e dez anos e apenas 1,2% passam de dez<sup>3</sup></td></tr>
+<tr><td>Perceber, prospectar e apostar</td><td>Os tr&ecirc;s verbos que descrevem o processo maduro na literatura de refer&ecirc;ncia<sup>1, 2</sup></td></tr>
+<tr><td>Empresa vigilante</td><td>Categoria de maturidade associada a 16% de lucratividade contra 12% da m&eacute;dia do setor, em 83 empresas<sup>1</sup></td></tr>
+<tr><td>Gatilho</td><td>N&uacute;mero acordado previamente que, ao ser cruzado, obriga uma reuni&atilde;o de decis&atilde;o em prazo definido</td></tr>
+<tr><td>Verba de op&ccedil;&atilde;o</td><td>Reserva de 1% a 3% do investimento destinada a apostas pequenas com gatilho de refor&ccedil;o e de abandono</td></tr>
+<tr><td>Escada da intelig&ecirc;ncia</td><td>Dado, informa&ccedil;&atilde;o, conhecimento e intelig&ecirc;ncia acion&aacute;vel, conforme a norma de refer&ecirc;ncia<sup>9, 10</sup></td></tr>
+<tr><td>ISO 56006</td><td>Norma internacional de 2021 sobre gest&atilde;o da intelig&ecirc;ncia estrat&eacute;gica na inova&ccedil;&atilde;o. Volunt&aacute;ria e orientativa<sup>9, 10</sup></td></tr>
+<tr><td>IFRS S1 e S2</td><td>Padr&otilde;es de divulga&ccedil;&atilde;o sobre sustentabilidade e clima, que incluem an&aacute;lise de cen&aacute;rio<sup>37</sup></td></tr>
+<tr><td>Resolu&ccedil;&atilde;o CVM 193</td><td>Norma de 2023 que tornou obrigat&oacute;rios no Brasil os padr&otilde;es IFRS S1 e S2 a partir de 2026<sup>37</sup></td></tr>
+<tr><td>Resolu&ccedil;&atilde;o CVM 244</td><td>Norma de 29 de maio de 2026 que revogou essa obrigatoriedade e tornou o regime volunt&aacute;rio<sup>38, 63</sup></td></tr>
+<tr><td>STEEPLEDI</td><td>Grade de nove dom&iacute;nios de vigil&acirc;ncia: social, tecnol&oacute;gico, econ&ocirc;mico, ecol&oacute;gico, pol&iacute;tico, legal, &eacute;tico, demogr&aacute;fico e infraestrutural</td></tr>
+<tr><td>Letramento em futuros</td><td>Capacidade de imaginar e discutir futuros de forma estruturada, tratada como compet&ecirc;ncia a ser desenvolvida</td></tr>
+<tr><td>Acerto retrospectivo</td><td>Verificar hoje quantos dos sinais marcados como quentes h&aacute; 24 meses se materializaram. Praticamente ningu&eacute;m publica</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="p-cem" class="pane">
+<h2>Cem perguntas para interrogar o assunto</h2>
+<p class="note">Use como roteiro de diagn&oacute;stico, de entrevista com fornecedor ou de prepara&ccedil;&atilde;o para conselho. As perguntas cujo espelho voc&ecirc; n&atilde;o consegue responder em uma frase indicam onde a fun&ccedil;&atilde;o est&aacute; frouxa.</p>
+
+<h3>Fundamentos e defini&ccedil;&atilde;o</h3>
+<ol>
+<li>O que exatamente esta empresa quer dizer quando diz futuro?</li>
+<li>Estamos comprando previs&atilde;o ou prepara&ccedil;&atilde;o?</li>
+<li>Qual foi a &uacute;ltima decis&atilde;o mudada por causa de um estudo de futuro?</li>
+<li>Quem, nominalmente, &eacute; o dono da agenda de longo prazo?</li>
+<li>Esse dono tem or&ccedil;amento pr&oacute;prio ou pede favor?</li>
+<li>Qual &eacute; o nosso horizonte real de planejamento, em anos?</li>
+<li>Esse horizonte alcan&ccedil;a os riscos que dizemos temer?</li>
+<li>Foresight aqui reporta a quem, e por qu&ecirc;?</li>
+<li>Se essa pessoa sair amanh&atilde;, a fun&ccedil;&atilde;o sobrevive?</li>
+<li>Existe mandato escrito, ou s&oacute; combinado verbalmente?</li>
+</ol>
+
+<h3>Evid&ecirc;ncia e ceticismo</h3>
+<ol start="11">
+<li>Que evid&ecirc;ncia temos de que isso gera retorno nesta empresa?</li>
+<li>Conhecemos a limita&ccedil;&atilde;o da evid&ecirc;ncia que estamos citando?</li>
+<li>Quantas empresas tinha o estudo que sustenta o nosso argumento?</li>
+<li>De quando &eacute; a medi&ccedil;&atilde;o?</li>
+<li>Ela foi feita em mercado parecido com o nosso?</li>
+<li>O que aconteceu com as empresas que perceberam muito e decidiram pouco?</li>
+<li>N&oacute;s somos esse grupo?</li>
+<li>Como saber&iacute;amos se fossemos?</li>
+<li>Quando foi a &uacute;ltima vez que medimos nosso pr&oacute;prio acerto?</li>
+<li>Estamos dispostos a publicar internamente esse acerto?</li>
+</ol>
+
+<h3>Surpresas passadas</h3>
+<ol start="21">
+<li>Quais foram as tr&ecirc;s &uacute;ltimas surpresas estrat&eacute;gicas desta empresa?</li>
+<li>O sinal existia antes?</li>
+<li>Algu&eacute;m interno viu?</li>
+<li>Essa pessoa reportou?</li>
+<li>Para quem reportou?</li>
+<li>Por que n&atilde;o virou decis&atilde;o?</li>
+<li>Faltou informa&ccedil;&atilde;o ou faltou autoridade?</li>
+<li>O que mudou desde ent&atilde;o para que n&atilde;o se repita?</li>
+<li>Se nada mudou, por que esperamos resultado diferente?</li>
+<li>Quanto custou cada uma dessas surpresas?</li>
+</ol>
+
+<h3>Processo e rotina</h3>
+<ol start="31">
+<li>Existe varredura peri&oacute;dica, com data e dono?</li>
+<li>Com que frequ&ecirc;ncia?</li>
+<li>Quantos dom&iacute;nios cobrimos e quem &eacute; dono de cada um?</li>
+<li>Como distinguimos sinal de not&iacute;cia?</li>
+<li>Quem transforma sinal em implica&ccedil;&atilde;o para o neg&oacute;cio?</li>
+<li>Essa pessoa tem acesso a n&uacute;mero interno?</li>
+<li>Onde a implica&ccedil;&atilde;o &eacute; discutida, e com que frequ&ecirc;ncia?</li>
+<li>Quem, com poder de assinatura, senta nessa reuni&atilde;o?</li>
+<li>O que acontece com a implica&ccedil;&atilde;o depois da reuni&atilde;o?</li>
+<li>Existe registro escrito das decis&otilde;es tomadas ali?</li>
+</ol>
+
+<h3>Cen&aacute;rios</h3>
+<ol start="41">
+<li>Qual &eacute; a pergunta focal do nosso pr&oacute;ximo ciclo?</li>
+<li>Ela &eacute; estreita o suficiente para gerar decis&atilde;o?</li>
+<li>Ela d&oacute;i?</li>
+<li>Quantos mundos vamos construir?</li>
+<li>Algum deles incomoda a lideran&ccedil;a?</li>
+<li>Se nenhum incomoda, o que foi censurado?</li>
+<li>Cada mundo tem tr&ecirc;s indicadores observ&aacute;veis?</li>
+<li>Quem acompanha esses indicadores, e com que frequ&ecirc;ncia?</li>
+<li>Vamos atribuir probabilidade? Por que n&atilde;o dever&iacute;amos?</li>
+<li>Onde a estrat&eacute;gia vigente quebra em cada mundo?</li>
+</ol>
+
+<h3>Decis&atilde;o e governan&ccedil;a</h3>
+<ol start="51">
+<li>Quantas premissas do nosso plano t&ecirc;m indicador de monitoramento ativo?</li>
+<li>Quantos gatilhos num&eacute;ricos temos definidos hoje?</li>
+<li>Algum foi cruzado nos &uacute;ltimos doze meses?</li>
+<li>O que aconteceu quando foi cruzado?</li>
+<li>Qual &eacute; o tempo m&eacute;dio entre detectar um sinal e decidir algo?</li>
+<li>Esse tempo est&aacute; caindo?</li>
+<li>Existe data fixa no ciclo or&ccedil;ament&aacute;rio para responder aos cen&aacute;rios?</li>
+<li>O conselho tem item fixo na pauta sobre longo prazo?</li>
+<li>Quantas vezes por ano?</li>
+<li>Quem pode matar uma aposta, e com que crit&eacute;rio?</li>
+</ol>
+
+<h3>Dinheiro</h3>
+<ol start="61">
+<li>Existe verba de op&ccedil;&atilde;o separada do or&ccedil;amento de inova&ccedil;&atilde;o?</li>
+<li>Qual percentual do investimento ela representa?</li>
+<li>Quantas apostas vivas temos?</li>
+<li>Cada uma tem diretor dono nomeado?</li>
+<li>Cada uma tem gatilho de refor&ccedil;o e de abandono?</li>
+<li>Alguma aposta j&aacute; foi morta por crit&eacute;rio, e n&atilde;o por esquecimento?</li>
+<li>Quanto gastamos por ano com foresight, somando tudo?</li>
+<li>Quanto disso &eacute; documento e quanto &eacute; capacidade instalada?</li>
+<li>Se o or&ccedil;amento cortar 30%, o que cai primeiro?</li>
+<li>Conseguir&iacute;amos defender a fun&ccedil;&atilde;o com n&uacute;meros, hoje, em uma p&aacute;gina?</li>
+</ol>
+
+<h3>Fornecedores</h3>
+<ol start="71">
+<li>Que decis&atilde;o de or&ccedil;amento este fornecedor j&aacute; fez um cliente mudar?</li>
+<li>Ele consegue nomear essa decis&atilde;o?</li>
+<li>Quantos concorrentes nossos receberam o mesmo material?</li>
+<li>O contrato prev&ecirc; transfer&ecirc;ncia de m&eacute;todo?</li>
+<li>Est&aacute; escrito quem, nominalmente, ser&aacute; treinado?</li>
+<li>O entreg&aacute;vel final &eacute; documento ou lista de decis&otilde;es com dono e prazo?</li>
+<li>Ele aceitaria trocar o entreg&aacute;vel pela lista de decis&otilde;es?</li>
+<li>Se recusar, o que isso revela sobre o que ele sabe fazer?</li>
+<li>A assinatura que pagamos ainda ensina algo &agrave; equipe?</li>
+<li>No terceiro ano, por que ainda precisamos dela?</li>
+</ol>
+
+<h3>Contexto brasileiro</h3>
+<ol start="81">
+<li>Nossa tese interna depende de alguma norma espec&iacute;fica?</li>
+<li>Ela sobreviveu &agrave; Resolu&ccedil;&atilde;o CVM 244, de maio de 2026?</li>
+<li>Se n&atilde;o, qual &eacute; a nova tese econ&ocirc;mica?</li>
+<li>Algu&eacute;m aqui j&aacute; leu a Estrat&eacute;gia Brasil 2050?</li>
+<li>E os estudos prospectivos do Ipea e do CGEE?</li>
+<li>Que implica&ccedil;&otilde;es setoriais tiramos deles?</li>
+<li>Quanto pagar&iacute;amos por esse mesmo material se fosse privado?</li>
+<li>Nossa vigil&acirc;ncia cobre regulador, ou s&oacute; concorrente?</li>
+<li>Cobre demografia, que &eacute; a for&ccedil;a mais previs&iacute;vel de todas?</li>
+<li>Cobre infraestrutura de energia e log&iacute;stica?</li>
+</ol>
+
+<h3>Cultura e sobreviv&ecirc;ncia</h3>
+<ol start="91">
+<li>As ger&ecirc;ncias de linha comparecem ao comit&ecirc;?</li>
+<li>A presen&ccedil;a est&aacute; subindo ou caindo?</li>
+<li>Quando algu&eacute;m discorda em p&uacute;blico, isso &eacute; premiado ou punido?</li>
+<li>Quem foi a &uacute;ltima pessoa a dizer algo desconfort&aacute;vel na sala?</li>
+<li>O que aconteceu com ela?</li>
+<li>Medimos entreg&aacute;veis ou decis&otilde;es?</li>
+<li>O relat&oacute;rio anual da nossa &aacute;rea lista qual dos dois?</li>
+<li>Usamos a palavra futurista internamente? Ela ajuda ou atrapalha?</li>
+<li>Se a fun&ccedil;&atilde;o acabasse hoje, quem sentiria falta e por qu&ecirc;?</li>
+<li>O que precisar&iacute;amos ver acontecer para admitir que erramos a tese?</li>
+</ol>
+</section>
+
+<section id="p-check" class="pane">
+<h2>O veredito do advogado &agrave; vista</h2>
+<p class="note">Esta se&ccedil;&atilde;o existe para atacar o pr&oacute;prio documento. Se o argumento sobreviver a ela, vale ser levado ao conselho; se n&atilde;o sobreviver, melhor descobrir aqui.</p>
+
+<h3>A acusa&ccedil;&atilde;o</h3>
+<div class="card">
+<p><strong>Primeiro:</strong> a tese central deste documento repousa sobre um &uacute;nico estudo de 83 empresas europeias, cuja performance foi medida at&eacute; 2015.<sup>1</sup> Nenhum campo s&eacute;rio de gest&atilde;o aceitaria uma amostra dessas como prova de causalidade. &Eacute; perfeitamente poss&iacute;vel que empresas j&aacute; saud&aacute;veis tenham dinheiro sobrando para montar &aacute;rea de futuros, e que a lucratividade cause o foresight, e n&atilde;o o contr&aacute;rio.</p>
+<p><strong>Segundo:</strong> se a pr&aacute;tica fosse t&atilde;o valiosa quanto se afirma, 98,8% das empresas n&atilde;o estariam ignorando o horizonte de mais de dez anos.<sup>3</sup> Mercados n&atilde;o costumam deixar dinheiro no ch&atilde;o por d&eacute;cadas. A explica&ccedil;&atilde;o mais simples n&atilde;o &eacute; que todo mundo &eacute; mi&oacute;pe: &eacute; que o retorno esperado &eacute; menor do que os defensores afirmam.</p>
+<p><strong>Terceiro:</strong> o campo n&atilde;o tem certifica&ccedil;&atilde;o, n&atilde;o tem m&eacute;trica de acerto e nenhuma casa publica seu pr&oacute;prio desempenho retrospectivo.<sup>23</sup> Uma ind&uacute;stria que vende preparo para o futuro e se recusa a medir o pr&oacute;prio acerto n&atilde;o deveria receber o benef&iacute;cio da d&uacute;vida.</p>
+<p><strong>Quarto:</strong> o principal empurr&atilde;o regulat&oacute;rio brasileiro foi revogado em maio de 2026 antes mesmo de produzir efeito.<sup>38, 63</sup> Se nem o regulador que criou a exig&ecirc;ncia se convenceu a mant&ecirc;-la, por que a diretoria financeira deveria?</p>
+<p><strong>Quinto:</strong> a pr&oacute;pria casa mais famosa do setor matou seu produto principal em 2026.<sup>17, 18</sup> Isso pode ser lido como amadurecimento, como este documento sugere, mas tamb&eacute;m pode ser lido de forma bem mais simples: o produto parou de vender.</p>
+</div>
+
+<h3>A defesa</h3>
+<div class="card">
+<p><strong>Sobre a amostra.</strong> A acusa&ccedil;&atilde;o est&aacute; correta e o documento a incorpora: o estudo &eacute; pequeno, europeu e antigo, e est&aacute; assim descrito em todas as passagens onde &eacute; citado.<sup>1</sup> A defesa n&atilde;o &eacute; que a evid&ecirc;ncia seja forte, e sim que o achado mais &uacute;til dele n&atilde;o depende de causalidade: o grupo de pior desempenho foi o que percebia muito e decidia pouco. Esse achado &eacute; um alerta contra o desperd&iacute;cio, n&atilde;o uma promessa de retorno, e sobrevive mesmo que a causalidade caia.</p>
+<p><strong>Sobre o dinheiro no ch&atilde;o.</strong> A escassez tem explica&ccedil;&atilde;o estrutural, n&atilde;o de racionalidade: mandatos executivos s&atilde;o curtos, o benef&iacute;cio matura fora do mandato e o custo aparece dentro dele. N&atilde;o &eacute; miopia, &eacute; incentivo desalinhado. A prova &eacute; que a fun&ccedil;&atilde;o sobrevive melhor ancorada no conselho, cujo mandato &eacute; mais longo.</p>
+<p><strong>Sobre a aus&ecirc;ncia de m&eacute;trica.</strong> Aqui a acusa&ccedil;&atilde;o &eacute; integralmente aceita. &Eacute; a fraqueza mais grave do campo e este documento a trata como tal, ao ponto de propor a solu&ccedil;&atilde;o: acerto retrospectivo publicado anualmente. Enquanto ningu&eacute;m publicar, o comprador deve tratar toda promessa de pontaria como propaganda.</p>
+<p><strong>Sobre a revoga&ccedil;&atilde;o.</strong> A defesa &eacute; que a recomenda&ccedil;&atilde;o deste documento nunca foi de conformidade. A norma revogada aparece como alerta, n&atilde;o como argumento: quem sustentou a tese nela perdeu o ch&atilde;o, e est&aacute; escrito exatamente assim.</p>
+<p><strong>Sobre o produto morto.</strong> As duas leituras podem ser verdadeiras ao mesmo tempo, e a consequ&ecirc;ncia pr&aacute;tica &eacute; id&ecirc;ntica nos dois casos: n&atilde;o organize sua fun&ccedil;&atilde;o interna em torno de um documento anual de tend&ecirc;ncias.</p>
+</div>
+
+<h3>Senten&ccedil;a</h3>
+<div class="alerta">
+<p><strong>A vers&atilde;o cara do foresight n&atilde;o est&aacute; provada.</strong> Projeto de consultoria de doze semanas, assinatura permanente, plataforma e relat&oacute;rio anual formam um pacote cuja evid&ecirc;ncia de retorno &eacute; fraca, antiga e pequena. Quem vende isso como certeza est&aacute; exagerando, e quem compra por conformidade acabou de perder o motivo.</p>
+<p><strong>A vers&atilde;o barata do foresight n&atilde;o precisa de prova.</strong> Uma pessoa dedicada, uma reuni&atilde;o mensal, duas datas no ciclo or&ccedil;ament&aacute;rio, gatilhos escritos e 1% do investimento reservado com crit&eacute;rio de abandono. O custo &eacute; pequeno o suficiente para dispensar estudo acad&ecirc;mico, e o mecanismo, combinar a resposta antes de estar sob press&atilde;o, funciona por raz&otilde;es que n&atilde;o dependem de nenhum dado deste documento.</p>
+<p><strong>Recomenda&ccedil;&atilde;o:</strong> instale a vers&atilde;o barata primeiro e por completo. S&oacute; compre a vers&atilde;o cara depois que a barata estiver girando h&aacute; um ano e voc&ecirc; souber, com nome e data, quais decis&otilde;es ela mudou. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+</div>
+
+<h3>Adendo da v2: o ataque ao bench Brasil</h3>
+<div class="card">
+<p><strong>Acusa&ccedil;&atilde;o.</strong> Primeira: o bench mede o que as empresas publicam, n&atilde;o o que elas fazem. Uma casa com foresight interno e discreto aparece como n/d, e a aus&ecirc;ncia declarada de XP e Nubank &eacute; limite de busca, n&atilde;o fato do mundo. Segunda: parte das evid&ecirc;ncias veio de resultado indexado de busca quando o site bloqueou leitura direta (WEG, Botic&aacute;rio, trechos do Banco do Brasil), e evid&ecirc;ncia de segunda m&atilde;o &eacute; mais fr&aacute;gil, por mais que esteja rotulada. Terceira: a conclus&atilde;o de que o setor p&uacute;blico &eacute; mais maduro que o privado pode ser artefato de transpar&ecirc;ncia, porque &oacute;rg&atilde;o p&uacute;blico &eacute; obrigado a publicar o processo e empresa privada n&atilde;o. Quarta: a cad&ecirc;ncia bienal da DHL foi inferida de tr&ecirc;s pontos (2020, 2022, 2024), sem edi&ccedil;&atilde;o 2026 confirmada at&eacute; a data da varredura.</p>
+<p><strong>Defesa.</strong> Cada linha do bench carrega URL espec&iacute;fica e data de acesso; tudo o que veio de snippet est&aacute; rebaixado a Infer&ecirc;ncia com a ressalva escrita na pr&oacute;pria linha; as afirma&ccedil;&otilde;es de aus&ecirc;ncia est&atilde;o redigidas como n&atilde;o localizado, nunca como n&atilde;o existe. E o achado central, nenhum radar serial p&uacute;blico de tend&ecirc;ncias em casa brasileira, resiste ao vi&eacute;s de transpar&ecirc;ncia por constru&ccedil;&atilde;o: radar serial p&uacute;blico &eacute;, por defini&ccedil;&atilde;o, vis&iacute;vel. Se existisse, a varredura teria encontrado.</p>
+<p><strong>Senten&ccedil;a da v2.</strong> Bench aprovado com as ressalvas acima &agrave; vista. Duas corre&ccedil;&otilde;es foram aplicadas no pr&oacute;prio ataque: a soma de cisnes negros do caso Sicredi voltou a ser apresentada como a fonte apresenta (37 mundiais e 11 locais), e o ju&iacute;zo comparativo entre setor p&uacute;blico e privado foi rebaixado de Verificado para Infer&ecirc;ncia. <span class="sel sel-i">Infer&ecirc;ncia</span></p>
+</div>
+
+<h3>Lista de verifica&ccedil;&atilde;o final</h3>
+<table>
+<thead><tr><th>&nbsp;</th><th>Item</th><th>Se a resposta for n&atilde;o</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Existe um diretor com mandato escrito sobre a agenda de longo prazo?</td><td>Resolva isso antes de qualquer outra coisa</td></tr>
+<tr><td>2</td><td>As tr&ecirc;s &uacute;ltimas surpresas da empresa foram reconstitu&iacute;das por escrito?</td><td>Fa&ccedil;a. &Eacute; a pe&ccedil;a de venda interna mais barata que existe</td></tr>
+<tr><td>3</td><td>Existe varredura com data fixa e dono nomeado?</td><td>Comece quinzenal, com planilha, nesta semana</td></tr>
+<tr><td>4</td><td>Existe reuni&atilde;o mensal onde sinal vira implica&ccedil;&atilde;o, com algu&eacute;m de assinatura presente?</td><td>Sem isso, o degrau 4 nunca acontece</td></tr>
+<tr><td>5</td><td>H&aacute; duas datas fixas de futuros dentro do ciclo or&ccedil;ament&aacute;rio?</td><td>Negocie-as agora; s&atilde;o de gra&ccedil;a e valem mais que qualquer software</td></tr>
+<tr><td>6</td><td>H&aacute; item fixo na pauta do conselho, duas vezes por ano?</td><td>&Eacute; o seguro contra troca de executivo</td></tr>
+<tr><td>7</td><td>Existe verba de op&ccedil;&atilde;o separada, entre 1% e 3% do investimento?</td><td>Sem ela, tudo o que precede vira opini&atilde;o bem formatada</td></tr>
+<tr><td>8</td><td>Cada aposta tem gatilho de refor&ccedil;o e de abandono, por escrito?</td><td>Aposta sem crit&eacute;rio de abandono nunca morre e envenena a carteira</td></tr>
+<tr><td>9</td><td>A &aacute;rea mede decis&otilde;es, e n&atilde;o entreg&aacute;veis?</td><td>Troque a m&eacute;trica antes do pr&oacute;ximo relat&oacute;rio anual</td></tr>
+<tr><td>10</td><td>A tese interna sobrevive sem citar nenhuma norma?</td><td>Reescreva em termos econ&ocirc;micos antes do pr&oacute;ximo or&ccedil;amento<sup>38, 63</sup></td></tr>
+<tr><td>11</td><td>Algum contrato com fornecedor prev&ecirc; transfer&ecirc;ncia de m&eacute;todo com nome de quem ser&aacute; treinado?</td><td>Inclua a cl&aacute;usula na pr&oacute;xima renova&ccedil;&atilde;o</td></tr>
+<tr><td>12</td><td>Algu&eacute;m aqui j&aacute; leu a Estrat&eacute;gia Brasil 2050 e os estudos do Ipea e do CGEE?</td><td>&Eacute; material p&uacute;blico, gratuito e melhor que boa parte do que se compra<sup>26, 27, 60</sup></td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="p-fontes" class="pane">
+<h2>Fontes</h2>
+<div class="card">
+<p><strong>Nota de m&eacute;todo.</strong> Os selos usados no documento significam o seguinte. <span class="sel sel-v">Verificado</span> indica afirma&ccedil;&atilde;o apoiada em fonte publicada e identificada. <span class="sel sel-i">Infer&ecirc;ncia</span> indica racioc&iacute;nio constru&iacute;do a partir de fontes verificadas, mas que nenhuma delas afirma diretamente. <span class="sel sel-e">Especulativo</span> indica leitura de cen&aacute;rio ou hip&oacute;tese sem base emp&iacute;rica direta, oferecida como provoca&ccedil;&atilde;o e n&atilde;o como fato.</p>
+<p><strong>Sobre os n&uacute;meros de pesquisa.</strong> As estat&iacute;sticas de matura&ccedil;&atilde;o e uso do foresight corporativo, itens 3 e 4 da lista, circulam em levantamentos de benchmarking do campo e s&atilde;o reproduzidas em m&uacute;ltiplos materiais setoriais. Recomenda-se confirm&aacute;-las na fonte prim&aacute;ria antes de lev&aacute;-las a um conselho, pelo mesmo motivo que este documento pede que se fa&ccedil;a com qualquer n&uacute;mero de terceiro.</p>
+<p><strong>Sobre normas e resolu&ccedil;&otilde;es.</strong> Textos de norma mudam. As Resolu&ccedil;&otilde;es CVM 193 e 244 devem ser lidas na &iacute;ntegra no s&iacute;tio da pr&oacute;pria Comiss&atilde;o de Valores Mobili&aacute;rios antes de qualquer decis&atilde;o de conformidade.</p>
+</div>
+
+<h3>Evid&ecirc;ncia e teoria do campo</h3>
+<ol>
+<li>Rohrbeck, R.; Kum, M. E. <em>Corporate foresight and its impact on firm performance: A longitudinal analysis.</em> Technological Forecasting and Social Change, 2018. Estudo de 83 empresas, avalia&ccedil;&atilde;o de maturidade em 2008 e desempenho em 2015.</li>
+<li>Rohrbeck, R. <em>Corporate Foresight: Towards a Maturity Model for the Future Orientation of a Firm.</em> Springer, 2011. Origem do arcabou&ccedil;o de perceber, prospectar e apostar.</li>
+<li>Levantamentos de benchmarking sobre unidades de foresight corporativo, estrutura, or&ccedil;amento e horizonte de planejamento. Ver nota de m&eacute;todo acima.</li>
+<li>Levantamentos sobre finalidade de uso do foresight nas empresas: defini&ccedil;&atilde;o de metas, planejamento adaptativo e eventos explorat&oacute;rios. Ver nota de m&eacute;todo acima.</li>
+<li>Boston Consulting Group. Pesquisa sobre gest&atilde;o de riscos estrat&eacute;gicos e foresight junto a organiza&ccedil;&otilde;es de m&uacute;ltiplos setores.</li>
+<li>BCG Henderson Institute. Publica&ccedil;&otilde;es sobre horizonte estrat&eacute;gico e prepara&ccedil;&atilde;o para incerteza.</li>
+<li>ISO 31000. <em>Gest&atilde;o de riscos: diretrizes.</em></li>
+<li>Scoblic, J. P. <em>Learning from the Future.</em> Harvard Business Review, 2020. Refer&ecirc;ncia do uso de cen&aacute;rios como ensaio de decis&atilde;o.</li>
+<li>ISO 56006:2021. <em>Innovation management: tools and methods for strategic intelligence management.</em></li>
+<li>ISO 56002:2019. <em>Innovation management system: guidance.</em> Fam&iacute;lia na qual a 56006 se insere.</li>
+</ol>
+
+<h3>Institui&ccedil;&otilde;es p&uacute;blicas e redes internacionais</h3>
+<ol start="11">
+<li>Comiss&atilde;o Europeia. <em>Strategic Foresight Report.</em> Publica&ccedil;&atilde;o anual desde 2020; edi&ccedil;&atilde;o de 2025 dedicada &agrave; resili&ecirc;ncia.</li>
+<li>Comiss&atilde;o Europeia, Joint Research Centre. <em>Competence Centre on Foresight.</em></li>
+<li>Event Horizon Strategies. Pr&aacute;tica de cen&aacute;rios fundada por J. Peter Scoblic.</li>
+<li>4CF. Consultoria internacional de estudos estrat&eacute;gicos de futuros.</li>
+<li>Deloitte. <em>Center for the Long View,</em> criado em 2015 na Alemanha, dentro da pr&aacute;tica Monitor Deloitte.</li>
+<li>Institute for the Future. Instituto de pesquisa de futuros sediado na Calif&oacute;rnia.</li>
+<li>Future Today Strategy Group. Anuncio do encerramento do relat&oacute;rio anual de tend&ecirc;ncias e substitui&ccedil;&atilde;o por material organizado em converg&ecirc;ncias, mar&ccedil;o de 2026.</li>
+<li>Cobertura do SXSW 2026 sobre o encerramento do relat&oacute;rio anual de tend&ecirc;ncias.</li>
+<li>Webb, A. Edi&ccedil;&otilde;es anteriores do relat&oacute;rio anual de tend&ecirc;ncias tecnol&oacute;gicas, publicadas por quase duas d&eacute;cadas.</li>
+<li>ITONICS. Plataforma de gest&atilde;o de tend&ecirc;ncias e inova&ccedil;&atilde;o, reconhecida em an&aacute;lises de mercado de inova&ccedil;&atilde;o de 2024.</li>
+<li>Copenhagen Institute for Futures Studies. Instituto sem fins lucrativos fundado em 1969.</li>
+<li>Kristensen, T. Fundador do instituto dinamarqu&ecirc;s e ex-secret&aacute;rio-geral da OCDE.</li>
+<li>Association of Professional Futurists. Fundada em 2002; mais de 600 membros em cerca de 60 pa&iacute;ses.</li>
+<li>The Millennium Project. Rede global fundada em 1996, com dezenas de n&oacute;s nacionais; n&oacute; brasileiro constitu&iacute;do em 2000.</li>
+<li>The Millennium Project. <em>State of the Future,</em> vers&atilde;o 20.</li>
+</ol>
+
+<h3>Brasil</h3>
+<ol start="26">
+<li>Brasil, Minist&eacute;rio do Planejamento e Or&ccedil;amento. <em>Estrat&eacute;gia Brasil 2050.</em> Entregue em outubro de 2025.</li>
+<li>Instituto de Pesquisa Econ&ocirc;mica Aplicada. Estudos prospectivos e de cen&aacute;rios para pol&iacute;tica p&uacute;blica.</li>
+<li>Instituto de Pesquisa Econ&ocirc;mica Aplicada. <em>Brasil 2035: cen&aacute;rios para o desenvolvimento.</em></li>
+<li>Instituto de Pesquisa Econ&ocirc;mica Aplicada. Publica&ccedil;&otilde;es de m&eacute;todo em constru&ccedil;&atilde;o de cen&aacute;rios.</li>
+<li>Instituto Brasileiro de Geografia e Estat&iacute;stica. Proje&ccedil;&otilde;es da popula&ccedil;&atilde;o brasileira.</li>
+<li>Ag&ecirc;ncia Nacional de Sa&uacute;de Suplementar. Consultas p&uacute;blicas e atualiza&ccedil;&otilde;es de rol, usadas como exemplo ilustrativo de sinal regulat&oacute;rio.</li>
+<li>Comiss&atilde;o de Valores Mobili&aacute;rios. S&iacute;tio oficial de normas.</li>
+<li>Banco Central do Brasil. Publica&ccedil;&otilde;es sobre cen&aacute;rios e riscos do sistema financeiro.</li>
+<li>Confedera&ccedil;&atilde;o Nacional da Ind&uacute;stria. Estudos setoriais de longo prazo.</li>
+<li>Empresa de Pesquisa Energ&eacute;tica. <em>Plano Nacional de Energia,</em> exemplo de cen&aacute;rio p&uacute;blico de longo prazo.</li>
+<li>Funda&ccedil;&atilde;o Get&uacute;lio Vargas. Pesquisas de conjuntura e prospec&ccedil;&atilde;o setorial.</li>
+</ol>
+
+<h3>Normas de divulga&ccedil;&atilde;o e regula&ccedil;&atilde;o</h3>
+<ol start="37">
+<li>International Sustainability Standards Board. <em>IFRS S1</em> e <em>IFRS S2,</em> 2023; adotados no Brasil pela Resolu&ccedil;&atilde;o CVM 193, de 2023, com obrigatoriedade prevista a partir de 2026.</li>
+<li>Comiss&atilde;o de Valores Mobili&aacute;rios. <em>Resolu&ccedil;&atilde;o CVM 244,</em> de 29 de maio de 2026, que tornou volunt&aacute;rio o regime antes obrigat&oacute;rio.</li>
+<li>Task Force on Climate-related Financial Disclosures. Recomenda&ccedil;&otilde;es sobre an&aacute;lise de cen&aacute;rio clim&aacute;tico.</li>
+<li>Global Reporting Initiative. Padr&otilde;es de relato de sustentabilidade.</li>
+<li>Uni&atilde;o Europeia. <em>Corporate Sustainability Reporting Directive.</em></li>
+<li>Painel Intergovernamental sobre Mudan&ccedil;a do Clima. Cen&aacute;rios de refer&ecirc;ncia usados em an&aacute;lise clim&aacute;tica corporativa.</li>
+<li>Ag&ecirc;ncia Internacional de Energia. Cen&aacute;rios energ&eacute;ticos de longo prazo.</li>
+<li>Organiza&ccedil;&atilde;o para a Coopera&ccedil;&atilde;o e Desenvolvimento Econ&ocirc;mico. Publica&ccedil;&otilde;es sobre prospectiva em governo.</li>
+<li>Governo do Reino Unido, Government Office for Science. <em>Futures Toolkit.</em></li>
+<li>Governo de Singapura. <em>Centre for Strategic Futures.</em></li>
+</ol>
+
+<h3>M&eacute;todo, forma&ccedil;&atilde;o e literatura de apoio</h3>
+<ol start="47">
+<li>Literatura setorial sobre a distin&ccedil;&atilde;o entre pesquisa de tend&ecirc;ncias de consumo e prospectiva estrat&eacute;gica.</li>
+<li>University of Houston. Programa de forma&ccedil;&atilde;o em estudos de futuros, refer&ecirc;ncia internacional na &aacute;rea.</li>
+<li>Pontif&iacute;cia Universidade Cat&oacute;lica de S&atilde;o Paulo. N&uacute;cleo de Estudos do Futuro.</li>
+<li>Wack, P. <em>Scenarios: Uncharted Waters Ahead.</em> Harvard Business Review, 1985.</li>
+<li>Schwartz, P. <em>The Art of the Long View.</em> 1991.</li>
+<li>Van der Heijden, K. <em>Scenarios: The Art of Strategic Conversation.</em></li>
+<li>Godet, M. Obras sobre prospectiva estrat&eacute;gica e m&eacute;todo dos cen&aacute;rios.</li>
+<li>Bishop, P.; Hines, A. <em>Thinking about the Future: Guidelines for Strategic Foresight.</em></li>
+<li>Day, G.; Schoemaker, P. <em>Peripheral Vision: Detecting the Weak Signals That Will Make or Break Your Company.</em></li>
+<li>Gartner. Metodologia do ciclo de expectativas e servi&ccedil;os de pesquisa por assinatura.</li>
+<li>Forrester Research. Servi&ccedil;os de pesquisa e an&aacute;lise por assinatura.</li>
+<li>Tetlock, P.; Gardner, D. <em>Superforecasting: The Art and Science of Prediction.</em></li>
+<li>Taleb, N. N. <em>A L&oacute;gica do Cisne Negro.</em></li>
+<li>Centro de Gest&atilde;o e Estudos Estrat&eacute;gicos. Organiza&ccedil;&atilde;o social ligada ao Minist&eacute;rio da Ci&ecirc;ncia, Tecnologia e Inova&ccedil;&atilde;o, dedicada a estudos prospectivos.</li>
+<li>UNESCO. Programa de letramento em futuros.</li>
+<li>F&oacute;rum Econ&ocirc;mico Mundial. <em>Global Risks Report,</em> edi&ccedil;&otilde;es anuais.</li>
+<li>Cobertura especializada e material da pr&oacute;pria Comiss&atilde;o de Valores Mobili&aacute;rios sobre a revoga&ccedil;&atilde;o da obrigatoriedade em maio de 2026.</li>
+</ol>
+
+<h3>Bench de empresas atuantes no Brasil (v2, varredura de 29 de agosto de 2026)</h3>
+<p class="note">Todas as URLs abaixo foram acessadas em 29 de agosto de 2026. Onde o site bloqueou leitura direta (403, conte&uacute;do din&acirc;mico ou p&aacute;gina fora do ar), a fonte indica e a afirma&ccedil;&atilde;o correspondente no corpo carrega selo de Infer&ecirc;ncia.</p>
+<ol start="64">
+<li>Shell Brasil. <em>Cen&aacute;rios da Shell tra&ccedil;am poss&iacute;veis caminhos para o Brasil atingir metas clim&aacute;ticas.</em> Press release, 20 de junho de 2024. <a href="https://www.shell.com.br/imprensa/press-releases-2024/cenarios-da-shell-tracam-possiveis-caminhos-para-o-brasil-atingir-metas-climaticas.html">shell.com.br</a></li>
+<li>Petrobras. Fato relevante: aprova&ccedil;&atilde;o do Plano Estrat&eacute;gico 2050 e do Plano de Neg&oacute;cios 2025-2029, novembro de 2024. <a href="https://mzgroup.com.br/fatosrelevantes/fato-relevante-petrobras-aprova-plano-estrategico-2050-e-plano-de-negocios-2025-2029/">mzgroup.com.br</a></li>
+<li>Ag&ecirc;ncia Petrobras. Lan&ccedil;amento do PN 2025-2029 (US$ 111 bilh&otilde;es) e aprova&ccedil;&atilde;o do PN 2026-2030; p&aacute;gina oficial de estrat&eacute;gia. <a href="https://agencia.petrobras.com.br/w/negocio/petrobras-lanca-plano-de-negocios-2025-2029-com-investimentos-de-us-111-bilhoes">agencia.petrobras.com.br</a>, <a href="https://petrobras.com.br/quem-somos/estrategia">petrobras.com.br</a></li>
+<li>Petrobras. Relat&oacute;rio de Sustentabilidade 2020, se&ccedil;&atilde;o de gerenciamento de riscos: exerc&iacute;cio Vis&atilde;o de Futuro. <a href="https://issuu.com/estantepetrobras/docs/relat_rio_de_sustentabilidade_2020_-_petrobras/s/12005027">issuu.com/estantepetrobras</a></li>
+<li>Embraer. <em>Market Outlook</em>, horizonte de 20 anos, edi&ccedil;&otilde;es anuais. <a href="https://www.embraer.com/eca/marketoutlook/en/">embraer.com</a>, <a href="https://www.embraer.com/media/kw3navfx/market-outlook-2025.pdf">PDF 2025</a></li>
+<li>Vale. <em>Management of Risks Related to Climate Change at Vale</em> (2020) e p&aacute;gina de clima. <a href="https://vale.com/documents/d/guest/relatorio-gestao-de-risco-mc-2020-site-en">vale.com (PDF)</a>, <a href="https://vale.com/esg/climate">vale.com/esg/climate</a></li>
+<li>Vale. Lan&ccedil;amento do Vale Ventures, US$ 100 milh&otilde;es, 2022. <a href="https://www.vale.com/vale-ventures">vale.com/vale-ventures</a></li>
+<li>Suzano. Resumo Estrat&eacute;gico do Relat&oacute;rio de Sustentabilidade 2024 e indicadores de cen&aacute;rios clim&aacute;ticos IPCC na Central de Sustentabilidade. <a href="https://s201.q4cdn.com/761980458/files/doc_downloads/sustainability_reports/2025/05/Suzano_RSust2024-ResumoEstrategico.pdf">PDF</a>, <a href="https://centraldesustentabilidade.suzano.com.br/indicadores/?ind=descricao-dos-riscos-de-gestao-da-agua-e-discussao-de-estrategias-e-praticas-para-mitigar-esses-riscos-63938fc63d898">central de sustentabilidade</a></li>
+<li>Suzano. Lan&ccedil;amento do Suzano Ventures, US$ 70 milh&otilde;es, 2022. <a href="https://www.suzano.com.br/noticia/suzano-lanca-venture-capital-com-us-70-milhoes-em-recursos-para-impulsionar-startups">suzano.com.br</a></li>
+<li>Braskem. P&aacute;gina de combate &agrave;s mudan&ccedil;as clim&aacute;ticas e Plano de Transi&ccedil;&atilde;o Clim&aacute;tica (padr&atilde;o TPT). <a href="https://www.braskem.com.br/combateasmudancasclimaticas">braskem.com.br</a>, <a href="https://www.braskem.com.br/portal/Principal/arquivos/BraskemDS_PlanoTransi%C3%A7%C3%A3oClim%C3%A1tica_PT_V15.pdf">PDF</a></li>
+<li>Braskem. Lan&ccedil;amento da Oxygea, US$ 150 milh&otilde;es, 2022. <a href="https://startups.com.br/negocios/braskem-lanca-hub-de-startups-com-us-150-mi-para-apoiar-novos-negocios/">startups.com.br</a></li>
+<li>Gerdau. Relat&oacute;rio Anual 2025, p&aacute;ginas 27-28 e 87-88: cen&aacute;rios SSP1-2.6 e SSP3-7.0, governan&ccedil;a de riscos, rota de descarboniza&ccedil;&atilde;o. <a href="https://www2.gerdau.com.br/wp-content/uploads/2026/05/relatorio-anual-gerdau-2025-pt.pdf">PDF</a></li>
+<li>Gerdau. Gerdau Next e Gerdau Next Ventures, mandato de identificar tend&ecirc;ncias disruptivas. <a href="https://www2.gerdau.com.br/gerdaunext/wp-content/uploads/sites/2/2025/05/sobre_gerdaunext.pdf">PDF institucional</a></li>
+<li>WEG. Apresenta&ccedil;&atilde;o institucional com linha do tempo do Comit&ecirc; Cient&iacute;fico e Tecnol&oacute;gico (1997), hospedada pelo Portal da Ind&uacute;stria; ades&atilde;o ao Industrial Liaison Program do MIT (2023); cobertura regional. <a href="https://static.portaldaindustria.com.br/media/filer_public/a3/63/a363842c-d7bc-4255-9959-adcdcc7b0410/sebastiao_nau_o_engenheiro_na_weg.pdf">PDF CNI</a>, <a href="https://ocp.news/geral/1119317">ocp.news</a>. O site institucional da WEG bloqueou leitura direta.</li>
+<li>Sicredi Pioneira. <em>Foresight, Relat&oacute;rio de Cen&aacute;rios Futuros</em>, 69 p&aacute;ginas: 6 cen&aacute;rios, 27 tend&ecirc;ncias, 32 sinais fracos, 37 cisnes negros mundiais e 11 locais, 45 workshops com cerca de 980 participantes. <a href="https://sicredipioneira.com.br/files/estrategia-pioneira-foresight-relatorio.pdf">PDF baixado e lido na &iacute;ntegra</a></li>
+<li>Sicredi e Box1824. Estudo <em>O Futuro do Cooperativismo</em>, apresentado no 1&ordm; Summit de Inova&ccedil;&atilde;o do Sicredi, mar&ccedil;o de 2024. <a href="https://brcooperativo.com.br/2024/03/futuro-do-cooperativismo-summit-inovacao-sicredi/">brcooperativo.com.br</a></li>
+<li>Banco do Brasil. Estrat&eacute;gia Corporativa BB 2026-2030: etapa Tend&ecirc;ncias e Panoramas, Semana Estrat&eacute;gica, mesas tem&aacute;ticas. <a href="https://contec.org.br/banco-do-brasil-apresenta-plano-de-estrategia-corporativa-bb/">contec.org.br</a> e Relat&oacute;rio da Administra&ccedil;&atilde;o 1S26 via RI.</li>
+<li>Bradesco inovabra. Relat&oacute;rio trimestral <em>Follow the Money</em> e frentes de pesquisa. <a href="https://www.meioemensagem.com.br/marketing/as-ambicoes-do-inovabra-e-seu-novo-head-de-negocios-e-solucoes">meioemensagem.com.br</a></li>
+<li>Cubo Ita&uacute; e Emerge. Radar Deep Tech LatAm, edi&ccedil;&otilde;es anuais 2024 a 2026. <a href="https://emergebrasil.in/lancamento-mapeamento-startups-deep-tech-brasileiras-2024/">emergebrasil.in</a></li>
+<li>Natura. Vis&atilde;o 2025-2050, neg&oacute;cio 100% regenerativo, julho de 2025. <a href="https://www.meioemensagem.com.br/marketing/natura-detalha-visao-de-futuro-com-foco-em-regeneracao-ate-2050">meioemensagem.com.br</a>, <a href="https://exame.com/esg/natura-atualiza-visao-para-2050-e-mira-negocio-100-regenerativo/">exame.com</a></li>
+<li>Grupo Botic&aacute;rio. Roadmap tecnol&oacute;gico <em>Futuro da Beleza</em> com a Inventta, desde 2017. <a href="https://forbes.com.br/forbes-collab/2023/06/rumo-futuro-grupo-boticario-prepara-nova-era-de-cosmeticos-personalizados/">forbes.com.br</a>. A p&aacute;gina do case na Inventta estava fora do ar no acesso.</li>
+<li>Ambev. ZX Ventures e hubs de tecnologia. <a href="https://investnews.com.br/colunistas/ambev-modelo-de-negocio-tradicional-pode-destravar-valor-com-inovacoes/">investnews.com.br</a></li>
+<li>DHL. <em>Logistics Trend Radar 7.0</em>, setembro de 2024, 40 tend&ecirc;ncias; Innovation Centers com mais de 13.000 visitantes por ano; press releases brasileiros de 2022 e 2024. <a href="https://www.dhl.com/content/dam/dhl/global/csi/documents/pdf/glo-csi-logistics-trend-radar-7-0.pdf">PDF oficial</a>, <a href="https://www.dhl.com/br-pt/home/imprensa/arquivo-de-imprensa/2024/inteligencia-artificial-e-sustentabilidade-sao-principais-tendencias-da-logistica-na-proxima-decada.html">press release BR</a>, <a href="https://www.dhl.com/br-en/home/innovation-in-logistics/innovation-center-americas.html">Innovation Center Americas</a></li>
+<li>Siemens. <em>Pictures of the Future</em>: metodologia de extrapola&ccedil;&atilde;o e retropola&ccedil;&atilde;o documentada em artigo IEEE e material da TUM; p&aacute;ginas atuais de pesquisa e desenvolvimento sem men&ccedil;&atilde;o &agrave; publica&ccedil;&atilde;o. <a href="https://ieeexplore.ieee.org/document/4077462/">ieeexplore.ieee.org</a>, <a href="https://www.siemens.com/global/en/company/innovation/research-development.html">siemens.com</a></li>
+<li>Unilever. Foresight na fun&ccedil;&atilde;o Consumer &amp; Market Insights (descri&ccedil;&atilde;o de vaga oficial) e relat&oacute;rio anual <em>Future Menus</em> com edi&ccedil;&atilde;o brasileira. <a href="https://careers.unilever.com/en/job/englewood-cliffs/head-of-consumer-and-market-insights-prestige/34155/89384066656">careers.unilever.com</a>, <a href="https://www.unileverfoodsolutions.com.br/dicas-e-servicos/future-menus-landing.html">unileverfoodsolutions.com.br</a></li>
+<li>BASF. BASF New Business GmbH com o Industry Foresight Team; incubadora Chemovator; an&aacute;lise da consultoria 4CF; plataforma AgroStart no Brasil. <a href="https://www.basf.com/sa/en/careers/why-join-basf/basf-in-germany/basf-group-companies/basf-new-business-gmbh">basf.com</a>, <a href="https://4cf.eu/corporate-foresight-basf/">4cf.eu</a>, <a href="https://www.basf.com/br/pt/media/news-releases/2022/02/plataforma-agrostart-torna-se-iniciativa-global-de-inovacao-aber">basf.com/br</a></li>
+<li>Embrapa. Sistema Agropensa (desde 2013); <em>Vis&atilde;o 2030: o futuro da agricultura brasileira</em> (2018); vis&atilde;o de futuro em plataforma cont&iacute;nua desde 2022; insumo declarado do Plano Diretor. <a href="https://www.embrapa.br/en/agropensa/sistema-agropensa">embrapa.br/agropensa</a>, <a href="https://www.embrapa.br/busca-de-publicacoes/-/publicacao/1090820/visao-2030-o-futuro-da-agricultura-brasileira">Vis&atilde;o 2030</a></li>
+<li>EPE e MME. Plano Nacional de Energia 2050, aprovado em 16 de dezembro de 2020 (Portaria MME 451/2020), com Painel PNE de acompanhamento. <a href="https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/Plano-Nacional-de-Energia-2050">epe.gov.br</a></li>
+<li>Fiocruz. Estrat&eacute;gia Fiocruz para a Agenda 2030 (desde 2017) e projeto Brasil Sa&uacute;de Amanh&atilde; (prospec&ccedil;&atilde;o com horizonte m&oacute;vel de 20 anos). <a href="https://fiocruz.br/estrategia-fiocruz-para-agenda-2030">fiocruz.br</a>, <a href="https://saudeamanha.fiocruz.br/tag/prospeccao-estrategica-e-saude/">saudeamanha.fiocruz.br</a></li>
+<li>SENAI e CNI. <em>Mapa do Trabalho Industrial 2025-2027</em>, Observat&oacute;rio Nacional da Ind&uacute;stria; m&eacute;todo de prospec&ccedil;&atilde;o citado pela OCDE como exemplo no G20. <a href="https://www.portaldaindustria.com.br/canais/observatorio-nacional-da-industria/produtos/mapa-do-trabalho-industrial-2025-2027/">portaldaindustria.com.br</a>, <a href="https://noticias.portaldaindustria.com.br/noticias/educacao/ocde-diz-que-metodo-do-senai-e-exemplo-em-paises-do-g20/">not&iacute;cia OCDE</a></li>
+<li>BNDES. <em>Vis&atilde;o 2035: Brasil, pa&iacute;s desenvolvido</em> (2018), tr&ecirc;s cen&aacute;rios aplicados a 17 setores, sem edi&ccedil;&atilde;o sucessora identificada. <a href="https://web.bndes.gov.br/bib/jspui/bitstream/1408/16040/3/PRLiv214078_Visao_2035_compl_P.pdf">PDF oficial</a></li>
+<li>Lojas Renner. Pr&aacute;tica de pesquisa de tend&ecirc;ncias da &aacute;rea de Estilo, segmenta&ccedil;&atilde;o por lifestyle h&aacute; mais de 20 anos. <a href="https://consumidormoderno.com.br/ouse-ser-voce-renner/">consumidormoderno.com.br</a></li>
+</ol>
+</section>
+
+</div>
+</body>
+</html>

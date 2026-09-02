@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fluxo Funcional · SUSEP Vida · rascunho</title>
+<style>
+body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:#1a1a1a;background:#f6f7f9;font-size:15px;line-height:1.5}
+header{background:#00995d;color:#fff;padding:18px 28px 14px}header h1{margin:0;font-size:23px;font-weight:600}header p{margin:6px 0 0;font-size:13.5px;color:#e6f6ee;max-width:1100px}
+main{padding:22px 28px 60px;max-width:1400px;margin:0 auto}
+h2{font-size:20px;margin:0 0 6px}h3{font-size:16px;margin:26px 0 6px}
+.tese{font-style:italic;color:#444;margin:0 0 12px;max-width:1080px}
+table{border-collapse:collapse;width:100%;font-size:13px;background:#fff;border:1px solid #e3e6ea;margin:8px 0}
+th,td{border-bottom:1px solid #e3e6ea;padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f0f0ec;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:#5a5f66}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:700px){.g2{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid #e3e6ea;border-left:5px solid #00995d;border-radius:6px;padding:12px 14px;font-size:13.5px}
+.note{font-size:12.5px;color:#666;margin-top:6px}
+footer{border-top:1px solid #e3e6ea;margin-top:40px;padding-top:12px;font-size:11px;color:#5a6068;letter-spacing:.06em;text-transform:uppercase}
+</style></head><body>
+<header><h1>Fluxo Funcional <span style="color:#a9e0c6;font-weight:300">· SUSEP Vida · quem alimenta quem</span></h1><p>Versão avulsa da aba "Fluxo funcional" da Anatomia Profunda do GT. Sem papéis por enquanto: primeiro o fluxo, depois quem faz.</p></header>
+<main>
+<h2>Fluxo funcional: quem alimenta quem, da origem do problema à solução entregue</h2>
+<p class="tese">Cada caixa é uma área, um grupo ou um fórum. Cada seta diz o que uma alimenta na outra. Dois fluxos passam pelo mesmo desenho: o de informação (dados, metas, resultados) e o de concepção (o caminho de um problema até virar solução). Sem papéis por enquanto: primeiro o fluxo, depois quem faz.</p>
+
+<div style="background:#d0342c;color:#fff;padding:16px 20px;border-radius:6px;margin:14px 0;display:flex;gap:20px;align-items:center;flex-wrap:wrap">
+<b style="font-size:30px;letter-spacing:6px;font-weight:800;line-height:1;font-family:system-ui,sans-serif">RASCUNHO</b>
+<span style="font-size:14px;max-width:900px;line-height:1.45">Nada aqui está decidido. Parte do esboço da Estratégia (Planejamento, Mapa, Squads, Fórum de Negócio, Aceleradores, Projetos de torre) e acrescenta o que faltava nele: de onde nasce o problema, quando acontece o discovery, para onde a solução vai e onde entram RDS e COMEX. Versão 0.2.</span>
+</div>
+
+<h3>O mapa funcional</h3>
+<p>Leitura da esquerda para a direita: o problema nasce nas origens, entra pelo Fórum de Negócio, é descoberto e concebido na squad e sai por um de cinco destinos. Por cima, a direção desce do planejamento; por baixo, o resultado volta. As setas verdes são o fluxo de concepção; as cinzas, o de informação; as roxas, governança.</p>
+<div style="overflow-x:auto;border:1px solid #e8e8e8;background:#fff;padding:10px;margin:12px 0">
+<svg viewBox="0 0 1400 820" role="img" aria-label="Mapa funcional: origens do problema alimentam o Fórum de Negócio, que alimenta a squad; a squad faz discovery e concepção e alimenta processos, aceleradores, projetos de torre, sustentação e RDS/COMEX; o resultado volta ao fórum e ao planejamento" xmlns="http://www.w3.org/2000/svg" style="display:block;min-width:1180px;width:100%;height:auto;font-family:system-ui,sans-serif">
+  <defs>
+    <marker id="fa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5b626a"/></marker>
+    <marker id="fg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#00995d"/></marker>
+    <marker id="fp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6410ab"/></marker>
+  </defs>
+  <text x="700" y="440" text-anchor="middle" font-size="150" font-weight="800" fill="#d0342c" fill-opacity="0.06" transform="rotate(-16 700 440)" letter-spacing="20">RASCUNHO</text>
+
+  <!-- cabecalhos de coluna -->
+  <g font-size="11" font-weight="700" letter-spacing="1.5" fill="#7d848c">
+    <text x="130" y="30" text-anchor="middle">ORIGEM DO PROBLEMA</text>
+    <text x="430" y="30" text-anchor="middle">PORTA ÚNICA</text>
+    <text x="720" y="30" text-anchor="middle">SQUAD VIDA</text>
+    <text x="1080" y="30" text-anchor="middle">DESTINO DA SOLUÇÃO</text>
+  </g>
+
+  <!-- governanca (topo) -->
+  <rect x="290" y="45" width="820" height="70" rx="8" fill="#f3ecfa" stroke="#6410ab" stroke-dasharray="5 4"/>
+  <text x="310" y="70" font-size="14" font-weight="700" fill="#6410ab">COMEX e RDS</text>
+  <text x="310" y="90" font-size="12" fill="#4a4f57">decidem política comercial, orçamento e o que envolve mais de um negócio; recebem exceção com recomendação única; devolvem decisão e patrocínio</text>
+
+  <!-- direcao -->
+  <rect x="290" y="135" width="240" height="64" rx="7" fill="#fff" stroke="#808080"/><rect x="290" y="135" width="6" height="64" rx="3" fill="#808080"/>
+  <text x="308" y="158" font-size="14" font-weight="600">Planejamento estratégico</text><text x="308" y="176" font-size="12" fill="#5a6068">diretoria, superintendentes, Estratégia</text><text x="308" y="191" font-size="12" fill="#5a6068">alimenta: mapa estratégico</text>
+  <rect x="580" y="135" width="240" height="64" rx="7" fill="#fff" stroke="#808080"/><rect x="580" y="135" width="6" height="64" rx="3" fill="#808080"/>
+  <text x="598" y="158" font-size="14" font-weight="600">Mapa estratégico</text><text x="598" y="176" font-size="12" fill="#5a6068">metas (diretores) e KRs (superintendentes)</text><text x="598" y="191" font-size="12" fill="#5a6068">alimenta: prioridades do fórum e da squad</text>
+  <rect x="870" y="135" width="240" height="64" rx="7" fill="#fff" stroke="#808080"/><rect x="870" y="135" width="6" height="64" rx="3" fill="#808080"/>
+  <text x="888" y="158" font-size="14" font-weight="600">PIE (trimestral)</text><text x="888" y="176" font-size="12" fill="#5a6068">recebe: resultado do ciclo e lições</text><text x="888" y="191" font-size="12" fill="#5a6068">alimenta: KRs e capacidade do trimestre</text>
+
+  <!-- origens (esquerda) -->
+  <g font-size="12" fill="#1a1a1a">
+    <rect x="30" y="240" width="200" height="72" rx="7" fill="#fff" stroke="#d7dbe0"/><rect x="30" y="240" width="6" height="72" rx="3" fill="#00995d"/>
+    <text x="48" y="262" font-size="13" font-weight="600">Ponta comercial</text><text x="48" y="279" fill="#5a6068">corretores, assessorias,</text><text x="48" y="294" fill="#5a6068">cooperativas, Unimeds</text>
+    <rect x="30" y="325" width="200" height="72" rx="7" fill="#fff" stroke="#d7dbe0"/><rect x="30" y="325" width="6" height="72" rx="3" fill="#00995d"/>
+    <text x="48" y="347" font-size="13" font-weight="600">Áreas de negócio</text><text x="48" y="364" fill="#5a6068">comercial, subscrição, atuarial,</text><text x="48" y="379" fill="#5a6068">produtos, operação, canais</text>
+    <rect x="30" y="410" width="200" height="72" rx="7" fill="#fff" stroke="#d7dbe0"/><rect x="30" y="410" width="6" height="72" rx="3" fill="#00995d"/>
+    <text x="48" y="432" font-size="13" font-weight="600">Dados</text><text x="48" y="449" fill="#5a6068">Controladoria, Inteligência de</text><text x="48" y="464" fill="#5a6068">Mercado, funil, BI, sinistro</text>
+    <rect x="30" y="495" width="200" height="72" rx="7" fill="#fff" stroke="#d7dbe0"/><rect x="30" y="495" width="6" height="72" rx="3" fill="#00995d"/>
+    <text x="48" y="517" font-size="13" font-weight="600">Regulador e parceiros</text><text x="48" y="534" fill="#5a6068">SUSEP, Banco Central, ressegurador,</text><text x="48" y="549" fill="#5a6068">Unicred, Marketing e patrocínio</text>
+    <rect x="30" y="580" width="200" height="72" rx="7" fill="#fff" stroke="#d7dbe0"/><rect x="30" y="580" width="6" height="72" rx="3" fill="#00995d"/>
+    <text x="48" y="602" font-size="13" font-weight="600">Esteiras já existentes</text><text x="48" y="619" fill="#5a6068">S&amp;OP Vida, Diagnóstico SUSEP,</text><text x="48" y="634" fill="#5a6068">frente (absorvidos pelo fórum)</text>
+  </g>
+
+  <!-- forum (porta unica) -->
+  <rect x="320" y="290" width="220" height="330" rx="8" fill="#eefaf1" stroke="#00995d" stroke-width="2"/>
+  <text x="430" y="318" text-anchor="middle" font-size="15" font-weight="700" fill="#00995d">Fórum de Negócio SUSEP</text>
+  <text x="430" y="336" text-anchor="middle" font-size="11.5" fill="#5a6068">mensal; lugar único no lugar de três agendas</text>
+  <g font-size="12" fill="#1a1a1a">
+    <rect x="335" y="352" width="190" height="56" rx="5" fill="#fff" stroke="#c9e6d4"/><text x="345" y="371" font-weight="600">1. Recebe</text><text x="345" y="387" fill="#5a6068">problemas, pedidos, metas,</text><text x="345" y="401" fill="#5a6068">dados e resultados</text>
+    <rect x="335" y="418" width="190" height="56" rx="5" fill="#fff" stroke="#c9e6d4"/><text x="345" y="437" font-weight="600">2. Tria e prioriza</text><text x="345" y="453" fill="#5a6068">estrutural, BAU, adequação,</text><text x="345" y="467" fill="#5a6068">oportunidade; contra capacidade</text>
+    <rect x="335" y="484" width="190" height="56" rx="5" fill="#fff" stroke="#c9e6d4"/><text x="345" y="503" font-weight="600">3. Decide na alçada</text><text x="345" y="519" fill="#5a6068">o que vai para a squad; o que</text><text x="345" y="533" fill="#5a6068">sobe para RDS/COMEX</text>
+    <rect x="335" y="550" width="190" height="56" rx="5" fill="#fff" stroke="#c9e6d4"/><text x="345" y="569" font-weight="600">4. Recebe a entrega</text><text x="345" y="585" fill="#5a6068">e o resultado medido;</text><text x="345" y="599" fill="#5a6068">fecha ou devolve</text>
+  </g>
+
+  <!-- squad -->
+  <rect x="600" y="290" width="240" height="330" rx="8" fill="#fff8e6" stroke="#f9af00" stroke-width="2"/>
+  <text x="720" y="318" text-anchor="middle" font-size="15" font-weight="700" fill="#b47c00">Squad Vida</text>
+  <text x="720" y="336" text-anchor="middle" font-size="11.5" fill="#5a6068">núcleo dedicado + áreas volantes</text>
+  <g font-size="12" fill="#1a1a1a">
+    <rect x="615" y="352" width="210" height="80" rx="5" fill="#fff" stroke="#f3dca3"/><text x="625" y="371" font-weight="600">Discovery</text><text x="625" y="387" fill="#5a6068">aqui acontece: causa raiz, ouve a</text><text x="625" y="401" fill="#5a6068">ponta, olha o mercado, mede o valor;</text><text x="625" y="415" fill="#5a6068">4 a 8 semanas por problema</text>
+    <rect x="615" y="442" width="210" height="80" rx="5" fill="#fff" stroke="#f3dca3"/><text x="625" y="461" font-weight="600">Concepção</text><text x="625" y="477" fill="#5a6068">opções: processo, tecnologia,</text><text x="625" y="491" fill="#5a6068">paliativo, política, não fazer;</text><text x="625" y="505" fill="#5a6068">esforço decupado com a TI</text>
+    <rect x="615" y="532" width="210" height="74" rx="5" fill="#fff" stroke="#f3dca3"/><text x="625" y="551" font-weight="600">Acompanhamento</text><text x="625" y="567" fill="#5a6068">indicador por item; segue a entrega</text><text x="625" y="581" fill="#5a6068">no destino; lê o resultado em</text><text x="625" y="595" fill="#5a6068">30 e 90 dias</text>
+  </g>
+
+  <!-- destinos (direita) -->
+  <g font-size="12" fill="#1a1a1a">
+    <rect x="900" y="240" width="220" height="64" rx="7" fill="#fff" stroke="#d7dbe0"/><rect x="900" y="240" width="6" height="64" rx="3" fill="#0072ce"/>
+    <text x="918" y="262" font-size="13" font-weight="600">Processos</text><text x="918" y="279" fill="#5a6068">melhoria processual antes da</text><text x="918" y="294" fill="#5a6068">ferramenta; resolve na área</text>
+    <rect x="900" y="318" width="220" height="64" rx="7" fill="#fff" stroke="#d7dbe0"/><rect x="900" y="318" width="6" height="64" rx="3" fill="#0072ce"/>
+    <text x="918" y="340" font-size="13" font-weight="600">Aceleradores (TI)</text><text x="918" y="357" fill="#5a6068">fila de desenvolvimento; exige</text><text x="918" y="372" fill="#5a6068">critério de despriorização</text>
+    <rect x="900" y="396" width="220" height="64" rx="7" fill="#fff" stroke="#d7dbe0"/><rect x="900" y="396" width="6" height="64" rx="3" fill="#0072ce"/>
+    <text x="918" y="418" font-size="13" font-weight="600">Projetos de torre</text><text x="918" y="435" fill="#5a6068">estruturantes, plurianuais</text><text x="918" y="450" fill="#5a6068">(APIs, pagamentos, dados)</text>
+    <rect x="900" y="474" width="220" height="64" rx="7" fill="#fff" stroke="#d7dbe0"/><rect x="900" y="474" width="6" height="64" rx="3" fill="#0072ce"/>
+    <text x="918" y="496" font-size="13" font-weight="600">Sustentação (BAU)</text><text x="918" y="513" fill="#5a6068">fila própria, cota e SLA;</text><text x="918" y="528" fill="#5a6068">não passa pelo discovery</text>
+    <rect x="900" y="552" width="220" height="64" rx="7" fill="#fff" stroke="#d7dbe0"/><rect x="900" y="552" width="6" height="64" rx="3" fill="#6410ab"/>
+    <text x="918" y="574" font-size="13" font-weight="600">Política e orçamento</text><text x="918" y="591" fill="#5a6068">comissão, apetite de risco,</text><text x="918" y="606" fill="#5a6068">dinheiro: sobe para RDS/COMEX</text>
+  </g>
+
+  <!-- entrega e medicao (base) -->
+  <rect x="320" y="670" width="800" height="60" rx="8" fill="#f6f7f9" stroke="#5b626a" stroke-dasharray="5 4"/>
+  <text x="340" y="694" font-size="14" font-weight="700" fill="#1a1a1a">Entrega e medição</text>
+  <text x="340" y="713" font-size="12" fill="#4a4f57">a solução volta ao fórum como entrega validada pela operação e pela ponta; o resultado medido em 30 e 90 dias e os não-ganhos alimentam o PIE e o próximo mapa</text>
+
+  <!-- setas: concepcao (verde) -->
+  <g fill="none" stroke="#00995d" stroke-width="2" marker-end="url(#fg)">
+    <path d="M230,276 L280,276 L280,380 L318,380"/>
+    <path d="M230,361 L318,361"/>
+    <path d="M230,446 L280,446 L280,380"/>
+    <path d="M230,531 L280,531 L280,400 L318,400"/>
+    <path d="M230,616 L290,616 L290,440 L318,440"/>
+    <path d="M540,512 L598,512"/>
+    <path d="M840,392 L870,392 L870,272 L898,272"/>
+    <path d="M840,400 L870,400 L870,350 L898,350"/>
+    <path d="M840,410 L870,410 L870,428 L898,428"/>
+    <path d="M540,505 L570,505 L570,506 L870,506 L898,506"/>
+    <path d="M840,480 L860,480 L860,584 L898,584"/>
+  </g>
+  <!-- setas: informacao (cinza) -->
+  <g fill="none" stroke="#5b626a" stroke-width="1.8" marker-end="url(#fa)">
+    <line x1="530" y1="167" x2="578" y2="167"/>
+    <line x1="820" y1="167" x2="868" y2="167"/>
+    <path d="M700,199 L700,240 L430,240 L430,288"/>
+    <path d="M720,199 L720,288"/>
+    <path d="M1010,616 L1010,700 L1122,700"/>
+    <path d="M720,620 L720,668"/>
+    <path d="M430,668 L430,622"/>
+    <path d="M990,199 L990,230 L1180,230 L1180,700 L1122,700"/>
+  </g>
+  <g fill="none" stroke="#808080" stroke-width="1.6" stroke-dasharray="6 5" marker-end="url(#fa)">
+    <path d="M1120,700 L1250,700 L1250,167 L1112,167"/>
+    <path d="M990,135 L990,110 L410,110 L410,135 L410,135"/>
+  </g>
+  <!-- setas: governanca (roxo) -->
+  <g fill="none" stroke="#6410ab" stroke-width="1.6" stroke-dasharray="4 4" marker-end="url(#fp)">
+    <path d="M1010,552 L1010,116"/>
+    <path d="M560,116 L560,300 L598,300"/>
+    <path d="M400,290 L400,116"/>
+  </g>
+
+  <!-- rotulos -->
+  <g font-size="11" fill="#4d545c">
+    <rect x="236" y="300" width="80" height="16" rx="4" fill="#fff" stroke="#c9e6d4"/><text x="276" y="312" text-anchor="middle" fill="#00995d">dores, pedidos</text>
+    <rect x="236" y="470" width="80" height="16" rx="4" fill="#fff" stroke="#c9e6d4"/><text x="276" y="482" text-anchor="middle" fill="#00995d">prazos, regras</text>
+    <rect x="540" y="486" width="60" height="16" rx="4" fill="#fff" stroke="#c9e6d4"/><text x="570" y="498" text-anchor="middle" fill="#00995d">problema</text>
+    <rect x="843" y="252" width="56" height="16" rx="4" fill="#fff" stroke="#c9e6d4"/><text x="871" y="264" text-anchor="middle" fill="#00995d">solução</text>
+    <rect x="843" y="592" width="56" height="16" rx="4" fill="#fff" stroke="#c9e6d4"/><text x="871" y="604" text-anchor="middle" fill="#6410ab">decisão</text>
+    <rect x="536" y="150" width="40" height="16" rx="4" fill="#fff" stroke="#e2e6ea"/><text x="556" y="162" text-anchor="middle">mapa</text>
+    <rect x="826" y="150" width="40" height="16" rx="4" fill="#fff" stroke="#e2e6ea"/><text x="846" y="162" text-anchor="middle">KRs</text>
+    <rect x="470" y="222" width="130" height="16" rx="4" fill="#fff" stroke="#e2e6ea"/><text x="535" y="234" text-anchor="middle">metas e KRs descem</text>
+    <rect x="1030" y="640" width="120" height="16" rx="4" fill="#fff" stroke="#e2e6ea"/><text x="1090" y="652" text-anchor="middle">entrega em produção</text>
+    <rect x="1190" y="420" width="120" height="16" rx="4" fill="#fff" stroke="#e2e6ea"/><text x="1250" y="432" text-anchor="middle">resultado ao PIE</text>
+    <rect x="640" y="102" width="150" height="16" rx="4" fill="#fff" stroke="#e2e6ea"/><text x="715" y="114" text-anchor="middle">direção anual desce ao fórum</text>
+    <rect x="1020" y="330" width="120" height="16" rx="4" fill="#fff" stroke="#e2d6f0"/><text x="1080" y="342" text-anchor="middle" fill="#6410ab">exceção sobe, decisão desce</text>
+    <rect x="452" y="200" width="150" height="16" rx="4" fill="#fff" stroke="#e2d6f0"/><text x="527" y="212" text-anchor="middle" fill="#6410ab">fora da alçada sobe</text>
+    <rect x="560" y="640" width="100" height="16" rx="4" fill="#fff" stroke="#e2e6ea"/><text x="610" y="652" text-anchor="middle">resultado medido</text>
+  </g>
+</svg>
+</div>
+<p class="note">Verde: fluxo de concepção (o problema andando até virar solução). Cinza: fluxo de informação (mapa, KRs, resultados). Roxo: governança (exceção sobe, decisão desce). O S&amp;OP, o Diagnóstico SUSEP e a frente aparecem como origens absorvidas pelo fórum, como no esboço da Estratégia.</p>
+
+<h3>Quem alimenta quem</h3>
+<table>
+<thead><tr><th>De</th><th>Alimenta</th><th>Com o quê</th><th>Quando</th><th>Fluxo</th></tr></thead>
+<tbody>
+<tr><td>Planejamento estratégico</td><td>Mapa estratégico</td><td>Visão 2028, orçamento, metas dos diretores</td><td>Anual</td><td>Informação</td></tr>
+<tr><td>Mapa estratégico</td><td>Fórum de Negócio e squad</td><td>KRs por superintendente; o que "muda o ponteiro"</td><td>Trimestral, revisto no PIE</td><td>Informação</td></tr>
+<tr><td>Ponta comercial</td><td>Fórum de Negócio</td><td>Dores de aceitação, cotador, comissão, renovação; "não-ganhos"</td><td>Contínuo</td><td>Concepção</td></tr>
+<tr><td>Áreas de negócio</td><td>Fórum de Negócio</td><td>Problemas processuais, pedidos de sistema, propostas de produto e preço</td><td>Contínuo</td><td>Concepção</td></tr>
+<tr><td>Dados (Controladoria, IM, BI, funil)</td><td>Fórum e squad</td><td>Meta contra realizado, sinistralidade, concorrência, filas do funil</td><td>Mensal</td><td>Informação</td></tr>
+<tr><td>Regulador, parceiros, Marketing</td><td>Fórum de Negócio</td><td>Prazos (Unicred jan/2027), regras (Nova Lei, BC), exigências do ressegurador, ofertas de patrocínio</td><td>Quando surgem</td><td>Concepção</td></tr>
+<tr><td>S&amp;OP, Diagnóstico, frente</td><td>Fórum de Negócio (absorvidos)</td><td>Backlog acumulado, planilha de necessidades, 418 itens do funil</td><td>Na transição</td><td>Concepção</td></tr>
+<tr><td>Fórum de Negócio</td><td>Squad Vida</td><td>Problema priorizado, com tipo, valor esperado e KR de referência</td><td>Mensal</td><td>Concepção</td></tr>
+<tr><td>Fórum de Negócio</td><td>Sustentação</td><td>BAU triado, direto, sem discovery</td><td>Contínuo</td><td>Concepção</td></tr>
+<tr><td>Fórum de Negócio</td><td>RDS e COMEX</td><td>Exceção fora da alçada, com recomendação única</td><td>Quando necessário</td><td>Governança</td></tr>
+<tr><td>Squad (discovery)</td><td>Squad (concepção)</td><td>Causa raiz, valor, dado da ponta e do mercado</td><td>4 a 8 semanas</td><td>Concepção</td></tr>
+<tr><td>Squad (concepção)</td><td>Processos</td><td>Melhoria processual antes da ferramenta</td><td>Imediato</td><td>Concepção</td></tr>
+<tr><td>Squad (concepção)</td><td>Aceleradores (TI)</td><td>Problema diagnosticado, esforço decupado, impacto se não for feito</td><td>Por ciclo</td><td>Concepção</td></tr>
+<tr><td>Squad (concepção)</td><td>Projetos de torre</td><td>Necessidade estruturante (APIs, pagamentos, dados) com valor calculado</td><td>Por ciclo</td><td>Concepção</td></tr>
+<tr><td>Squad (concepção)</td><td>RDS e COMEX (via fórum)</td><td>Mudança de política comercial ou orçamento (esgotamento de comissão, apetite de risco)</td><td>Quando necessário</td><td>Governança</td></tr>
+<tr><td>Aceleradores, Projetos, Processos</td><td>Squad e fórum</td><td>Viável ou não; posição na fila; o que foi despriorizado; entrega em produção</td><td>Por ciclo</td><td>Informação</td></tr>
+<tr><td>Entrega e medição</td><td>Fórum, PIE, Mapa</td><td>Resultado em 30 e 90 dias; não-ganhos; lições; item fechado, recusado ou estacionado</td><td>Mensal e trimestral</td><td>Informação</td></tr>
+<tr><td>RDS e COMEX</td><td>Fórum e squad</td><td>Decisão, patrocínio, orçamento</td><td>Quando necessário</td><td>Governança</td></tr>
+</tbody>
+</table>
+<p>Os sobrescritos apontam para o registro nas atas ou nas reuniões de 1º de setembro que sustenta cada relação; o desenho do fluxo é  e o formato de porta única é .</p>
+
+<h3>Três perguntas que o esboço não respondia</h3>
+<div class="g2">
+<div class="card"><strong>De onde vem o problema.</strong> De cinco origens, não de uma: a ponta comercial (corretor que "nem calcular na Unimed"), as áreas (operação saturada, subscrição, produtos), os dados (funil com 418 itens, 40% parados há mais de 180 dias), o mundo externo (Unicred, Banco Central, Nova Lei, patrocínio) e as três esteiras que o fórum absorve. Hoje cada origem tem uma porta diferente; no desenho, uma só.  nas origens;  na porta única.</div>
+<div class="card"><strong>Quando acontece o discovery.</strong> Depois de o fórum triar e priorizar, e antes de qualquer pedido à TI. É a primeira coisa que a squad faz com um problema: causa raiz, valor, dado da ponta e do mercado. O que a Ingrid descreveu como "o problema ele não vai chegar cru, ele vai chegar com um diagnóstico" é exatamente essa etapa. BAU não passa por ela.  a intenção;  a posição no fluxo.</div>
+<div class="card"><strong>Para onde vai.</strong> Para um de cinco destinos, escolhido na concepção: Processos (resolve na área), Aceleradores (fila de TI), Projetos de torre (estruturante), Sustentação (BAU) ou RDS/COMEX (política e orçamento). Sem esse desvio, tudo vira pedido à TI, que é o gargalo que as atas mostram há seis meses. </div>
+<div class="card"><strong>Onde entram COMEX e RDS.</strong> Em duas portas: recebem do fórum o que está fora da alçada (com uma recomendação única) e recebem da squad, via fórum, o que muda política comercial ou orçamento. Devolvem decisão e patrocínio. Sem alçada escrita para o fórum, tudo sobe; é o sintoma mais caro do diagnóstico.  sobre escalações verificadas.</div>
+</div>
+
+
+<footer>Rascunho · versão 0.2 · SUSEP Vida · fluxo funcional · 1º de setembro de 2026 · Eric Leite · sem travessão</footer>
+</main></body></html>

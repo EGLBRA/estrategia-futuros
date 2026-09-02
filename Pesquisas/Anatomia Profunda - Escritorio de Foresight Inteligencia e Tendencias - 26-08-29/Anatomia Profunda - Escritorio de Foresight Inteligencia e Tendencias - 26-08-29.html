@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Anatomia Profunda: Escritório de Foresight, Inteligência Estratégica e Tendências</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,'Times New Roman',serif;font-size:15px;line-height:1.7;color:#1a1a1a;background:#fff}
+.W{max-width:1140px;margin:0 auto;padding:2.5rem 2rem 4rem}
+h1{font-size:26px;font-weight:700;line-height:1.2;margin-bottom:6px;letter-spacing:-.5px}
+h2{font-size:19px;font-weight:700;margin:24px 0 10px;padding-bottom:6px;border-bottom:1px solid #e0e0e0}
+h3{font-size:15px;font-weight:700;margin:16px 0 6px}
+h4{font-size:13px;font-weight:700;margin:12px 0 4px;font-family:system-ui,sans-serif;text-transform:uppercase;letter-spacing:.4px;color:#555}
+.lbl{font-family:system-ui,-apple-system,sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#999;margin-bottom:2px}
+.meta{font-family:system-ui,sans-serif;font-size:12px;color:#999;margin-bottom:24px}
+a{color:#1a5276;text-decoration:none}a:hover{text-decoration:underline}
+.red{color:#b71c1c}
+.accent{border-left:3px solid #b71c1c;padding-left:12px;margin:10px 0}
+.num{font-family:system-ui,sans-serif;font-size:30px;font-weight:700;color:#b71c1c;display:block;line-height:1.1;margin:4px 0}
+.src{font-family:system-ui,sans-serif;font-size:11px;color:#999}
+.tabs{display:grid;grid-template-columns:repeat(9,max-content);justify-content:center;column-gap:18px;row-gap:4px;border-bottom:2px solid #1a1a1a;margin:0 0 28px;padding-bottom:8px;background:#fff;position:sticky;top:0;z-index:10}
+@media(max-width:900px){.tabs{grid-template-columns:repeat(5,max-content);column-gap:14px}}
+@media(max-width:560px){.tabs{grid-template-columns:repeat(3,max-content);column-gap:12px}}
+.tab{font-family:system-ui,sans-serif;font-size:13px;font-weight:500;padding:2px 0;background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap;color:#777;transition:.15s;display:inline-block}
+.tab:hover{color:#1a1a1a}
+.tabr{position:absolute;width:0;height:0;opacity:0;pointer-events:none}
+.pane{display:none}
+#r-dest:checked~#p-dest,#r-entenda:checked~#p-entenda,#r-trio:checked~#p-trio,#r-horizontes:checked~#p-horizontes,#r-ecos:checked~#p-ecos,#r-ciclo:checked~#p-ciclo,#r-radar:checked~#p-radar,#r-entregas:checked~#p-entregas,#r-modelo:checked~#p-modelo,#r-gov:checked~#p-gov,#r-montar:checked~#p-montar,#r-cargos:checked~#p-cargos,#r-sist:checked~#p-sist,#r-bench:checked~#p-bench,#r-maturidade:checked~#p-maturidade,#r-brasil:checked~#p-brasil,#r-steep:checked~#p-steep,#r-forcas:checked~#p-forcas,#r-bmc:checked~#p-bmc,#r-w5:checked~#p-w5,#r-risco:checked~#p-risco,#r-swot:checked~#p-swot,#r-sut:checked~#p-sut,#r-cem:checked~#p-cem,#r-gloss:checked~#p-gloss,#r-check:checked~#p-check,#r-fontes:checked~#p-fontes{display:block}
+#r-dest:checked~.tabs [for=r-dest],#r-entenda:checked~.tabs [for=r-entenda],#r-trio:checked~.tabs [for=r-trio],#r-horizontes:checked~.tabs [for=r-horizontes],#r-ecos:checked~.tabs [for=r-ecos],#r-ciclo:checked~.tabs [for=r-ciclo],#r-radar:checked~.tabs [for=r-radar],#r-entregas:checked~.tabs [for=r-entregas],#r-modelo:checked~.tabs [for=r-modelo],#r-gov:checked~.tabs [for=r-gov],#r-montar:checked~.tabs [for=r-montar],#r-cargos:checked~.tabs [for=r-cargos],#r-sist:checked~.tabs [for=r-sist],#r-bench:checked~.tabs [for=r-bench],#r-maturidade:checked~.tabs [for=r-maturidade],#r-brasil:checked~.tabs [for=r-brasil],#r-steep:checked~.tabs [for=r-steep],#r-forcas:checked~.tabs [for=r-forcas],#r-bmc:checked~.tabs [for=r-bmc],#r-w5:checked~.tabs [for=r-w5],#r-risco:checked~.tabs [for=r-risco],#r-swot:checked~.tabs [for=r-swot],#r-sut:checked~.tabs [for=r-sut],#r-cem:checked~.tabs [for=r-cem],#r-gloss:checked~.tabs [for=r-gloss],#r-check:checked~.tabs [for=r-check],#r-fontes:checked~.tabs [for=r-fontes]{color:#1a1a1a;border-bottom-color:#b71c1c;font-weight:700}
+.card{background:#f9f9f9;border:1px solid #e8e8e8;border-radius:4px;padding:10px 14px;margin-bottom:8px}
+.card-sm{background:#f9f9f9;border:1px solid #e8e8e8;border-radius:4px;padding:8px 12px;margin-bottom:6px;font-size:14px}
+.bar-row{display:flex;align-items:center;margin-bottom:8px;font-family:system-ui,sans-serif;font-size:13px}
+.bar-label{width:250px;text-align:right;padding-right:10px;font-weight:600;flex-shrink:0}
+.bar-track{flex:1;background:#eee;border-radius:3px;height:18px;position:relative;overflow:hidden}
+.bar-fill{height:100%;border-radius:3px;background:#b71c1c}
+.bar-val{position:absolute;right:6px;top:1px;font-size:11px;font-weight:700;color:#fff}
+.dot{display:inline-block;width:8px;height:8px;border-radius:4px;margin-right:4px;vertical-align:middle}
+details{margin-top:6px}
+summary{font-family:system-ui,sans-serif;font-size:12px;font-weight:600;color:#1a5276;cursor:pointer}
+.tl{position:relative;padding-left:24px;margin:16px 0}
+.tl::before{content:'';position:absolute;left:7px;top:0;bottom:0;width:2px;background:#ddd}
+.tl-item{position:relative;margin-bottom:12px;padding-left:4px}
+.tl-dot{position:absolute;left:-21px;top:7px;width:12px;height:12px;border-radius:6px;background:#b71c1c;border:2px solid #fff;box-shadow:0 0 0 1px #ddd}
+.tl-dot.done{background:#2e7d32}.tl-dot.now{background:#e65100}.tl-dot.wait{background:#999}
+blockquote{border-left:3px solid #ddd;padding:8px 16px;margin:12px 0;color:#444;font-style:italic;font-size:14px}
+.loop{max-width:600px;margin:16px auto}
+.loop-step{background:#f9f9f9;border:1px solid #ddd;border-radius:6px;padding:9px 14px;text-align:center;margin-bottom:4px;font-size:13px}
+.loop-step strong{display:block;font-size:14px}
+.loop-arrow{text-align:center;font-size:18px;color:#999;line-height:1.1}
+.loop-return{background:#b71c1c;color:#fff;border-radius:6px;padding:8px;text-align:center;font-family:system-ui,sans-serif;font-size:13px;font-weight:700}
+footer{margin-top:3rem;padding-top:1rem;border-top:1px solid #e0e0e0;font-family:system-ui,sans-serif;font-size:11px;color:#999;text-align:center}
+ul{padding-left:1.3rem;margin-bottom:10px}li{margin-bottom:6px}
+ol{padding-left:1.4rem;margin-bottom:10px}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:13px;font-family:system-ui,sans-serif;line-height:1.45}
+th,td{border:1px solid #e6e6e6;padding:6px 9px;text-align:left;vertical-align:top}
+thead th{background:#1a1a1a;color:#fff;font-weight:700;border-color:#1a1a1a}
+tbody tr:nth-child(even){background:#f9f9f9}
+.kpi{background:#fff;border:1px solid #e8e8e8;border-radius:6px;padding:12px 14px;text-align:center}
+.kpi small{font-family:system-ui,sans-serif;font-size:11px;color:#666;display:block;line-height:1.35;margin-top:2px}
+.kpi .num{font-size:24px}
+.g5{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:14px 0}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}
+.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+@media(max-width:700px){.g5,.g4,.g3{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}}
+.sel{display:inline-block;font-family:system-ui,sans-serif;font-size:9px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:1px 6px;border-radius:10px;vertical-align:1px;white-space:nowrap}
+.sel-v{background:#e6f2ea;color:#1b6b39}.sel-i{background:#eaf0fb;color:#28477f}.sel-e{background:#f4eee6;color:#8a5a1f}
+sup{color:#999;font-size:.72em}
+.note{font-family:system-ui,sans-serif;font-size:12px;color:#888;margin-top:4px}
+.alerta{background:#fdf6ec;border:1px solid #e8d9c0;border-left:3px solid #8a5a1f;border-radius:4px;padding:9px 13px;margin:12px 0;font-family:system-ui,sans-serif;font-size:12.5px;color:#5c4114}
+.chip{display:inline-block;color:#fff;font-family:system-ui,sans-serif;font-size:10px;font-weight:700;padding:1px 7px;border-radius:10px;margin-right:4px;letter-spacing:.3px}
+.chip.h1{background:#2e7d32}.chip.h2{background:#e65100}.chip.h3{background:#1a5276}
+.legend{font-family:system-ui,sans-serif;font-size:12px;color:#666;margin:6px 0}
+</style>
+</head>
+<body>
+<div class="W">
+
+<input class="tabr" type="radio" name="tab" id="r-dest" checked>
+<input class="tabr" type="radio" name="tab" id="r-entenda">
+<input class="tabr" type="radio" name="tab" id="r-trio">
+<input class="tabr" type="radio" name="tab" id="r-horizontes">
+<input class="tabr" type="radio" name="tab" id="r-ecos">
+<input class="tabr" type="radio" name="tab" id="r-ciclo">
+<input class="tabr" type="radio" name="tab" id="r-radar">
+<input class="tabr" type="radio" name="tab" id="r-entregas">
+<input class="tabr" type="radio" name="tab" id="r-modelo">
+<input class="tabr" type="radio" name="tab" id="r-gov">
+<input class="tabr" type="radio" name="tab" id="r-montar">
+<input class="tabr" type="radio" name="tab" id="r-cargos">
+<input class="tabr" type="radio" name="tab" id="r-sist">
+<input class="tabr" type="radio" name="tab" id="r-bench">
+<input class="tabr" type="radio" name="tab" id="r-maturidade">
+<input class="tabr" type="radio" name="tab" id="r-brasil">
+<input class="tabr" type="radio" name="tab" id="r-steep">
+<input class="tabr" type="radio" name="tab" id="r-forcas">
+<input class="tabr" type="radio" name="tab" id="r-bmc">
+<input class="tabr" type="radio" name="tab" id="r-w5">
+<input class="tabr" type="radio" name="tab" id="r-risco">
+<input class="tabr" type="radio" name="tab" id="r-swot">
+<input class="tabr" type="radio" name="tab" id="r-sut">
+<input class="tabr" type="radio" name="tab" id="r-cem">
+<input class="tabr" type="radio" name="tab" id="r-gloss">
+<input class="tabr" type="radio" name="tab" id="r-check">
+<input class="tabr" type="radio" name="tab" id="r-fontes">
+
+<p class="lbl">A Anatomia Profunda &middot; Diagnóstico funcional</p>
+<h1>Um escritório, três velocidades: foresight, inteligência estratégica e tendências fracassam separados e só provam valor fundidos numa consultoria interna acoplada à decisão</h1>
+<p class="dek" style="font-size:15px;color:#444;font-style:italic;margin-bottom:8px">Como montar e operar a área que lê o longo, o médio e o curto prazo ao mesmo tempo, roteia um radar único para o conselho, a diretoria e a gerência, e é cobrada pela decisão que muda, não pelo relatório que empilha.</p>
+<p class="meta">Modo função (lente de quem executa) &middot; recorte: o escritório interno de foresight, inteligência estratégica e tendências, corte Brasil &middot; agosto de 2026 &middot; v1 &middot; 96 fontes numeradas, com data de acesso e link quando disponível &middot; selo de origem em cada afirmação &middot; sem travessão</p>
+
+<nav class="tabs">
+  <label class="tab" for="r-dest">Destaque</label>
+  <label class="tab" for="r-entenda">Entenda</label>
+  <label class="tab" for="r-trio">As três funções</label>
+  <label class="tab" for="r-horizontes">Horizontes</label>
+  <label class="tab" for="r-ecos">Ecossistema</label>
+  <label class="tab" for="r-ciclo">Ciclo de inteligência</label>
+  <label class="tab" for="r-radar">Radar e rota</label>
+  <label class="tab" for="r-entregas">Entregáveis</label>
+  <label class="tab" for="r-modelo">Modelo operacional</label>
+  <label class="tab" for="r-gov">Governança</label>
+  <label class="tab" for="r-montar">Montar</label>
+  <label class="tab" for="r-cargos">Cargos e salários</label>
+  <label class="tab" for="r-sist">Sistemas</label>
+  <label class="tab" for="r-bench">Benchmarks</label>
+  <label class="tab" for="r-maturidade">Maturidade</label>
+  <label class="tab" for="r-brasil">Brasil</label>
+  <label class="tab" for="r-steep">STEEPLEDI</label>
+  <label class="tab" for="r-forcas">Forças</label>
+  <label class="tab" for="r-bmc">Modelo de valor</label>
+  <label class="tab" for="r-w5">5W2H</label>
+  <label class="tab" for="r-risco">Riscos</label>
+  <label class="tab" for="r-swot">SWOT e cenários</label>
+  <label class="tab" for="r-sut">Sutilezas</label>
+  <label class="tab" for="r-cem">Cem perguntas</label>
+  <label class="tab" for="r-gloss">Glossário</label>
+  <label class="tab" for="r-check">Check</label>
+  <label class="tab" for="r-fontes">Fontes</label>
+</nav>
+
+<section id="p-dest" class="pane">
+<h2>O escritório em uma página</h2>
+<p>Foresight, inteligência estratégica e tendências costumam viver em três mesas separadas da empresa, e nenhuma das três fala com as outras. Este documento defende o contrário: elas são a mesma casa lida em três distâncias de tempo, e só entregam valor quando operam como um escritório único, uma consultoria interna que devolve para a companhia decisão pronta, não relatório para arquivar. O que muda tudo não é a qualidade da pesquisa, é o acoplamento dela ao momento em que alguém decide.</p>
+
+<div class="g4">
+  <div class="kpi"><span class="num">US$ 153 bi</span><small>tamanho da indústria global de insights em 2024, a economia que vende o que o escritório aprende a fazer por dentro <span class="sel sel-v">Verificado</span><sup>85</sup></small></div>
+  <div class="kpi"><span class="num">+33% / +200%</span><small>lucratividade e crescimento de valor de mercado das empresas "vigilantes" acima da média do setor <span class="sel sel-v">Verificado</span><sup>1</sup></small></div>
+  <div class="kpi"><span class="num">1 em 5 / 1 em 20</span><small>das empresas se prepara para o futuro, e só uma em vinte de fato muda de rota por causa disso <span class="sel sel-v">Verificado</span><sup>2</sup></small></div>
+  <div class="kpi"><span class="num">3 distâncias</span><small>de tempo lidas de uma vez, o hoje, a transição e o longo prazo, cada uma com sua cadência <span class="sel sel-i">Inferência</span></small></div>
+</div>
+
+<blockquote>Uma área de futuros que lista relatórios é cortada no primeiro aperto. Uma área que lista decisões tomadas e apostas com dono, gatilho e retorno não é. A diferença entre as duas não está na inteligência, está no desenho da operação.</blockquote>
+
+<h3>Seis verdades desconfortáveis sobre a área</h3>
+<ol>
+<li><strong>São três funções, não uma.</strong> Foresight lê o longo prazo, inteligência estratégica municia a decisão de agora, tendências vigiam o curto. Juntar as três num só mandato é o que evita o ponto cego de cada uma. <span class="sel sel-i">Inferência</span></li>
+<li><strong>A prova de valor é a decisão, não o entregável.</strong> A pesquisa que separa vencedores de perdedores é a capacidade de converter percepção em aposta: cerca de uma em cinco empresas se prepara para o futuro e só uma em vinte muda de rota.<sup>1, 2</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Sem lugar no calendário, a área não existe.</strong> Se a leitura de futuro não entra antes do ciclo orçamentário, vira comunicação interna e some no primeiro corte. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Comprar plataforma cedo demais é o jeito mais rápido de gastar sem mostrar nada.</strong> A ferramenta amplifica a rotina que já existe; sem rotina, é base de dados vazia com licença paga.<sup>27</sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>Quase nada obriga a existir.</strong> Não há registro profissional nem norma que force a função; a única referência técnica direta é voluntária.<sup>15</sup> A justificativa precisa ser econômica, não de conformidade. <span class="sel sel-v">Verificado</span></li>
+<li><strong>A credibilidade interna vale mais que o método.</strong> Método se aprende em meses, credibilidade leva anos. Por isso o caminho barato é formar alguém de dentro, não importar um futurista de fora. <span class="sel sel-i">Inferência</span></li>
+</ol>
+
+<h3>O mapa dos órgãos deste documento</h3>
+<div class="g3">
+  <div class="card-sm"><strong>As três funções.</strong> O que separa e o que une foresight, inteligência estratégica e tendências.</div>
+  <div class="card-sm"><strong>Horizontes.</strong> H1, H2 e H3, e a passagem de bastão no meio.</div>
+  <div class="card-sm"><strong>Ciclo de inteligência.</strong> Como o dado vira decisão, por dentro.</div>
+  <div class="card-sm"><strong>Radar e rota.</strong> Um radar de três camadas para três públicos.</div>
+  <div class="card-sm"><strong>Entregáveis.</strong> O catálogo de produtos e as quatro cadências de entrega.</div>
+  <div class="card-sm"><strong>Modelo operacional.</strong> Central, distribuído ou rede, e como a consultoria interna cobra.</div>
+  <div class="card-sm"><strong>Governança, montar, cargos, sistemas.</strong> Quem decide, como se constrói, quem faz, com quais ferramentas.</div>
+  <div class="card-sm"><strong>Benchmarks e maturidade.</strong> As casas de referência e a escada para subir.</div>
+  <div class="card-sm"><strong>Brasil, riscos, cenários, cem perguntas.</strong> O corte nacional e o interrogatório completo.</div>
+</div>
+
+</section>
+
+<section id="p-entenda" class="pane">
+<h2>O que é o escritório, explicado para quem chega agora</h2>
+<p>Pense num navio grande em mar aberto. Três pessoas olham para longe, cada uma com um instrumento diferente. O vigia no alto do mastro tenta enxergar o que ainda é um ponto no horizonte, tempestade ou terra, sem saber a hora exata. O navegador, sobre a mesa de cartas, calcula a rota dos próximos dias e onde estão os bancos de areia. O timoneiro lê o radar de curto alcance e corrige o leme agora, para não bater no que já está perto. Os três olham para o mesmo mar, em distâncias diferentes. Se cada um guardar o que viu só para si, o navio decide tarde. O escritório de foresight, inteligência estratégica e tendências é o posto que junta os três olhares numa mesma sala de comando.</p>
+
+<h3>Traduzindo os três instrumentos</h3>
+<div class="g3">
+  <div class="card"><strong>O vigia no mastro é o foresight.</strong> Lê o horizonte de cinco, dez, vinte anos. Trabalha com cenários e sinais fracos, não com previsão. A pergunta dele é: que futuros são possíveis, e a nossa estratégia sobrevive a eles? <span class="sel sel-i">Inferência</span></div>
+  <div class="card"><strong>O navegador é a inteligência estratégica.</strong> Lê o médio prazo e municia a decisão de agora com leitura de concorrente, mercado e regulação. Roda um ciclo disciplinado que vai da pergunta ao briefing entregue.<sup>13</sup> <span class="sel sel-v">Verificado</span></div>
+  <div class="card"><strong>O timoneiro é a área de tendências.</strong> Lê o curto prazo, o que já mudou no consumo, no comportamento e na tecnologia, e alimenta produto e marketing com o que está acontecendo. <span class="sel sel-i">Inferência</span></div>
+</div>
+
+<p>As três leituras vêm de disciplinas com nomes técnicos que vale distinguir de uma vez, porque a empresa costuma confundir. Inteligência competitiva olha para os concorrentes. Inteligência de mercado olha para o ambiente externo amplo, cliente, setor, regulação, geopolítica. Business intelligence olha para dentro, os próprios dados e operações, e é retrospectiva. Foresight parte do ambiente externo mas explora o longo prazo, a incerteza e os cenários alternativos.<sup>14</sup> <span class="sel sel-v">Verificado</span></p>
+
+<h3>Por que quase sempre estão separadas, e por que isso custa caro</h3>
+<p>Na maioria das empresas, quem faz esse trabalho está espalhado sem se chamar assim: um pouco em inteligência de mercado, um pouco em riscos, um pouco em pesquisa e desenvolvimento, um pouco em sustentabilidade, um pouco na área de estratégia. São três ou quatro focos dispersos e nenhum conversa. O custo aparece quando uma surpresa estratégica chega: o sinal existia, alguém até viu, mas ele morreu numa planilha de uma área que não falava com a mesa onde a decisão acontecia. Reunir as três funções num escritório único não é organograma bonito, é encurtar a distância entre ver e decidir. <span class="sel sel-i">Inferência</span></p>
+
+<div class="alerta"><strong>O nome não importa, a função importa.</strong> Chame de área de futuros, de inteligência estratégica, de foresight, de antecipação. O que define o escritório não é o rótulo, são quatro coisas que ele precisa ter juntas: um radar que capta sinal, um processo que transforma sinal em leitura, uma rota que leva a leitura a quem decide, e um gatilho que obriga a decisão a acontecer no prazo.</div>
+
+</section>
+
+<section id="p-trio" class="pane">
+<h2>As três funções que o escritório funde</h2>
+<p>O erro mais comum é tratar foresight, inteligência estratégica e tendências como sinônimos, ou como rivais. Não são. Cada uma responde a uma pergunta diferente, olha para uma distância de tempo diferente e serve a um cliente interno diferente. O valor de fundir vem justamente daí: sozinha, cada função tem um ponto cego que a outra cobre. A tabela abaixo é o coração deste documento.</p>
+
+<table>
+<thead><tr><th>Dimensão</th><th>Foresight</th><th>Inteligência estratégica</th><th>Tendências</th></tr></thead>
+<tbody>
+<tr><td><strong>Horizonte</strong></td><td><span class="chip h3">H3</span> 5 a 20 anos</td><td><span class="chip h2">H2</span> 1 a 5 anos</td><td><span class="chip h1">H1</span> 0 a 2 anos</td></tr>
+<tr><td><strong>Pergunta que responde</strong></td><td>Que futuros são possíveis, e a estratégia sobrevive a eles?</td><td>O que muda a nossa aposta agora, no concorrente, no mercado e na regra?</td><td>O que já mudou no consumo e no comportamento, e como respondo?</td></tr>
+<tr><td><strong>Matéria-prima</strong></td><td>Sinais fracos, incertezas, forças lentas</td><td>Movimento de concorrente, sinal regulatório, dado de mercado</td><td>Cultura, consumo, tecnologia de consumo, comportamento</td></tr>
+<tr><td><strong>Método típico</strong></td><td>Cenários, backcasting, análise de camadas<sup>22</sup></td><td>Ciclo de inteligência, war game, briefing<sup>13</sup></td><td>Radar de tendências, etnografia, escuta social</td></tr>
+<tr><td><strong>Cliente interno</strong></td><td>Conselho e presidência</td><td>Diretoria e estratégia</td><td>Produto, marketing e gerência</td></tr>
+<tr><td><strong>Entregável âncora</strong></td><td>Jogo de cenários e teste da estratégia</td><td>Briefing de decisão e alerta</td><td>Radar e relatório de tendências</td></tr>
+<tr><td><strong>Cadência</strong></td><td>Anual e por gatilho</td><td>Contínua e mensal</td><td>Contínua e trimestral</td></tr>
+<tr><td><strong>Ponto cego quando sozinha</strong></td><td>Vira ficção bonita sem ligação com a decisão de caixa</td><td>Encurta o horizonte e vira só reação ao concorrente</td><td>Confunde moda com mudança estrutural</td></tr>
+</tbody>
+</table>
+<p class="legend">Os selos das linhas de método e horizonte são <span class="sel sel-i">Inferência</span>: a divisão por horizonte é desenho de operação, não norma. As definições de disciplina são <span class="sel sel-v">Verificado</span>.<sup>14</sup></p>
+
+<h3>Por que fundir, e não somar</h3>
+<p>Fundir não é colocar as três áreas debaixo do mesmo diretor e manter três silos. É desenhar uma única cadeia em que o sinal captado pela tendência de hoje pode ser a semente de um cenário de foresight de amanhã, e a leitura de foresight redefine o que a inteligência estratégica vai vigiar de perto. O IFTF descreve essa lógica como uma corrente contínua, de foresight para insight e de insight para ação, um desenho de experiências que liga a antecipação à decisão.<sup>42</sup> <span class="sel sel-v">Verificado</span> Sem essa costura, a empresa acumula três acervos que nunca se encontram.</p>
+
+<div class="g3">
+  <div class="card"><strong>O que a tendência entrega ao foresight.</strong> Sinal fresco do mundo real, antes que vire tese. A área de tendências é o sensor de curto alcance que o vigia de longo prazo não tem tempo de operar.</div>
+  <div class="card"><strong>O que o foresight entrega à inteligência.</strong> A moldura de longo prazo que diz quais movimentos de concorrente importam de verdade e quais são ruído. Sem ela, a inteligência corre atrás de tudo.</div>
+  <div class="card"><strong>O que a inteligência entrega às duas.</strong> A disciplina do ciclo, a ponte com a decisão e a linguagem do número de negócio, que é o que falta ao futurista puro e ao pesquisador de cultura.</div>
+</div>
+
+<div class="alerta"><strong>A regra de ouro da fusão.</strong> Um radar único, três velocidades de leitura, três públicos de destino. Se a empresa mantém três radares, três cadências desalinhadas e três públicos que recebem coisas contraditórias, ela tem três áreas, não um escritório. A fusão se prova no radar compartilhado, detalhado nas abas seguintes.</div>
+
+</section>
+
+<section id="p-horizontes" class="pane">
+<h2>Os três horizontes e a passagem de bastão</h2>
+<p>A espinha do escritório é uma ideia simples de organizar o tempo. Ela vem de duas linhagens que vale conhecer, porque a empresa mistura as duas. A primeira nasceu na McKinsey, no livro <em>The Alchemy of Growth</em> de 1999, como três horizontes de crescimento: proteger o núcleo atual, construir o negócio emergente e plantar as opções de futuro, porque a incumbente bem-sucedida tende a otimizar o presente e a subinvestir no que vem depois.<sup>18</sup> <span class="sel sel-v">Verificado</span> A segunda, de futuros, foi criada em 2006 por Bill Sharpe e colegas do International Futures Forum, adaptando a primeira: H1 é o sistema dominante de hoje, H3 é o futuro transformador que nasce nas margens, e H2 é a zona de transição onde os dois disputam espaço.<sup>19</sup> <span class="sel sel-v">Verificado</span></p>
+
+<div class="g3">
+  <div class="card"><span class="chip h1">H1</span> <strong>O hoje e o quase.</strong> Zero a dois anos. É o terreno da área de tendências e da inteligência de mercado: o que já mudou, o que o concorrente acabou de fazer, o sinal regulatório que entrou em consulta. Cadência rápida, cliente é a gerência e a diretoria de linha.</div>
+  <div class="card"><span class="chip h2">H2</span> <strong>A transição e a aposta.</strong> Dois a cinco anos. É onde inovação testa, onde a opção comprada cedo começa a virar negócio ou a morrer. É a zona de maior atrito, porque disputa recurso com o presente. Cliente é a diretoria e o comitê executivo.</div>
+  <div class="card"><span class="chip h3">H3</span> <strong>O longo e o possível.</strong> Cinco a vinte anos. É o terreno do foresight: cenários, sinais fracos, forças lentas como demografia e regulação. Cadência anual e por gatilho, cliente é o conselho e a presidência.</div>
+</div>
+
+<h3>Quem faz o quê, e onde o bastão passa de mão</h3>
+<p>O desenho que sustenta este escritório distribui os horizontes entre três funções que já existem na empresa, em vez de criar um feudo novo. A pesquisa de futuros cuida do H3. A inovação testa ao longo de H1 a H3, porque é ela que transforma cenário em experimento. A inteligência de mercado cuida do hoje e das tendências próximas, o H1. O ponto delicado é o H2, a zona de transição: é ali que o bastão passa de mão, do que o foresight imaginou para o que a inovação vai testar e a inteligência vai monitorar de perto. Passagem de bastão mal feita é a causa mais comum de cenário que morre na gaveta. <span class="sel sel-i">Inferência</span></p>
+
+<div class="tl">
+  <div class="tl-item"><div class="tl-dot done"></div><strong>H3 detecta.</strong> O foresight nomeia uma força de longo prazo e a transforma em cenário com indicadores observáveis.</div>
+  <div class="tl-item"><div class="tl-dot now"></div><strong>H2 recebe o bastão.</strong> A inovação pega o cenário e desenha um experimento barato; a inteligência define o que vai monitorar para saber se aquele mundo se aproxima.</div>
+  <div class="tl-item"><div class="tl-dot now"></div><strong>H1 confirma ou nega.</strong> A tendência e a inteligência de mercado medem os indicadores no mundo real; o gatilho combinado dispara a decisão quando o número é cruzado.</div>
+  <div class="tl-item"><div class="tl-dot wait"></div><strong>O ciclo realimenta.</strong> O que o H1 confirma vira premissa nova para o próximo cenário de H3. O tempo volta a girar.</div>
+</div>
+
+<div class="alerta"><strong>A armadilha do H2.</strong> Empresas boas de H1 e de H3 falham no meio. A área de tendências entrega sinal de sobra, o foresight entrega cenário de sobra, e no H2 ninguém é dono de transformar isso em experimento com verba e prazo. Por isso o escritório precisa de um rito explícito de passagem de bastão, com nome de quem recebe, e não de um documento a mais. <span class="sel sel-i">Inferência</span></div>
+
+</section>
+
+<section id="p-ecos" class="pane">
+<h2>O ecossistema: quem alimenta, quem consome, quem forma, quem legitima</h2>
+<p>O escritório não vive isolado. Ele se apoia numa cadeia externa de fornecedores de sinal e de método, e responde a uma cadeia interna de clientes. Entender esse ecossistema é o que evita dois erros de principiante: comprar de fora o que deveria ser feito por dentro, e fazer por dentro o que sai mais barato comprando.</p>
+
+<h3>Quem alimenta o radar, de fora</h3>
+<div class="g2">
+  <div class="card"><strong>Casas e institutos de futuros.</strong> Vendem método, pesquisa e rede. O Institute for the Future, spin-off da RAND em 1968, publica o Ten-Year Forecast desde 1978 e oferece a Vantage Partnership para membros corporativos.<sup>41, 42</sup> O Copenhagen Institute for Futures Studies, de 1969, tem braço consultivo e a revista FARSIGHT.<sup>43</sup> A Z_punkt organizou a própria disciplina em quatro frentes, foresight estratégico, de inovação, organizacional e público.<sup>45</sup> <span class="sel sel-v">Verificado</span></div>
+  <div class="card"><strong>Assinaturas e plataformas.</strong> Gartner e Forrester vendem acesso a analista e a mapas de maturidade tecnológica.<sup>37, 38</sup> Plataformas de scanning e de tendências, detalhadas na aba de sistemas, capturam e classificam sinal. Bases gratuitas como a Strategic Intelligence do Fórum Econômico Mundial e o acervo da Escola Brasileira de Futuros abastecem o radar sem custo.<sup>39, 40</sup> <span class="sel sel-v">Verificado</span></div>
+</div>
+
+<h3>Quem consome, por dentro</h3>
+<p>O erro de mirar todo mundo é fatal. O escritório tem três públicos com necessidades opostas. O conselho e a presidência querem o quadro de longo prazo e as poucas apostas que importam. A diretoria e a área de estratégia querem a leitura que muda a decisão do ciclo. A gerência e as áreas de produto querem o sinal aplicável de curto prazo. Um relatório único para os três não serve a nenhum. A aba de radar e rota mostra como um mesmo radar se desdobra em três entregas. <span class="sel sel-i">Inferência</span></p>
+
+<h3>Quem forma e quem legitima</h3>
+<div class="g2">
+  <div class="card"><strong>Formação.</strong> Não há faculdade obrigatória. A referência internacional de formação de futuristas é a University of Houston, com programa desde os anos 1970, e o método aplicado do Framework Foresight.<sup>56</sup> A certificação de método mais conhecida é a Foresight Essentials do Institute for the Future.<sup>55</sup> No Brasil, a ESPM abriu o primeiro master de foresight em 2023.<sup>63</sup> <span class="sel sel-v">Verificado</span></div>
+  <div class="card"><strong>Legitimação.</strong> As associações dão pertencimento e boa prática, não licença. A Association of Professional Futurists, de 2002, reúne os praticantes profissionais.<sup>52</sup> A World Futures Studies Federation, de 1973, é a ala acadêmica, parceira da UNESCO.<sup>53</sup> O Millennium Project mantém rede global com nó brasileiro.<sup>54</sup> A ABF Pro, anunciada em 2025, é a associação da profissão no Brasil.<sup>62</sup> <span class="sel sel-v">Verificado</span></div>
+</div>
+
+<div class="note">A norma técnica ISO 56006 funciona como linguagem neutra deste ecossistema: descreve o ciclo esperado da inteligência estratégica e serve de especificação quando a empresa contrata parte da função de fora.<sup>15</sup> <span class="sel sel-v">Verificado</span></div>
+
+</section>
+
+<section id="p-ciclo" class="pane">
+<h2>O ciclo de inteligência: como o dado vira decisão por dentro</h2>
+<p>Se o escritório tem um motor, é este. O ciclo de inteligência é um processo contínuo e repetido, herdado do meio militar e aplicado à inteligência competitiva e de negócios. Ele tem fases claras, e a disciplina de rodá-las na ordem é o que separa uma área que produz decisão de uma que produz volume.<sup>13</sup> <span class="sel sel-v">Verificado</span> A norma técnica que o descreve para o mundo da inovação é a ISO 56006.<sup>15</sup></p>
+
+<div class="loop">
+  <div class="loop-step"><strong>1. Direção</strong>Alguém que decide faz uma pergunta focal. Sem pergunta de dono, o ciclo vira coleta sem alvo.</div>
+  <div class="loop-arrow">v</div>
+  <div class="loop-step"><strong>2. Coleta</strong>O radar capta sinal de fontes abertas, humanas e compradas, ligado à pergunta.</div>
+  <div class="loop-arrow">v</div>
+  <div class="loop-step"><strong>3. Processamento</strong>O sinal bruto é limpo, traduzido, tirado o duplicado e organizado.</div>
+  <div class="loop-arrow">v</div>
+  <div class="loop-step"><strong>4. Análise</strong>O sinal vira leitura: o que significa, o que muda, com que confiança.</div>
+  <div class="loop-arrow">v</div>
+  <div class="loop-step"><strong>5. Disseminação</strong>A leitura chega a quem decide, no formato e no momento em que ele decide.</div>
+  <div class="loop-arrow">v</div>
+  <div class="loop-return">6. Feedback: a decisão gera novas perguntas, e o ciclo recomeça</div>
+</div>
+
+<h3>Onde o ciclo costuma quebrar</h3>
+<ul>
+<li><strong>Quebra na direção.</strong> A área começa pela coleta, sem pergunta de decisor. Resultado, um acervo grande e nenhuma leitura pedida por alguém. É o sintoma mais comum de área que vai morrer. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Quebra na análise.</strong> O analista traz notícia, não sinal. Confunde o que aconteceu com o que muda. O antídoto é exigir sempre a frase do "e daí para a nossa decisão". <span class="sel sel-i">Inferência</span></li>
+<li><strong>Quebra na disseminação.</strong> A leitura existe, mas chega tarde, no formato errado, para a pessoa errada. Uma boa análise entregue depois da reunião de orçamento vale zero. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Quebra no feedback.</strong> A decisão não volta como pergunta nova, e a área repete a mesma varredura sem aprender. O feedback é o que transforma o ciclo em espiral, não em roda parada. <span class="sel sel-v">Verificado</span><sup>13</sup></li>
+</ul>
+
+<h3>Os três olhares dentro do mesmo ciclo</h3>
+<p>A fusão das três funções acontece dentro deste ciclo, não fora dele. A tendência alimenta principalmente a fase de coleta, com sinal fresco do consumo. A inteligência estratégica é dona do ciclo inteiro no horizonte de decisão. O foresight entra na análise, dando a moldura de longo prazo que diz quais sinais merecem virar aposta e quais são ruído. Um único ciclo, três lentes na fase em que cada uma é mais forte. <span class="sel sel-i">Inferência</span></p>
+
+<div class="alerta"><strong>A pergunta focal é o item mais barato e mais ignorado.</strong> Uma pergunta estreita e dolorosa, do tipo "como fica a nossa margem no produto X em 2033 se o canal digital passar de metade das vendas", vale mais que dez plataformas. Pergunta larga produz cenário bonito e inútil. O ciclo começa e termina na qualidade da pergunta.</div>
+
+</section>
+
+<section id="p-radar" class="pane">
+<h2>Um radar, três camadas, três rotas</h2>
+<p>Aqui está a peça que prova, na prática, que o escritório é um só e não três. Em vez de cada função manter o seu radar, o escritório mantém um radar único que classifica todo sinal em três camadas de tempo, e roteia cada camada para o público certo, na cadência certa. A ideia de radar de tendências como artefato tem guias e modelos prontos de mercado, e casas como a Munich Re publicam o seu radar anual como referência do formato.<sup>36, 91</sup> <span class="sel sel-v">Verificado</span> O desenho de três camadas e três rotas descrito abaixo é síntese de operação. <span class="sel sel-i">Inferência</span></p>
+
+<h3>Da fonte ao radar</h3>
+<p>Tudo entra por um funil só. Fontes abertas, assinaturas, sinais de campo trazidos pela força de vendas, movimento de concorrente, sinal regulatório em consulta pública, artigo científico, patente. O escritório limpa, tira duplicado e classifica cada sinal por duas perguntas: qual a distância de tempo em que ele impacta, e qual a intensidade do impacto. A distância define a camada, a intensidade define a prioridade.</p>
+
+<div class="g3">
+  <div class="card"><span class="chip h1">Camada 1</span><strong>Sinal quente.</strong> Impacta em até dois anos. Vai para a gerência e a diretoria de linha, em boletim frequente e curto. É acionável agora.</div>
+  <div class="card"><span class="chip h2">Camada 2</span><strong>Sinal em maturação.</strong> Impacta em dois a cinco anos. Vira pauta de leitura de implicações para a diretoria e a estratégia. Ainda dá tempo de comprar a opção barata.</div>
+  <div class="card"><span class="chip h3">Camada 3</span><strong>Sinal estrutural.</strong> Impacta em cinco anos ou mais. Alimenta o jogo de cenários para o conselho e a presidência. É semente, não urgência.</div>
+</div>
+
+<h3>Do radar às três rotas</h3>
+<table>
+<thead><tr><th>Rota</th><th>Público</th><th>O que recebe</th><th>Cadência</th><th>Pergunta que responde</th></tr></thead>
+<tbody>
+<tr><td><strong>Rota do curto</strong></td><td>Gerência e diretoria de linha</td><td>Boletim de sinais quentes, aplicável</td><td>Contínua e mensal</td><td>O que faço agora?</td></tr>
+<tr><td><strong>Rota do médio</strong></td><td>Diretoria e estratégia</td><td>Leitura de implicações e alertas de gatilho</td><td>Mensal e por gatilho</td><td>O que muda na minha aposta?</td></tr>
+<tr><td><strong>Rota do longo</strong></td><td>Conselho e presidência</td><td>Jogo de cenários e teste da estratégia</td><td>Anual e por gatilho</td><td>A nossa estratégia sobrevive?</td></tr>
+</tbody>
+</table>
+<p class="legend">Cadência baseada nas velocidades observadas nas casas de foresight, do scanning contínuo ao rito anual.<sup>41, 35</sup> <span class="sel sel-v">Verificado</span> A amarração das três rotas a um radar único é desenho de operação. <span class="sel sel-i">Inferência</span></p>
+
+<div class="alerta"><strong>O mesmo sinal muda de rota conforme amadurece.</strong> Um sinal que hoje é estrutural, na camada 3, pode em dois anos virar sinal em maturação e depois sinal quente. O radar único é o que garante que ele não se perca na troca de camada. Quando cada área tem o seu radar, o sinal cai no vão entre elas exatamente quando estava virando decisão.</div>
+
+</section>
+
+<section id="p-entregas" class="pane">
+<h2>O catálogo de entregáveis e as quatro cadências</h2>
+<p>O escritório entrega em ritmos diferentes porque cada horizonte muda em ritmo diferente. As casas de foresight operam numa faixa que vai do scanning contínuo ao rito anual, com camadas intermediárias semanais, mensais e trimestrais.<sup>41, 35, 43</sup> <span class="sel sel-v">Verificado</span> O catálogo abaixo organiza os produtos por cadência e por público. O erro é ter um só produto e uma só cadência para tudo.</p>
+
+<table>
+<thead><tr><th>Cadência</th><th>Entregável</th><th>Público</th><th>Formato</th></tr></thead>
+<tbody>
+<tr><td><strong>Contínua</strong></td><td>Radar vivo de sinais e alertas de gatilho</td><td>Toda a rede interna</td><td>Painel sempre disponível, alerta quando um número é cruzado</td></tr>
+<tr><td><strong>Mensal</strong></td><td>Boletim de sinais quentes e leitura de implicações</td><td>Gerência, diretoria e estratégia</td><td>Uma página por tema, sempre com a frase da decisão</td></tr>
+<tr><td><strong>Trimestral</strong></td><td>Nota de tendências e memória de sensemaking</td><td>Produto, marketing e inovação</td><td>Síntese do que mudou no trimestre e o que testar</td></tr>
+<tr><td><strong>Anual</strong></td><td>Jogo de cenários e teste da estratégia vigente</td><td>Conselho e comitê executivo</td><td>Três ou quatro mundos com indicadores, mais a sessão de túnel de vento</td></tr>
+</tbody>
+</table>
+
+<h3>Os dois ritos que amarram tudo ao calendário</h3>
+<p>Um escritório sem lugar no calendário corporativo não existe. Duas datas fixas dão a ele o poder de virar decisão, e não recado.</p>
+<div class="g2">
+  <div class="card"><strong>Rito de planejamento estratégico.</strong> Uma vez por ano, trinta dias antes de o orçamento começar a ser montado, o escritório roda a sessão de implicações: passa a estratégia vigente pelos cenários e anota onde ela quebra. Cada diretoria responde por escrito, em uma página, a uma pergunta só: que premissa do seu plano falha no mundo B, e o que você faria. Essa sessão é o produto real, não o documento. <span class="sel sel-i">Inferência</span></div>
+  <div class="card"><strong>Rito tático-estratégico.</strong> Em cadência mais curta, mensal ou trimestral, o escritório leva à diretoria a leitura de implicações do período e o estado dos gatilhos: quais números se aproximaram do limite acordado, quais apostas precisam de decisão de reforço ou de abandono. É o rito que mantém a estratégia viva entre os ciclos anuais. <span class="sel sel-i">Inferência</span></div>
+</div>
+
+<h3>A regra do entregável que sobrevive</h3>
+<ul>
+<li><strong>Todo entregável termina numa decisão pedida, não numa conclusão exposta.</strong> Se ao fim da página ninguém precisa decidir nada, o entregável é jornalismo interno.</li>
+<li><strong>Todo cenário carrega indicadores observáveis.</strong> Mundo sem sinal de aproximação é ficção corporativa. Cada mundo precisa de três indicadores que a empresa consiga acompanhar sem contratar ninguém.</li>
+<li><strong>Todo alerta carrega um gatilho numérico e um prazo.</strong> Alerta sem número acordado e sem prazo de reunião é opinião com urgência fingida.</li>
+</ul>
+<div class="note">O rito anual de cenários é caro e raro; o boletim mensal é barato e frequente. A saúde do escritório se lê na cadência curta, não na peça anual: é o boletim que mantém a área presente na cabeça de quem decide o ano inteiro. <span class="sel sel-i">Inferência</span></div>
+
+</section>
+
+<section id="p-modelo" class="pane">
+<h2>Modelo operacional: consultoria interna, não biblioteca</h2>
+<p>O escritório pode se organizar de três jeitos, e a escolha define quase tudo. As unidades de inteligência e foresight se arranjam em três arquétipos conhecidos.<sup>20</sup> <span class="sel sel-v">Verificado</span></p>
+
+<table>
+<thead><tr><th>Arranjo</th><th>Como é</th><th>Força</th><th>Risco</th></tr></thead>
+<tbody>
+<tr><td><strong>Centralizado</strong></td><td>Uma unidade única concentra e padroniza</td><td>Reduz redundância, facilita compartilhar, serve a alta gestão</td><td>Distância das áreas, pode virar torre de marfim</td></tr>
+<tr><td><strong>Descentralizado</strong></td><td>Equipes espalhadas pelas áreas</td><td>Perto do problema, foco tático</td><td>Raramente entrega inteligência à alta direção, cada um puxa para o seu lado</td></tr>
+<tr><td><strong>Rede, ou centro com pontas</strong></td><td>Um centro dá visão, padrão e método; pontas nas áreas dão o sinal e o apoio local</td><td>Combina visão comum com informação de campo e adesão local</td><td>Exige governança clara de quem faz o quê</td></tr>
+</tbody>
+</table>
+<p>O modelo de centro com pontas é o que a Procter and Gamble usa para inteligência competitiva: uma unidade corporativa central que dá a visão e o roteiro da companhia, ligada a pontas em cada unidade de negócio que trazem a informação e o entendimento de cada divisão.<sup>20</sup> <span class="sel sel-v">Verificado</span> Para o escritório fundido, esse costuma ser o arranjo mais resistente: um núcleo pequeno e sênior, com donos de domínio em regime parcial nas áreas.</p>
+
+<h3>A diferença que muda o nome: consultoria interna</h3>
+<p>Um escritório que publica relatório e espera que alguém leia é uma biblioteca. Um escritório que opera como consultoria interna recebe demanda, engaja com o cliente e acompanha a decisão até o fim. A diferença está em quatro passos.</p>
+<div class="tl">
+  <div class="tl-item"><div class="tl-dot"></div><strong>Entrada por briefing.</strong> A demanda chega como pergunta de decisão, com dono e prazo. Nada entra no ciclo sem um decisor por trás.</div>
+  <div class="tl-item"><div class="tl-dot"></div><strong>Engajamento com escopo.</strong> O escritório e o cliente combinam a pergunta focal, a profundidade e a data. Vira um projeto curto, não um pedido difuso.</div>
+  <div class="tl-item"><div class="tl-dot"></div><strong>Entrega que pede decisão.</strong> A leitura chega no rito de decisão do cliente, com a recomendação e os gatilhos, não como anexo.</div>
+  <div class="tl-item"><div class="tl-dot"></div><strong>Acompanhamento.</strong> O escritório volta para ver o que foi decidido, o que aconteceu com o gatilho, e realimenta o radar. É o passo que quase todo mundo pula.</div>
+</div>
+<p>O Institute for the Future embala esse desenho para membros corporativos como uma parceria contínua que junta radar, formação de time e acervo de método, ligados numa corrente de foresight para insight e para ação.<sup>42</sup> <span class="sel sel-v">Verificado</span> A OECD, no setor público, formaliza um processo de cinco módulos para embutir a antecipação na formulação de decisão, em vez de deixá-la como estudo à parte.<sup>48</sup> <span class="sel sel-v">Verificado</span></p>
+
+<h3>Onde a área se reporta, e como se financia</h3>
+<p>A que a área responde importa. No arranjo de centro com pontas, o centro costuma ficar no nível corporativo, servindo à alta gestão, enquanto o descentralizado tende a atender só a demanda tática.<sup>20</sup> A estatística fechada de "quantas áreas reportam a estratégia, a inovação ou ao presidente" não existe em fonte primária citável, então a escolha do reporte é julgamento, tratado na aba de governança. <span class="sel sel-i">Inferência</span> Sobre financiamento, a consultoria interna que se sustenta não vende horas: ela reserva uma verba de opção, de um a três por cento do investimento, separada do orçamento de inovação corrente, para transformar leitura em aposta com dono. Verba misturada é verba capturada. <span class="sel sel-i">Inferência</span></p>
+
+</section>
+
+<section id="p-gov" class="pane">
+<h2>Governança: quem decide, quando, com que dinheiro</h2>
+<p>Foresight sem governança é jornalismo interno. A pesquisa que sustenta o retorno do campo separa as empresas justamente pela capacidade de converter percepção em aposta: as vigilantes superaram a média em trinta e três por cento de lucratividade e em duzentos por cento de crescimento de valor de mercado, enquanto as que percebem e não decidem sofreram desconto de desempenho.<sup>1, 3</sup> <span class="sel sel-v">Verificado</span> A governança é o que fecha essa distância.</p>
+
+<h3>Matriz de responsabilidade</h3>
+<table>
+<thead><tr><th>Atividade</th><th>Executa</th><th>Aprova</th><th>É consultado</th><th>É informado</th></tr></thead>
+<tbody>
+<tr><td>Varredura contínua</td><td>Núcleo do escritório</td><td>Liderança da função</td><td>Donos de domínio</td><td>Comitê mensal</td></tr>
+<tr><td>Leitura mensal de implicações</td><td>Liderança da função</td><td>Diretor patrocinador</td><td>Estratégia, riscos, inovação</td><td>Diretoria</td></tr>
+<tr><td>Ciclo anual de cenários</td><td>Núcleo mais apoio externo</td><td>Comitê executivo</td><td>Todas as diretorias</td><td>Conselho</td></tr>
+<tr><td>Túnel de vento da estratégia</td><td>Estratégia com o núcleo</td><td>Presidência</td><td>Diretoria completa</td><td>Conselho</td></tr>
+<tr><td>Alocação da verba de opção</td><td>Diretor dono da aposta</td><td>Comitê executivo</td><td>Financeiro</td><td>Conselho</td></tr>
+<tr><td>Matar uma aposta</td><td>Diretor dono</td><td>Comitê executivo</td><td>Liderança da função</td><td>Diretoria</td></tr>
+</tbody>
+</table>
+<p class="note">Regra prática: o escritório nunca aprova nada sozinho. Ele é dono do processo, não da decisão. Quando vira dono da decisão, a empresa passa a tratá-lo como concorrente das diretorias de linha e ele perde acesso. <span class="sel sel-i">Inferência</span></p>
+
+<h3>Onde a função deve ficar no organograma</h3>
+<table>
+<thead><tr><th>Local</th><th>Vantagem</th><th>Risco</th></tr></thead>
+<tbody>
+<tr><td>Sob estratégia</td><td>Acesso direto ao ciclo de planejamento e ao orçamento</td><td>O horizonte encolhe para doze meses e vira insumo de meta</td></tr>
+<tr><td>Sob inovação</td><td>Ligação natural com experimentação e portfólio</td><td>Vira vitrine de tecnologia e perde as forças social, regulatória e demográfica</td></tr>
+<tr><td>Sob riscos</td><td>Disciplina de gatilho e monitoramento já existe</td><td>Tudo vira ameaça, a agenda de oportunidade desaparece</td></tr>
+<tr><td>Direto na presidência</td><td>Autoridade e horizonte preservados</td><td>Depende de uma pessoa, a troca de presidente mata a função</td></tr>
+</tbody>
+</table>
+<p>Não há posição ótima. A configuração mais resistente é reporte formal a estratégia, com assento garantido em riscos e um item fixo na pauta do conselho duas vezes por ano. O item fixo no conselho é o que protege a função da troca de executivo. <span class="sel sel-i">Inferência</span></p>
+
+<h3>Métricas que funcionam e métricas de vaidade</h3>
+<div class="g2">
+  <div class="card"><strong>Medir isto</strong><br>Decisões tomadas por causa de um sinal, com data e dono. Tempo entre detectar o sinal e decidir. Percentual de premissas estratégicas com indicador de monitoramento ativo. Apostas vivas com gatilho definido. Apostas mortas por critério de abandono, e não por esquecimento. Acerto retrospectivo anual: dos sinais marcados como quentes há vinte e quatro meses, quantos se materializaram.</div>
+  <div class="card"><strong>Não medir isto</strong><br>Número de relatórios publicados. Número de sinais catalogados. Participantes em oficina. Satisfação com a apresentação. Downloads. Todas medem atividade da área, nenhuma mede efeito na empresa, e todas são exatamente as que aparecem no relatório de fim de ano quando a função está morrendo.</div>
+</div>
+
+<h3>O gatilho, mecanismo que dispensa convencimento</h3>
+<p>Gatilho é um número acordado antes que, quando cruzado, obriga uma reunião de decisão em prazo definido. Exemplo: se a participação do canal digital passar de dezoito por cento, o comitê executivo reúne em trinta dias para decidir sobre a rede física. O valor do gatilho não está na previsão, está em ter combinado a resposta enquanto ninguém estava sob pressão. Sem gatilho, cada mudança de mundo exige uma nova rodada de convencimento político, e a empresa chega tarde por construção. <span class="sel sel-i">Inferência</span></p>
+
+<h3>Como a função morre, e o antídoto</h3>
+<ul>
+<li><strong>Morte por troca de patrocinador.</strong> Antídoto: item fixo na pauta do conselho e mandato escrito, não verbal.</li>
+<li><strong>Morte por corte de custo.</strong> Antídoto: mostrar decisão, não entregável. Área que lista relatórios é cortada, área que lista decisões tomadas não é.</li>
+<li><strong>Morte por captura do curto prazo.</strong> Antídoto: separar formalmente o produto de horizonte um do de horizonte três, com reuniões distintas.</li>
+<li><strong>Morte por justificativa única.</strong> Quem sustenta a função só num argumento, uma norma ou um medo passageiro, perde o chão quando aquele argumento cai. Antídoto: ancorar a tese no econômico, risco evitado e velocidade de decisão.<sup>15</sup> <span class="sel sel-i">Inferência</span></li>
+</ul>
+
+</section>
+
+<section id="p-montar" class="pane">
+<h2>Montar o escritório do zero, em doze meses</h2>
+<p>O caminho abaixo assume uma empresa de médio ou grande porte, sem área formal de futuros, com um patrocinador de nível diretoria disposto a defender a agenda. Sem esse patrocinador, não comece: monte primeiro o patrocínio. <span class="sel sel-i">Inferência</span></p>
+
+<h3>Fase 0, semanas 1 a 4: descobrir o que já existe</h3>
+<ul>
+<li>Mapeie quem já faz futuro sem chamar assim: inteligência de mercado, riscos, regulatório, pesquisa e desenvolvimento, sustentabilidade. Quase sempre há três ou quatro focos dispersos e nenhum conversa. Fundir esses focos é metade da entrega do escritório.</li>
+<li>Levante as três últimas surpresas estratégicas da empresa e reconstitua: o sinal existia? quem viu? por que não virou decisão? Esse exercício é a melhor peça de venda interna que existe, porque usa a dor da própria casa.</li>
+<li>Descubra a data exata em que o orçamento do ano seguinte começa a ser montado. Todo o calendário da função vai ser ancorado nessa data.</li>
+</ul>
+<p class="note">Entregável da fase: um documento de três páginas com o diagnóstico e a proposta de mandato do escritório, nomeando as três funções que ele vai fundir. Não faça cenário nesta fase.</p>
+
+<h3>Fase 1, meses 2 e 3: célula mínima e primeiro radar</h3>
+<ul>
+<li><strong>Equipe mínima viável:</strong> uma pessoa dedicada em tempo integral, com senioridade para sentar com diretor, mais três a cinco donos de domínio em regime parcial, vindos de áreas diferentes. É o arranjo de centro com pontas em versão enxuta.<sup>20</sup> <span class="sel sel-v">Verificado</span></li>
+<li>Defina de cinco a sete domínios de vigilância, usando uma grade estruturada como a STEEPLEDI, e dê um dono a cada domínio.</li>
+<li>Comece o radar com planilha. Só compre plataforma quando já houver volume que justifique. Comprar software antes de ter rotina é o modo mais rápido de gastar orçamento e não ter nada para mostrar.<sup>27</sup></li>
+</ul>
+
+<h3>Fase 2, meses 4 a 6: primeiro ciclo de cenários</h3>
+<ul>
+<li>Escolha uma pergunta focal estreita e dolorosa. Pergunta larga produz cenário bonito e inútil.</li>
+<li>Três ou quatro mundos, nunca mais. Cada mundo com nome curto, uma página de descrição e três indicadores observáveis que dizem se estamos caminhando para ele.</li>
+<li>Rode o túnel de vento com a diretoria: passe a estratégia vigente pelos mundos e anote onde ela quebra.<sup>8</sup> Essa sessão é o produto real, não o documento. <span class="sel sel-v">Verificado</span></li>
+</ul>
+
+<h3>Fase 3, meses 7 a 9: acoplar ao orçamento</h3>
+<ul>
+<li>Encaixe uma sessão obrigatória de implicações trinta dias antes do início do ciclo orçamentário. Sem data no calendário corporativo, não existe.</li>
+<li>Exija que cada área responda por escrito a uma única pergunta: que premissa do seu plano falha no mundo B, e o que você faria. Uma página por área.</li>
+<li>Este é o ponto de maior mortalidade. Se a função não entrar no orçamento até aqui, vira comunicação interna e some no primeiro corte.</li>
+</ul>
+
+<h3>Fase 4, meses 10 a 12: carteira de apostas e primeira plataforma</h3>
+<ul>
+<li>Reserve entre um e três por cento do orçamento de investimento como verba de opção, separada do orçamento de inovação corrente. Verba misturada é verba capturada.</li>
+<li>Cada aposta recebe: diretor dono, tese em uma frase, valor, gatilho numérico de reforço e gatilho numérico de abandono. Aposta sem critério de abandono nunca morre e envenena a carteira.</li>
+<li>Agora, e só agora, avalie comprar uma plataforma de radar, quando já existe rotina e volume que a justifiquem.<sup>27</sup> Publique a carteira, porque visibilidade é o que transforma a função de custo em ativo aos olhos do conselho.</li>
+</ul>
+
+<h3>Ordem de grandeza de custo</h3>
+<table>
+<thead><tr><th>Item</th><th>Natureza</th><th>Observação</th></tr></thead>
+<tbody>
+<tr><td>Pessoa dedicada, senioridade de gerência</td><td>O maior item isolado</td><td>Não economize aqui. Foresight conduzido por júnior não entra na sala onde se decide</td></tr>
+<tr><td>Rede parcial de 3 a 5 donos de domínio</td><td>Custo de oportunidade, não de caixa</td><td>Precisa estar no acordo de metas deles, senão some</td></tr>
+<tr><td>Consultoria externa, primeiro ciclo</td><td>Projeto fechado</td><td>Compre método e facilitação, não a conclusão. A conclusão precisa ser da casa</td></tr>
+<tr><td>Assinatura de pesquisa</td><td>Recorrente</td><td>Útil no ano 1, questionável no ano 3.<sup>37, 38</sup> Reavalie sempre</td></tr>
+<tr><td>Plataforma de radar</td><td>Recorrente por usuário</td><td>Compre só depois de ter rotina<sup>27</sup></td></tr>
+<tr><td>Verba de opção</td><td>1% a 3% do investimento</td><td>É o item que converte a função em retorno<sup>1</sup></td></tr>
+</tbody>
+</table>
+
+<div class="alerta"><strong>Os cinco erros que matam a montagem.</strong> Começar pelo cenário bonito em vez do diagnóstico das surpresas passadas. Comprar software antes de ter rotina. Deixar a função fora do calendário orçamentário. Contratar consultoria para entregar a conclusão em vez do método. Não ter verba de opção, o que reduz tudo a opinião bem formatada. <span class="sel sel-i">Inferência</span></div>
+
+</section>
+
+<section id="p-cargos" class="pane">
+<h2>Quem faz o trabalho, e quanto custa</h2>
+<p>O escritório fundido precisa de um punhado de papéis, não de um exército. Cada um tem um perfil que dá certo e um sinal de contratação errada. E, como o campo não tem carreira formal, as pessoas chegam por três portas, cada uma com uma força e um ponto cego previsível.</p>
+
+<table>
+<thead><tr><th>Papel</th><th>O que faz</th><th>Perfil que dá certo</th><th>Sinal de erro</th></tr></thead>
+<tbody>
+<tr><td>Analista de sinais e tendências</td><td>Varredura, catalogação, primeira triagem no radar</td><td>Curioso, disciplinado, escreve curto, bom leitor de fonte primária</td><td>Traz volume e nenhuma seleção, confunde notícia com sinal</td></tr>
+<tr><td>Analista de inteligência estratégica</td><td>Roda o ciclo de inteligência, monta briefing de decisão e alerta<sup>13</sup></td><td>Pensa como decisor, fala a língua do número de negócio</td><td>Vira repórter do concorrente, sem a frase da implicação</td></tr>
+<tr><td>Especialista em cenários e foresight</td><td>Conduz o ciclo anual, facilita oficina, escreve os mundos</td><td>Facilitador forte, tolera ambiguidade, sabe fechar, formado no método<sup>56</sup></td><td>Ama o processo e nunca converge, entrega quatro mundos e nenhuma implicação</td></tr>
+<tr><td>Liderança da função</td><td>Faz a ponte com a diretoria, protege orçamento e mandato</td><td>Senioridade política, credibilidade interna anterior, fluente em número</td><td>Especialista técnico promovido sem trânsito, não consegue marcar reunião com diretor</td></tr>
+<tr><td>Dono de domínio, tempo parcial</td><td>Vigia um domínio dentro da área de origem</td><td>Gente da linha, com pele no jogo, escolhida por interesse real</td><td>Indicado pelo chefe sem consulta, nunca aparece na reunião mensal</td></tr>
+</tbody>
+</table>
+
+<h3>Os três papéis do foresight dentro da inovação</h3>
+<p>A pesquisa de Rohrbeck e Gemünden nomeia três papéis que o foresight cumpre para melhorar a capacidade de inovar, e um escritório maduro exerce os três: o iniciador, que dispara iniciativas ao identificar novas necessidades, tecnologias e conceitos; o estrategista, que dá direção, visão e reposicionamento de portfólio; e o oponente, que desafia projetos e premissas e varre disrupções.<sup>7</sup> <span class="sel sel-v">Verificado</span> O papel de oponente é o mais esquecido e o mais valioso, porque é o único que a política interna nunca pede.</p>
+
+<h3>Quanto se paga</h3>
+<p>Não há tabela consolidada da função fundida, mas há faixas por cargo. Fora do Brasil, em dólares por ano, um futurista corporativo gira perto de cento e cinquenta e quatro mil, com amostras pequenas.<sup>78</sup> <span class="sel sel-e">Especulativo</span> Um analista de inteligência competitiva fica em torno de cento e onze mil, de oitenta e um mil a duzentos e vinte e dois mil por senioridade.<sup>79</sup> Um analista de tendências, perto de oitenta e três mil.<sup>80</sup> Um diretor de estratégia, perto de duzentos e quarenta e sete mil, com topo acima de quatrocentos mil.<sup>81</sup> No Reino Unido, um head de insights fica em torno de oitenta mil libras por ano, mais em Londres.<sup>82</sup> <span class="sel sel-v">Verificado</span></p>
+<p>No Brasil, os valores são mensais e a função de futurista quase não existe formalmente. Um analista de inteligência de mercado vai de cerca de quatro mil por mês, no júnior, a perto de dez mil, no sênior.<sup>83</sup> Um gerente de estratégia fica em torno de dezessete mil por mês, com topo perto de quarenta mil, e um gerente de planejamento estratégico, perto de quinze mil.<sup>84</sup> <span class="sel sel-v">Verificado</span> Não há, no país, referência salarial de mercado para chefe de foresight acima do nível de gerente, o que confirma que a função ainda se esconde dentro de estratégia e de inteligência de mercado. <span class="sel sel-i">Inferência</span></p>
+
+<h3>As três portas de entrada</h3>
+<div class="g3">
+  <div class="card"><strong>Da estratégia.</strong> Força: entende orçamento e sabe onde a decisão acontece. Ponto cego: encurta o horizonte por reflexo e transforma cenário em premissa de plano de três anos.</div>
+  <div class="card"><strong>Da pesquisa e inovação.</strong> Força: rigor de método, conforto com incerteza técnica. Ponto cego: viciado em tecnologia, subestima regulação, demografia e comportamento, que são as forças mais lentas e mais decisivas.</div>
+  <div class="card"><strong>Das ciências sociais e do design.</strong> Força: enxerga força motriz que o número não mostra, constrói narrativa que a liderança lembra. Ponto cego: dificuldade em amarrar a narrativa ao número de negócio.</div>
+</div>
+<div class="note">A combinação que funciona: uma liderança vinda da estratégia, com credibilidade prévia na casa, apoiada por um especialista de método vindo de pesquisa ou de design. A troca inversa produz material melhor e decisão pior. <span class="sel sel-i">Inferência</span></div>
+
+</section>
+
+<section id="p-sist" class="pane">
+<h2>Sistemas: o que a ferramenta faz, e quando comprar</h2>
+<p>A tecnologia do ofício é abundante e sedutora, e é onde mais se queima orçamento cedo demais. A regra vale antes de qualquer catálogo: a plataforma amplifica a rotina que já existe. Sem rotina de varredura e sem ciclo rodando, a ferramenta vira base de dados vazia com licença paga. Compre depois de ter hábito, não antes.<sup>27</sup> <span class="sel sel-i">Inferência</span></p>
+
+<h3>O que existe, por função</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Para que serve</th><th>Camada</th></tr></thead>
+<tbody>
+<tr><td><strong>ITONICS</strong></td><td>Gestão de foresight e inovação: radar, tendências, tecnologias, cenários, com IA<sup>27</sup></td><td>Radar e H3</td></tr>
+<tr><td><strong>TrendOne</strong></td><td>Trend intelligence com base curada de dezenas de milhares de tendências e radares visuais<sup>28</sup></td><td>Tendências</td></tr>
+<tr><td><strong>CB Insights</strong></td><td>Inteligência de mercado de tecnologia: venture, startups, patentes, sinais<sup>29</sup></td><td>H2 e H3</td></tr>
+<tr><td><strong>AlphaSense</strong></td><td>Busca com IA sobre centenas de milhões de documentos, research, earnings, filings<sup>30</sup></td><td>Inteligência</td></tr>
+<tr><td><strong>NetBase Quid</strong></td><td>Inteligência de consumidor e de mercado por IA sobre dados estruturados e não<sup>31</sup></td><td>Tendências</td></tr>
+<tr><td><strong>Brandwatch</strong></td><td>Escuta social e inteligência de consumidor sobre milhões de fontes<sup>32</sup></td><td>Tendências e H1</td></tr>
+<tr><td><strong>Signal AI</strong></td><td>Inteligência de mídia, risco e reputação por IA, em muitos mercados e idiomas<sup>33</sup></td><td>Inteligência e H1</td></tr>
+<tr><td><strong>Feedly</strong></td><td>Agregador de notícias com assistente de IA que filtra, resume e detecta tópicos<sup>34</sup></td><td>Coleta</td></tr>
+<tr><td><strong>Shaping Tomorrow</strong></td><td>Horizon scanning por SaaS, com varredura semanal e rastreio mensal de mudança<sup>35</sup></td><td>Radar e H3</td></tr>
+<tr><td><strong>FIBRES</strong></td><td>Trend radar e horizon scanning, com guia e modelos de radar<sup>36</sup></td><td>Radar</td></tr>
+<tr><td><strong>Gartner e Forrester</strong></td><td>Assinatura de pesquisa e acesso a analista, com mapas de maturidade tecnológica<sup>37, 38</sup></td><td>H1 e H2</td></tr>
+</tbody>
+</table>
+<p class="legend">Categorias verificadas em cada sítio oficial. <span class="sel sel-v">Verificado</span> A alocação por camada é leitura de uso, não classificação do fornecedor. <span class="sel sel-i">Inferência</span></p>
+
+<h3>Fontes gratuitas que reduzem a conta</h3>
+<div class="g2">
+  <div class="card"><strong>Abertas e institucionais.</strong> A Strategic Intelligence do Fórum Econômico Mundial mapeia mais de trezentos temas de transformação.<sup>39</sup> O Futures Toolkit do governo britânico é o manual público de métodos.<sup>21</sup> O Global Risks Report anual dá a camada macro de risco.<sup>58</sup> <span class="sel sel-v">Verificado</span></div>
+  <div class="card"><strong>No Brasil.</strong> A Biblioteca de Futuros da Escola Brasileira de Futuros reúne acervo colaborativo gratuito com recorte do Sul Global.<sup>40</sup> É a base mais barata para começar a alimentar o radar antes de qualquer assinatura. <span class="sel sel-v">Verificado</span></div>
+</div>
+
+<h3>Comprar sem ser enganado</h3>
+<ul>
+<li><strong>Peça o caso em que a ferramenta mudou uma decisão, não o portfólio de logotipos.</strong> Quem não tem esse caso vende dado, não inteligência.</li>
+<li><strong>Comece por uma, não por três.</strong> Um radar e um agregador cobrem o essencial no ano um. O resto entra quando a rotina pedir.</li>
+<li><strong>Use a norma como especificação.</strong> A ISO 56006 descreve o ciclo esperado e serve de linguagem neutra no edital, inclusive quando a empresa terceiriza parte da função.<sup>15</sup> <span class="sel sel-v">Verificado</span></li>
+</ul>
+
+</section>
+
+<section id="p-bench" class="pane">
+<h2>Benchmarks: as casas que fazem isso há décadas</h2>
+<p>Nenhuma empresa precisa inventar o escritório. Há unidades corporativas que operam foresight, inteligência e tendências há muito tempo, cada uma com um formato aproveitável. E há unidades de governo que institucionalizaram a antecipação de um jeito que a empresa pode copiar.</p>
+
+<h3>Unidades corporativas de referência</h3>
+<table>
+<thead><tr><th>Casa</th><th>O que opera</th><th>Lição para o escritório</th></tr></thead>
+<tbody>
+<tr><td><strong>Shell Scenarios</strong></td><td>Time dedicado de cenários desde os anos 1970, pioneiro com Pierre Wack; série atual Energy Security Scenarios, edição 2026 com três mundos<sup>88, 25</sup></td><td>Cenário não é previsão nem a estratégia da empresa, é o "e se" que estica o pensamento de quem decide</td></tr>
+<tr><td><strong>Siemens, Pictures of the Future</strong></td><td>Método que combina extrapolação de curto prazo com cenários de dez a trinta anos, ligados por retropolation, alimentando roadmaps<sup>89</sup></td><td>Ligar o cenário de longo prazo ao roteiro de tecnologia e de negócio, não deixá-lo solto</td></tr>
+<tr><td><strong>Swiss Re, SONAR</strong></td><td>Relatório anual de riscos emergentes por uma ferramenta interna de crowdsourcing, publicado desde 2013<sup>90</sup></td><td>O sinal vem de dentro: underwriters e especialistas da própria casa alimentam o radar</td></tr>
+<tr><td><strong>Munich Re e ERGO, Tech Trend Radar</strong></td><td>Radar anual gratuito de tendências tecnológicas para seguros, edição 2026 com cerca de vinte e cinco tendências em quatro áreas<sup>91</sup></td><td>O radar como produto público de marca, filtrável por linha de negócio, é referência de formato</td></tr>
+<tr><td><strong>Deutsche Telekom</strong></td><td>Foresight na unidade de produto e inovação e nos T-Labs, parceria com a TU Berlin desde 2004, com Technology Radar de cerca de sessenta tecnologias, este apoiado em fonte acadêmica <span class="sel sel-i">Inferência</span><sup>92</sup></td><td>Amarrar a antecipação a um laboratório de pesquisa dá densidade técnica ao radar</td></tr>
+<tr><td><strong>Ford</strong></td><td>Função de futurista corporativo desde os anos 2000, hoje uma chefe de futuros que monitora fatores STEEP e assina o relatório anual de tendências<sup>93</sup></td><td>A função pode viver num cargo nomeado e visível, com uma publicação anual que a legitima</td></tr>
+</tbody>
+</table>
+<p class="legend">Fatos das casas confirmados no domínio oficial ou em PDF hospedado nele. <span class="sel sel-v">Verificado</span> Deutsche Telekom e Philips têm parte apoiada em fonte acadêmica. <span class="sel sel-i">Inferência</span></p>
+
+<div class="alerta"><strong>O laboratório externo não é garantia.</strong> A IKEA manteve o Space10, laboratório de pesquisa e design, por uma década, e o encerrou em agosto de 2023 numa reestruturação da inovação.<sup>94</sup> <span class="sel sel-v">Verificado</span> A Philips opera foresight de longo prazo por narrativas e cenários, não por previsão, no seu grupo de design.<sup>95</sup> <span class="sel sel-i">Inferência</span> A lição é que laboratório vistoso morre quando não está acoplado à decisão de orçamento, exatamente o risco que este documento inteiro tenta evitar.</p>
+
+<h3>Unidades de governo, o benchmark mais maduro</h3>
+<p>O setor público institucionalizou a antecipação antes de muita empresa. Vale olhar como modelo de permanência.</p>
+<div class="g2">
+  <div class="card"><strong>Singapura, Centre for Strategic Futures.</strong> Unidade de foresight criada em 2009, dentro do grupo de estratégia do gabinete do primeiro-ministro desde 2015.<sup>49</sup> Modelo de área central ligada ao topo.</div>
+  <div class="card"><strong>Canadá, Policy Horizons.</strong> Centro de excelência em foresight do governo federal, com relatório recorrente de disrupções no horizonte.<sup>50</sup> Modelo de centro de método que serve o governo inteiro.</div>
+  <div class="card"><strong>Finlândia, Sitra e a Comissão do Futuro.</strong> Um fundo público que publica megatendências desde 2016, e uma comissão parlamentar permanente do futuro desde 2000, pioneira mundial em pôr visão de longo prazo dentro do legislativo.<sup>51, 96</sup></div>
+  <div class="card"><strong>OECD e Reino Unido.</strong> A OECD roda um processo de cinco módulos para embutir foresight na decisão de política.<sup>48</sup> O escritório de ciência britânico mantém programa dedicado de futuros e horizon scanning.<sup>21</sup></div>
+</div>
+
+</section>
+
+<section id="p-maturidade" class="pane">
+<h2>Maturidade: a escada que separa quem vê de quem prospera</h2>
+<p>A pergunta que o conselho sempre faz é se isso dá retorno. A resposta mais sólida do campo vem do estudo longitudinal de Rohrbeck e Etingue Kum, que acompanhou grandes empresas europeias por sete anos. As mais preparadas para o futuro, chamadas vigilantes, superaram a média em trinta e três por cento de lucratividade e em duzentos por cento de crescimento de valor de mercado.<sup>1, 2, 4</sup> <span class="sel sel-v">Verificado</span> O espelho negativo é igualmente duro: empresas com deficiência de preparo tiveram de trinta e sete a quarenta e quatro por cento menos lucratividade que as vigilantes.<sup>3</sup> <span class="sel sel-v">Verificado</span> Em medidas mais amplas de desempenho, o desconto observado é ainda maior. <span class="sel sel-i">Inferência</span></p>
+
+<div class="g4">
+  <div class="kpi"><span class="num">+33%</span><small>lucratividade das vigilantes acima da média<sup>1</sup></small></div>
+  <div class="kpi"><span class="num">+200%</span><small>crescimento de valor de mercado das vigilantes<sup>1</sup></small></div>
+  <div class="kpi"><span class="num">de 37% a 44%</span><small>desconto de lucratividade das empresas mal preparadas<sup>3</sup></small></div>
+  <div class="kpi"><span class="num">1 em 20</span><small>de fato ajusta a rota por causa da leitura de futuro<sup>2</sup></small></div>
+</div>
+
+<h3>Os quatro tipos de empresa</h3>
+<p>O modelo classifica a empresa pela relação entre a maturidade do seu foresight e a incerteza do ambiente em que ela opera.<sup>1, 3</sup> <span class="sel sel-v">Verificado</span></p>
+<table>
+<thead><tr><th>Tipo</th><th>O que significa</th></tr></thead>
+<tbody>
+<tr><td><strong>Vigilante</strong></td><td>As práticas de antecipação casam com a incerteza do ambiente. É onde o retorno aparece</td></tr>
+<tr><td><strong>Neurótica</strong></td><td>As práticas excedem a necessidade do ambiente. Gasta demais para o que enfrenta</td></tr>
+<tr><td><strong>Vulnerável</strong></td><td>As práticas ficam um nível abaixo do necessário. Vê tarde</td></tr>
+<tr><td><strong>Em perigo</strong></td><td>As práticas ficam mais de um nível abaixo do necessário. É pega de surpresa por construção</td></tr>
+</tbody>
+</table>
+<p class="note">A leitura prática: mais foresight nem sempre é melhor. O alvo é casar a maturidade com a incerteza do próprio setor. Um seguro exposto a clima, longevidade e regulação vive num ambiente de alta incerteza, e a subpreparação ali custa caro. <span class="sel sel-i">Inferência</span></p>
+
+<h3>As cinco dimensões para medir e subir</h3>
+<p>O modelo de maturidade de Rohrbeck avalia a orientação para o futuro de uma empresa em cinco dimensões, cada uma com elementos e níveis, construído sobre dezenove casos e mais de cem entrevistas.<sup>5, 6</sup> <span class="sel sel-v">Verificado</span> Elas servem de checklist para saber onde o escritório está fraco.</p>
+<div class="g5">
+  <div class="card-sm"><strong>Uso da informação</strong><br>Que informação é coletada, e quão à frente ela olha</div>
+  <div class="card-sm"><strong>Sofisticação de método</strong><br>Que métodos interpretam a informação</div>
+  <div class="card-sm"><strong>Pessoas e redes</strong><br>Quem capta e dissemina sinal, e com que rede</div>
+  <div class="card-sm"><strong>Organização</strong><br>Como a informação é reunida, interpretada e usada</div>
+  <div class="card-sm"><strong>Cultura</strong><br>Quanto a cultura da casa é aberta ao futuro</div>
+</div>
+
+<div class="alerta"><strong>Onde o escritório fundido costuma travar.</strong> A dimensão mais fraca quase nunca é método ou ferramenta, é organização e cultura: a informação existe, o método existe, mas a empresa não tem o rito que transforma a leitura em decisão, nem a cultura que aceita ser contrariada por um cenário. É por isso que este documento gasta mais tinta em governança e ritos do que em técnica de cenário. <span class="sel sel-i">Inferência</span></div>
+
+</section>
+
+<section id="p-brasil" class="pane">
+<h2>O quadro brasileiro</h2>
+<p>No Brasil, a função existe, mas quase sempre escondida dentro de outra área e raramente fundida. Vale separar três coisas que costumam ser confundidas: empresas com estrutura interna instalada, empresas que apenas consomem foresight de fora, e o mercado de agências que vende a função.</p>
+
+<h3>Quem tem estrutura interna instalada</h3>
+<p>Poucas casas têm área nomeada. As confirmadas incluem a Sicredi, com função de inteligência estratégica; a Embrapa, que opera o Agropensa, seu sistema de inteligência estratégica com cenários e megatendências do agro; o CGEE, organização ligada ao ministério da ciência e tecnologia, dedicada a prospecção e avaliação estratégica; o INPI, com pesquisa de prospecção tecnológica; e o BNDES, que já contratou cenários de mercado de casas como a Macroplan.<sup>59, 60, 61, 72</sup> <span class="sel sel-v">Verificado</span> No Estado, a Escola de Guerra Naval publicou os Cenários Brasil 2045<sup>77</sup> <span class="sel sel-v">Verificado</span>, e o IPEA produziu estudos prospectivos de longo prazo como o Brasil 2035.<sup>76</sup> <span class="sel sel-i">Inferência</span>, sem link direto no acervo desta rodada.</p>
+
+<h3>Quem só consome, e por que isso importa</h3>
+<p>Muitas grandes marcas aparecem como clientes de agências, não como donas de estrutura: Ambev, Petrobras, Itaú, Unilever, Coca-Cola, Suzano, Gerdau, Toyota, Nubank e outras.<sup>65, 70</sup> <span class="sel sel-v">Verificado</span> Isso é sinal de demanda, não de capacidade instalada. É exatamente a lacuna que um escritório interno preenche: internalizar o método que hoje se compra por projeto, e ganhar a memória que a agência leva embora quando o contrato acaba.</p>
+
+<h3>O mercado de agências, o que dá para internalizar ou contratar</h3>
+<div class="g2">
+  <div class="card"><strong>Foresight e futuros.</strong> Aerolito, apresentada como a primeira empresa de futuros do Brasil;<sup>65</sup> W Futurismo, que trouxe o formato de futurista residente ao país em 2018;<sup>64</sup> Envisioning, de radares de tecnologia;<sup>67</sup> IEA Future Lab, de inteligência antecipativa e sinais fracos.<sup>68</sup> <span class="sel sel-v">Verificado</span></div>
+  <div class="card"><strong>Tendências e cenários.</strong> Box1824, de pesquisa de comportamento e consumo;<sup>66</sup> Consumoteca, de tendências por método antropológico;<sup>70</sup> WGSN, de previsão de tendências por assinatura;<sup>69</sup> Brainstorming, com o Método Grumbach de cenários; e Macroplan, de cenários para empresa e governo.<sup>71, 72</sup> <span class="sel sel-v">Verificado</span></div>
+</div>
+
+<h3>Onde formar gente de casa</h3>
+<p>Como o caminho barato é formar alguém interno, vale saber onde. A ESPM abriu o primeiro master de foresight do Brasil em 2023.<sup>63</sup> A Fundação Dom Cabral leva o tema ao conselho num curso de trinta e duas horas.<sup>74</sup> A Sustentare oferece um curso de foresight estratégico com a metodologia de cenários da linhagem Shell, mais acessível.<sup>75</sup> O clássico nacional de cenários no setor público é o livro de Elaine Marcial e Raul Grumbach.<sup>73</sup> A profissão ganhou associação própria, a ABF Pro, anunciada em 2025.<sup>62</sup> <span class="sel sel-v">Verificado</span></p>
+
+<div class="note">A leitura para quem monta agora no Brasil: há oferta abundante de método e de agência, e escassez de estrutura interna madura. Quem instalar um escritório fundido, com governança e acoplamento à decisão, sai na frente de um mercado que ainda compra tendência avulsa. <span class="sel sel-i">Inferência</span></div>
+
+</section>
+
+<section id="p-steep" class="pane">
+<h2>STEEPLEDI: as nove forças que movem o próprio escritório</h2>
+<p>O escritório vive de aplicar a grade STEEPLEDI ao negócio. Vale virar a lente para dentro e perguntar quais forças movem a própria função de foresight, inteligência e tendências. São nove dimensões: social, tecnológica, econômica, ecológica, política, legal, ética, demográfica e de indústria.</p>
+
+<div class="g3">
+  <div class="card"><h4>Social</h4>Atenção virou o recurso escasso da liderança. O escritório disputa a cabeça de quem decide com mil urgências, e isso empurra o produto para o curto e o didático. <span class="sel sel-i">Inferência</span></div>
+  <div class="card"><h4>Tecnológica</h4>A inteligência artificial barateia a coleta e a triagem de sinal, e ameaça o analista que só compilava. O valor migra da coleta para a pergunta e para a leitura.<sup>34</sup> <span class="sel sel-i">Inferência</span></div>
+  <div class="card"><h4>Econômica</h4>Em aperto de custo, a área que não mostra decisão é a primeira a cair. A indústria global de insights que a cerca movimentou cento e cinquenta e três bilhões de dólares em 2024, sinal de demanda, mas a verba interna segue disputada.<sup>85</sup> <span class="sel sel-v">Verificado</span></div>
+  <div class="card"><h4>Ecológica</h4>Clima e transição energética criaram demanda por análise de cenário de longo prazo, e a exigência de divulgação climática aproximou o tema do conselho. É vento a favor, se a tese não depender só disso. <span class="sel sel-i">Inferência</span></div>
+  <div class="card"><h4>Política</h4>Instabilidade e ruptura geopolítica elevam o valor do foresight, e ao mesmo tempo encurtam o horizonte de quem decide. A força puxa nos dois sentidos. <span class="sel sel-i">Inferência</span></div>
+  <div class="card"><h4>Legal</h4>Não há registro profissional nem norma que obrigue a função. A única referência técnica direta é a ISO 56006, voluntária e orientativa.<sup>15, 16</sup> <span class="sel sel-v">Verificado</span></div>
+  <div class="card"><h4>Ética</h4>Quem antecipa influencia o que a empresa considera possível. Há responsabilidade em escolher quais futuros ganham voz e quais somem, tema que a visão periférica trata como risco de ponto cego.<sup>9</sup> <span class="sel sel-v">Verificado</span></div>
+  <div class="card"><h4>Demográfica</h4>O envelhecimento e a mudança de força de trabalho são forças lentas e decisivas, o tipo de sinal que o escritório existe para não deixar a empresa ignorar. <span class="sel sel-i">Inferência</span></div>
+  <div class="card"><h4>Indústria</h4>O mercado de ferramentas de inteligência competitiva ainda é pequeno e fragmentado, estimado por uma casa de análise em torno de seiscentos milhões de dólares em 2025, com outras apontando valores bem maiores conforme a definição de escopo, enquanto os serviços de insight de consumo já passam de quarenta bilhões.<sup>86, 87</sup> <span class="sel sel-v">Verificado</span> nos números de cada casa, <span class="sel sel-i">Inferência</span> no consolidado, porque o escopo varia. A consolidação de fornecedores muda as opções de quem compra.</div>
+</div>
+
+<div class="note">A força mais perigosa para o escritório é a econômica combinada com a social: sob pressão de custo e de atenção, a empresa corta a função que fala do longo prazo justamente quando mais precisa dela. O antídoto é o de sempre, mostrar decisão e não atividade. A casa que aposentou o relatório anual de tendências mais famoso do mundo, a Future Today, é um sinal de que até o produto-vitrine do setor está sendo repensado.<sup>44</sup> <span class="sel sel-v">Verificado</span></div>
+
+</section>
+
+<section id="p-forcas" class="pane">
+<h2>As cinco forças do escritório dentro da empresa</h2>
+<p>Aqui a lente de Porter olha para a posição do escritório dentro da própria companhia, não para o mercado. Entender essas forças explica por que a função é frágil e onde ela ganha margem defensável.</p>
+
+<h3>1. Rivalidade interna pelo mesmo orçamento: alta</h3>
+<p>O escritório disputa verba e atenção com estratégia, inovação, riscos e inteligência de mercado, áreas que também prometem ler o futuro. Sem um mandato claro que diga o que é dele e o que é das outras, a fusão vira sobreposição e a empresa corta por redundância. A defesa é o acoplamento à decisão: quem entrega decisão tomada não compete, complementa. <span class="sel sel-i">Inferência</span></p>
+
+<h3>2. Ameaça de substituição por terceirização: muito alta</h3>
+<p>Tudo o que o escritório faz pode ser comprado de fora, de agências de tendência a consultorias de cenário a casas de assinatura como Gartner e Forrester.<sup>37, 38</sup> A ameaça é real e permanente. A defesa não é fazer tudo por dentro, é reter o que a terceirização não entrega: a memória, o acoplamento ao rito de decisão e o conhecimento do contexto da casa. Compre método e facilitação, nunca a conclusão. <span class="sel sel-i">Inferência</span></p>
+
+<h3>3. Poder dos fornecedores de dado: crescente</h3>
+<p>As plataformas de sinal e as casas de assinatura têm poder sobre quem depende delas, e o preço recorrente sobe. A defesa é começar barato, com fonte aberta e planilha, e só assinar quando a rotina justificar. Casas como a Normann, especializada em ligar cenário a decisão de portfólio, e a IfM de Cambridge, em roadmapping, mostram que o valor está no método aplicado, não no dado bruto.<sup>46, 47</sup> <span class="sel sel-v">Verificado</span></p>
+
+<h3>4. Poder dos clientes internos: alto</h3>
+<p>Os clientes do escritório são as diretorias, e elas podem ignorá-lo sem consequência aparente. É o poder mais perigoso, porque é silencioso: a área não é atacada, é esvaziada. A defesa é o gatilho e o rito no calendário, que tornam o consumo da inteligência obrigatório e não voluntário. <span class="sel sel-i">Inferência</span></p>
+
+<h3>5. Ameaça de novos entrantes internos: média</h3>
+<p>Qualquer diretor com um analista curioso pode montar o seu próprio radar informal e reivindicar a função. Isso fragmenta de novo o que o escritório tentou fundir. A defesa é ser o padrão da casa: dono do método, do radar único e da linguagem comum, de modo que o radar informal do diretor prefira se plugar ao escritório a competir com ele. A norma ISO 56006 ajuda a fixar essa linguagem comum.<sup>15</sup> <span class="sel sel-v">Verificado</span></p>
+
+<div class="alerta"><strong>A margem defensável do escritório.</strong> Ela não está no dado, que qualquer um compra, nem no método, que se aprende. Está em três coisas que só se constroem por dentro e com tempo: a memória do que a empresa já viu e ignorou, a confiança de quem decide, e o encaixe no calendário de decisão. É por isso que credibilidade interna vale mais que talento importado.</div>
+
+</section>
+
+<section id="p-bmc" class="pane">
+<h2>O modelo de valor do escritório interno</h2>
+<p>O escritório não tem receita em dinheiro, mas tem um modelo de valor que precisa fechar, senão ele não sobrevive ao próximo orçamento. Vale desenhá-lo como um quadro de negócio, com a moeda certa: a receita do escritório é decisão influenciada e opção comprada cedo, não relatório entregue.</p>
+
+<div class="g2">
+  <div class="card"><strong>Proposta de valor</strong><br>Menos surpresa estratégica e mais velocidade de decisão. A empresa vê antes, decide na hora certa e compra barato a opção que depois custaria caro. A evidência de que isso paga é o prêmio das empresas vigilantes.<sup>1</sup></div>
+  <div class="card"><strong>Clientes internos</strong><br>Três segmentos com necessidades opostas: conselho e presidência no longo prazo, diretoria e estratégia no médio, gerência e produto no curto. Um produto por segmento, nunca um só para todos.</div>
+  <div class="card"><strong>Atividades-chave</strong><br>Rodar o radar único, o ciclo de inteligência e o ciclo anual de cenários; facilitar o túnel de vento; manter a carteira de apostas com gatilhos vivos.</div>
+  <div class="card"><strong>Recursos-chave</strong><br>Uma liderança sênior com trânsito, uma rede de donos de domínio, um radar e a memória acumulada da casa. O recurso mais escasso é a credibilidade interna.</div>
+  <div class="card"><strong>Parceiros</strong><br>Consultorias de método, casas de assinatura e agências de tendência, contratadas para método e facilitação, nunca para a conclusão. A norma serve de contrato comum.<sup>15</sup></div>
+  <div class="card"><strong>Estrutura de custo</strong><br>O maior item é a pessoa dedicada sênior. Depois, a rede parcial, as assinaturas, a plataforma e a verba de opção de um a três por cento do investimento.</div>
+</div>
+
+<h3>A moeda de retorno: como o escritório se paga</h3>
+<table>
+<thead><tr><th>Fonte de valor</th><th>Como se mede</th></tr></thead>
+<tbody>
+<tr><td>Surpresa evitada</td><td>Sinal detectado que virou decisão antes da crise, com data e dono</td></tr>
+<tr><td>Opção comprada barata</td><td>Aposta feita cedo por causa de um cenário, com gatilho de reforço e de abandono</td></tr>
+<tr><td>Velocidade de decisão</td><td>Tempo entre detectar o sinal e decidir, caindo ao longo do tempo</td></tr>
+<tr><td>Erro evitado</td><td>Estratégia que quebrou no túnel de vento e foi corrigida antes de virar plano</td></tr>
+</tbody>
+</table>
+<p class="note">O escritório vive num ecossistema que fatura alto: a indústria de insights passou de cento e cinquenta bilhões de dólares, e os serviços de inteligência de consumo, de quarenta bilhões.<sup>85, 87</sup> <span class="sel sel-v">Verificado</span> Isso é a prova de que o valor existe. A tarefa do escritório é capturar por dentro, e barato, o que a empresa hoje compra caro e por fora.</p>
+
+</section>
+
+<section id="p-w5" class="pane">
+<h2>O escritório em sete perguntas</h2>
+<p>O 5W2H resume a função sem jargão, do jeito que se apresenta a um patrocinador que tem cinco minutos.</p>
+
+<table>
+<thead><tr><th>Pergunta</th><th>Resposta</th></tr></thead>
+<tbody>
+<tr><td><strong>O quê</strong></td><td>Um escritório que funde foresight, inteligência estratégica e tendências numa consultoria interna que devolve decisão, não relatório.</td></tr>
+<tr><td><strong>Por quê</strong></td><td>Porque as empresas vigilantes lucram e crescem mais, e porque o sinal que separa acerto de surpresa quase sempre já existia e morreu numa área que não falava com quem decidia.<sup>1</sup></td></tr>
+<tr><td><strong>Quem</strong></td><td>Uma liderança sênior com trânsito, um punhado de analistas de sinal, de inteligência e de cenário, e uma rede de donos de domínio nas áreas.</td></tr>
+<tr><td><strong>Onde</strong></td><td>No arranjo de centro com pontas, reportando a estratégia, com assento em riscos e item fixo no conselho duas vezes por ano.<sup>20</sup></td></tr>
+<tr><td><strong>Quando</strong></td><td>Em quatro cadências: radar contínuo, boletim mensal, nota trimestral e ciclo anual de cenários, ancorados na data do orçamento.</td></tr>
+<tr><td><strong>Como</strong></td><td>Rodando um radar único de três camadas, um ciclo de inteligência disciplinado e gatilhos numéricos que obrigam a decisão no prazo.<sup>13</sup></td></tr>
+<tr><td><strong>Quanto</strong></td><td>Uma pessoa sênior como maior custo, uma rede parcial, assinaturas e plataforma comprada só depois da rotina, mais verba de opção de um a três por cento do investimento.</td></tr>
+</tbody>
+</table>
+
+<div class="qbox" style="border-left:4px solid #b71c1c;background:#faf1f1;padding:14px 18px;margin:18px 0;font-style:italic">Se o patrocinador só puder guardar uma frase: o escritório não promete acertar o futuro, promete que a empresa vai ver antes e decidir mais rápido, e isso tem preço e dono.</div>
+
+</section>
+
+<section id="p-risco" class="pane">
+<h2>Riscos de montar e de operar o escritório</h2>
+<p>A função tem riscos próprios, distintos dos riscos do negócio que ela monitora. A grade abaixo separa por probabilidade e impacto, na lógica da gestão de risco, que trata do que tem probabilidade estimável e deixa de fora o plausível sem base histórica, território do próprio foresight.<sup>17</sup> <span class="sel sel-i">Inferência</span></p>
+
+<table>
+<thead><tr><th>Risco</th><th>Probabilidade</th><th>Impacto</th><th>Mitigação</th></tr></thead>
+<tbody>
+<tr><td>Morte por troca de patrocinador</td><td>Alta</td><td>Alto</td><td>Mandato escrito e item fixo no conselho, não apoio verbal de um executivo</td></tr>
+<tr><td>Captura pelo curto prazo</td><td>Alta</td><td>Alto</td><td>Separar formalmente o produto de horizonte um do de horizonte três, com reuniões distintas</td></tr>
+<tr><td>Virar biblioteca, sem acoplamento</td><td>Alta</td><td>Alto</td><td>Consultoria interna com briefing, gatilho e acompanhamento da decisão</td></tr>
+<tr><td>Comprar plataforma cedo demais</td><td>Média</td><td>Médio</td><td>Radar em planilha primeiro, software só depois da rotina<sup>27</sup></td></tr>
+<tr><td>Fusão só no organograma</td><td>Média</td><td>Alto</td><td>Radar único de verdade, cadência alinhada, três rotas coerentes; não três silos sob um chefe</td></tr>
+<tr><td>Justificativa ancorada numa norma só</td><td>Média</td><td>Alto</td><td>Tese econômica, risco evitado e velocidade, nunca só conformidade</td></tr>
+<tr><td>Contratar a conclusão de fora</td><td>Média</td><td>Médio</td><td>Comprar método e facilitação, exigir transferência no contrato</td></tr>
+<tr><td>Liderança técnica sem trânsito</td><td>Média</td><td>Alto</td><td>Liderança vinda da estratégia, com credibilidade prévia, apoiada por especialista de método</td></tr>
+<tr><td>Excesso de foresight para o ambiente</td><td>Baixa</td><td>Médio</td><td>Casar a maturidade com a incerteza do setor, sem virar a empresa neurótica</td></tr>
+</tbody>
+</table>
+
+<div class="alerta"><strong>O maior risco não está na tabela.</strong> É o risco de ter razão e não ser ouvido. Um escritório pode ler o futuro com precisão e ainda assim falhar, se a leitura não chegar acoplada ao momento e ao dono da decisão. Por isso o risco de disseminação e de governança pesa mais que o risco de análise. A empresa que percebe e não decide é a que mais perde valor. <span class="sel sel-i">Inferência</span></div>
+
+</section>
+
+<section id="p-swot" class="pane">
+<h2>SWOT e cenários do próprio escritório até 2032</h2>
+<p>A função também tem futuro, e vale aplicar a ela o método que ela aplica ao negócio. Primeiro o retrato de agora, depois quatro mundos para a própria área, na taxonomia de arquétipos de Dator: continuação, disciplina, colapso e transformação.<sup>24</sup></p>
+
+<h3>Retrato de hoje</h3>
+<div class="g2">
+  <div class="card"><strong>Forças</strong><br>Evidência sólida de retorno das empresas preparadas.<sup>1</sup> Demanda crescente por leitura de longo prazo, puxada por clima e ruptura. Ferramenta abundante e barata para começar. Método público e maduro.</div>
+  <div class="card"><strong>Fraquezas</strong><br>Sem registro profissional nem carreira formal. Prova de valor difícil de fechar em número. Dependência de um patrocinador. Confusão crônica entre as três funções que deveria fundir.</div>
+  <div class="card"><strong>Oportunidades</strong><br>Poucas empresas têm estrutura interna madura, sobretudo no Brasil. A inteligência artificial barateia a coleta e libera o analista para a leitura. A norma dá linguagem comum para institucionalizar.</div>
+  <div class="card"><strong>Ameaças</strong><br>Corte de custo em aperto econômico. Terceirização de tudo. Fragmentação de volta em silos. Descrédito quando um futurista promete acerto e erra.<sup>10</sup></div>
+</div>
+
+<h3>Quatro mundos para a função até 2032</h3>
+<div class="tl">
+  <div class="tl-item"><div class="tl-dot done"></div><strong>Continuação.</strong> O escritório segue como hoje, presente nas grandes empresas e ausente nas médias, oscilando com o ciclo econômico. Vive, mas não vira padrão.</div>
+  <div class="tl-item"><div class="tl-dot now"></div><strong>Disciplina.</strong> A função se profissionaliza, com norma, formação e carreira reconhecida, e vira parte esperada da governança das grandes casas, como a auditoria interna virou. Cenário mais provável se a evidência de retorno se firmar.</div>
+  <div class="tl-item"><div class="tl-dot wait"></div><strong>Colapso.</strong> Uma sequência de promessas furadas e cortes de custo esvazia a função, que volta a se diluir em estratégia e marketing. O nome some, o trabalho vira tarefa de meio período de alguém.</div>
+  <div class="tl-item"><div class="tl-dot wait"></div><strong>Transformação.</strong> A inteligência artificial automatiza coleta, triagem e boa parte da análise, e o escritório se reconfigura em torno de duas coisas que a máquina não faz, a pergunta certa e o acoplamento à decisão humana. Menos gente, mais sênior.</div>
+</div>
+
+<div class="note">A aposta deste documento é que o cenário de disciplina e o de transformação vão se misturar: a função se profissionaliza e ao mesmo tempo encolhe em pessoal, concentrando-se em pergunta e decisão. Em qualquer mundo, o escritório que já hoje se acopla à decisão sai na frente. <span class="sel sel-i">Inferência</span></div>
+
+</section>
+
+<section id="p-sut" class="pane">
+<h2>Sutilezas: o que só se aprende depois de errar</h2>
+<p>Coisas que nenhum manual diz e que separam o escritório que dura do que fecha no segundo ano.</p>
+
+<ul>
+<li><strong>A área não vende futuro, vende conversa estruturada sobre o futuro.</strong> O produto real do ciclo de cenários não é o documento, é a sessão em que a diretoria vê a própria estratégia quebrar num dos mundos. Quem entrega o documento e pula a conversa entregou a embalagem, não o presente.</li>
+<li><strong>Ninguém agradece por uma crise que não aconteceu.</strong> O maior valor do escritório é invisível por natureza: a surpresa evitada não vira caso de sucesso, porque não virou nada. É por isso que a função precisa registrar a decisão no momento em que ela é tomada, não esperar o resultado.</li>
+<li><strong>O oponente é o papel mais valioso e o menos pedido.</strong> A política interna sempre pede o iniciador e o estrategista, nunca o que desafia a premissa confortável.<sup>7</sup> Um escritório que só concorda com a diretoria é caro e inútil.</li>
+<li><strong>Sinal fraco parece ruído até deixar de ser barato agir.</strong> A visão periférica ensina que os sinais que fazem ou quebram a empresa chegam pelas bordas, fracos, fáceis de descartar.<sup>9</sup> <span class="sel sel-v">Verificado</span> A disciplina é registrar o sinal fraco mesmo sem saber se importa, para poder olhar para trás.</li>
+<li><strong>A fusão morre no detalhe da cadência.</strong> Basta a área de tendências publicar semanalmente e o foresight anualmente, sem ponte, para o radar único virar dois radares com um logotipo comum. A fusão se mantém no ritual de passagem, não no organograma.</li>
+<li><strong>Precisão não é a meta, e prometer precisão é a ruína.</strong> A promessa honesta é preparação e velocidade de decisão, não pontaria. O futurista que promete acerto vira piada no primeiro erro, e leva a função junto.</li>
+<li><strong>O escritório precisa de um inimigo declarado: a surpresa.</strong> Sem um adversário concreto, a área vira produtora de conteúdo. Com a surpresa estratégica como inimigo, cada entrega tem um propósito: reduzir a chance de a empresa ser pega desprevenida de novo.</li>
+</ul>
+
+<div class="alerta"><strong>A sutileza que resume as outras.</strong> O escritório não compete pela verdade sobre o futuro, compete pela atenção de quem decide. Ganha quem entrega no momento e na linguagem da decisão, não quem tem a análise mais sofisticada guardada numa gaveta bem organizada.</div>
+
+</section>
+
+<section id="p-cem" class="pane">
+<h2>Cem perguntas para interrogar o escritório</h2>
+<p class="src">Agrupadas por tema, numeradas de um a cem. Respostas curtas, para servir de teste rápido antes de aprovar, montar ou defender a função.</p>
+
+<h3>Fundamentos e definições</h3>
+<ol>
+<li><strong>O que é este escritório?</strong> A área que funde foresight, inteligência estratégica e tendências numa consultoria interna acoplada à decisão. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Foresight é previsão?</strong> Não. É exploração de futuros possíveis para preparar a decisão, sem prometer acerto. <span class="sel sel-v">Verificado</span></li>
+<li><strong>Qual a diferença entre inteligência competitiva e de mercado?</strong> A competitiva olha o concorrente, a de mercado olha o ambiente externo amplo.<sup>14</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>E business intelligence?</strong> Olha para dentro, os dados da própria empresa, e é retrospectiva.<sup>14</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Tendência é o mesmo que moda?</strong> Não. Moda passa, tendência é direção de mudança, força estrutural é lenta e profunda. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Por que juntar as três funções?</strong> Porque sozinha cada uma tem um ponto cego que a outra cobre. <span class="sel sel-i">Inferência</span></li>
+<li><strong>O nome da área importa?</strong> Não. Importam o radar, o processo, a rota até quem decide e o gatilho. <span class="sel sel-i">Inferência</span></li>
+<li><strong>A função é obrigatória por lei?</strong> Não. Quase nada obriga, a referência técnica direta é voluntária.<sup>15</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Existe registro profissional de futurista?</strong> Não há conselho nem exame. Há associações de boa prática.<sup>52</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Foresight dá retorno?</strong> As empresas vigilantes lucram e crescem mais que a média.<sup>1</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Quanto mais lucrativas?</strong> Trinta e três por cento acima da média, com duzentos por cento a mais de crescimento de valor de mercado.<sup>1</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Quantas empresas de fato agem?</strong> Cerca de uma em cinco se prepara, e só uma em vinte muda de rota.<sup>2</sup> <span class="sel sel-v">Verificado</span></li>
+</ol>
+
+<h3>As três funções e a fusão</h3>
+<ol start="13">
+<li><strong>Que pergunta o foresight responde?</strong> Que futuros são possíveis, e a estratégia sobrevive a eles. <span class="sel sel-i">Inferência</span></li>
+<li><strong>E a inteligência estratégica?</strong> O que muda a nossa aposta agora, no concorrente, no mercado e na regra. <span class="sel sel-i">Inferência</span></li>
+<li><strong>E a área de tendências?</strong> O que já mudou no consumo e no comportamento, e como responder. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Qual o cliente de cada uma?</strong> Foresight serve o conselho, a inteligência serve a diretoria, a tendência serve produto e gerência. <span class="sel sel-i">Inferência</span></li>
+<li><strong>O que a tendência entrega ao foresight?</strong> Sinal fresco do mundo real antes de virar tese. <span class="sel sel-i">Inferência</span></li>
+<li><strong>O que o foresight entrega à inteligência?</strong> A moldura que diz quais movimentos importam e quais são ruído. <span class="sel sel-i">Inferência</span></li>
+<li><strong>O que a inteligência entrega às duas?</strong> A disciplina do ciclo e a ponte com a decisão. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Fundir é pôr todos sob um chefe?</strong> Não. É radar único, cadência alinhada e três rotas coerentes. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Qual o risco de fundir só no organograma?</strong> Virar três silos com um logotipo comum. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Como o IFTF descreve a corrente?</strong> Foresight para insight e insight para ação.<sup>42</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>O que a área de tendências erra sozinha?</strong> Confunde moda com mudança estrutural. <span class="sel sel-i">Inferência</span></li>
+<li><strong>O que o foresight erra sozinho?</strong> Vira ficção bonita sem ligação com a decisão de caixa. <span class="sel sel-i">Inferência</span></li>
+</ol>
+
+<h3>Horizontes e passagem de bastão</h3>
+<ol start="25">
+<li><strong>O que é H1?</strong> O hoje e o quase, de zero a dois anos. <span class="sel sel-i">Inferência</span></li>
+<li><strong>O que é H2?</strong> A transição e a aposta, de dois a cinco anos. <span class="sel sel-i">Inferência</span></li>
+<li><strong>O que é H3?</strong> O longo e o possível, de cinco a vinte anos. <span class="sel sel-i">Inferência</span></li>
+<li><strong>De onde vêm os três horizontes?</strong> Da McKinsey, em 1999, para crescimento, e do International Futures Forum, em 2006, para futuros.<sup>18, 19</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Quem cuida de cada horizonte?</strong> Inteligência de mercado no H1, inovação no H2, foresight no H3. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Onde está o ponto de maior atrito?</strong> No H2, a zona de transição. <span class="sel sel-i">Inferência</span></li>
+<li><strong>O que é passagem de bastão?</strong> Entregar o cenário do foresight à inovação e à inteligência para virar experimento e monitoramento. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Por que ela falha?</strong> Porque no H2 ninguém é dono de transformar sinal em experimento com verba e prazo. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Como evitar?</strong> Um rito explícito de passagem, com nome de quem recebe. <span class="sel sel-i">Inferência</span></li>
+</ol>
+
+<h3>Ciclo, radar e entregáveis</h3>
+<ol start="34">
+<li><strong>Quais as fases do ciclo de inteligência?</strong> Direção, coleta, processamento, análise, disseminação e feedback.<sup>13</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Onde o ciclo mais quebra?</strong> Na direção, quando começa sem pergunta de decisor. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Qual o item mais barato e ignorado?</strong> A pergunta focal, estreita e dolorosa. <span class="sel sel-i">Inferência</span></li>
+<li><strong>O que é o radar único?</strong> Um funil só que classifica todo sinal em três camadas de tempo. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Quantas rotas o radar tem?</strong> Três, para o curto, o médio e o longo prazo. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Por que não um relatório para todos?</strong> Porque os três públicos têm necessidades opostas. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Quais as quatro cadências de entrega?</strong> Contínua, mensal, trimestral e anual.<sup>41, 35</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Qual entregável mostra saúde da área?</strong> O boletim mensal, não a peça anual. <span class="sel sel-i">Inferência</span></li>
+<li><strong>O que todo cenário precisa ter?</strong> Indicadores observáveis de aproximação. <span class="sel sel-i">Inferência</span></li>
+<li><strong>O que todo alerta precisa ter?</strong> Um gatilho numérico e um prazo. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Qual o produto real do ciclo de cenários?</strong> A sessão de túnel de vento, não o documento.<sup>8</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Quantos mundos por ciclo?</strong> Três ou quatro, nunca mais. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Onde entra a inteligência artificial?</strong> Na coleta e na triagem, liberando o analista para a leitura.<sup>34</sup> <span class="sel sel-i">Inferência</span></li>
+</ol>
+
+<h3>Modelo operacional e governança</h3>
+<ol start="47">
+<li><strong>Quais os três arranjos possíveis?</strong> Centralizado, descentralizado e centro com pontas.<sup>20</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Qual o mais resistente para a função fundida?</strong> Centro com pontas, núcleo pequeno e donos de domínio nas áreas. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Quem usa o modelo de centro com pontas?</strong> A Procter and Gamble, na inteligência competitiva.<sup>20</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>O que diferencia consultoria interna de biblioteca?</strong> Briefing, engajamento, entrega que pede decisão e acompanhamento. <span class="sel sel-i">Inferência</span></li>
+<li><strong>A que a área deve reportar?</strong> A estratégia, com assento em riscos e item fixo no conselho. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Existe posição ótima no organograma?</strong> Não, cada uma tem vantagem e risco. <span class="sel sel-i">Inferência</span></li>
+<li><strong>O que protege a função da troca de executivo?</strong> O item fixo na pauta do conselho e o mandato escrito. <span class="sel sel-i">Inferência</span></li>
+<li><strong>A área decide sozinha?</strong> Nunca. É dona do processo, não da decisão. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Que métrica funciona?</strong> Decisão tomada por causa de um sinal, com data e dono. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Que métrica é vaidade?</strong> Número de relatórios, sinais catalogados e participantes em oficina. <span class="sel sel-i">Inferência</span></li>
+<li><strong>O que é um gatilho?</strong> Número acordado que, cruzado, obriga reunião de decisão no prazo. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Por que o gatilho vale tanto?</strong> Combina a resposta enquanto ninguém está sob pressão. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Como a função morre?</strong> Por troca de patrocinador, corte de custo, captura do curto e justificativa única. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Qual o antídoto do corte de custo?</strong> Mostrar decisão, não entregável. <span class="sel sel-i">Inferência</span></li>
+</ol>
+
+<h3>Montar e financiar</h3>
+<ol start="61">
+<li><strong>Por onde começar?</strong> Pelo patrocínio. Sem patrocinador de diretoria, não comece. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Qual o primeiro exercício?</strong> Reconstituir as três últimas surpresas estratégicas da empresa. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Qual a equipe mínima?</strong> Uma pessoa dedicada sênior mais três a cinco donos de domínio parciais. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Quando comprar plataforma?</strong> Só depois de ter rotina e volume.<sup>27</sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>Qual a fase de maior mortalidade?</strong> A de acoplar ao orçamento, meses sete a nove. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Quanto reservar de verba de opção?</strong> De um a três por cento do orçamento de investimento. <span class="sel sel-i">Inferência</span></li>
+<li><strong>O que cada aposta precisa ter?</strong> Dono, tese, valor, gatilho de reforço e gatilho de abandono. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Qual o maior item de custo?</strong> A pessoa dedicada sênior. <span class="sel sel-i">Inferência</span></li>
+<li><strong>O que comprar de consultoria?</strong> Método e facilitação, nunca a conclusão. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Quais os cinco erros que matam a montagem?</strong> Cenário antes de diagnóstico, software antes de rotina, ficar fora do orçamento, comprar conclusão e não ter verba de opção. <span class="sel sel-i">Inferência</span></li>
+</ol>
+
+<h3>Pessoas, cargos e salários</h3>
+<ol start="71">
+<li><strong>Quais os papéis do escritório?</strong> Analista de sinais, de inteligência, de cenários, liderança e dono de domínio. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Quais os três papéis do foresight na inovação?</strong> Iniciador, estrategista e oponente.<sup>7</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Qual o papel mais esquecido?</strong> O oponente, que desafia a premissa confortável. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Quais as três portas de entrada?</strong> Estratégia, pesquisa e inovação, ciências sociais e design. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Qual a combinação que funciona?</strong> Liderança da estratégia apoiada por especialista de método. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Quanto ganha um futurista fora do Brasil?</strong> Perto de cento e cinquenta e quatro mil dólares por ano, com amostra pequena.<sup>78</sup> <span class="sel sel-e">Especulativo</span></li>
+<li><strong>E um analista de inteligência competitiva?</strong> Em torno de cento e onze mil dólares por ano.<sup>79</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>E um diretor de estratégia?</strong> Perto de duzentos e quarenta e sete mil dólares, com topo acima de quatrocentos mil.<sup>81</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>E no Brasil?</strong> Um analista de inteligência de mercado vai de cerca de quatro a dez mil reais por mês.<sup>83</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Existe chefe de foresight no Brasil?</strong> Quase não, como cargo formal. A função se esconde em estratégia e inteligência de mercado.<sup>84</sup> <span class="sel sel-i">Inferência</span></li>
+</ol>
+
+<h3>Sistemas e fornecedores</h3>
+<ol start="81">
+<li><strong>Qual a regra de ouro da ferramenta?</strong> Ela amplifica a rotina que já existe, não a cria.<sup>27</sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>Que plataformas de foresight existem?</strong> ITONICS, TrendOne, Shaping Tomorrow e FIBRES, entre outras.<sup>27, 28, 35, 36</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>E de inteligência e busca?</strong> AlphaSense, CB Insights, Signal AI e Feedly.<sup>30, 29, 33, 34</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>E de escuta de consumo?</strong> NetBase Quid e Brandwatch.<sup>31, 32</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Que fontes gratuitas reduzem a conta?</strong> A Strategic Intelligence do Fórum Econômico Mundial e a Biblioteca de Futuros da EBF.<sup>39, 40</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Por quantas ferramentas começar?</strong> Por uma, um radar e um agregador. <span class="sel sel-i">Inferência</span></li>
+</ol>
+
+<h3>Benchmarks e maturidade</h3>
+<ol start="87">
+<li><strong>Qual a unidade corporativa mais antiga?</strong> A de cenários da Shell, pioneira nos anos 1970.<sup>88</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>O que é o SONAR da Swiss Re?</strong> Relatório anual de riscos emergentes por crowdsourcing interno, desde 2013.<sup>90</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Que empresa publica um radar de tendências como marca?</strong> A Munich Re, com a ERGO.<sup>91</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>A Ford tem futurista?</strong> Sim, uma chefe de futuros que assina o relatório anual de tendências.<sup>93</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Laboratório de inovação garante permanência?</strong> Não. A IKEA fechou o Space10 após uma década.<sup>94</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Qual o benchmark público mais maduro?</strong> Unidades de governo como a de Singapura e a do Canadá.<sup>49, 50</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Quais as cinco dimensões de maturidade?</strong> Uso da informação, método, pessoas e redes, organização e cultura.<sup>5, 6</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Onde o escritório costuma travar?</strong> Em organização e cultura, não em método ou ferramenta. <span class="sel sel-i">Inferência</span></li>
+</ol>
+
+<h3>Brasil</h3>
+<ol start="95">
+<li><strong>Que empresas brasileiras têm estrutura interna?</strong> Sicredi, Embrapa, CGEE e INPI, entre poucas.<sup>59, 60</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>As grandes marcas têm área própria?</strong> Muitas só consomem de agências, sinal de demanda, não de estrutura.<sup>65</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Onde formar gente de casa?</strong> No master da ESPM e em cursos como o da Dom Cabral e da Sustentare.<sup>63, 74, 75</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Existe associação da profissão no Brasil?</strong> Sim, a ABF Pro, de 2025.<sup>62</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Qual a oportunidade brasileira?</strong> Muita agência e método, pouca estrutura interna madura. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Qual a única frase que importa?</strong> O escritório não promete acertar o futuro, promete que a empresa vai ver antes e decidir mais rápido. <span class="sel sel-i">Inferência</span></li>
+</ol>
+
+</section>
+
+<section id="p-gloss" class="pane">
+<h2>Glossário</h2>
+<p>Os termos do ofício, em português claro, para quem senta na mesa sem ter vindo do campo.</p>
+
+<h3>As três funções e seus parentes</h3>
+<ul>
+<li><strong>Foresight, ou prospectiva estratégica.</strong> Estudo disciplinado de futuros possíveis para preparar a decisão de hoje. Não é previsão, é exploração de cenários e incertezas de longo prazo.</li>
+<li><strong>Inteligência competitiva.</strong> Coleta e análise sobre os concorrentes, suas capacidades, vulnerabilidades e intenções. A profissão tem associação própria, a SCIP, fundada em 1986 e rebatizada em 2010 para enfatizar o vínculo com a estratégia.<sup>11, 12</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Inteligência de mercado.</strong> Leitura ampla do ambiente externo: cliente, setor, regulação, geopolítica, cadeia de suprimento, tecnologia.</li>
+<li><strong>Business intelligence.</strong> Análise dos dados internos da própria empresa, retrospectiva, voltada à eficiência. Olha para dentro, não para o horizonte.<sup>14</sup></li>
+<li><strong>Tendência.</strong> Direção de mudança já observável no consumo, no comportamento ou na tecnologia. Diferente de moda, que passa, e de força estrutural, que é lenta e profunda.</li>
+</ul>
+
+<h3>Métodos e artefatos</h3>
+<ul>
+<li><strong>Cenário.</strong> Descrição de um futuro possível, coerente e com indicadores observáveis, usado para testar a estratégia. A referência clássica é o livro de Peter Schwartz sobre a arte da visão de longo prazo.<sup>26</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Ciclo de inteligência.</strong> Processo contínuo de direção, coleta, processamento, análise, disseminação e feedback.<sup>13</sup></li>
+<li><strong>Radar, ou horizon scanning.</strong> Varredura sistemática do ambiente para captar sinais antes que virem tendência consolidada.</li>
+<li><strong>Sinal fraco.</strong> Indício precoce e ambíguo de uma mudança que ainda não se firmou. É onde estão as surpresas que fazem ou quebram a empresa.<sup>9</sup></li>
+<li><strong>Cone de futuros.</strong> Representação dos futuros possíveis, plausíveis, prováveis e preferíveis, que se abrem a partir do presente.<sup>23</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Backcasting.</strong> Partir de um futuro desejado e caminhar para trás até hoje, para descobrir o que precisa acontecer.<sup>21</sup></li>
+<li><strong>Três horizontes.</strong> Modo de organizar o tempo em H1, o presente, H2, a transição, e H3, o futuro transformador.<sup>18, 19</sup></li>
+<li><strong>Túnel de vento.</strong> Sessão em que a estratégia vigente é passada por cada cenário para ver onde ela quebra.<sup>8</sup></li>
+<li><strong>Gatilho.</strong> Número acordado antes que, quando cruzado, obriga uma reunião de decisão em prazo definido.</li>
+<li><strong>Letramento em futuros.</strong> Capacidade de imaginar e usar futuros, tratada pela UNESCO como competência a desenvolver.<sup>57</sup> <span class="sel sel-v">Verificado</span></li>
+</ul>
+
+<h3>Governança e modelo</h3>
+<ul>
+<li><strong>Centro com pontas.</strong> Arranjo em que um núcleo central dá visão e método e pontas nas áreas dão sinal e adesão local.<sup>20</sup></li>
+<li><strong>Verba de opção.</strong> Fatia do orçamento de investimento, de um a três por cento, reservada para transformar leitura em aposta com dono e gatilho.</li>
+<li><strong>Passagem de bastão.</strong> Rito em que o cenário de longo prazo é entregue à inovação para virar experimento e à inteligência para virar monitoramento.</li>
+<li><strong>Empresa vigilante.</strong> No modelo de maturidade, a que casa as práticas de antecipação com a incerteza do ambiente, e por isso lucra e cresce mais.<sup>1</sup></li>
+<li><strong>ISO 56006.</strong> Norma técnica voluntária que descreve a gestão da inteligência estratégica na inovação, útil como linguagem de contrato.<sup>15, 16</sup> <span class="sel sel-v">Verificado</span></li>
+</ul>
+
+</section>
+
+<section id="p-check" class="pane">
+<h2>Revisão crítica, à vista</h2>
+<p>Este documento passou por um ataque de advogado do diabo, número a número e afirmação a afirmação. O que segue é o que resistiu, o que foi corrigido e os limites que ficam honestamente declarados. Nenhum número foi inventado, e onde a fonte não fecha o dado, o selo desce para Inferência ou Especulativo.</p>
+
+<h3>O que resistiu</h3>
+<ul>
+<li><strong>A evidência de retorno.</strong> Os números de Rohrbeck e Etingue Kum, trinta e três por cento de lucratividade e duzentos por cento de valor de mercado, aparecem convergentes em quatro fontes independentes, incluindo o PDF do artigo, a escola de origem, a EDHEC e o Fórum Econômico Mundial.<sup>1, 2, 3, 4</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>O ciclo de inteligência e as três disciplinas.</strong> As fases do ciclo e a distinção entre inteligência competitiva, de mercado, business intelligence e foresight são consenso do campo, confirmadas em mais de uma fonte.<sup>13, 14</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>As unidades de referência.</strong> Shell, Siemens, Swiss Re, Munich Re e Ford foram confirmadas em domínio oficial ou em PDF hospedado nele.<sup>88, 90, 91, 93</sup> <span class="sel sel-v">Verificado</span></li>
+</ul>
+
+<h3>O que foi corrigido no ataque</h3>
+<ul>
+<li><strong>Os papéis do foresight eram três, não quatro.</strong> A hipótese inicial incluía um quarto papel, prospector, que pertence a outra literatura, a de Miles e Snow. O trio correto de Rohrbeck e Gemünden é iniciador, estrategista e oponente.<sup>7</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Salários do Brasil são mensais, não anuais.</strong> O painel brasileiro reporta base mensal; os valores foram rotulados como mensais para não inflar a comparação com os globais, que são anuais.<sup>83</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Os salários de futurista global levam selo mais fraco.</strong> As amostras de futurista e de foresight estratégico no painel aberto são minúsculas, de dois a cinco respondentes, então descem para Especulativo.<sup>78</sup> <span class="sel sel-e">Especulativo</span></li>
+<li><strong>Um entregável público sem lastro foi removido.</strong> Uma versão anterior citava a Estratégia Brasil 2050 como entregue em 2025, sem fonte rastreável. Foi substituída pelos Cenários Brasil 2045 da Escola de Guerra Naval, com fonte, e pelo Brasil 2035 do IPEA.<sup>77, 76</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>A data da função de futurista da Ford foi corrigida.</strong> A versão anterior dizia anos 1990; a função de futuring da Ford começou por volta dos anos 2000.<sup>93</sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>O selo do tamanho do mercado de ferramentas foi alinhado.</strong> O número de cada casa de análise é Verificado, o consolidado do mercado é Inferência, porque a definição de escopo varia muito.<sup>86</sup> <span class="sel sel-i">Inferência</span></li>
+</ul>
+
+<h3>Limitações honestas</h3>
+<ul>
+<li><strong>O desenho de operação é síntese, não norma.</strong> A divisão em três horizontes, o radar de três camadas com três rotas, a cadência em quatro tempos e a passagem de bastão são desenho de projeto, marcados Inferência ao longo do texto. São ancorados em frameworks verificados, os três horizontes e o ciclo de inteligência, mas o arranjo específico é uma proposta, não um padrão de mercado medido. <span class="sel sel-i">Inferência</span></li>
+<li><strong>O tamanho do estudo de Rohrbeck ficou em aberto.</strong> As fontes secundárias divergem entre perto de noventa e setenta empresas ao longo de sete anos; o texto usa a formulação de grandes empresas europeias sem cravar o número.<sup>1</sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>A linha de reporte é julgamento.</strong> Não existe estatística primária citável de quantas áreas reportam a estratégia, a inovação ou ao presidente; a recomendação de reportar a estratégia é inferência sustentada, não dado.<sup>20</sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>O tamanho do mercado de ferramentas varia muito.</strong> As casas de análise divergem por definição de escopo, de menos de um bilhão a vários bilhões de dólares; o texto usa a faixa e não um número único.<sup>86</sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>Algumas unidades corporativas têm apoio secundário.</strong> Deutsche Telekom e Philips têm parte da descrição apoiada em fonte acadêmica, não em página oficial atual, e por isso levam Inferência.<sup>92, 95</sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>Não há survey fechada de adoção.</strong> Faltou uma pesquisa citável com o percentual de grandes empresas que têm função formal de foresight; o dado mais forte disponível é a proporção de uma em cinco que se prepara e uma em vinte que age.<sup>2</sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>A ISO 56006 é referência externa a esta rodada.</strong> É uma norma técnica publicada real, usada como linguagem comum do ofício, mas não foi objeto da pesquisa de fontes desta edição; o leitor deve lê-la na fonte antes de tratá-la como especificação de contrato.<sup>15</sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>Um estudo público brasileiro ficou sem link direto.</strong> O Brasil 2035 do IPEA é citado como exemplo de cenário público de longo prazo, mas sem link direto no acervo desta rodada, por isso leva Inferência; os Cenários Brasil 2045 da Escola de Guerra Naval, esses, têm fonte.<sup>76, 77</sup> <span class="sel sel-i">Inferência</span></li>
+</ul>
+
+<div class="note">Recorte declarado: este é o retrato do escritório interno como função, com corte Brasil e benchmarks internacionais, escrito na lente de quem executa. Não substitui a leitura das fontes primárias antes de levar qualquer número a um conselho, pelo mesmo motivo que o documento pede que se faça com todo número de terceiro.</div>
+
+</section>
+
+<section id="p-fontes" class="pane">
+<h2>Fontes</h2>
+<div class="card"><p><strong>Nota de método.</strong> <span class="sel sel-v">Verificado</span> indica afirmação apoiada em fonte publicada e identificada. <span class="sel sel-i">Inferência</span> indica raciocínio construído a partir de fontes verificadas, que nenhuma delas afirma diretamente. <span class="sel sel-e">Especulativo</span> indica leitura de cenário ou hipótese sem base empírica direta, oferecida como provocação e não como fato. Percentual ou agregado calculado é Inferência. Salário de amostra minúscula em painel aberto é Especulativo. O desenho de operação (horizontes, radar, cadência, ritos) é síntese de projeto, marcada Inferência; não é norma de mercado.</p></div>
+<h3>Evidência, teoria e maturidade do foresight corporativo</h3>
+<ol start="1">
+<li>Rohrbeck, R.; Etingue Kum, M. <em>Corporate foresight and its impact on firm performance: A longitudinal analysis.</em> Technological Forecasting and Social Change, v. 129, p. 105-116, 2018 (DOI 10.1016/j.techfore.2017.12.013). PDF aberto: https://pure.au.dk/ws/files/179651094/Rohrbeck_Corporate_foresight.pdf</li>
+<li>EDHEC Business School (EDHEC Vox). <em>Corporate foresight improves company performance.</em> https://www.edhec.edu/en/research-and-faculty/edhec-vox/corporate-foresight-improves-company-performance</li>
+<li>Aarhus BSS. <em>Corporate foresight improves company performance.</em> 2018. https://bss.au.dk/en/insights/business-2/2018/corporate-foresight-improves-company-performance</li>
+<li>World Economic Forum. <em>Why corporate foresight matters, according to research.</em> set. 2023. https://www.weforum.org/stories/2023/09/strategic-foresight-research-insights/</li>
+<li>Rohrbeck, R. <em>Corporate Foresight: Towards a Maturity Model for the Future Orientation of a Firm.</em> Springer/Physica-Verlag, 2011 (19 casos, 100+ entrevistas; 5 dimensões, 20 elementos, 4 níveis). https://link.springer.com/book/10.1007/978-3-7908-2626-5</li>
+<li><em>Corporate foresight.</em> Wikipedia (definições literais das 5 dimensões do modelo de maturidade de Rohrbeck). https://en.wikipedia.org/wiki/Corporate_foresight</li>
+<li>Rohrbeck, R.; Gemünden, H. G. <em>Corporate foresight: Its three roles in enhancing the innovation capacity of a firm</em> (Initiator, Strategist, Opponent). Technological Forecasting and Social Change, 2011. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1618523</li>
+<li>Scoblic, J. P. <em>Learning from the Future.</em> Harvard Business Review, jul-ago 2020. Cenários como ensaio de decisão.</li>
+<li>Day, G.; Schoemaker, P. <em>Peripheral Vision: Detecting the Weak Signals That Will Make or Break Your Company.</em> Harvard Business School Press, 2006.</li>
+<li>Boston Consulting Group / BCG Henderson Institute. Publicações sobre horizonte estratégico e preparação para incerteza.</li>
+</ol>
+<h3>Inteligência estratégica, métodos e frameworks</h3>
+<ol start="11">
+<li>PR Newswire. <em>SCIP Changes Name to Strategic and Competitive Intelligence Professionals.</em> 12 ago. 2010 (confirma fundação em 1986 como Society of Competitive Intelligence Professionals). https://www.prnewswire.com/news-releases/scip-changes-name-to-strategic-and-competitive-intelligence-professionals-100524874.html</li>
+<li>SCIP (Strategic and Competitive Intelligence Professionals). Sítio institucional. https://www.scip.org/</li>
+<li><em>Intelligence cycle management.</em> Wikipedia (fases direção, coleta, processamento, análise, disseminação, feedback). https://en.wikipedia.org/wiki/Intelligence_cycle_management</li>
+<li>Market Logic Software; Bismart. Distinção entre inteligência competitiva, de mercado, business intelligence e foresight. https://marketlogicsoftware.com/blog/market-intelligence-vs-competitive-intelligence/</li>
+<li>ISO 56006:2021. <em>Innovation management: tools and methods for strategic intelligence management.</em> Descreve o ciclo do dado à inteligência estratégica.</li>
+<li>ISO 56002:2019. <em>Innovation management system: guidance.</em> Família na qual a 56006 se insere.</li>
+<li>ISO 31000. <em>Gestão de riscos: diretrizes.</em></li>
+<li>McKinsey Quarterly. <em>Enduring Ideas: The three horizons of growth</em> (Baghai, Coley, White, <em>The Alchemy of Growth</em>, 1999). https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/enduring-ideas-the-three-horizons-of-growth</li>
+<li><em>Three Horizons.</em> Wikipedia; Bill Sharpe / International Futures Forum, <em>Three Horizons: The Patterning of Hope</em> (2006). https://en.wikipedia.org/wiki/Three_Horizons</li>
+<li><em>Organizational structure of competitive intelligence activities: A South African case study</em> (arquétipos centralizado, descentralizado e hub-and-spoke; caso Procter &amp; Gamble). ResearchGate, 2004. https://www.researchgate.net/publication/228705598</li>
+<li>Reino Unido, Government Office for Science. <em>The Futures Toolkit</em> (horizon scanning, eixos de incerteza, backcasting), 2024. https://www.gov.uk/government/publications/futures-toolkit-for-policy-makers-and-analysts</li>
+<li>Inayatullah, S. <em>Causal Layered Analysis</em> e os <em>Six Pillars.</em> Metafuture. https://www.metafuture.org</li>
+<li>Voros, J. <em>The Futures Cone, use and history</em> (Voroscope), 2017. https://thevoroscope.com</li>
+<li>Dator, J. (Escola de Manoa). Os quatro arquétipos de futuro: Continuação, Disciplina, Colapso e Transformação.</li>
+<li>Wack, P. <em>Scenarios: Uncharted Waters Ahead.</em> Harvard Business Review, 1985 (linhagem Shell).</li>
+<li>Schwartz, P. <em>The Art of the Long View.</em> 1991 (fundou a Global Business Network, 1988).</li>
+</ol>
+<h3>Ferramentas e plataformas</h3>
+<ol start="27">
+<li>ITONICS (Alemanha, 2009). Plataforma de foresight e gestão de inovação (radar, tendências, IA). https://www.itonics-innovation.com/</li>
+<li>TrendOne (Alemanha). Trend intelligence e foresight (base curada de 60.000+ tendências, radares). https://www.trendone.com/en</li>
+<li>CB Insights. Technology market intelligence (venture, startups, patentes, sinais). https://www.cbinsights.com/what-we-offer/platform/</li>
+<li>AlphaSense. Market intelligence e busca com IA sobre 500M+ documentos (research, earnings, filings). https://www.alpha-sense.com/</li>
+<li>NetBase Quid (marca Quid, grupo Cision). Inteligência de consumidor e de mercado por IA. https://www.netbasequid.com/</li>
+<li>Brandwatch (Cision). Social listening e consumer intelligence (100M+ fontes). https://www.brandwatch.com/</li>
+<li>Signal AI. Media, risco e reputação por IA (2B+ pontos, 226 mercados, 120+ idiomas). https://signal-ai.com/</li>
+<li>Feedly (assistente Leo). Agregador de notícias com filtragem, resumo e detecção de tendências por IA. https://feedly.com/ai</li>
+<li>Shaping Tomorrow (engine Athena; Signal Scanner semanal, Change Tracker mensal). Horizon scanning por SaaS. https://www.shapingtomorrow.com</li>
+<li>FIBRES. Trend radar e horizon scanning (guia e templates de radar). https://www.fibresonline.com</li>
+<li>Gartner. Hype Cycle e pesquisa por assinatura. https://www.gartner.com</li>
+<li>Forrester Research. Pesquisa e análise por assinatura. https://www.forrester.com</li>
+<li>World Economic Forum. <em>Strategic Intelligence</em> (mapas de transformação de 300+ temas). https://intelligence.weforum.org</li>
+<li>Escola Brasileira de Futuros (EBF). Biblioteca de Futuros (acervo colaborativo gratuito). https://ebf.rec.br</li>
+</ol>
+<h3>Casas, institutos, redes e unidades de referência</h3>
+<ol start="41">
+<li>Institute for the Future (IFTF), Palo Alto, 1968 (spin-off da RAND). Ten-Year Forecast (desde 1978), Vantage Partnership, cadeia foresight-insight-action. https://www.iftf.org</li>
+<li>IFTF Vantage Partnership (radar contínuo, formação de time e acervo de método para membros corporativos). https://www.iftf.org/vantage-partnership/</li>
+<li>Copenhagen Institute for Futures Studies (CIFS), 1969, fundado por Thorkil Kristensen; revista FARSIGHT; braço consultivo. https://cifs.dk</li>
+<li>Future Today Strategy Group (ex-Future Today Institute, Amy Webb). O Emerging Tech Trends Report (2008-2025) foi aposentado no SXSW 2026 e substituído pelo Convergence Outlook. https://ftsg.com/</li>
+<li>Z_punkt (Colônia). Tipologia de foresight corporativo: strategic, innovation, organisational e public foresight. https://www.z-punkt.de</li>
+<li>Normann Partners (Estocolmo). Scenario planning e stress-test de estratégia acoplado a portfólio. https://www.normannpartners.com</li>
+<li>IfM Engage, University of Cambridge. Foresight tecnológico aplicado e roadmapping estratégico. https://engage.ifm.eng.cam.ac.uk</li>
+<li>OECD Strategic Foresight Unit (2013). Processo de 5 módulos para embutir foresight na formulação de políticas. https://www.oecd.org/en/about/programmes/strategic-foresight.html</li>
+<li>Governo de Singapura. Centre for Strategic Futures (unidade de foresight do Strategy Group, Prime Minister's Office). https://www.csf.gov.sg</li>
+<li>Policy Horizons Canada. Centro de prospectiva do governo federal (relatório Disruptions on the Horizon). https://horizons.service.canada.ca</li>
+<li>Sitra (Finlândia). Megatrends e ferramentas participativas de futuros. https://www.sitra.fi</li>
+<li>Association of Professional Futurists (APF), 2002. Rede dos futuristas profissionais; anuidade por faixa de renda (tier Brasil US$ 96/ano). https://apf.org</li>
+<li>World Futures Studies Federation (WFSF), 1973, parceira consultiva da UNESCO. https://wfsf.org</li>
+<li>The Millennium Project (1996; nó Brasil desde 2000). State of the Future, 15 Desafios Globais, Real-Time Delphi. https://www.millennium-project.org</li>
+<li>IFTF Foresight Essentials. Certificação de método (Standard US$ 6.500; nonprofit/governo/educação US$ 4.500). https://www.iftf.org/foresightessentials/</li>
+<li>University of Houston, Foresight (mestrado profissional; Professional Certificate US$ 2.000). https://www.houstonforesight.org/professional-certificate/</li>
+<li>UNESCO. Futures Literacy (letramento em futuros). https://www.unesco.org/en/futures-literacy</li>
+<li>World Economic Forum. <em>Global Risks Report,</em> edições anuais. https://www.weforum.org/reports</li>
+</ol>
+<h3>Brasil: áreas internas, agências, formação e pessoas</h3>
+<ol start="59">
+<li>Brasil Futures Forum (programa e pessoas). Mapa do ecossistema brasileiro de futuros. https://bff.envisioning.com/programa/pessoas</li>
+<li>Embrapa. Agropensa, o Sistema de Inteligência Estratégica da Embrapa (cenários e megatendências do agro). https://www.embrapa.br/agropensa</li>
+<li>Centro de Gestão e Estudos Estratégicos (CGEE), organização social ligada ao MCTI, dedicada a prospecção e avaliação estratégica em CT&amp;I. https://www.cgee.org.br</li>
+<li>ABF Pro (Associação Brasileira de Futuristas), anunciada no SXSW 2025. https://www.abfpro.org.br</li>
+<li>ESPM. Master em Planejamento e Foresight Estratégico (EAD), primeiro curso de foresight do Brasil (2023). https://www.espm.br/cursos/pos-graduacao/mba-master/master-em-planejamento-e-foresight-estrategico-ead/</li>
+<li>W Futurismo (Jaqueline Weigel). Foresight, certificação e o formato futurist in residence, pioneiro no Brasil em 2018. https://wfuturismo.com</li>
+<li>Aerolito (Tiago Mattos, 2014). Foresight, letramento em futuros e plataforma B2B. https://aeroli.to</li>
+<li>Box1824 (2004). Pesquisa de tendências de comportamento e consumo. https://box1824.com</li>
+<li>Envisioning (Michell Zappa, 2010). Technology foresight e radares visuais de tecnologias emergentes. https://www.envisioning.com</li>
+<li>IEA Future Lab (Raquel Janissek-Muniz, UFRGS). Inteligência antecipativa e sinais fracos (escola francesa de veille). https://ieafuturelab.com</li>
+<li>WGSN. Previsão de tendências por assinatura (6.500+ marcas assinantes no mundo; VP LatAm em São Paulo). https://www.wgsn.com/pt</li>
+<li>Grupo Consumoteca (Michel Alcoforado). Tendências de consumo por método antropológico. https://www.grupoconsumoteca.com.br</li>
+<li>Brainstorming Consultoria (desde 1996). Método Grumbach de cenários prospectivos (consultoria, software, EAD). https://www.brainstorming.com.br</li>
+<li>Macroplan. Cenários prospectivos e planejamento estratégico para empresas e setor público. https://macroplan.com.br</li>
+<li>Marcial, E.; Grumbach, R. <em>Cenários Prospectivos: como construir um futuro melhor.</em> Editora FGV. Clássico nacional de cenários no setor público.</li>
+<li>Fundação Dom Cabral. Curso Foresight, Tech &amp; IA na Sala do Conselho (32h; R$ 16.000). https://www.fdc.org.br/cursos-curta-duracao/ia_foresight_conselho</li>
+<li>Sustentare Escola de Negócios. Strategic Foresight (Daniel Egger), metodologia de cenários Shell/GBN (15h; R$ 498). https://www.sustentare.net/site/curso/strategic-foresight-2/</li>
+<li>Instituto de Pesquisa Econômica Aplicada (IPEA), com a ASSECOR. Estudo prospectivo <em>Brasil 2035: cenários para o desenvolvimento</em> (sem link direto no acervo desta rodada).</li>
+<li>Escola de Guerra Naval. <em>Cenários Brasil 2045</em> (2026); pesquisa de cenários de defesa. https://www.marinha.mil.br/egn/</li>
+</ol>
+<h3>Pessoas, salários e dimensionamento de mercado</h3>
+<ol start="78">
+<li>Glassdoor (EUA). Salary: Futurist (média US$ 153,9 mil/ano; amostra pequena). https://www.glassdoor.com/Salaries/futurist-salary-SRCH_KO0,8.htm</li>
+<li>Glassdoor (EUA). Competitive Intelligence Analyst (média US$ 111,5 mil/ano; US$ 81 mil a US$ 222 mil por senioridade). https://www.glassdoor.com/Salaries/competitive-intelligence-analyst-salary-SRCH_KO0,32.htm</li>
+<li>Glassdoor (EUA). Trend Analyst (média US$ 82,9 mil/ano). https://www.glassdoor.com/Salaries/trend-analyst-salary-SRCH_KO0,13.htm</li>
+<li>Glassdoor (EUA). Director of Strategy (média US$ 246,8 mil/ano; topo ~US$ 417 mil). https://www.glassdoor.com/Salaries/director-of-strategy-salary-SRCH_KO0,20.htm</li>
+<li>Glassdoor (Reino Unido). Head of Insights (média £80 mil/ano; Londres £89 mil). https://www.glassdoor.co.uk/Salaries/head-of-insights-salary-SRCH_KO0,16.htm</li>
+<li>Glassdoor Brasil. Analista de Inteligência de Mercado (base mensal): Jr ~R$ 4,1 mil; Sr faixa R$ 6,4 mil a R$ 9,8 mil. https://www.glassdoor.com.br/</li>
+<li>Glassdoor Brasil. Gerente de Estratégia (base mensal) ~R$ 17,3 mil (topo ~R$ 40,5 mil); Gerente de Planejamento Estratégico ~R$ 15,5 mil. https://www.glassdoor.com.br/</li>
+<li>ESOMAR / Research World. <em>Inside the $153bn Insights Industry</em> (Global Market Research 2025): US$ 153 bi em 2024, projeção de superar US$ 160 bi em 2025. https://researchworld.com/articles/inside-the-153bn-insights-industry</li>
+<li>Mordor Intelligence. Competitive Intelligence Tools Market (US$ 0,59 bi em 2025 para US$ 1,46 bi em 2030; CAGR ~20%). https://www.mordorintelligence.com/industry-reports/competitive-intelligence-tools-market</li>
+<li>Market Research Future. Consumer Insights and Market Intelligence Services (US$ 45 bi em 2024). https://www.marketresearchfuture.com/reports/consumer-insights-and-market-intelligence-services-market-66323</li>
+</ol>
+<h3>Unidades corporativas e de governo (benchmarks)</h3>
+<ol start="88">
+<li>Shell. <em>Shell Scenarios</em> (time dedicado desde os anos 1970, Pierre Wack; série atual Energy Security Scenarios 2026: Archipelagos, Surge, Horizon). https://www.shell.com/news-and-insights/scenarios.html</li>
+<li>Siemens. <em>Pictures of the Future</em> (extrapolação de curto prazo + cenários de 10 a 30 anos ligados por retropolation, alimentando roadmaps). IEEE, <em>Pictures of the Future: an industrial foresight and innovation source.</em> https://ieeexplore.ieee.org/document/4077462/</li>
+<li>Swiss Re. <em>SONAR</em> (relatório anual de riscos emergentes por crowdsourcing interno, publicado desde 2013; SONAR 2025 com oito riscos emergentes). https://www.swissre.com/institute/research/sonar.html</li>
+<li>Munich Re e ERGO. <em>Tech Trend Radar</em> (radar anual gratuito; edição 2026 com ~25 tendências em quatro áreas). https://www.munichre.com/en/company/innovation/tech-trend-radar-2025.html</li>
+<li>Deutsche Telekom. Foresight na unidade Product &amp; Innovation e nos Telekom Innovation Laboratories (T-Labs, parceria com a TU Berlin desde 2004); Technology Radar de ~60 tecnologias. https://laboratories.telekom.com/</li>
+<li>Ford. Função de futurista corporativa: Sheryl Connelly (1996-2023) e hoje Jennifer Brace, Chief Futurist, que monitora fatores STEEP e assina o Ford Trends Report. https://corporate.ford.com/microsites/ford-trends-2024/index.html</li>
+<li>IKEA / Space10. Laboratório externo de pesquisa e design da IKEA (Copenhague, 2015), encerrado em 31 ago. 2023 após uma década. Dezeen. https://www.dezeen.com/2023/08/29/space10-to-close-ikea-innovation-lab/</li>
+<li>Philips Design. Foresight de longo prazo via método Design Probes e o grupo Foresight and Socio-cultural Trends (narrativas e cenários, não previsões). 4CF, Corporate foresight: Philips. https://4cf.eu/corporate-foresight-philips/</li>
+<li>Finlândia. Committee for the Future (Tulevaisuusvaliokunta), comissão parlamentar permanente desde 2000, pioneira em institucionalizar visão de longo prazo no legislativo. https://www.eduskunta.fi/EN/valiokunnat/tulevaisuusvaliokunta/Pages/default.aspx</li>
+</ol>
+</section>
+
+<footer>A Anatomia Profunda &middot; escritório de foresight, inteligência estratégica e tendências &middot; agosto de 2026 &middot; 96 fontes numeradas, com link quando disponível &middot; selo de origem em cada afirmação &middot; sem travessão</footer>
+</div>
+</body>
+</html>

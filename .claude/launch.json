@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "anatomia-static",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8765", "--directory", "A:\\_01 Projetos\\Estrategia\\Pesquisas\\Anatomia Profunda - GT Susep Vida e RE - 26-09-01"],
+      "port": 8765
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fluxo de Informação e Reuniões · SUSEP Vida · rascunho</title>
+<style>
+:root{--verde:#00995d;--estr:#808080;--tat:#f9af00;--oper:#00ae31;--gov:#6410ab;
+ --ok:#1a9e4b;--vermelho:#d0342c;--tinta:#1a1a1a;--sec:#5a6068;--linha:#e3e6ea;--fundo:#f6f7f9;--papel:#fff;--rasc:#d0342c}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",system-ui,-apple-system,Helvetica,Arial,sans-serif;color:var(--tinta);background:var(--fundo);font-size:15px;line-height:1.5}
+header{background:var(--verde);color:#fff;padding:18px 28px 16px}
+header h1{margin:0;font-size:23px;font-weight:600}
+header h1 span{color:#a9e0c6;font-weight:300}
+header p{margin:6px 0 0;font-size:13.5px;color:#e6f6ee;max-width:1100px}
+.rascunho{background:var(--rasc);color:#fff;padding:14px 28px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.rascunho b{font-size:30px;letter-spacing:6px;font-weight:800;line-height:1}
+.rascunho span{font-size:14px;max-width:900px;line-height:1.45}
+main{padding:22px 28px 60px;max-width:1400px;margin:0 auto}
+h2{font-size:18px;margin:26px 0 4px}
+.sub{color:var(--sec);font-size:13.5px;margin:0 0 12px;max-width:1080px}
+.palco{background:var(--papel);border:1px solid var(--linha);border-radius:10px;overflow-x:auto;padding:10px}
+.palco svg{display:block;min-width:1320px;width:100%;height:auto;font-family:"Segoe UI",system-ui,sans-serif}
+table{width:100%;border-collapse:collapse;background:var(--papel);font-size:13px;border:1px solid var(--linha);margin-top:6px}
+th,td{border-bottom:1px solid var(--linha);padding:9px 11px;text-align:left;vertical-align:top}
+th{background:#f0f0ec;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:#5a5f66;font-weight:650}
+td.cam{font-size:10px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;white-space:nowrap}
+.cam.e{color:var(--estr)}.cam.t{color:#b47c00}.cam.o{color:var(--oper)}.cam.g{color:var(--gov)}
+td.cif{font-family:Consolas,"IBM Plex Mono",monospace;font-weight:700;color:var(--ok);white-space:nowrap}
+.bg{display:inline-block;border-radius:3px;color:#fff;font-size:10px;font-weight:700;padding:1px 6px;letter-spacing:.4px}
+.bg.ex{background:#5b626a}.bg.ing{background:#0072ce}.bg.prop{background:var(--tat);color:#1a1a1a}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:6px}
+.card{background:var(--papel);border:1px solid var(--linha);border-left:5px solid var(--verde);border-radius:6px;padding:12px 14px}
+.card h3{margin:0 0 3px;font-size:14px;font-weight:650}
+.card .q{font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--sec);font-weight:650;margin-bottom:6px}
+.card p{font-size:12.5px;color:#4a4f57;margin:0}
+.nota{background:#fff7f7;border:1px dashed var(--rasc);border-radius:6px;padding:12px 16px;margin-top:14px;font-size:12.5px;color:#5a2a2a}
+.leg{display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--sec);margin:8px 0 0}
+.leg i{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:5px}
+footer{border-top:1px solid var(--linha);margin-top:40px;padding-top:12px;font-size:11px;color:var(--sec);letter-spacing:.06em;text-transform:uppercase}
+</style>
+</head>
+<body>
+<header>
+  <h1>Fluxo de Informação e Reuniões <span>· SUSEP Vida · fórum e squad</span></h1>
+  <p>Versão simplificada, no mesmo formato do blueprint organizacional da Previdência: cada reunião é um cartão numa camada; as setas dizem que informação passa de uma para a outra; a tabela declara ciclo, duração, dono da pauta, o que entra e o que sai.</p>
+</header>
+<div class="rascunho"><b>RASCUNHO</b><span>Nada aqui está decidido. É um desenho para discussão, montado a partir do modelo de squad descrito pela Ingrid (1º de setembro), do fórum de negócio descrito pela Fabíola e do que já existe no PIE. Nomes, cadências e durações são hipóteses para o time validar ou derrubar. Versão 0.1.</span></div>
+
+<main>
+<h2>Mapa do fluxo de informação</h2>
+<p class="sub">Leitura: da esquerda para a direita e de cima para baixo. A direção nasce em cima, vira prioridade na squad, volta como resultado para o fórum e fecha o ciclo no PIE. A TI entra pelo acelerador, pela lateral, e só depois do diagnóstico.</p>
+
+<div class="palco">
+<svg viewBox="0 0 1320 760" role="img" aria-label="Mapa do fluxo de informação entre as reuniões do modelo fórum e squad da SUSEP Vida, em quatro camadas" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5b626a"/></marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0072ce"/></marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6410ab"/></marker>
+  </defs>
+
+  <!-- marca d'agua de rascunho -->
+  <text x="660" y="420" text-anchor="middle" font-size="150" font-weight="800" fill="#d0342c" fill-opacity="0.07" transform="rotate(-18 660 420)" letter-spacing="20">RASCUNHO</text>
+
+  <!-- faixas -->
+  <g font-size="13" font-weight="700" letter-spacing=".5">
+    <rect x="10" y="20" width="1300" height="120" fill="#f3ecfa" stroke="#6410ab" stroke-dasharray="5 4"/>
+    <text x="22" y="40" fill="#6410ab">GOVERNANÇA</text>
+    <text x="22" y="56" fill="#5a6068" font-size="11" font-weight="400">instância corporativa; decide política e o que envolve mais de um negócio</text>
+
+    <rect x="10" y="150" width="1300" height="170" fill="#f2f2f2" stroke="#808080" stroke-dasharray="5 4"/>
+    <text x="22" y="170" fill="#606060">ESTRATÉGICO</text>
+    <text x="22" y="186" fill="#5a6068" font-size="11" font-weight="400">rumo, metas e KRs; meses a anos</text>
+
+    <rect x="10" y="330" width="1300" height="220" fill="#fff8e6" stroke="#f9af00" stroke-dasharray="5 4"/>
+    <text x="22" y="350" fill="#b47c00">TÁTICO</text>
+    <text x="22" y="366" fill="#5a6068" font-size="11" font-weight="400">prioriza, destrava e entrega; semanas a meses</text>
+
+    <rect x="10" y="560" width="1300" height="180" fill="#eefaf1" stroke="#00ae31" stroke-dasharray="5 4"/>
+    <text x="22" y="580" fill="#00ae31">OPERACIONAL</text>
+    <text x="22" y="596" fill="#5a6068" font-size="11" font-weight="400">o trabalho da squad, dia a dia</text>
+  </g>
+
+  <!-- cartoes: governanca -->
+  <g font-size="12">
+    <rect x="1010" y="60" width="270" height="64" rx="7" fill="#fff" stroke="#d7dbe0"/><rect x="1010" y="60" width="6" height="64" rx="3" fill="#6410ab"/>
+    <text x="1028" y="82" font-size="14" font-weight="600">RDS e COMEX</text>
+    <text x="1028" y="100" fill="#5a6068">conforme governança · exceções acima da alçada</text>
+    <text x="1028" y="116" fill="#5a6068">existente</text>
+    <text x="1262" y="82" text-anchor="end" font-weight="700" fill="#1a9e4b">$$$$</text>
+  </g>
+
+  <!-- cartoes: estrategico -->
+  <g font-size="12">
+    <rect x="40" y="200" width="270" height="96" rx="7" fill="#fff" stroke="#d7dbe0"/><rect x="40" y="200" width="6" height="96" rx="3" fill="#808080"/>
+    <text x="58" y="222" font-size="14" font-weight="600">Planejamento estratégico</text>
+    <text x="58" y="240" fill="#5a6068">anual · diretores, superintendentes, Estratégia</text>
+    <text x="58" y="256" fill="#5a6068">sai: mapa estratégico (metas e KRs)</text>
+    <text x="58" y="284" fill="#5a6068">existente</text>
+    <text x="292" y="222" text-anchor="end" font-weight="700" fill="#1a9e4b">$$$$</text>
+
+    <rect x="370" y="200" width="270" height="96" rx="7" fill="#fff" stroke="#d7dbe0"/><rect x="370" y="200" width="6" height="96" rx="3" fill="#808080"/>
+    <text x="388" y="222" font-size="14" font-weight="600">PIE (planejamento integrado)</text>
+    <text x="388" y="240" fill="#5a6068">trimestral · frente, mentores, áreas convidadas</text>
+    <text x="388" y="256" fill="#5a6068">sai: KRs e iniciativas do trimestre; fecha o ciclo</text>
+    <text x="388" y="284" fill="#5a6068">existente</text>
+    <text x="622" y="222" text-anchor="end" font-weight="700" fill="#1a9e4b">$$$</text>
+
+    <rect x="700" y="200" width="580" height="96" rx="7" fill="#fff" stroke="#0072ce" stroke-width="1.5"/><rect x="700" y="200" width="6" height="96" rx="3" fill="#808080"/>
+    <text x="718" y="222" font-size="14" font-weight="600">Fórum de Negócio SUSEP (evolução do Fórum de Gestão)</text>
+    <text x="718" y="240" fill="#5a6068">mensal · três camadas na mesma sala: diretores (metas), superintendentes (KRs), squads (resultados)</text>
+    <text x="718" y="256" fill="#5a6068">entra: retrô das squads (máx. 3 por fórum, 20 a 30 min cada, quem fala é a PM) · sai: deliberações, barreiras removidas</text>
+    <text x="718" y="284" fill="#0072ce">proposto (Ingrid, Fabíola) · substitui Frente + S&amp;OP + Diagnóstico como lugar único</text>
+    <text x="1262" y="222" text-anchor="end" font-weight="700" fill="#1a9e4b">$$$$</text>
+  </g>
+
+  <!-- cartoes: tatico -->
+  <g font-size="12">
+    <rect x="40" y="385" width="300" height="140" rx="7" fill="#fff" stroke="#d7dbe0"/><rect x="40" y="385" width="6" height="140" rx="3" fill="#f9af00"/>
+    <text x="58" y="407" font-size="14" font-weight="600">Planning da squad</text>
+    <text x="58" y="425" fill="#5a6068">quinzenal (ou semanal) · segunda · 1h30 a 2h</text>
+    <text x="58" y="441" fill="#5a6068">dono: PM de negócio (Jaque)</text>
+    <text x="58" y="457" fill="#5a6068">entra: problemas priorizados pela PM, dados,</text>
+    <text x="58" y="473" fill="#5a6068">conhecimento das áreas · sai: o que a squad</text>
+    <text x="58" y="489" fill="#5a6068">trabalha no ciclo (PO coleta, processos mapeia)</text>
+    <text x="58" y="513" fill="#0072ce">proposto (Ingrid)</text>
+    <text x="322" y="407" text-anchor="end" font-weight="700" fill="#1a9e4b">$$$</text>
+
+    <rect x="400" y="385" width="300" height="140" rx="7" fill="#fff" stroke="#d7dbe0"/><rect x="400" y="385" width="6" height="140" rx="3" fill="#f9af00"/>
+    <text x="418" y="407" font-size="14" font-weight="600">Review da squad</text>
+    <text x="418" y="425" fill="#5a6068">semanal · quinta · 30 min a 1h</text>
+    <text x="418" y="441" fill="#5a6068">dono: PO; PM dá direcionamento</text>
+    <text x="418" y="457" fill="#5a6068">entra: o que foi entregue e diagnosticado</text>
+    <text x="418" y="473" fill="#5a6068">sai: mantém ou muda a rota; sem conteúdo,</text>
+    <text x="418" y="489" fill="#5a6068">cancela e vai para a próxima</text>
+    <text x="418" y="513" fill="#0072ce">proposto (Ingrid)</text>
+    <text x="682" y="407" text-anchor="end" font-weight="700" fill="#1a9e4b">$$</text>
+
+    <rect x="760" y="385" width="250" height="140" rx="7" fill="#fff" stroke="#d7dbe0"/><rect x="760" y="385" width="6" height="140" rx="3" fill="#f9af00"/>
+    <text x="778" y="407" font-size="14" font-weight="600">Triagem de entrada</text>
+    <text x="778" y="425" fill="#5a6068">quinzenal · 30 min</text>
+    <text x="778" y="441" fill="#5a6068">dono: facilitação (Estratégia)</text>
+    <text x="778" y="457" fill="#5a6068">entra: pedidos de qualquer origem</text>
+    <text x="778" y="473" fill="#5a6068">sai: fila única com tipo (estrutural,</text>
+    <text x="778" y="489" fill="#5a6068">BAU, adequação, oportunidade)</text>
+    <text x="778" y="513" fill="#b47c00">proposto neste rascunho</text>
+    <text x="992" y="407" text-anchor="end" font-weight="700" fill="#1a9e4b">$</text>
+
+    <rect x="1040" y="385" width="240" height="140" rx="7" fill="#fff" stroke="#d7dbe0"/><rect x="1040" y="385" width="6" height="140" rx="3" fill="#f9af00"/>
+    <text x="1058" y="407" font-size="14" font-weight="600">Acelerador (TI)</text>
+    <text x="1058" y="425" fill="#5a6068">contínuo · PMs da TI com a squad</text>
+    <text x="1058" y="441" fill="#5a6068">entra: problema já diagnosticado</text>
+    <text x="1058" y="457" fill="#5a6068">sai: viável ou não; entra na fila</text>
+    <text x="1058" y="473" fill="#5a6068">ou despriorização de outro item</text>
+    <text x="1058" y="489" fill="#5a6068">(critério ainda não definido)</text>
+    <text x="1058" y="513" fill="#5a6068">existente · conexão a definir</text>
+    <text x="1262" y="407" text-anchor="end" font-weight="700" fill="#1a9e4b">$$</text>
+  </g>
+
+  <!-- cartoes: operacional -->
+  <g font-size="12">
+    <rect x="40" y="615" width="300" height="100" rx="7" fill="#fff" stroke="#d7dbe0"/><rect x="40" y="615" width="6" height="100" rx="3" fill="#00ae31"/>
+    <text x="58" y="637" font-size="14" font-weight="600">Daily do núcleo</text>
+    <text x="58" y="655" fill="#5a6068">diária · 15 min · PO + analista de processos</text>
+    <text x="58" y="671" fill="#5a6068">(+ scrum master) · destrava o dia, não é status</text>
+    <text x="58" y="700" fill="#0072ce">proposto (Ingrid: "básico, sem firula")</text>
+    <text x="322" y="637" text-anchor="end" font-weight="700" fill="#1a9e4b">$</text>
+
+    <rect x="400" y="615" width="610" height="100" rx="7" fill="#fff" stroke="#d7dbe0"/><rect x="400" y="615" width="6" height="100" rx="3" fill="#00ae31"/>
+    <text x="418" y="637" font-size="14" font-weight="600">Trabalho da squad (não é reunião)</text>
+    <text x="418" y="655" fill="#5a6068">PO dedicado: coleta, diagnostica, faz o discovery, escreve e prioriza · analista de processos dedicado: mapeia e corrige o processo antes da ferramenta</text>
+    <text x="418" y="671" fill="#5a6068">time de conhecimento (pessoas das frentes): entram nos momentos de coletar e direcionar, não 100% · scrum master (agilistas): rito, impedimentos, indicadores</text>
+    <text x="418" y="700" fill="#0072ce">proposto (Ingrid) · o discovery mora aqui</text>
+    <text x="992" y="637" text-anchor="end" font-weight="700" fill="#1a9e4b">$$$</text>
+  </g>
+
+  <!-- setas de fluxo -->
+  <g fill="none" stroke="#5b626a" stroke-width="1.8" marker-end="url(#a)">
+    <line x1="310" y1="248" x2="368" y2="248"/>
+    <line x1="640" y1="248" x2="698" y2="248"/>
+    <path d="M718,296 L718,340 L340,340 L190,340 L190,383"/>
+    <line x1="340" y1="455" x2="398" y2="455"/>
+    <line x1="190" y1="525" x2="190" y2="613"/>
+    <path d="M340,665 L370,665 L370,680 L398,680"/>
+    <path d="M705,615 L705,560 L550,560 L550,527"/>
+    <path d="M885,525 L885,590 L1012,590"/>
+    <path d="M885,385 L885,340 L980,340 L980,296"/>
+  </g>
+  <g fill="none" stroke="#0072ce" stroke-width="1.8" stroke-dasharray="6 5" marker-end="url(#ab)">
+    <path d="M700,455 L730,455 L730,570 L1012,570"/>
+    <path d="M1160,525 L1160,555 L1020,555 L1020,640 L1012,640"/>
+    <path d="M550,385 L550,360 L990,360 L990,300"/>
+  </g>
+  <g fill="none" stroke="#6410ab" stroke-width="1.6" stroke-dasharray="4 4" marker-end="url(#ag)">
+    <path d="M1145,200 L1145,126"/>
+    <path d="M1200,126 L1200,200"/>
+  </g>
+  <g fill="none" stroke="#808080" stroke-width="1.6" stroke-dasharray="6 5" marker-end="url(#a)">
+    <path d="M1000,200 L1000,175 L505,175 L505,198"/>
+  </g>
+
+  <!-- rotulos das setas -->
+  <g font-size="11" fill="#4d545c">
+    <rect x="312" y="228" width="54" height="16" rx="4" fill="#fff" stroke="#e2e6ea"/><text x="339" y="240" text-anchor="middle">mapa</text>
+    <rect x="642" y="228" width="54" height="16" rx="4" fill="#fff" stroke="#e2e6ea"/><text x="669" y="240" text-anchor="middle">KRs</text>
+    <rect x="380" y="330" width="160" height="16" rx="4" fill="#fff" stroke="#e2e6ea"/><text x="460" y="342" text-anchor="middle">prioridades da PM, por KR</text>
+    <rect x="342" y="435" width="54" height="16" rx="4" fill="#fff" stroke="#e2e6ea"/><text x="369" y="447" text-anchor="middle">ciclo</text>
+    <rect x="200" y="560" width="120" height="16" rx="4" fill="#fff" stroke="#e2e6ea"/><text x="260" y="572" text-anchor="middle">o que fazer no ciclo</text>
+    <rect x="560" y="540" width="140" height="16" rx="4" fill="#fff" stroke="#e2e6ea"/><text x="630" y="552" text-anchor="middle">entregas e diagnóstico</text>
+    <rect x="990" y="322" width="200" height="16" rx="4" fill="#fff" stroke="#e2e6ea"/><text x="1090" y="334" text-anchor="middle">retrô mensal: resultado e aprendizado</text>
+    <rect x="895" y="580" width="110" height="16" rx="4" fill="#fff" stroke="#e2e6ea"/><text x="950" y="592" text-anchor="middle">fila triada</text>
+    <rect x="740" y="560" width="120" height="16" rx="4" fill="#fff" stroke="#cfe2f5"/><text x="800" y="572" text-anchor="middle" fill="#0072ce">precisa de TI?</text>
+    <rect x="1040" y="620" width="120" height="16" rx="4" fill="#fff" stroke="#cfe2f5"/><text x="1100" y="632" text-anchor="middle" fill="#0072ce">viável / na fila</text>
+    <rect x="560" y="352" width="140" height="16" rx="4" fill="#fff" stroke="#cfe2f5"/><text x="630" y="364" text-anchor="middle" fill="#0072ce">impedimento fora da alçada</text>
+    <rect x="1050" y="150" width="180" height="16" rx="4" fill="#fff" stroke="#e2d6f0"/><text x="1140" y="162" text-anchor="middle" fill="#6410ab">exceção sobe · decisão desce</text>
+    <rect x="640" y="160" width="220" height="16" rx="4" fill="#fff" stroke="#e2e6ea"/><text x="750" y="172" text-anchor="middle">fecha o ciclo: resultado e lições ao PIE</text>
+  </g>
+</svg>
+</div>
+<div class="leg">
+  <span><i style="background:#5b626a"></i>fluxo principal de informação</span>
+  <span><i style="background:#0072ce"></i>vai e volta com a TI e escalada de impedimento</span>
+  <span><i style="background:#6410ab"></i>exceção acima da alçada</span>
+  <span><i style="background:#808080"></i>retorno que fecha o ciclo</span>
+  <span>cifrões: custo estimado da sala (cabeças, senioridade, horas)</span>
+</div>
+
+<h2>As reuniões, uma a uma</h2>
+<p class="sub">Origem de cada rito: <span class="bg ex">existente</span> já acontece hoje; <span class="bg ing">Ingrid</span> descrito por ela em 1º de setembro; <span class="bg prop">rascunho</span> proposta deste desenho, sem dono ainda.</p>
+<table>
+  <tr><th>Momento</th><th>Camada</th><th>Ciclo</th><th>Duração</th><th>Dono da pauta</th><th>Entra</th><th>Sai</th><th>Custo</th><th>Origem</th></tr>
+  <tr><td><b>RDS e COMEX</b></td><td class="cam g">Governança</td><td>conforme governança</td><td>a confirmar</td><td>Diretoria</td><td>Recomendação única do fórum</td><td>Decisão de política; o que envolve mais de um negócio</td><td class="cif">$$$$</td><td><span class="bg ex">existente</span></td></tr>
+  <tr><td><b>Planejamento estratégico</b></td><td class="cam e">Estratégico</td><td>Anual</td><td>a confirmar</td><td>Diretoria e Estratégia</td><td>Visão 2028, orçamento</td><td>Mapa estratégico com metas e KRs</td><td class="cif">$$$$</td><td><span class="bg ex">existente</span></td></tr>
+  <tr><td><b>PIE</b></td><td class="cam e">Estratégico</td><td>Trimestral</td><td>meio dia</td><td>Estratégia com mentores</td><td>Resultado do ciclo; retrôs; lições</td><td>KRs e iniciativas do trimestre; capacidade alocada; itens encerrados</td><td class="cif">$$$</td><td><span class="bg ex">existente</span></td></tr>
+  <tr><td><b>Fórum de Negócio SUSEP</b><br><span style="color:#8a8f97;font-size:11.5px">evolução do Fórum de Gestão</span></td><td class="cam e">Estratégico</td><td>Mensal</td><td>a definir (hoje até 4h)</td><td>Estratégia; PMs falam pelas squads</td><td>Metas (diretores), KRs (superintendentes), retrô de até 3 squads (20 a 30 min cada)</td><td>Deliberações, barreiras removidas, prioridades confirmadas</td><td class="cif">$$$$</td><td><span class="bg ing">Ingrid</span> <span class="bg ing">Fabíola</span></td></tr>
+  <tr><td><b>Planning da squad</b></td><td class="cam t">Tático</td><td>Quinzenal (ou semanal)</td><td>1h30 a 2h, segunda</td><td>PM de negócio (Jaque)</td><td>Problemas priorizados pela PM; dados; conhecimento das áreas</td><td>O que a squad trabalha no ciclo; o que o PO coleta e o processo mapeia</td><td class="cif">$$$</td><td><span class="bg ing">Ingrid</span></td></tr>
+  <tr><td><b>Review da squad</b></td><td class="cam t">Tático</td><td>Semanal</td><td>30 min a 1h, quinta</td><td>PO; PM direciona</td><td>Entregas e diagnósticos do período</td><td>Mantém ou muda a rota; cancela se não há o que mostrar</td><td class="cif">$$</td><td><span class="bg ing">Ingrid</span></td></tr>
+  <tr><td><b>Triagem de entrada</b></td><td class="cam t">Tático</td><td>Quinzenal</td><td>30 min</td><td>Facilitação (Estratégia)</td><td>Pedidos de qualquer origem (áreas, parceiros, Marketing, TI)</td><td>Fila única com tipo e nota; BAU vai para sustentação</td><td class="cif">$</td><td><span class="bg prop">rascunho</span></td></tr>
+  <tr><td><b>Acelerador (TI)</b></td><td class="cam t">Tático</td><td>Contínuo</td><td>por demanda</td><td>PMs da TI</td><td>Problema diagnosticado pela squad</td><td>Viável ou não; entra na fila ou despriorização de outro item (critério a definir)</td><td class="cif">$$</td><td><span class="bg ex">existente</span></td></tr>
+  <tr><td><b>Daily do núcleo</b></td><td class="cam o">Operacional</td><td>Diário</td><td>15 min</td><td>Scrum master</td><td>O dia</td><td>Impedimento identificado; não é reporte</td><td class="cif">$</td><td><span class="bg ing">Ingrid</span></td></tr>
+  <tr><td><b>Trabalho da squad</b><br><span style="color:#8a8f97;font-size:11.5px">não é reunião</span></td><td class="cam o">Operacional</td><td>Contínuo</td><td>dedicação integral do PO e do analista de processos</td><td>PO</td><td>Prioridades da planning</td><td>Diagnóstico, discovery, recomendação, melhoria de processo, pedido à TI com impacto medido</td><td class="cif">$$$</td><td><span class="bg ing">Ingrid</span></td></tr>
+</table>
+
+<h2>Os papéis, como foram descritos</h2>
+<div class="cards">
+  <div class="card" style="border-left-color:#808080"><h3>PM (dona do negócio)</h3><div class="q">Jaque · cerca de 3h por semana</div><p>Traz o que é importante, prioriza, acompanha os indicadores e fala pela squad no fórum. Não é dedicação integral.</p></div>
+  <div class="card" style="border-left-color:#f9af00"><h3>PO (dedicado)</h3><div class="q">interno, de processos; ex.: Arruda</div><p>100% na squad. Coleta, diagnostica, faz o discovery, escreve e prioriza. Se não houver dentro de casa, vem de fora e recebe curadoria.</p></div>
+  <div class="card" style="border-left-color:#f9af00"><h3>Scrum master</h3><div class="q">agilistas da Estratégia · até 3 squads</div><p>Cuida do rito, tira impedimentos, controla indicadores, mostra o que funciona e o que não.</p></div>
+  <div class="card" style="border-left-color:#00ae31"><h3>Analista de processos (dedicado)</h3><div class="q">time da Mari</div><p>Mapeia e corrige o processo antes da ferramenta, para não automatizar o problema.</p></div>
+  <div class="card" style="border-left-color:#00ae31"><h3>Time de conhecimento</h3><div class="q">pessoas das frentes; volantes</div><p>Subscrição, atuarial, produtos, canais, operação. Entram nos momentos de coletar, direcionar e validar; não 100%.</p></div>
+  <div class="card" style="border-left-color:#0072ce"><h3>TI (PMs do acelerador)</h3><div class="q">sob demanda</div><p>Recebe o problema já diagnosticado, diz se é viável e se entra na fila. A regra de despriorização ainda não existe.</p></div>
+</div>
+
+<h2>O que ainda não está definido (por isso é rascunho)</h2>
+<div class="cards">
+  <div class="card" style="border-left-color:#d0342c"><h3>Qual problema</h3><p>"Eu não tô vendo o problema" (Camila). Formato antes do problema. A lista de dores das áreas ainda não foi posta na mesa.</p></div>
+  <div class="card" style="border-left-color:#d0342c"><h3>Braço de TI</h3><p>"A fala dela é que não vai TI." O acelerador não tem capacidade nem critério de despriorização; sem isso a squad diagnostica e não entrega.</p></div>
+  <div class="card" style="border-left-color:#d0342c"><h3>Quem é quem</h3><p>PM, PO e scrum master "nebulosos"; PO dedicado precisa de substituto na área de origem; dinheiro "com o Flávio".</p></div>
+  <div class="card" style="border-left-color:#d0342c"><h3>Tempo do fórum</h3><p>Três camadas na mesma sala e até 3 squads por mês: quanto tempo sobra para as squads se diretores e superintendentes falam primeiro?</p></div>
+  <div class="card" style="border-left-color:#d0342c"><h3>O que vira squad</h3><p>Quatro squads sugeridas para Vida (aquisição e conversão; produto, subscrição e emissão; ativação, pagamento e permanência; corretor à parte), duas talvez sejam uma. Sem validação do negócio.</p></div>
+  <div class="card" style="border-left-color:#d0342c"><h3>Dedicação real</h3><p>"As pessoas estão atoladas nas suas próprias áreas" (Fabíola). O modelo pressupõe tempo que hoje não existe.</p></div>
+</div>
+
+<div class="nota"><b>Nota de rascunho.</b> Este desenho não foi validado com Ingrid, Caio, Dani, Flávio nem com a frente. Cadências e durações repetem o que a Ingrid disse em voz alta ("entre 1 hora e meia e duas", "meia hora de review", "retrospectiva mensal no fórum", "20 a 30 minutos por squad") e podem mudar na primeira conversa. A triagem de entrada é acréscimo deste desenho, não da proposta dela. Custos em cifrões são impressão, não conta.</div>
+
+<footer>Rascunho · versão 0.1 · SUSEP Vida · fórum de negócio e squad · 1º de setembro de 2026 · Eric Leite · sem travessão</footer>
+</main>
+</body>
+</html>

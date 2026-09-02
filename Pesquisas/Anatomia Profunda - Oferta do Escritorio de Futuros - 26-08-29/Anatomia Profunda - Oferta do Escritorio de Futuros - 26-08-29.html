@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Anatomia Profunda: A Oferta do Escritório de Futuros</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,'Times New Roman',serif;font-size:15px;line-height:1.7;color:#1a1a1a;background:#fff}
+.W{max-width:1140px;margin:0 auto;padding:2.5rem 2rem 4rem}
+h1{font-size:26px;font-weight:700;line-height:1.2;margin-bottom:6px;letter-spacing:-.5px}
+h2{font-size:19px;font-weight:700;margin:24px 0 10px;padding-bottom:6px;border-bottom:1px solid #e0e0e0}
+h3{font-size:15px;font-weight:700;margin:16px 0 6px}
+.lbl{font-family:system-ui,-apple-system,sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#999;margin-bottom:2px}
+.meta{font-family:system-ui,sans-serif;font-size:12px;color:#999;margin-bottom:24px}
+a{color:#1a5276;text-decoration:none}a:hover{text-decoration:underline}
+.red{color:#b71c1c}
+.accent{border-left:3px solid #b71c1c;padding-left:12px;margin:10px 0}
+.num{font-family:system-ui,sans-serif;font-size:30px;font-weight:700;color:#b71c1c;display:block;line-height:1.1;margin:4px 0}
+.src{font-family:system-ui,sans-serif;font-size:11px;color:#999}
+.tabs{display:grid;grid-template-columns:repeat(10,max-content);justify-content:center;column-gap:22px;row-gap:3px;border-bottom:2px solid #1a1a1a;margin:0 0 28px;padding-bottom:8px;background:#fff;position:sticky;top:0;z-index:10}
+@media(max-width:900px){.tabs{grid-template-columns:repeat(5,max-content);column-gap:18px}}
+@media(max-width:560px){.tabs{grid-template-columns:repeat(3,max-content);column-gap:14px}}
+.tab{font-family:system-ui,sans-serif;font-size:13.5px;font-weight:500;padding:2px 0;background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap;color:#777;transition:.15s;display:inline-block}
+.tab:hover{color:#1a1a1a}
+.tabr{position:absolute;width:0;height:0;opacity:0;pointer-events:none}
+.pane{display:none}
+#r-dest:checked~#p-dest,#r-entenda:checked~#p-entenda,#r-click:checked~#p-click,#r-clientes:checked~#p-clientes,#r-prob:checked~#p-prob,#r-serv:checked~#p-serv,#r-arte:checked~#p-arte,#r-quick:checked~#p-quick,#r-plano:checked~#p-plano,#r-dif:checked~#p-dif,#r-oper:checked~#p-oper,#r-comp:checked~#p-comp,#r-custo:checked~#p-custo,#r-met:checked~#p-met,#r-risco:checked~#p-risco,#r-cem:checked~#p-cem,#r-gloss:checked~#p-gloss,#r-check:checked~#p-check,#r-fontes:checked~#p-fontes{display:block}
+#r-dest:checked~.tabs [for=r-dest],#r-entenda:checked~.tabs [for=r-entenda],#r-click:checked~.tabs [for=r-click],#r-clientes:checked~.tabs [for=r-clientes],#r-prob:checked~.tabs [for=r-prob],#r-serv:checked~.tabs [for=r-serv],#r-arte:checked~.tabs [for=r-arte],#r-quick:checked~.tabs [for=r-quick],#r-plano:checked~.tabs [for=r-plano],#r-dif:checked~.tabs [for=r-dif],#r-oper:checked~.tabs [for=r-oper],#r-comp:checked~.tabs [for=r-comp],#r-custo:checked~.tabs [for=r-custo],#r-met:checked~.tabs [for=r-met],#r-risco:checked~.tabs [for=r-risco],#r-cem:checked~.tabs [for=r-cem],#r-gloss:checked~.tabs [for=r-gloss],#r-check:checked~.tabs [for=r-check],#r-fontes:checked~.tabs [for=r-fontes]{color:#1a1a1a;border-bottom-color:#b71c1c;font-weight:700}
+.card{background:#f9f9f9;border:1px solid #e8e8e8;border-radius:4px;padding:10px 14px;margin-bottom:8px}
+.tl{position:relative;padding-left:24px;margin:16px 0}
+.tl::before{content:"";position:absolute;left:7px;top:0;bottom:0;width:2px;background:#ddd}
+.tl-item{position:relative;margin-bottom:12px;padding-left:4px}
+.tl-dot{position:absolute;left:-21px;top:7px;width:12px;height:12px;border-radius:6px;background:#b71c1c;border:2px solid #fff;box-shadow:0 0 0 1px #ddd}
+blockquote{border-left:3px solid #ddd;padding:8px 16px;margin:12px 0;color:#444;font-style:italic;font-size:14px}
+footer{margin-top:3rem;padding-top:1rem;border-top:1px solid #e0e0e0;font-family:system-ui,sans-serif;font-size:11px;color:#999;text-align:center}
+ul{padding-left:1.3rem;margin-bottom:10px}li{margin-bottom:6px}
+ol{padding-left:1.4rem;margin-bottom:10px}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:13px;font-family:system-ui,sans-serif;line-height:1.45}
+th,td{border:1px solid #e6e6e6;padding:6px 9px;text-align:left;vertical-align:top}
+thead th{background:#1a1a1a;color:#fff;font-weight:700;border-color:#1a1a1a}
+tbody tr:nth-child(even){background:#f9f9f9}
+.kpi{background:#fff;border:1px solid #e8e8e8;border-radius:6px;padding:12px 14px;text-align:center}
+.kpi small{font-family:system-ui,sans-serif;font-size:11px;color:#666;display:block;line-height:1.35;margin-top:2px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}
+.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+@media(max-width:600px){.g4{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}}
+.sel{display:inline-block;font-family:system-ui,sans-serif;font-size:9px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:1px 6px;border-radius:10px;vertical-align:1px;white-space:nowrap}
+.sel-v{background:#e6f2ea;color:#1b6b39}.sel-i{background:#eaf0fb;color:#28477f}.sel-e{background:#f4eee6;color:#8a5a1f}
+sup{color:#999;font-size:.72em}
+.note{font-family:system-ui,sans-serif;font-size:12px;color:#888;margin-top:4px}
+.alerta{background:#fdf6ec;border:1px solid #e8d9c0;border-left:3px solid #8a5a1f;border-radius:4px;padding:9px 13px;margin:12px 0;font-family:system-ui,sans-serif;font-size:12.5px;color:#5c4114}
+</style>
+</head>
+<body>
+<div class="W">
+
+<input class="tabr" type="radio" name="tab" id="r-dest" checked>
+<input class="tabr" type="radio" name="tab" id="r-entenda">
+<input class="tabr" type="radio" name="tab" id="r-click">
+<input class="tabr" type="radio" name="tab" id="r-clientes">
+<input class="tabr" type="radio" name="tab" id="r-prob">
+<input class="tabr" type="radio" name="tab" id="r-serv">
+<input class="tabr" type="radio" name="tab" id="r-arte">
+<input class="tabr" type="radio" name="tab" id="r-quick">
+<input class="tabr" type="radio" name="tab" id="r-plano">
+<input class="tabr" type="radio" name="tab" id="r-dif">
+<input class="tabr" type="radio" name="tab" id="r-oper">
+<input class="tabr" type="radio" name="tab" id="r-comp">
+<input class="tabr" type="radio" name="tab" id="r-custo">
+<input class="tabr" type="radio" name="tab" id="r-met">
+<input class="tabr" type="radio" name="tab" id="r-risco">
+<input class="tabr" type="radio" name="tab" id="r-cem">
+<input class="tabr" type="radio" name="tab" id="r-gloss">
+<input class="tabr" type="radio" name="tab" id="r-check">
+<input class="tabr" type="radio" name="tab" id="r-fontes">
+
+<p class="lbl">A Anatomia Profunda &middot; Diagnóstico funcional &middot; Uso interno</p>
+<h1>A oferta do escritório de futuros: venda respostas com data, não métodos com sigla</h1>
+<p class="meta">Última atualização 2026-09-01 &middot; v2, segunda rodada do advogado &middot; Recorte: o que o escritório pode construir, prover e resolver; catálogo de serviços e artefatos, quick wins e a estruturação dos primeiros 90 dias, pela lente do Foundation Sprint de Jake Knapp e John Zeratsky &middot; Documento irmão de "Escritório de Foresight, Inteligência e Tendências" (o organismo) e de "Design de Futuros e Foresight" (a disciplina e o bench)</p>
+
+<nav class="tabs">
+  <label class="tab" for="r-dest">Destaque</label>
+  <label class="tab" for="r-entenda">Entenda</label>
+  <label class="tab" for="r-click">O Clique</label>
+  <label class="tab" for="r-clientes">Clientes</label>
+  <label class="tab" for="r-prob">Problemas</label>
+  <label class="tab" for="r-serv">Serviços</label>
+  <label class="tab" for="r-arte">Artefatos</label>
+  <label class="tab" for="r-quick">Quick wins</label>
+  <label class="tab" for="r-plano">90 dias</label>
+  <label class="tab" for="r-dif">Diferenciação</label>
+  <label class="tab" for="r-oper">Operação</label>
+  <label class="tab" for="r-comp">Competências</label>
+  <label class="tab" for="r-custo">Custo</label>
+  <label class="tab" for="r-met">Métricas</label>
+  <label class="tab" for="r-risco">Riscos</label>
+  <label class="tab" for="r-cem">Cem perguntas</label>
+  <label class="tab" for="r-gloss">Glossário</label>
+  <label class="tab" for="r-check">Check</label>
+  <label class="tab" for="r-fontes">Fontes</label>
+</nav>
+
+<!-- ============================== DESTAQUE ============================== -->
+<section id="p-dest" class="pane">
+<p class="accent" style="font-size:17px"><strong>A tese:</strong> uma área nova de futuros morre de dois jeitos, e os dois são silenciosos. Vira biblioteca, produzindo estudos que ninguém pediu, ou vira evento, uma palestra bonita por ano. A vacina para os dois é a mesma e vem do manual de fundação de startup: tratar o escritório como um produto. Cliente fundador nomeado, problema doloroso escolhido, diferencial explícito frente a quem já existe na casa, e uma hipótese fundadora testada em semanas com experimentos minúsculos, não defendida em teoria por um ano. É exatamente o desenho do Foundation Sprint que Jake Knapp e John Zeratsky publicaram no livro Click, depois de acompanhar mais de 300 equipes.<sup>1, 2</sup> <span class="sel sel-i">Inferência</span> na aplicação; método <span class="sel sel-v">Verificado</span></p>
+
+<div class="g4">
+  <div class="kpi"><span class="num">2 dias</span><small>é o que dura um Foundation Sprint: no primeiro, cliente, problema e diferenciação; no segundo, a abordagem e a hipótese fundadora testável<sup>1, 3</sup></small></div>
+  <div class="kpi"><span class="num">12</span><small>serviços no catálogo desta oferta, dos quais só 5 formam o núcleo não negociável do primeiro ano (aba Serviços)</small></div>
+  <div class="kpi"><span class="num">10</span><small>quick wins de 1 a 6 semanas mapeados, cada um com custo, prova de valor e o artefato definitivo que ele destrava (aba Quick wins)</small></div>
+  <div class="kpi"><span class="num">90 dias</span><small>para rodar um ciclo completo: fundar, girar e aterrissar o primeiro insumo num rito de decisão real (aba 90 dias)</small></div>
+</div>
+
+<h2>As seis decisões da primeira semana</h2>
+<ol>
+<li><strong>Quem é o cliente fundador.</strong> Não é "a empresa". É uma diretoria específica, com uma dor específica, escolhida pelo critério do Click: quem sente o problema com mais força e tem poder para agir.<sup>1, 2</sup> A aba Clientes traz o mapa e o critério de escolha. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Qual problema doloroso a oferta ataca primeiro.</strong> Dos 12 problemas do catálogo, um vira a ponta de lança. O melhor candidato é sempre a última surpresa estratégica que doeu: ela dispensa argumento de venda. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Qual é o diferencial que ninguém mais tem.</strong> Inteligência de Mercado olha o presente, a consultoria não conhece a casa, a Inovação testa mas não antecipa, Riscos cuida do provável com histórico. O escritório é o único mandatado para o plausível de 5 a 15 anos acoplado aos dois ritos de planejamento. É o quadrante vencedor do 2x2 de diferenciação (aba Diferenciação). <span class="sel sel-i">Inferência</span></li>
+<li><strong>Qual é a hipótese fundadora.</strong> Uma frase testável no formato do Click: se eu entregar o artefato X ao cliente fundador Y no rito Z, uma decisão nomeada muda. Sem essa frase escrita, todo o resto é atividade.<sup>1</sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>Qual é o primeiro tiny loop.</strong> O teste mais barato que valida ou derruba a hipótese: um protótipo de radar em planilha, um memorando de uma página, um workshop de duas horas com uma diretoria só. Antes de plataforma, antes de marca, antes de equipe.<sup>1, 2</sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>Que datas do calendário da casa já são suas.</strong> Duas datas no ciclo de planejamento e um item fixo de pauta valem mais que qualquer software. O bench é unânime: quem sobrevive é quem tem calendário, da Comissão Europeia à Embrapa.<sup>12, 20</sup> <span class="sel sel-i">Inferência</span></li>
+</ol>
+
+<h2>O mapa deste documento</h2>
+<p>As abas seguem a lógica de construção de uma oferta: primeiro o método de fundação (O Clique), depois quem compra (Clientes) e o que dói (Problemas), então o que se vende (Serviços) e o que se entrega em mãos (Artefatos), o que provar em semanas (Quick wins), o plano de instalação (90 dias), contra quem se posiciona (Diferenciação), como gira por dentro (Operação), o que é preciso saber (Competências), quanto custa (Custo), como se mede (Métricas), onde pode morrer (Riscos), e o estoque de perguntas, termos, ataques e fontes. Este documento desenha a OFERTA; o organismo que a produz está no documento irmão do escritório, e a disciplina com o bench de 27 casas está no documento irmão de design de futuros.</p>
+<div class="alerta"><strong>Aviso de honestidade intelectual.</strong> Este é um documento de projeto: prescreve, não descreve. O que é fato verificado carrega selo e fonte numerada; todo o desenho da oferta é síntese própria a partir do bench e da literatura, e está selado como Inferência. Nenhum número foi inventado.</div>
+</section>
+
+<!-- ============================== ENTENDA ============================== -->
+<section id="p-entenda" class="pane">
+<h2>Entenda: a anatomia de uma oferta interna</h2>
+<p><strong>A frase que organiza tudo: ninguém compra cenário; compra resposta a uma dor com data de entrega.</strong> A unidade da oferta não é o método (cenários, radar, Delphi), é a cadeia completa: um problema na voz do cliente, um serviço que o ataca, um artefato de formato fixo que materializa a resposta, e um rito onde o artefato aterrissa e vira decisão. Quando um elo falta, o valor evapora: serviço sem artefato vira conversa, artefato sem rito vira arquivo, rito sem problema vira cerimônia. <span class="sel sel-i">Inferência</span></p>
+
+<h3>A cadeia da oferta, elo a elo</h3>
+<table>
+<thead><tr><th>Elo</th><th>Pergunta que responde</th><th>Onde está neste documento</th><th>Teste de qualidade</th></tr></thead>
+<tbody>
+<tr><td>Problema</td><td>Que dor, de quem, dita na voz do cliente?</td><td>Aba Problemas, catálogo de 12</td><td>O cliente reconhece a frase como dele</td></tr>
+<tr><td>Serviço</td><td>O que o escritório faz, com que esforço e cadência?</td><td>Aba Serviços, catálogo de 12</td><td>Tem dono, insumo, prazo e cliente nomeado</td></tr>
+<tr><td>Artefato</td><td>O que o cliente segura na mão?</td><td>Aba Artefatos, catálogo de 15</td><td>Formato fixo, tamanho fixo, reconhecível de longe</td></tr>
+<tr><td>Rito</td><td>Em que sala e em que data isso vira decisão?</td><td>Aba Operação</td><td>Data no calendário antes de o trabalho começar</td></tr>
+</tbody>
+</table>
+
+<h3>A pirâmide da oferta: três andares de velocidade</h3>
+<p>A oferta opera em três andares, e o erro clássico é começar pelo de cima. <strong>O andar contínuo</strong> (scanning, alertas, respostas rápidas) roda toda semana e constrói credibilidade barata. <strong>O andar cadenciado</strong> (radar trimestral, deep dives, letramento) roda em ciclos e constrói o hábito institucional. <strong>O andar anual</strong> (cenários, túnel de vento, insumo dos ritos) é o de maior prestígio e maior risco: quem estreia por ele aposta tudo numa entrega que a casa ainda não sabe usar. A sequência dos 90 dias sobe a pirâmide de baixo para cima. <span class="sel sel-i">Inferência</span></p>
+
+<h3>Por que a lente de produto, e não a lente de departamento</h3>
+<p>Três razões, todas verificáveis no campo. Primeira: a evidência de retorno do foresight aparece apenas quando a percepção vira aposta com dono, que é o comportamento de produto, não de biblioteca; no estudo longitudinal de 83 empresas, o grupo que percebia muito e decidia pouco destruiu 6% de valor enquanto os vigilantes cresceram 75%, e a literatura de maturidade confirma: o valor só aparece com o foresight acoplado a estratégia e inovação, nunca como ilha.<sup>4, 5</sup> <span class="sel sel-v">Verificado</span> Segunda: os sobreviventes do bench operam como produto com marca, formato e série: o radar da DHL tem taxonomia estável, 40 tendências por edição e cadência de dois anos há mais de uma década, e por isso virou moeda dentro e fora da empresa.<sup>6</sup> <span class="sel sel-v">Verificado</span> Terceira: quem operou como departamento de prestígio morreu na primeira reorganização, e o obituário mais famoso é o Pictures of the Future da Siemens.<sup>15</sup> <span class="sel sel-v">Verificado</span></p>
+
+<blockquote>O escritório de futuros que não sabe dizer em uma frase quem é seu cliente, que dor resolve e por que ele e não outro, ainda não existe: apenas ocupa uma sala.</blockquote>
+</section>
+
+<!-- ============================== O CLIQUE ============================== -->
+<section id="p-click" class="pane">
+<h2>O Clique: o Foundation Sprint aplicado à fundação do escritório</h2>
+<p><strong>O que é, nos fatos.</strong> Click: How to Make What People Want, de Jake Knapp e John Zeratsky (2025), é a continuação do Sprint e destila o que os autores aprenderam com mais de 300 equipes: a maioria dos produtos falha antes de nascer, por fundação errada, não por execução ruim. A resposta deles é o Foundation Sprint, um workshop de dois dias: no primeiro dia a equipe fecha o básico (cliente e problema) e a diferenciação; no segundo, a abordagem. O resultado é uma hipótese fundadora testável, que em seguida passa por experimentos minúsculos, os tiny loops, antes de qualquer construção grande. A diferenciação é tratada como o preditor número um de sucesso, trabalhada num 2x2 onde o produto precisa ocupar sozinho o quadrante superior direito, deixando as alternativas no quadrante que os autores chamam de Loserville.<sup>1, 2, 3</sup> <span class="sel sel-v">Verificado</span></p>
+
+<h3>A tradução: o escritório de futuros como o produto do sprint</h3>
+<p>Tudo abaixo é aplicação própria do método a um caso que os autores não escreveram: fundar uma área interna. <span class="sel sel-i">Inferência</span></p>
+<table>
+<thead><tr><th>Etapa do Foundation Sprint</th><th>No original (startup)</th><th>Traduzido para o escritório de futuros</th></tr></thead>
+<tbody>
+<tr><td><strong>Básico: cliente</strong></td><td>Qual segmento de usuário atacar primeiro</td><td>Qual diretoria é o cliente fundador: a que tem decisão de capital travada, susto recente ou premissa envelhecida no plano</td></tr>
+<tr><td><strong>Básico: problema</strong></td><td>Que dor o produto elimina</td><td>Um dos 12 problemas do catálogo, escolhido pela dor, não pela elegância do método que o resolve</td></tr>
+<tr><td><strong>Vantagem única</strong></td><td>Capacidade que só a equipe fundadora tem</td><td>Mandato sobre o horizonte 3 somado ao acesso aos dois ritos de planejamento e ao conhecimento da casa: nenhum concorrente interno ou externo tem os três juntos</td></tr>
+<tr><td><strong>Diferenciação (2x2)</strong></td><td>Produto contra concorrentes em dois eixos</td><td>Eixo 1: responde a uma decisão da casa contra responde à curiosidade geral. Eixo 2: olha 5 a 15 anos contra olha o trimestre. O quadrante vencedor: decisão + longo prazo. Loserville: curiosidade + trimestre, que é a newsletter de tendências</td></tr>
+<tr><td><strong>Abordagem</strong></td><td>Como resolver, entre alternativas práticas</td><td>Pela pirâmide: contínuo primeiro, cadenciado depois, anual por último; planilha antes de plataforma; uma diretoria antes de todas</td></tr>
+<tr><td><strong>Hipótese fundadora</strong></td><td>Frase testável que amarra tudo</td><td>"Se eu entregar [artefato] para [cliente fundador] antes de [rito], a decisão [X] muda." Escrita, datada e revisada no dia 90</td></tr>
+<tr><td><strong>Tiny loops</strong></td><td>Protótipos e testes de dias, não meses</td><td>Os 10 quick wins da aba própria: cada um é um experimento barato que valida um pedaço da hipótese antes de institucionalizar</td></tr>
+</tbody>
+</table>
+
+<div class="card"><strong>A hipótese fundadora, preenchida (exemplo ilustrativo).</strong> "Se eu entregar um memorando de cenários regulatórios de 5 páginas à diretoria de estratégia até 45 dias antes do Planejamento Estratégico, ao menos uma premissa do plano será formalmente revisada e registrada em ata." Cliente, artefato, prazo, rito e decisão verificável na mesma frase; no dia 90, a ata diz se a hipótese viveu. <span class="sel sel-e">Especulativo</span> (ilustração de calibre, não recomendação de tema)</div>
+
+<h3>O sprint de fundação do escritório: o roteiro da sala, hora a hora</h3>
+<p>Dois dias, na semana 1 ou 2 dos 90 dias, com cinco pessoas na sala: o patrocinador, o dono do escritório e uma pessoa de cada área vizinha (Inteligência de Mercado, Inovação, Riscos). O artefato de saída é uma página. Abaixo, o roteiro completo, adaptação própria da mecânica do método.<sup>1, 3</sup> <span class="sel sel-i">Inferência</span></p>
+<table>
+<thead><tr><th>Bloco</th><th>Hora</th><th>Atividade</th><th>Saída do bloco</th></tr></thead>
+<tbody>
+<tr><td rowspan="5"><strong>Dia 1, manhã<br>o básico</strong></td><td>9h00</td><td>Abertura pelo patrocinador: por que agora, em 10 minutos</td><td>Mandato dito em voz alta</td></tr>
+<tr><td>9h10</td><td>Leitura das 3 surpresas reconstituídas (quick win 1, feito antes do sprint): o sinal existia? quem viu? por que não virou decisão?</td><td>A dor da casa na mesa</td></tr>
+<tr><td>9h50</td><td>Nota individual e silenciosa: qual diretoria mais dói hoje; depois, votação</td><td>Lista curta de clientes candidatos</td></tr>
+<tr><td>10h30</td><td>Cliente fundador escolhido pelos 3 filtros da aba Clientes</td><td>UM cliente nomeado</td></tr>
+<tr><td>11h10</td><td>O problema da ponta de lança: os 12 do catálogo na parede, nota e voto</td><td>UM problema escolhido</td></tr>
+<tr><td rowspan="4"><strong>Dia 1, tarde<br>a diferenciação</strong></td><td>14h00</td><td>Vantagem única: o que só o escritório tem (mandato H3 + ritos + contexto)</td><td>A frase da vantagem</td></tr>
+<tr><td>14h30</td><td>2x2 de diferenciação: desenhar os eixos, posicionar cada alternativa interna e externa</td><td>O mapa com a Loserville povoada</td></tr>
+<tr><td>15h50</td><td>Teste do quadrante: se o escritório sumir amanhã, que decisão piora?</td><td>Resposta escrita, ou eixos refeitos</td></tr>
+<tr><td>16h20</td><td>Registro do dia em meia página</td><td>Metade da página final</td></tr>
+<tr><td rowspan="4"><strong>Dia 2, manhã<br>a abordagem</strong></td><td>9h00</td><td>Revisão do dia 1 e objeções dormidas</td><td>Confirmação ou ajuste</td></tr>
+<tr><td>9h15</td><td>Abordagem: a pirâmide (contínuo, cadenciado, anual) e a lista do que fica FORA dos 90 dias</td><td>Sequência combinada</td></tr>
+<tr><td>10h00</td><td>Hipótese fundadora: cada um redige a sua em silêncio; convergência para uma</td><td>A frase testável</td></tr>
+<tr><td>11h20</td><td>Os 3 primeiros tiny loops com dono e data + compromissos: datas do calendário, cota de agenda, checkpoint dos 30 dias</td><td>A página final, assinada</td></tr>
+</tbody>
+</table>
+<p class="note">Materiais: parede ou quadro, notas adesivas, o catálogo de problemas impresso, cronômetro visível. Regra de decisão: nota individual antes de qualquer conversa e voto antes de debate, com desempate do patrocinador; é a mecânica do método que impede a reunião de virar monólogo do mais graduado.<sup>1</sup></p>
+<div class="alerta"><strong>O que o Click proíbe, traduzido:</strong> não construir a catedral antes do teste. Nada de plataforma de radar, assinatura de pesquisa cara, identidade visual ou equipe grande antes de a hipótese fundadora sobreviver a três tiny loops. A versão de teste de quase todo artefato desta oferta é uma planilha e um documento de uma página. <span class="sel sel-i">Inferência</span></div>
+</section>
+
+<!-- ============================== CLIENTES ============================== -->
+<section id="p-clientes" class="pane">
+<h2>Clientes: quem compra a oferta por dentro da casa</h2>
+<p><strong>A regra do Click aplicada: um cliente fundador primeiro, o mercado inteiro depois.</strong><sup>1</sup> O mapa abaixo existe para escolher UM, não para atender todos no dia 1. <span class="sel sel-i">Inferência</span></p>
+<table>
+<thead><tr><th>Cliente interno</th><th>A dor, na voz dele</th><th>O que ele quer de verdade</th><th>Primeiro artefato a oferecer</th><th>Sinal de que é o cliente fundador</th></tr></thead>
+<tbody>
+<tr><td><strong>Board e conselho</strong></td><td>"Podemos ser pegos de surpresa de novo"</td><td>Não passar vergonha em público e ter registro de que perguntou</td><td>Item fixo de pauta com uma página, duas vezes ao ano</td><td>Houve susto público recente no setor</td></tr>
+<tr><td><strong>Presidência</strong></td><td>"Preciso de visão de longo prazo"</td><td>Opções reais que caibam no mandato dela</td><td>Túnel de vento da estratégia vigente</td><td>Mandato novo, agenda de legado</td></tr>
+<tr><td><strong>Diretoria de estratégia</strong></td><td>"As premissas do plano envelheceram"</td><td>Plano que sobreviva à pergunta difícil do conselho</td><td>Memorando de cenários antes do ciclo</td><td>Ciclo de planejamento começando em 2 a 4 meses</td></tr>
+<tr><td><strong>Diretorias de negócio e gerentes</strong></td><td>"Isso muda alguma coisa no MEU plano?"</td><td>Implicação acionável, não tendência genérica</td><td>Memo de implicações de uma página por área</td><td>Área sob disrupção visível (canal, regulação, tecnologia)</td></tr>
+<tr><td><strong>Inovação</strong></td><td>"Não sei onde apostar além do óbvio"</td><td>Critério defensável diante do financeiro</td><td>Brief de território de oportunidade H3</td><td>Funil H3 vazio ou aleatório</td></tr>
+<tr><td><strong>Inteligência de Mercado</strong></td><td>"Me cobram futuro e meu mandato é o presente"</td><td>Fronteira clara e crédito compartilhado</td><td>Radar único com camada dela assinada</td><td>É a aliada estrutural, não a cliente fundadora</td></tr>
+<tr><td><strong>Riscos e GRC</strong></td><td>"Minhas matrizes só cobrem o que tem histórico"</td><td>Cobertura do plausível sem virar auditada pelo vizinho</td><td>Nota de riscos emergentes com fronteira combinada</td><td>Pressão de relato integrado ou de rating</td></tr>
+<tr><td><strong>Sustentabilidade</strong></td><td>"Cenário climático virou exigência e eu não tenho método"</td><td>Análise defensável ligada a negócio, não só a relato</td><td>Cenário climático acoplado a uma decisão de ativo</td><td>Bench: nas grandes casas brasileiras a capacidade de cenário já mora aqui, e o horizonte 2050 mais longo do bench privado também<sup>24, 25</sup></td></tr>
+<tr><td><strong>Comercial e produto</strong></td><td>"O cliente de amanhã não é o de hoje"</td><td>Perfis e jornadas do futuro que virem oferta</td><td>Deep dive de comportamento com implicações de produto</td><td>Perda de share em segmento jovem ou novo canal</td></tr>
+<tr><td><strong>RH e cultura</strong></td><td>"Não sabemos que competências faltarão"</td><td>Mapa de competências futuras com números</td><td>Dossiê estilo Mapa do Trabalho do SENAI, com variável de decisão única: quantos formar, em quê, quando<sup>22</sup></td><td>Plano de força de trabalho em revisão</td></tr>
+</tbody>
+</table>
+<h3>O critério de escolha do cliente fundador</h3>
+<p>Três filtros em ordem: dor aguda e recente (surpresas doem mais que teses), poder de assinatura sobre uma decisão que o escritório pode influenciar em 90 dias, e disposição para dar as duas coisas que a oferta precisa e não pode comprar: uma data no calendário e presença nas reuniões. Se dois candidatos empatam, escolha o que participa do rito de planejamento mais próximo. <span class="sel sel-i">Inferência</span></p>
+<p class="note">O anti-cliente também existe: quem quer "uma palestra inspiradora para o time". Aceitar esse pedido no primeiro trimestre posiciona a oferta como entretenimento, e reposicionar depois custa um ano.</p>
+</section>
+
+<!-- ============================== PROBLEMAS ============================== -->
+<section id="p-prob" class="pane">
+<h2>Problemas: o catálogo das 12 dores que a oferta resolve</h2>
+<p><strong>Cada problema abaixo está escrito na voz do cliente, porque é assim que ele chega.</strong> A coluna final liga ao serviço e ao artefato que respondem: é a espinha que costura as três abas de catálogo. <span class="sel sel-i">Inferência</span></p>
+<table>
+<thead><tr><th>#</th><th>O problema, na voz do cliente</th><th>O que o escritório faz</th><th>Serviço e artefato que respondem</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>"Fomos pegos de surpresa por regulação, tecnologia ou concorrente"</td><td>Reconstitui as últimas surpresas (o sinal existia? quem viu? por que não virou decisão?) e instala o sistema de captação e alerta</td><td>S1 Scanning e alertas: ficha de sinal, nota de alerta</td></tr>
+<tr><td>2</td><td>"O planejamento parte de premissas que ninguém revisita"</td><td>Passa a estratégia vigente pelo túnel de vento dos cenários e devolve a lista de premissas frágeis</td><td>S5 Cenários e túnel: matriz de túnel de vento</td></tr>
+<tr><td>3</td><td>"A Inovação não sabe onde apostar além do incremental"</td><td>Entrega territórios de oportunidade do horizonte 3 com hipóteses testáveis e critério de sucesso</td><td>S6 Territórios H3: brief de território</td></tr>
+<tr><td>4</td><td>"Duas diretorias brigam sobre o futuro e ninguém cede"</td><td>Usa cenários como arbitragem neutra: nos mundos onde A ganha e nos onde B ganha, o que fazemos em cada um?</td><td>S5 Cenários: memorando de cenários</td></tr>
+<tr><td>5</td><td>"O conselho pergunta sobre longo prazo e a resposta improvisa"</td><td>Instala item fixo de pauta com uma página e radar atualizado</td><td>S8 Insumo dos ritos: página do conselho</td></tr>
+<tr><td>6</td><td>"Sabemos que o mundo muda, mas não o que monitorar"</td><td>Arma gatilhos escritos: se X acontecer, fazemos Y, com dono e limiar</td><td>S7 Alerta precoce: planilha de gatilhos</td></tr>
+<tr><td>7</td><td>"Compramos relatórios caros que ninguém lê"</td><td>Cura, traduz e devolve em uma página o que importa para a casa; cancela o resto</td><td>S11 Curadoria: resenha de uma página</td></tr>
+<tr><td>8</td><td>"O time não tem vocabulário para conversar sobre futuro"</td><td>Letramento em futuros: oficinas curtas com os artefatos da própria casa como material</td><td>S9 Letramento: oficina + kit</td></tr>
+<tr><td>9</td><td>"Tenho uma decisão de capital travada há meses"</td><td>Cenário focal da decisão: os 2 ou 3 futuros que importam para ela, com implicação e gatilho de cada um</td><td>S10 Resposta rápida: one-pager de decisão</td></tr>
+<tr><td>10</td><td>"Cenário climático virou exigência de investidor e não temos método"</td><td>Conecta a capacidade de cenário climático que já existe (riscos, sustentabilidade) à decisão de portfólio, não só ao relato<sup>25</sup></td><td>S5 + S8: cenário climático de negócio</td></tr>
+<tr><td>11</td><td>"Rediscutimos o mesmo futuro todo ano e nunca sai do lugar"</td><td>Registra a memória de decisão: o que foi aceito, recusado e por quê, com data</td><td>S12 Memória: registro de decisão</td></tr>
+<tr><td>12</td><td>"A linha de frente vê coisas que nunca chegam aqui em cima"</td><td>Abre canal de captação de sinais da ponta, no modelo que a Swiss Re usa com subscritores no SONAR<sup>7</sup></td><td>S1 Scanning: canal da linha de frente</td></tr>
+</tbody>
+</table>
+<div class="alerta"><strong>Como usar o catálogo:</strong> na venda interna, nunca abrir pelo serviço ("fazemos horizon scanning") e sempre pelo problema ("da última vez que a regulação virou, quanto custou a surpresa?"). O problema 1 é a ponta de lança universal porque usa a dor da própria casa como argumento, custa duas semanas e não exige nenhum método novo. <span class="sel sel-i">Inferência</span></div>
+</section>
+
+<!-- ============================== SERVIÇOS ============================== -->
+<section id="p-serv" class="pane">
+<h2>Serviços: o catálogo do que o escritório provê</h2>
+<p><strong>Doze serviços, cinco de núcleo e sete de expansão.</strong> Núcleo é o que roda desde o trimestre 1 e não se negocia; expansão entra quando houver tração e pedido. Cada linha tem cliente, entregável e cadência porque serviço sem esses três é intenção. <span class="sel sel-i">Inferência</span></p>
+
+<h3>Núcleo: os cinco do primeiro ano</h3>
+<table>
+<thead><tr><th>Serviço</th><th>O que é</th><th>Cliente principal</th><th>Entregável (aba Artefatos)</th><th>Cadência e esforço</th></tr></thead>
+<tbody>
+<tr><td><strong>S1. Scanning contínuo e alertas</strong></td><td>Varredura de sinais fracos H2 e H3 nas margens (ciência, regulação, comportamento, tecnologia), com canal aberto para a linha de frente<sup>7</sup></td><td>Todos; alimenta o resto</td><td>Ficha de sinal; nota de alerta de 1 página</td><td>Semanal; 30 a 40% do tempo do dono</td></tr>
+<tr><td><strong>S2. Radar único da empresa</strong></td><td>Consolidação trimestral dos sinais em tendências com maturidade e horizonte, em camadas: H1 da Inteligência de Mercado, H2 conjunta, H3 do escritório<sup>8</sup></td><td>Diretoria e gerentes</td><td>Radar vN + 1 página por camada</td><td>Trimestral; 1 semana por versão</td></tr>
+<tr><td><strong>S5. Rodada de cenários e túnel de vento</strong></td><td>Incertezas críticas viram 3 ou 4 futuros; a estratégia vigente é testada contra cada um, no uso clássico da Shell<sup>16</sup></td><td>Board, presidência, estratégia</td><td>Memorando de cenários; matriz de túnel</td><td>Anual; 8 a 12 semanas, pronto 2 a 3 meses antes do rito</td></tr>
+<tr><td><strong>S7. Gatilhos e alerta precoce</strong></td><td>Tradução de incertezas em "se X, então Y" com limiar, dono e resposta pré-combinada, o elo que a Deutsche Telekom automatizou entre sinal e reação organizacional<sup>9</sup></td><td>Gerentes e diretorias</td><td>Planilha viva de gatilhos</td><td>Contínua; revisão trimestral</td></tr>
+<tr><td><strong>S8. Insumo dos dois ritos</strong></td><td>O memorando executivo para o Planejamento Estratégico e os memos de implicação por área para o Tático-Estratégico, no timing certo</td><td>Board, diretoria, gerentes</td><td>Memorando; memo por área; página do conselho</td><td>Anual, ancorado no calendário; 2 a 3 semanas</td></tr>
+</tbody>
+</table>
+
+<p class="note">A régua de ambição para o método participativo existe no país: uma cooperativa singular construiu os próprios cenários em 45 workshops com cerca de 980 pessoas, prova de que profundidade não é privilégio de matriz global.<sup>10</sup></p>
+<h3>Expansão: os sete que entram com tração</h3>
+<table>
+<thead><tr><th>Serviço</th><th>O que é</th><th>Cliente</th><th>Entregável</th><th>Quando ativar</th></tr></thead>
+<tbody>
+<tr><td><strong>S3. Monitoramento de sinais maduros</strong></td><td>Passagem de bastão formal: sinal que amadureceu vai para a lista da Inteligência de Mercado com gatilho definido</td><td>Inteligência de Mercado</td><td>Lista de monitoramento com termo de entrega</td><td>Assim que o radar girar 2 versões</td></tr>
+<tr><td><strong>S4. Deep dive temático</strong></td><td>Varredura profunda de uma pergunta focal priorizada, com acervo e especialistas</td><td>Diretoria dona do tema</td><td>Dossiê temático</td><td>Trimestre 2, um por semestre</td></tr>
+<tr><td><strong>S6. Territórios de oportunidade H3</strong></td><td>O handoff nobre para a Inovação: contexto, sinais, hipóteses testáveis, critério de sucesso, no espírito do funil da BASF que dá a cada tendência um caminho até virar negócio<sup>14</sup></td><td>Inovação</td><td>Brief de território</td><td>Após o primeiro deep dive</td></tr>
+<tr><td><strong>S9. Letramento em futuros</strong></td><td>Oficinas de 2 a 4 horas usando os artefatos da casa; multiplica sensores e reduz resistência</td><td>Gerências e equipes</td><td>Oficina + kit de bolso</td><td>Trimestre 2, sob demanda</td></tr>
+<tr><td><strong>S10. Resposta rápida ("e se?")</strong></td><td>One-pager sob demanda para pergunta quente ou decisão travada, em 5 dias úteis</td><td>Qualquer diretoria</td><td>One-pager de decisão</td><td>Desde o trimestre 1, com cota (2 por mês)</td></tr>
+<tr><td><strong>S11. Curadoria de conhecimento externo</strong></td><td>Biblioteca viva: o melhor material público (Agropensa, PNE 2050, radares setoriais) traduzido em implicações para a casa<sup>6, 12, 13</sup></td><td>Todos</td><td>Resenha de 1 página por peça</td><td>Desde o trimestre 1, 2 por mês</td></tr>
+<tr><td><strong>S12. Memória de decisão</strong></td><td>Registro do aceito, do recusado e do porquê, que impede a casa de rediscutir o mesmo futuro anualmente</td><td>Estratégia e conselho</td><td>Registro datado por decisão</td><td>Desde o primeiro rito</td></tr>
+</tbody>
+</table>
+<p class="note">A numeração dos serviços é estável de propósito: S1 a S12 viram vocabulário interno, do mesmo jeito que a taxonomia fixa do radar da DHL virou moeda.<sup>6</sup> Mudar nome de serviço a cada trimestre destrói o ativo mais barato da oferta, que é ser reconhecível. E publicação periódica com marca própria cabe em equipe enxuta: o ecossistema de inovação do Bradesco sustenta um relatório trimestral com identidade fixa.<sup>19</sup></p>
+</section>
+
+<!-- ============================== ARTEFATOS ============================== -->
+<section id="p-arte" class="pane">
+<h2>Artefatos: o catálogo do que o cliente segura na mão</h2>
+<p><strong>Regra de ouro: formato fixo, tamanho fixo, nome fixo.</strong> Artefato é interface: quando o decisor reconhece o formato de longe, o custo de leitura despenca e a marca do escritório se constrói sozinha. O bench confirma dos dois lados: a DHL mantém taxonomia e formato estáveis há edições e virou referência<sup>6</sup>; o campo em geral produz relatório de formato novo a cada vez e é tratado como descartável. <span class="sel sel-i">Inferência</span> sobre a regra; exemplos <span class="sel sel-v">Verificado</span></p>
+<table>
+<thead><tr><th>#</th><th>Artefato</th><th>Formato e tamanho</th><th>Nasce em</th><th>Cadência</th><th>Cliente</th><th>Vida útil</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>Pergunta focal</strong></td><td>Uma frase; a menor unidade da oferta</td><td>Ritos e conselho</td><td>Por ciclo</td><td>O próprio escritório</td><td>Um ciclo</td></tr>
+<tr><td>2</td><td><strong>Ficha de sinal</strong></td><td>Meia página: o sinal, a fonte, por que importa, horizonte, maturidade</td><td>S1</td><td>Contínua</td><td>Comitê de sinais</td><td>Até classificar</td></tr>
+<tr><td>3</td><td><strong>Nota de alerta</strong></td><td>1 página: o que acelerou, implicação, recomendação</td><td>S1/S7</td><td>Ad hoc</td><td>Diretoria</td><td>Dias; é perecível</td></tr>
+<tr><td>4</td><td><strong>Radar único vN</strong></td><td>1 mapa + 1 página por camada (H1, H2, H3)</td><td>S2</td><td>Trimestral</td><td>Diretoria e gerentes</td><td>90 dias, versão data</td></tr>
+<tr><td>5</td><td><strong>Lista de monitoramento</strong></td><td>Planilha: sinal, gatilho, dono, data de revisão</td><td>S3</td><td>Trimestral</td><td>Inteligência de Mercado</td><td>Viva</td></tr>
+<tr><td>6</td><td><strong>Dossiê temático</strong></td><td>10 a 20 páginas + sumário de 1</td><td>S4</td><td>Semestral</td><td>Diretoria dona do tema</td><td>12 a 24 meses</td></tr>
+<tr><td>7</td><td><strong>Brief de território H3</strong></td><td>2 a 3 páginas: contexto, sinais, hipóteses testáveis, critério de sucesso, próximo passo</td><td>S6</td><td>Por território</td><td>Inovação</td><td>Até o teste decidir</td></tr>
+<tr><td>8</td><td><strong>Memorando de cenários</strong></td><td>5 páginas + anexos: os futuros, as incertezas, o que muda em cada um</td><td>S5</td><td>Anual</td><td>Board e diretoria</td><td>1 ciclo estratégico</td></tr>
+<tr><td>9</td><td><strong>Matriz de túnel de vento</strong></td><td>1 tabela: estratégia vigente x cenários, com veredito por linha</td><td>S5</td><td>Anual</td><td>Estratégia</td><td>1 ciclo</td></tr>
+<tr><td>10</td><td><strong>Mapa de apostas e opções</strong></td><td>1 página: apostas, opções reais, gatilho de reforço e de abandono de cada uma</td><td>S5/S8</td><td>Anual</td><td>Board</td><td>1 ciclo, revisado</td></tr>
+<tr><td>11</td><td><strong>Planilha de gatilhos</strong></td><td>Linhas "se X (limiar), então Y (resposta), dono Z"</td><td>S7</td><td>Viva</td><td>Gerentes</td><td>Permanente</td></tr>
+<tr><td>12</td><td><strong>Memo de implicações por área</strong></td><td>1 página por diretoria, na língua dela</td><td>S8</td><td>Anual</td><td>Gerentes</td><td>1 ciclo tático</td></tr>
+<tr><td>13</td><td><strong>Página do conselho</strong></td><td>1 página, formato imutável: o que mudou, o que monitoramos, o que pedimos</td><td>S8</td><td>Semestral</td><td>Board</td><td>6 meses</td></tr>
+<tr><td>14</td><td><strong>One-pager de decisão</strong></td><td>1 página: a pergunta, 2 ou 3 futuros relevantes, implicação, recomendação com gatilho</td><td>S10</td><td>Sob demanda, 5 dias úteis</td><td>Quem pediu</td><td>A decisão</td></tr>
+<tr><td>15</td><td><strong>Memória de decisão</strong></td><td>Registro datado: decisão, alternativas, recusas e porquês</td><td>S12</td><td>Por rito</td><td>Estratégia e conselho</td><td>Permanente; é o patrimônio</td></tr>
+</tbody>
+</table>
+<h3>As três regras de fabricação</h3>
+<ol>
+<li><strong>Uma página é o formato padrão; tudo acima disso precisa justificar o tamanho.</strong> O decisor lê a página; o anexo existe para a auditoria da confiança, não para a leitura. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Todo artefato carrega selo de origem no corpo</strong> (verificado, inferência, especulação) e fonte rastreável, porque a moeda do escritório é confiança, e uma fabricação descoberta quebra o caixa inteiro. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Versão de teste antes de versão institucional:</strong> radar em planilha antes de radar em plataforma, memorando piloto para uma diretoria antes do rito completo. É o tiny loop do Click aplicado à fabricação.<sup>1</sup> <span class="sel sel-i">Inferência</span></li>
+</ol>
+</section>
+
+<!-- ============================== QUICK WINS ============================== -->
+<section id="p-quick" class="pane">
+<h2>Quick wins: as dez vitórias que cabem em semanas</h2>
+<p><strong>Quick win aqui tem definição estrita: custa dias, prova valor sozinho e destrava um artefato definitivo da oferta.</strong> Não é atalho nem enfeite: é o tiny loop do Click funcionando como instalação por partes.<sup>1, 2</sup> A ordem importa menos que a regra: sempre ter um girando. <span class="sel sel-i">Inferência</span></p>
+<table>
+<thead><tr><th>#</th><th>Quick win</th><th>Semanas</th><th>Custo real</th><th>Prova de valor</th><th>Artefato definitivo que destrava</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>Reconstituição das 3 últimas surpresas estratégicas</strong>: o sinal existia? quem viu? por que não virou decisão?</td><td>1 a 2</td><td>Entrevistas e arquivo</td><td>A melhor peça de venda interna que existe: usa a dor da própria casa</td><td>Sistema de alertas (S1) e o argumento do escritório inteiro</td></tr>
+<tr><td>2</td><td><strong>Foundation Sprint do escritório</strong>: cliente fundador, problema, 2x2, hipótese fundadora<sup>1, 3</sup></td><td>2 dias</td><td>Uma sala e 5 pessoas</td><td>Alinhamento do patrocinador em página única</td><td>A hipótese que o dia 90 vai julgar</td></tr>
+<tr><td>3</td><td><strong>Protótipo do radar em planilha</strong> com 20 sinais classificados por horizonte e maturidade</td><td>2</td><td>Zero software</td><td>Primeira conversa de radar com Inteligência de Mercado</td><td>Radar único vN (S2)</td></tr>
+<tr><td>4</td><td><strong>One-pager de resposta rápida</strong> a uma pergunta quente real de uma diretoria</td><td>1</td><td>5 dias de trabalho</td><td>Um diretor cita o documento em reunião</td><td>Serviço S10 com cota</td></tr>
+<tr><td>5</td><td><strong>Curadoria do material público de longo prazo</strong> (Agropensa, PNE 2050, radares setoriais) traduzido em 3 implicações para a casa<sup>12, 13</sup></td><td>2</td><td>Leitura dirigida</td><td>Valor visível sem produzir pesquisa nova</td><td>Biblioteca viva (S11)</td></tr>
+<tr><td>6</td><td><strong>Mapa da capacidade escondida</strong>: quem já faz cenário na casa sem chamar assim (clima, riscos, atuarial)<sup>25</sup></td><td>1</td><td>Conversas internas</td><td>Aliados mapeados e retrabalho evitado</td><td>Rede de sensores e o time estendido</td></tr>
+<tr><td>7</td><td><strong>Duas datas negociadas no calendário do planejamento</strong> + item de pauta do conselho</td><td>1 (política)</td><td>Capital político do patrocinador</td><td>O calendário existe antes do conteúdo</td><td>Insumo dos ritos (S8)</td></tr>
+<tr><td>8</td><td><strong>Canal da linha de frente</strong>: formulário simples de sinal para comercial e atendimento, no modelo SONAR<sup>7</sup></td><td>2</td><td>Formulário e divulgação</td><td>Primeiros 10 sinais da ponta</td><td>Captação distribuída (S1)</td></tr>
+<tr><td>9</td><td><strong>Primeira nota de alerta real</strong> sobre um sinal que acelerou de verdade</td><td>Quando o sinal der</td><td>1 página</td><td>O escritório chega antes da notícia</td><td>Nota de alerta como gênero da casa</td></tr>
+<tr><td>10</td><td><strong>Planilha de gatilhos v0</strong> com 5 gatilhos "se X, então Y" para uma diretoria</td><td>2</td><td>1 oficina de 2 horas</td><td>A diretoria sai com resposta pré-combinada</td><td>Alerta precoce (S7)</td></tr>
+</tbody>
+</table>
+<h3>O roteiro do quick win 1: a reconstituição de surpresa em 5 perguntas</h3>
+<div class="card"><p>Por surpresa, 3 a 5 entrevistas de 30 minutos (quem estava na cadeira na época) mais uma tarde de arquivo: atas, e-mails, imprensa e relatórios setoriais da data. As 5 perguntas, sempre na mesma ordem:</p>
+<ol>
+<li><strong>Qual foi o evento e quanto custou</strong>, em dinheiro, prazo ou decisão atrasada? Sem custo nomeado, a surpresa não vira argumento.</li>
+<li><strong>O sinal existia antes?</strong> Onde e desde quando: procurar a data mais antiga em que o sinal já era público.</li>
+<li><strong>Quem dentro da casa viu, ou estava em posição de ver?</strong> Quase sempre alguém viu; o cargo importa mais que o nome.</li>
+<li><strong>Em que mesa a decisão poderia ter sido tomada antes, e por que não foi:</strong> o sinal não chegou, chegou sem dono, ou chegou sem resposta combinada?</li>
+<li><strong>Que gatilho armado hoje nos avisaria da próxima?</strong> A resposta vira a primeira linha da planilha de gatilhos.</li>
+</ol>
+<p>Saída: uma página por surpresa e a lista dos elos quebrados. É essa lista, não o susto, que justifica cada peça do desenho: elo "ninguém viu" pede scanning; elo "viu e não subiu" pede canal e comitê; elo "subiu e não decidiu" pede gatilho e rito. <span class="sel sel-i">Inferência</span></p></div>
+
+<div class="alerta"><strong>O anti-quick-win.</strong> Três coisas parecem vitória rápida e são armadilha: a newsletter de tendências (o formato que o próprio mercado aposentou<sup>25</sup>), a palestra inspiracional (posiciona como entretenimento) e a compra de plataforma ou assinatura no trimestre 1 (compra a catedral antes do teste, exatamente o que o Click proíbe<sup>1</sup>). <span class="sel sel-i">Inferência</span></div>
+</section>
+
+<!-- ============================== 90 DIAS ============================== -->
+<section id="p-plano" class="pane">
+<h2>90 dias: a instalação em três atos</h2>
+<p><strong>O plano sobe a pirâmide da oferta de baixo para cima: fundar, girar, aterrissar.</strong> Cada mês fecha com um marco verificável; se o marco do mês não fechou, o mês seguinte não começa, ajusta-se o escopo. Nada de software, assinatura ou contratação no período: uma pessoa dedicada, planilha e calendário. <span class="sel sel-i">Inferência</span></p>
+
+<h3>Mês 1: Fundar (semanas 1 a 4)</h3>
+<div class="tl">
+<div class="tl-item"><span class="tl-dot"></span><strong>Semanas 1 e 2.</strong> Reconstituição das 3 surpresas (QW1). Foundation Sprint de 2 dias com patrocinador e vizinhos: cliente fundador, problema da ponta de lança, 2x2, hipótese fundadora escrita (QW2).<sup>1, 3</sup> Mapa da capacidade escondida na casa (QW6).</div>
+<div class="tl-item"><span class="tl-dot"></span><strong>Semanas 3 e 4.</strong> Scanning mínimo viável no ar: fontes definidas, ficha de sinal padronizada, 20 primeiros sinais na planilha (QW3). Canal da linha de frente aberto (QW8). Negociação das duas datas no calendário e do item de pauta (QW7).</div>
+<div class="tl-item"><span class="tl-dot"></span><strong>Marco do mês 1:</strong> hipótese fundadora assinada pelo patrocinador + planilha de radar com 20 sinais + 2 datas confirmadas no calendário. Sem os três, o mês 2 é adiado, não empilhado.</div>
+</div>
+
+<h3>Mês 2: Girar (semanas 5 a 8)</h3>
+<div class="tl">
+<div class="tl-item"><span class="tl-dot"></span><strong>Semana 5.</strong> Primeiro Comitê de Sinais com Inteligência de Mercado e Inovação: sinais classificados por horizonte, primeira passagem de bastão combinada.</div>
+<div class="tl-item"><span class="tl-dot"></span><strong>Semanas 6 e 7.</strong> Radar único v1 publicado (camadas H1 da IM, H3 do escritório, H2 conjunta).<sup>8</sup> Primeiro one-pager de resposta rápida entregue a uma diretoria real (QW4). Primeira oficina de letramento com o cliente fundador, usando o radar da casa como material.</div>
+<div class="tl-item"><span class="tl-dot"></span><strong>Semana 8.</strong> Planilha de gatilhos v0 com o cliente fundador (QW10). Deep dive da pergunta focal priorizada É INICIADO (não prometido para o mês 2).</div>
+<div class="tl-item"><span class="tl-dot"></span><strong>Marco do mês 2:</strong> radar v1 publicado e citado em ao menos uma reunião de diretoria + comitê de sinais com presença das 3 áreas + 5 gatilhos armados com dono.</div>
+</div>
+
+<h3>Mês 3: Aterrissar (semanas 9 a 13)</h3>
+<div class="tl">
+<div class="tl-item"><span class="tl-dot"></span><strong>Semanas 9 e 10.</strong> Deep dive entregue como dossiê com sumário de 1 página. Primeiro brief de território H3 apresentado no comitê da Inovação, com hipóteses testáveis e critério de sucesso.<sup>14</sup></div>
+<div class="tl-item"><span class="tl-dot"></span><strong>Semanas 11 e 12.</strong> Memorando piloto para o rito mais próximo (versão de teste do S8, para o cliente fundador antes da sala cheia). Curadoria publicada: 2 resenhas de material externo com implicações (QW5).<sup>12, 13</sup></div>
+<div class="tl-item"><span class="tl-dot"></span><strong>Semana 13.</strong> Balanço dos 90 dias contra a hipótese fundadora: que decisões o escritório tocou, com nome e data? A hipótese sobreviveu, pivota ou morre? Memória de decisão inaugurada com o próprio balanço. Proposta do trimestre 2 (ativar S4 em série, S6, S9) apresentada ao patrocinador.</div>
+<div class="tl-item"><span class="tl-dot"></span><strong>Marco do mês 3:</strong> um dossiê entregue + um brief no funil da Inovação + memorando piloto lido pelo cliente fundador + balanço escrito contra a hipótese.</div>
+</div>
+
+<h3>A semana típica do dono durante os 90 dias</h3>
+<table>
+<thead><tr><th>Dia</th><th>Bloco fixo</th><th>O que produz</th></tr></thead>
+<tbody>
+<tr><td>Segunda</td><td>2h de scanning + escrita de fichas</td><td>3 a 5 fichas de sinal novas</td></tr>
+<tr><td>Terça</td><td>2 conversas internas de 30 min (1 diretor ou gerente + 1 pessoa da ponta)</td><td>Rede, sinais da casa, venda silenciosa</td></tr>
+<tr><td>Quarta</td><td>Manhã inteira de produção protegida</td><td>O artefato da semana: one-pager, resenha, radar ou memorando</td></tr>
+<tr><td>Quinta</td><td>Comitê (ou preparo de comitê) + curadoria de 1 material externo</td><td>Pauta viva; resenha quinzenal</td></tr>
+<tr><td>Sexta</td><td>2h de síntese + balanço de 1 página ao patrocinador</td><td>O registro que vira o balanço do dia 90</td></tr>
+</tbody>
+</table>
+<p class="note">A proporção que o desenho protege: cerca de 60% da semana produzindo artefato, 20% em relação (conversas e comitês), 20% em método e registro. Quando a agenda inverte para reunião em cima de reunião, o bloco da quarta-feira é o primeiro a morrer, e com ele a oferta inteira. <span class="sel sel-i">Inferência</span></p>
+
+<h3>O que fica explicitamente FORA dos 90 dias</h3>
+<ul>
+<li><strong>Rodada completa de cenários.</strong> Ela exige 8 a 12 semanas só dela e um rito para aterrissar; entra no trimestre certo do calendário anual, tipicamente o 2 ou o 3, terminando 2 a 3 meses antes do Planejamento Estratégico. Prometê-la nos 90 dias é a receita do fracasso de estreia; e cenário sem série vira foto de época, o destino do Visão 2035 do BNDES.<sup>23</sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>Plataforma, assinatura de pesquisa e contratação.</strong> A regra do Click: só depois que a hipótese sobreviver aos tiny loops.<sup>1</sup></li>
+<li><strong>Atender todas as diretorias.</strong> O trimestre 1 pertence ao cliente fundador; a expansão é problema bom do trimestre 2.</li>
+</ul>
+</section>
+
+<!-- ============================== DIFERENCIAÇÃO ============================== -->
+<section id="p-dif" class="pane">
+<h2>Diferenciação: o 2x2 e a Loserville do mercado de futuro</h2>
+<p><strong>No Click, diferenciação é o preditor número um: o produto precisa ocupar sozinho um quadrante que importa.</strong><sup>1, 2</sup> Os dois eixos que separam o escritório de tudo o que já existe na casa e no mercado: responde a uma DECISÃO da casa (contra responde à curiosidade geral) e olha o PLAUSÍVEL DE 5 A 15 ANOS (contra o trimestre). <span class="sel sel-i">Inferência</span></p>
+
+<h3>O mapa das alternativas</h3>
+<table>
+<thead><tr><th>Alternativa</th><th>O que faz bem</th><th>O que não faz</th><th>Quadrante no 2x2</th><th>Relação certa com o escritório</th></tr></thead>
+<tbody>
+<tr><td><strong>Inteligência de Mercado</strong></td><td>O presente com dados: mercado, concorrência, cliente</td><td>Não tem mandato nem método para o plausível sem histórico</td><td>Decisão + trimestre</td><td>Sócia do radar único; fronteira por horizonte, não por tema</td></tr>
+<tr><td><strong>Consultoria de estratégia ou futuros</strong></td><td>Método, benchmark, legitimidade externa</td><td>Não conhece a casa, não fica para o desdobramento, e o incentivo dela é renovar contrato</td><td>Decisão + longo prazo, mas SEM contexto e SEM permanência</td><td>Contratar por projeto com cláusula de transferência de método</td></tr>
+<tr><td><strong>Inovação</strong></td><td>Testa e aprende rápido</td><td>Só enxerga o futuro que já virou hipótese testável; o padrão brasileiro de delegar antecipação ao braço de venture só vê o que já é startup investível<sup>25</sup></td><td>Decisão + médio prazo</td><td>Cliente do brief de território: o escritório antecipa, ela testa</td></tr>
+<tr><td><strong>Gestão de riscos</strong></td><td>O provável com histórico e probabilidade</td><td>O plausível sem base histórica fica de fora por construção</td><td>Decisão + curto/médio</td><td>Fronteira explícita: riscos cuida do provável, o escritório do plausível</td></tr>
+<tr><td><strong>Assinaturas e relatórios de tendência</strong></td><td>Volume e abrangência</td><td>Genéricos por definição: não sabem qual é a sua decisão</td><td>Curiosidade + longo prazo</td><td>Insumo curado pelo S11, nunca substituto</td></tr>
+<tr><td><strong>Newsletter e palestra de tendências</strong></td><td>Entretém</td><td>Não muda decisão nenhuma; o formato foi aposentado pelo próprio mercado<sup>25</sup></td><td><strong>Loserville: curiosidade + trimestre</strong></td><td>Não competir; não virar isso</td></tr>
+</tbody>
+</table>
+
+<h3>A vantagem injusta, por escrito</h3>
+<p>Só o escritório tem, ao mesmo tempo: o mandato formal sobre o horizonte 3, o assento nos dois ritos de planejamento, e o contexto da casa (história, números, política interna). Consultoria tem método sem os outros dois; IM tem contexto sem mandato de longo prazo; Inovação tem apetite sem o assento nos ritos. A oferta inteira é desenhada para explorar essa tríade, e toda decisão que a dilua (terceirizar o insumo dos ritos, abrir mão do radar único, pular os ritos) ataca o próprio diferencial. <span class="sel sel-i">Inferência</span></p>
+<blockquote>O teste da diferenciação em uma pergunta: se o escritório sumir amanhã, que decisão específica a casa passa a tomar pior? Enquanto a resposta não for imediata, a diferenciação ainda é promessa.</blockquote>
+</section>
+
+<!-- ============================== OPERAÇÃO ============================== -->
+<section id="p-oper" class="pane">
+<h2>Operação: onde a oferta encaixa na máquina</h2>
+<p><strong>Esta aba é o mapa de encaixe, não o manual.</strong> O organismo completo (funções, reuniões, cargos, sistemas, governança) está no documento irmão do escritório; a blueprint operacional com raias, estações e o diagrama funcional está publicada à parte. Aqui, só o essencial de como oferta e máquina se casam. <span class="sel sel-i">Inferência</span></p>
+<h3>O ciclo em uma linha</h3>
+<p>Perguntas focais focam o scanning; sinais viram fichas; o comitê mensal classifica; a revisão trimestral publica o radar único (H1 da IM, H2 conjunta, H3 do escritório) e origina briefs, alertas e temas; deep dives sustentam a rodada anual de cenários; o túnel de vento e o memorando abastecem o Planejamento Estratégico; as implicações por área e os gatilhos abastecem o Tático-Estratégico; gerentes monitoram gatilhos; decisões e recusas viram memória e as novas perguntas focais. O ciclo recomeça, na sequência clássica que os guias do campo descrevem, do scanning à integração na estratégia.<sup>21</sup></p>
+<h3>Que serviço nasce em que reunião</h3>
+<table>
+<thead><tr><th>Reunião ou rito</th><th>Cadência</th><th>Serviços que dependem dela</th><th>Artefatos que saem dela</th></tr></thead>
+<tbody>
+<tr><td>Comitê de Sinais</td><td>Mensal, 1h</td><td>S1, S3</td><td>Sinais classificados, pedidos de aprofundamento</td></tr>
+<tr><td>Revisão do Radar (com IM)</td><td>Trimestral, 2h</td><td>S2, S3, S6, S7</td><td>Radar vN, bastão H2, briefs, alertas</td></tr>
+<tr><td>Deep Dive temático</td><td>Semestral</td><td>S4</td><td>Dossiê com sumário</td></tr>
+<tr><td>Rodada de Cenários</td><td>Anual, 8 a 12 semanas</td><td>S5</td><td>Memorando, túnel, mapa de apostas</td></tr>
+<tr><td>Planejamento Estratégico</td><td>Anual</td><td>S8, S12</td><td>Página do conselho, memorando; perguntas focais novas</td></tr>
+<tr><td>Planejamento Tático-Estratégico</td><td>Anual, na sequência</td><td>S8, S7</td><td>Memos por área, gatilhos armados</td></tr>
+</tbody>
+</table>
+<p class="note">A regra de ouro do timing, que o bench público brasileiro pratica melhor que o privado (a Visão da Embrapa antecede o Plano Diretor; o PNE de 30 anos desdobra no plano decenal; o Banco do Brasil tem etapa formal de tendências dentro do rito da estratégia; a Petrobras aprova o PE 2050 junto do plano quinquenal<sup>11, 12, 13, 17</sup>): o insumo fica pronto ANTES do rito, nunca durante. Cenário entregue no meio do planejamento é opinião; entregue 2 a 3 meses antes é insumo.</p>
+</section>
+
+<!-- ============================== COMPETÊNCIAS ============================== -->
+<section id="p-comp" class="pane">
+<h2>Competências: o que o dono da oferta precisa saber fazer</h2>
+<p><strong>A oferta exige sete competências, e as duas mais decisivas não são de futurista.</strong> O detalhe de cargos, salários e formações do campo está no documento irmão do escritório; aqui, o recorte é o que ESTA oferta cobra de quem a opera. <span class="sel sel-i">Inferência</span></p>
+<table>
+<thead><tr><th>Competência</th><th>Serve a quê na oferta</th><th>Teste prático de que existe</th></tr></thead>
+<tbody>
+<tr><td><strong>1. Escrita executiva</strong></td><td>Toda a oferta aterrissa em páginas únicas; quem não comprime não entrega</td><td>Resumir um dossiê de 20 páginas em 1 sem perder a decisão</td></tr>
+<tr><td><strong>2. Facilitação de sala</strong></td><td>Foundation Sprint, oficinas de cenário, letramento; o método Knapp é, antes de tudo, facilitação<sup>1, 3</sup></td><td>Conduzir 5 diretores a uma escolha em 2 horas sem impor a sua</td></tr>
+<tr><td><strong>3. Scanning e triagem de sinais</strong></td><td>S1: separar sinal de ruído nas margens, com critério explícito</td><td>20 fichas de sinal por mês com taxa de descarte declarada</td></tr>
+<tr><td><strong>4. Sense-making e síntese</strong></td><td>S2: transformar sinais em tendências com maturidade, horizonte e motor</td><td>Um radar cuja camada H3 nenhum relatório externo entrega pronto</td></tr>
+<tr><td><strong>5. Método de cenários</strong></td><td>S5: incertezas críticas, 2x2 ou arquétipos, túnel de vento</td><td>Cenários que fazem a estratégia vigente ranger, não sorrir</td></tr>
+<tr><td><strong>6. Influência sem autoridade</strong></td><td>A oferta atravessa fronteiras de IM, Inovação e Riscos sem mandar em nenhuma</td><td>O radar sai assinado pelas três áreas sem escalar para cima</td></tr>
+<tr><td><strong>7. Gestão de produto</strong></td><td>Catálogo, cadência, versão, feedback, retenção de cliente interno</td><td>Saber dizer não a pedido fora do catálogo citando o catálogo</td></tr>
+</tbody>
+</table>
+<p>A ordem de desenvolvimento importa: escrita e facilitação primeiro, porque são as que aparecem no trimestre 1; método de cenários pode amadurecer até a primeira rodada anual. A rede externa (comunidades, formações e os mapas de quem seguir) está catalogada no Atlas de Futuros do projeto. <span class="sel sel-i">Inferência</span></p>
+</section>
+
+<!-- ============================== CUSTO ============================== -->
+<section id="p-custo" class="pane">
+<h2>Custo: a conta da versão mínima</h2>
+<p><strong>A oferta do primeiro ano cabe em uma pessoa dedicada e capital político, e isso é desenho, não pobreza.</strong> O argumento econômico da versão barata é o do documento irmão de foresight: o custo é pequeno o suficiente para dispensar prova acadêmica de retorno, e o mecanismo (combinar a resposta antes de estar sob pressão) funciona por razões que não dependem de estudo.<sup>25</sup> <span class="sel sel-i">Inferência</span></p>
+<table>
+<thead><tr><th>Item</th><th>Ano 1 (versão mínima)</th><th>Quando escalar</th></tr></thead>
+<tbody>
+<tr><td>Gente</td><td>1 pessoa dedicada em tempo integral com senioridade para sentar com diretor + 3 a 5 pessoas em regime parcial das áreas vizinhas (o time estendido do mapa de capacidade escondida)</td><td>Segunda pessoa dedicada quando S4 e S9 virarem série</td></tr>
+<tr><td>Ferramenta</td><td>Planilha, editor de texto, formulário. Zero software dedicado</td><td>Plataforma de radar só depois de 4 versões do radar em planilha provarem o hábito</td></tr>
+<tr><td>Conteúdo externo</td><td>Material público gratuito (Agropensa, PNE, radares setoriais abertos, SONAR público)<sup>6, 7, 12, 13</sup> + curadoria do que a casa JÁ assina</td><td>Assinatura paga só com pedido nomeado de cliente interno</td></tr>
+<tr><td>Consultoria</td><td>Zero no trimestre 1. Na primeira rodada de cenários, facilitação externa é aceitável COM cláusula de transferência de método e nome de quem será treinado (o modelo do roadmap que o Grupo Boticário mantém com consultoria desde 2017: método de fora, direção de dentro<sup>18</sup>)</td><td>Nunca terceirizar o insumo dos ritos: é o diferencial</td></tr>
+<tr><td>Verba de opção</td><td>Não é orçamento do escritório: é a verba que a oferta ajuda a instituir (1 a 3% do investimento com gatilho de abandono), e mora no dono do capital</td><td>Proposta formal no primeiro ciclo orçamentário após os 90 dias</td></tr>
+</tbody>
+</table>
+<div class="alerta"><strong>O custo que ninguém orça e mais derruba oferta:</strong> as horas dos OUTROS. Cada reunião do desenho consome agenda de diretor e gerente; a oferta paga essa conta entregando reunião curta, com artefato de uma página lido em cinco minutos. Reunião longa com apresentação de quarenta lâminas é a oferta consumindo o próprio capital político. <span class="sel sel-i">Inferência</span></div>
+</section>
+
+<!-- ============================== MÉTRICAS ============================== -->
+<section id="p-met" class="pane">
+<h2>Métricas: como saber se a oferta funciona</h2>
+<p><strong>Métrica de atividade mede esforço; a oferta se mede pelo acoplamento à decisão e pela retenção do cliente interno.</strong> O balanço do dia 90 e os trimestrais seguintes usam este painel, e o critério-mestre é o do estudo longitudinal: perceber sem decidir destrói valor.<sup>4</sup> <span class="sel sel-i">Inferência</span></p>
+<table>
+<thead><tr><th>Métrica</th><th>O que mede</th><th>Meta do ano 1</th><th>Fonte do dado</th></tr></thead>
+<tbody>
+<tr><td><strong>Decisões influenciadas</strong></td><td>Deliberações dos ritos que citaram artefato do escritório, com nome e data</td><td>Toda decisão registrada na memória; meta é existir, não inflar</td><td>Memória de decisão (S12)</td></tr>
+<tr><td><strong>Lead time de antecipação</strong></td><td>Dias entre o sinal entrar no radar e o tema entrar em pauta de decisão</td><td>Cair trimestre a trimestre</td><td>Ficha de sinal x ata</td></tr>
+<tr><td><strong>Conversão de territórios</strong></td><td>% de briefs H3 que viraram experimento com aprendizado registrado</td><td>1 de cada 2 briefs testado</td><td>Funil da Inovação</td></tr>
+<tr><td><strong>Gatilhos armados e disparados</strong></td><td>"Se X, então Y" ativos com dono; e quantos dispararam com resposta pré-combinada usada</td><td>15 armados; todo disparo com resposta usada</td><td>Planilha de gatilhos (S7)</td></tr>
+<tr><td><strong>Retenção de cliente interno</strong></td><td>Clientes que voltaram a pedir sem serem procurados (a métrica de produto do Click<sup>1</sup>)</td><td>Cliente fundador retido + 2 novos espontâneos</td><td>Registro de pedidos</td></tr>
+<tr><td><strong>Tempo até o primeiro valor</strong></td><td>Dias entre um cliente novo pedir e receber algo utilizável</td><td>5 dias úteis (cota do S10)</td><td>Registro de pedidos</td></tr>
+<tr><td><strong>Acerto retrospectivo</strong></td><td>Balanço anual público interno: o que o radar disse, o que aconteceu, o que erramos</td><td>1 edição honesta por ano</td><td>Radar vN x realidade</td></tr>
+</tbody>
+</table>
+<p>A última métrica é a mais rara do campo, e por isso a mais diferenciadora: praticamente nenhuma casa publica o próprio desempenho retrospectivo, e a crítica de que o setor vende preparo sem medir pontaria é a mais difícil de rebater.<sup>25</sup> Um escritório interno que se audita anualmente compra uma credibilidade que consultoria nenhuma tem como oferecer. <span class="sel sel-i">Inferência</span></p>
+</section>
+
+<!-- ============================== RISCOS ============================== -->
+<section id="p-risco" class="pane">
+<h2>Riscos: onde a oferta pode morrer, e a oportunidade dentro de cada um</h2>
+<p><strong>Seis categorias, cada uma com o risco, a implicação, a evidência e a oportunidade que ele abre.</strong> <span class="sel sel-i">Inferência</span> no desenho; evidências seladas caso a caso.</p>
+
+<h3>1. Risco institucional e de patrocínio</h3>
+<p><strong>O risco:</strong> a oferta nasce pendurada num patrocinador único e morre na troca dele. É a causa de morte mais documentada do campo: o Pictures of the Future da Siemens, célebre por quinze anos, sumiu quando a unidade que o abrigava foi reorganizada.<sup>15</sup> <span class="sel sel-v">Verificado</span> <strong>Implicação:</strong> tudo o que foi construído vira arquivo em um trimestre. <strong>A oportunidade no risco.</strong> A ancoragem múltipla é vendável desde o dia 1: item de pauta no conselho, radar co-assinado pela IM e memória de decisão tornam o escritório caro de matar, porque a morte fica visível. <span class="sel sel-i">Inferência</span></p>
+
+<h3>2. Risco financeiro</h3>
+<p><strong>O risco:</strong> corte no primeiro aperto de orçamento, porque o benefício matura fora do ano fiscal. <strong>Implicação:</strong> a função entra na fila do corte junto com tudo que não é receita. <strong>Evidência:</strong> a fração de empresas que planeja além de dez anos é de 1,2%, sinal de como o longo prazo perde a disputa anual por recurso.<sup>25</sup> <span class="sel sel-v">Verificado</span> <strong>A oportunidade no risco.</strong> A versão mínima (1 pessoa, planilha, calendário) é pequena demais para valer o desgaste do corte, e o balanço de decisões influenciadas dá ao patrocinador a defesa pronta. Sobreviver barato é parte do desenho, não acidente. <span class="sel sel-i">Inferência</span></p>
+
+<h3>3. Risco comercial e de marca interna</h3>
+<p><strong>O risco:</strong> virar "a área do slide bonito": muita presença, nenhuma decisão. <strong>Implicação:</strong> convites para palestra sobem, convites para reunião de decisão somem, e a área morre de sucesso aparente. <strong>Evidência:</strong> o formato mais famoso do campo, o relatório anual de tendências, foi aposentado pelo próprio autor por ter virado exatamente isso.<sup>25</sup> <span class="sel sel-v">Verificado</span> <strong>A oportunidade no risco.</strong> A disciplina do artefato de uma página com recomendação e gatilho é rara o suficiente para virar marca: o escritório que entrega decisão em cinco minutos de leitura ocupa um espaço que nenhuma consultoria de lâminas ocupa. <span class="sel sel-i">Inferência</span></p>
+
+<h3>4. Risco estratégico</h3>
+<p><strong>O risco:</strong> captura por uma diretoria: a oferta vira munição da agenda de um lado da casa. <strong>Implicação:</strong> perde a neutralidade que sustenta o serviço de arbitragem (problema 4) e vira parte da briga. <strong>A oportunidade no risco.</strong> A governança do radar único com camadas assinadas por áreas diferentes é o anticorpo: quanto mais cedo a IM e a Inovação assinam junto, mais cara fica a captura, e o escritório pode se vender explicitamente como o único território neutro da conversa sobre futuro. <span class="sel sel-i">Inferência</span></p>
+
+<h3>5. Risco operacional</h3>
+<p><strong>O risco:</strong> afogar em scanning: coletar sem sintetizar, o modo de falha do grupo de pior desempenho do estudo longitudinal, que percebia muito e decidia pouco.<sup>4</sup> <span class="sel sel-v">Verificado</span> <strong>Implicação:</strong> esforço alto, prateleira cheia, decisão nenhuma; pior que não existir, porque gera falsa sensação de cobertura. <strong>A oportunidade no risco.</strong> As perguntas focais e a taxa de descarte declarada viram argumento de qualidade: o escritório que mostra o que DECIDIU NÃO acompanhar prova critério, e critério é o que separa radar de colecionismo. <span class="sel sel-i">Inferência</span></p>
+
+<h3>6. Risco de governança e sucessão</h3>
+<p><strong>O risco:</strong> a oferta mora inteira na cabeça de uma pessoa; férias, saída ou promoção apagam a função. <strong>Implicação:</strong> o ativo real (método, rede, memória) sai pela porta. <strong>A oportunidade no risco.</strong> Os catálogos deste documento, os formatos fixos de artefato e a memória de decisão são, na prática, o plano de sucessão: uma função documentada em catálogo sobrevive à pessoa, e a documentação é subproduto do trabalho bem feito, não custo extra. O time estendido das áreas vizinhas é a redundância barata. <span class="sel sel-i">Inferência</span></p>
+</section>
+
+<!-- ============================== CEM PERGUNTAS ============================== -->
+<section id="p-cem" class="pane">
+<h2>Cem perguntas com resposta</h2>
+<p class="note">Instrumento de trabalho: perguntas curtas, respostas diretas em uma ou duas linhas, agrupadas por tema. As respostas remetem às abas onde o assunto está desenvolvido.</p>
+
+<h3>Fundação e método (1 a 15)</h3>
+<ol>
+<li><strong>Por que tratar o escritório como produto?</strong> Porque as duas mortes clássicas (biblioteca e evento) são falhas de fundação, e fundação é o problema que o método de produto resolve primeiro.<sup>1</sup></li>
+<li><strong>O que é o Foundation Sprint?</strong> Workshop de 2 dias: cliente, problema e diferenciação no dia 1; abordagem e hipótese fundadora no dia 2.<sup>1, 3</sup></li>
+<li><strong>O que é hipótese fundadora aqui?</strong> "Se eu entregar [artefato] a [cliente] antes de [rito], a decisão [X] muda." Escrita e datada.</li>
+<li><strong>O que é um tiny loop?</strong> O teste mais barato que valida um pedaço da hipótese: planilha antes de plataforma, uma diretoria antes de todas.<sup>1</sup></li>
+<li><strong>Quando rodar o sprint de fundação?</strong> Semana 1 ou 2 dos 90 dias, com patrocinador e áreas vizinhas na sala.</li>
+<li><strong>Quem participa?</strong> Patrocinador, dono do escritório, uma pessoa de IM, uma de Inovação, uma de Riscos. Cinco cabe na sala do método.</li>
+<li><strong>E se a hipótese morrer no dia 90?</strong> Vitória do método: pivotar cliente ou problema custou um trimestre, não um mandato.</li>
+<li><strong>O Click foi escrito para áreas internas?</strong> Não; foi escrito para produtos e startups. A aplicação aqui é tradução assumida como inferência.<sup>1</sup></li>
+<li><strong>Por que não começar pelo organograma?</strong> Porque estrutura sem cliente é a definição de biblioteca. Cliente, problema e diferencial vêm antes de caixa e cargo.</li>
+<li><strong>Qual o primeiro documento a produzir?</strong> A reconstituição das 3 últimas surpresas. Vende o escritório melhor que qualquer proposta.</li>
+<li><strong>O que é a pirâmide da oferta?</strong> Três andares de velocidade: contínuo (semanal), cadenciado (trimestral), anual. Instala-se de baixo para cima.</li>
+<li><strong>Por que não estrear pelos cenários?</strong> Maior prestígio, maior risco: a casa ainda não sabe usar, e um fracasso de estreia queima o mandato.</li>
+<li><strong>Quantos serviços no dia 1?</strong> Três em pé (S1, S10, S11) e dois em construção (S2, S7). O resto espera tração.</li>
+<li><strong>O que nunca fazer no trimestre 1?</strong> Newsletter, palestra inspiracional, plataforma, assinatura cara, atender todas as diretorias.</li>
+<li><strong>Uma frase para o elevador?</strong> "Ajudo a casa a decidir hoje o que vai doer em cinco anos, com uma página e uma data."</li>
+</ol>
+
+<h3>Clientes e venda interna (16 a 30)</h3>
+<ol start="16">
+<li><strong>Quem é o cliente fundador ideal?</strong> A diretoria com dor aguda recente, poder de assinatura e assento no rito mais próximo.</li>
+<li><strong>Board é bom cliente fundador?</strong> É o melhor âncora e o pior operacional: garante calendário, mas não roda tiny loop. Combine board como fiador e uma diretoria como cliente.</li>
+<li><strong>Como vender sem parecer ameaça à estratégia?</strong> Posicionando-se como quem TESTA o plano dela, nunca como plano concorrente.</li>
+<li><strong>E se a IM se sentir invadida?</strong> Radar único com a camada H1 assinada por ela. Fronteira por horizonte, crédito compartilhado.</li>
+<li><strong>E se a Inovação achar que compete pelo mesmo dinheiro?</strong> Separar verbas por escrito: opção não é inovação corrente. O escritório manda território, não disputa orçamento.</li>
+<li><strong>Qual o anti-cliente?</strong> Quem quer palestra. Aceitar no trimestre 1 posiciona a oferta como entretenimento.</li>
+<li><strong>O que o conselho quer de verdade?</strong> Não ser pego de surpresa em público e ter registro de que perguntou. A página semestral resolve os dois.</li>
+<li><strong>O que o gerente quer de verdade?</strong> Saber o que muda no plano DELE em uma página. Tendência sem implicação é ruído.</li>
+<li><strong>Como conquistar a linha de frente?</strong> Canal de sinal simples e crédito nominal quando o sinal vira alerta. Sensor reconhecido continua sensor.</li>
+<li><strong>Quantos clientes no ano 1?</strong> Um fundador no trimestre 1; três ou quatro no fim do ano, de preferência por procura espontânea.</li>
+<li><strong>Como lidar com pedido fora do catálogo?</strong> Recusar citando o catálogo e oferecendo o serviço mais próximo. Catálogo que não recusa não é catálogo.</li>
+<li><strong>O que fazer quando o patrocinador troca?</strong> Memória de decisão na mesa do sucessor na semana 1: o que a casa já decidiu com o escritório e o que está armado.</li>
+<li><strong>Venda por medo ou por ganância?</strong> Abrir por medo (surpresas) e sustentar por ganância (territórios, opções). Medo abre porta, ganância renova contrato.</li>
+<li><strong>Quem NÃO deve aprovar o radar?</strong> Ninguém sozinho. Radar aprovado por uma diretoria vira agenda dela.</li>
+<li><strong>Qual o sinal de tração real?</strong> Cliente volta sem ser procurado.<sup>1</sup> Convite para palestra não conta.</li>
+</ol>
+
+<h3>Serviços e artefatos (31 a 50)</h3>
+<ol start="31">
+<li><strong>Por que 12 serviços e não 5?</strong> São 5 no núcleo; os 7 de expansão existem no catálogo para dizer sim com prazo, em vez de improvisar.</li>
+<li><strong>Qual serviço nunca terceirizar?</strong> S8, o insumo dos ritos. É o diferencial inteiro.</li>
+<li><strong>Qual serviço é o mais barato de manter?</strong> S11, curadoria: transforma leitura que já acontece em valor visível.</li>
+<li><strong>Qual é o mais caro?</strong> S5, cenários: 8 a 12 semanas e o capital político de sentar diretoria em workshop.</li>
+<li><strong>O que é a ficha de sinal?</strong> Meia página: sinal, fonte, por que importa, horizonte, maturidade. A célula-tronco de todos os artefatos.</li>
+<li><strong>Radar único: por que único?</strong> Dois radares na mesma casa produzem disputa de narrativa na diretoria. Camadas assinadas resolvem a autoria.</li>
+<li><strong>Qual o tamanho certo do memorando de cenários?</strong> Cinco páginas mais anexos. O board lê cinco; o anexo existe para a confiança.</li>
+<li><strong>O que diferencia brief de território de ideia solta?</strong> Hipóteses testáveis e critério de sucesso escritos. Sem os dois, é opinião com capa.</li>
+<li><strong>Quantos gatilhos armar por diretoria?</strong> Cinco bem escritos valem mais que vinte vagos. Cada um com limiar numérico e dono.</li>
+<li><strong>O que é o túnel de vento?</strong> A estratégia vigente testada linha a linha contra cada cenário, com veredito: resiste, range ou quebra.<sup>16</sup></li>
+<li><strong>Quem escreve o memo de implicação por área?</strong> O escritório redige na língua da área, a área valida. Implicação imposta não gruda.</li>
+<li><strong>Qual a vida útil de um alerta?</strong> Dias. Alerta reaquecido é a morte da credibilidade do gênero.</li>
+<li><strong>Por que formato fixo?</strong> Reconhecimento de longe barateia leitura e constrói marca; é a lição da taxonomia estável da DHL.<sup>6</sup></li>
+<li><strong>Onde mora a memória de decisão?</strong> Num registro simples e permanente, com dono. É o patrimônio que sobrevive às pessoas.</li>
+<li><strong>Artefato pode ter selo de especulação?</strong> Deve, quando for o caso. Especulação rotulada é provocação útil; sem rótulo é fabricação.</li>
+<li><strong>O que fazer com sinal que a casa não quer ver?</strong> Registrar a recusa na memória com data. É o seguro de quem avisou.</li>
+<li><strong>Quantas versões do radar até plataforma?</strong> Quatro em planilha, no mínimo. Hábito primeiro, ferramenta depois.</li>
+<li><strong>O one-pager de decisão substitui estudo?</strong> Não: comprime o que se sabe e declara o que não se sabe. Honestidade cabe em uma página.</li>
+<li><strong>Quem pode pedir o S10?</strong> Qualquer diretoria, com cota (2 por mês). Cota transforma favor em serviço.</li>
+<li><strong>O que sai do deep dive além do dossiê?</strong> Incertezas para a rodada de cenários e, às vezes, um território para a Inovação. Dossiê é insumo, não fim.</li>
+</ol>
+
+<h3>Quick wins e 90 dias (51 a 65)</h3>
+<ol start="51">
+<li><strong>O que define quick win aqui?</strong> Custa dias, prova valor sozinho e destrava um artefato definitivo. As três condições juntas.</li>
+<li><strong>Qual é o primeiro?</strong> Reconstituição das 3 surpresas. Sempre.</li>
+<li><strong>Por que ela vende tanto?</strong> Usa a dor da própria casa: o sinal existia, alguém viu, ninguém decidiu. Nenhum slide externo compete com isso.</li>
+<li><strong>O que provar até o dia 30?</strong> Hipótese assinada, planilha com 20 sinais, duas datas no calendário.</li>
+<li><strong>Até o dia 60?</strong> Radar v1 citado em reunião de diretoria, comitê rodando, cinco gatilhos armados.</li>
+<li><strong>Até o dia 90?</strong> Dossiê entregue, brief no funil da Inovação, memorando piloto lido, balanço contra a hipótese.</li>
+<li><strong>O que fazer se um marco falhar?</strong> Adiar o mês seguinte e encolher escopo. Empilhar atraso é como as áreas novas afundam.</li>
+<li><strong>Por que zero software nos 90 dias?</strong> Ferramenta antes do hábito automatiza o que ainda não existe.<sup>1</sup></li>
+<li><strong>Cenários nos 90 dias?</strong> Não. Entram no calendário anual, terminando 2 a 3 meses antes do Planejamento Estratégico.</li>
+<li><strong>Quantos quick wins simultâneos?</strong> Um girando sempre; dois no máximo. Três é dispersão.</li>
+<li><strong>Quem faz os quick wins?</strong> O dono do escritório pessoalmente. Delegar a estreia é terceirizar a reputação.</li>
+<li><strong>O balanço do dia 90 é público?</strong> Interno e honesto: decisões tocadas com nome, hipótese julgada, proposta do trimestre 2.</li>
+<li><strong>E se não houver decisão influenciada no dia 90?</strong> Dizer exatamente isso e diagnosticar o elo quebrado (problema, artefato ou rito). Maquiar o primeiro balanço mata a métrica para sempre.</li>
+<li><strong>O trimestre 2 começa com o quê?</strong> Ativação de S4 em série, S6 e S9, mais o segundo cliente.</li>
+<li><strong>Quando propor a verba de opção?</strong> No primeiro ciclo orçamentário após os 90 dias, com o balanço na mão.</li>
+</ol>
+
+<h3>Diferenciação e fronteiras (66 a 80)</h3>
+<ol start="66">
+<li><strong>Qual é o 2x2 da oferta?</strong> Decisão da casa contra curiosidade geral; 5 a 15 anos contra trimestre. Vencedor: decisão + longo prazo.</li>
+<li><strong>O que é a Loserville daqui?</strong> Curiosidade + trimestre: a newsletter de tendências.<sup>1, 25</sup></li>
+<li><strong>Qual a vantagem injusta?</strong> Mandato H3 + assento nos ritos + contexto da casa. Ninguém mais tem os três.</li>
+<li><strong>Fronteira com a IM em uma frase?</strong> Ela responde "o que está acontecendo"; o escritório, "o que pode mudar o jogo". O tempo separa, o tema não.</li>
+<li><strong>Fronteira com Riscos?</strong> Riscos cuida do provável com histórico; o escritório, do plausível sem histórico. Por escrito, para não virar guerra de território.</li>
+<li><strong>Fronteira com Inovação?</strong> O escritório antecipa e entrega território; ela testa e devolve aprendizado. Handoff por brief, não por conversa.</li>
+<li><strong>Quando usar consultoria?</strong> Facilitação e método com transferência obrigatória. Nunca para o insumo dos ritos.</li>
+<li><strong>Como responder "ninguém acerta o futuro"?</strong> Correto e fora da proposta: o produto é reduzir o tempo entre choque e decisão, que é medível.</li>
+<li><strong>Como responder "já temos gestão de riscos"?</strong> As três últimas surpresas da casa vieram do plausível sem histórico, exatamente o que a matriz não cobre.</li>
+<li><strong>Como responder "isso é luxo de empresa grande"?</strong> A versão mínima é uma pessoa, uma planilha e duas datas. Luxo é a versão cara, que não é esta.</li>
+<li><strong>O braço de venture não resolve?</strong> Ele só vê o futuro que já virou startup investível; o padrão dominante no Brasil deixa o H3 descoberto.<sup>25</sup></li>
+<li><strong>Assinatura de tendências não substitui?</strong> Genérica por definição: não conhece a decisão da casa. Vira insumo do S11, não substituto.</li>
+<li><strong>O que copiar do bench público brasileiro?</strong> O acoplamento ao rito: Visão antes do Plano Diretor na Embrapa, PNE desdobrando em decenal.<sup>12, 13</sup></li>
+<li><strong>O que copiar da DHL?</strong> Série, taxonomia estável e radar alimentado por conversa com a ponta.<sup>6</sup></li>
+<li><strong>O que aprender com a Siemens?</strong> Que prestígio não protege: sem dono institucional e assento no orçamento, a prática morre na reorganização.<sup>15</sup></li>
+</ol>
+
+<h3>Operação e medição (81 a 90)</h3>
+<ol start="81">
+<li><strong>Qual reunião é inegociável?</strong> O comitê mensal de sinais. Sem ele, o contínuo para e o resto desidrata.</li>
+<li><strong>Qual é a regra de ouro do timing?</strong> Insumo pronto ANTES do rito. Durante, é opinião.</li>
+<li><strong>Quantas métricas acompanhar?</strong> Sete no painel, uma acima de todas: decisões influenciadas com nome e data.</li>
+<li><strong>Por que medir taxa de descarte?</strong> Porque critério declarado é o que separa radar de colecionismo.</li>
+<li><strong>O que é o acerto retrospectivo?</strong> Balanço anual do que o radar disse contra o que aconteceu. Quase ninguém no campo faz; fazer é diferencial.<sup>25</sup></li>
+<li><strong>Como medir letramento?</strong> Pelo comportamento: áreas que mandam sinal e usam vocabulário sem serem cobradas.</li>
+<li><strong>Reunião de comitê pode passar de 1 hora?</strong> Não. Pauta fixa, fichas lidas antes, decisão de classificação na sala.</li>
+<li><strong>Quem escreve a ata que vira memória?</strong> O escritório, no dia. Memória escrita depois é reconstrução, não registro.</li>
+<li><strong>O que reportar ao patrocinador por mês?</strong> Uma página: marcos, decisões tocadas, próximo tiny loop, pedido de desbloqueio se houver.</li>
+<li><strong>Quando o escritório está pronto para crescer?</strong> Quando a demanda espontânea estourar a capacidade com o painel verde. Crescer antes disso é inchar.</li>
+</ol>
+
+<h3>Armadilhas e sobrevivência (91 a 100)</h3>
+<ol start="91">
+<li><strong>A armadilha número 1?</strong> Perceber sem decidir: o grupo que faz isso destrói valor em vez de criar.<sup>4</sup></li>
+<li><strong>A número 2?</strong> Estrear pelo produto de prestígio (cenários) sem a base contínua instalada.</li>
+<li><strong>A número 3?</strong> Virar palco: palestras sobem, decisões somem.</li>
+<li><strong>Como não virar a área do não?</strong> Todo alerta com recomendação e todo risco com a oportunidade dentro. Profeta de desgraça perde audiência no segundo aviso.</li>
+<li><strong>Como sobreviver à troca de CEO?</strong> Ancoragem múltipla + memória de decisão na mesa do novo na primeira semana.</li>
+<li><strong>O que fazer com previsão errada?</strong> Publicar no acerto retrospectivo com o que mudou no método. Erro admitido compra licença para os próximos.</li>
+<li><strong>Pode usar IA generativa na oferta?</strong> No rascunho, na varredura e na síntese, com verificação humana e selo de origem; a comoditização do documento valoriza justamente o que a máquina não faz: facilitação, contexto e assinatura.<sup>25</sup></li>
+<li><strong>Qual o maior erro de comunicação?</strong> Jargão. A casa não precisa aprender a palavra backcasting para decidir; o escritório precisa aprender a língua da casa.</li>
+<li><strong>O que garante a segunda edição de tudo?</strong> Cadência no calendário e formato fixo: a série é o produto, o número avulso é amostra.<sup>6</sup></li>
+<li><strong>Se só uma coisa deste documento sobreviver, qual deve ser?</strong> A hipótese fundadora escrita e julgada a cada 90 dias. Tudo o mais se reconstrói a partir dela.</li>
+</ol>
+</section>
+
+<!-- ============================== GLOSSÁRIO ============================== -->
+<section id="p-gloss" class="pane">
+<h2>Glossário da oferta</h2>
+<table>
+<thead><tr><th>Termo</th><th>Definição</th></tr></thead>
+<tbody>
+<tr><td><strong>Oferta</strong></td><td>O conjunto problema + serviço + artefato + rito que o escritório provê.<br><span class="note">É o cardápio do restaurante, não a cozinha.</span></td></tr>
+<tr><td><strong>Cliente fundador</strong></td><td>A primeira diretoria atendida, escolhida por dor, poder e assento no rito.<sup>1</sup><br><span class="note">O primeiro freguês, que ajuda a acertar o prato antes de abrir o salão.</span></td></tr>
+<tr><td><strong>Hipótese fundadora</strong></td><td>Frase testável que amarra artefato, cliente, rito e decisão esperada.<sup>1</sup><br><span class="note">A aposta escrita num papel para poder conferir depois.</span></td></tr>
+<tr><td><strong>Foundation Sprint</strong></td><td>Workshop de 2 dias de Knapp e Zeratsky para fundar produto: básico, diferenciação, abordagem.<sup>1, 3</sup><br><span class="note">Dois dias para combinar o jogo antes de entrar em campo.</span></td></tr>
+<tr><td><strong>Tiny loop</strong></td><td>Experimento minúsculo que testa a hipótese antes de construir grande.<sup>1</sup><br><span class="note">Provar a sopa na colher antes de servir o caldeirão.</span></td></tr>
+<tr><td><strong>2x2 de diferenciação</strong></td><td>Mapa de dois eixos onde a oferta deve ocupar sozinha o quadrante que importa.<sup>1, 2</sup><br><span class="note">O desenho que mostra por que você e não os outros.</span></td></tr>
+<tr><td><strong>Loserville</strong></td><td>No Click, o quadrante onde vivem as alternativas indiferenciadas; aqui, a newsletter de tendências.<sup>2</sup><br><span class="note">O bairro para onde vai quem é igual a todo mundo.</span></td></tr>
+<tr><td><strong>Quick win</strong></td><td>Vitória de dias que prova valor sozinha e destrava um artefato definitivo.<br><span class="note">O gol no primeiro tempo que faz o time acreditar.</span></td></tr>
+<tr><td><strong>Radar único</strong></td><td>O mapa de tendências da casa em três camadas de horizonte, co-assinado.<br><span class="note">Um mapa só para todo mundo brigar menos e enxergar mais.</span></td></tr>
+<tr><td><strong>Ficha de sinal</strong></td><td>Meia página que registra um sinal fraco com fonte, horizonte e maturidade.<br><span class="note">A ficha do paciente na entrada do hospital.</span></td></tr>
+<tr><td><strong>Brief de território</strong></td><td>Documento de 2 a 3 páginas que entrega uma oportunidade H3 testável à Inovação.<br><span class="note">O mapa do tesouro com as coordenadas e o teste do metal.</span></td></tr>
+<tr><td><strong>Túnel de vento</strong></td><td>Teste da estratégia vigente contra cada cenário, linha a linha.<sup>16</sup><br><span class="note">Sacudir o avião no chão para não descobrir a rachadura no ar.</span></td></tr>
+<tr><td><strong>Gatilho</strong></td><td>Regra escrita "se X passar do limiar, fazemos Y", com dono.<br><span class="note">O alarme com o número do bombeiro já colado do lado.</span></td></tr>
+<tr><td><strong>Wild card</strong></td><td>Evento de baixa probabilidade e alto impacto que merece resposta ensaiada.<br><span class="note">O raro que muda tudo, tratado antes de acontecer.</span></td></tr>
+<tr><td><strong>Memória de decisão</strong></td><td>Registro datado do aceito, do recusado e dos porquês.<br><span class="note">O caderno que impede a casa de discutir a mesma coisa todo ano.</span></td></tr>
+<tr><td><strong>Letramento em futuros</strong></td><td>Capacitação curta que dá vocabulário e multiplica sensores.<br><span class="note">Ensinar todo mundo a ler o céu, não só o meteorologista.</span></td></tr>
+<tr><td><strong>Horizonte 3</strong></td><td>O prazo de 5 a 15 anos onde nascem rupturas de modelo; o mandato nobre do escritório.<br><span class="note">O longe que parece longe até chegar de uma vez.</span></td></tr>
+<tr><td><strong>Pergunta focal</strong></td><td>A pergunta da vez, vinda dos ritos, que orienta scanning e aprofundamento.<br><span class="note">A lanterna: sem ela, procura-se tudo e acha-se nada.</span></td></tr>
+<tr><td><strong>Acerto retrospectivo</strong></td><td>Balanço anual e honesto do que o radar disse contra o que aconteceu.<br><span class="note">Conferir o bilhete depois do sorteio, em público.</span></td></tr>
+<tr><td><strong>Verba de opção</strong></td><td>Fatia pequena do investimento (1 a 3%) reservada a apostas com gatilho de abandono.<br><span class="note">O dinheiro do talvez, com regra para deixar de ser talvez.</span></td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- ============================== CHECK ============================== -->
+<section id="p-check" class="pane">
+<h2>O veredito do advogado à vista</h2>
+<p class="note">Esta seção ataca o próprio documento. O que sobreviver pode ir à diretoria; o que não sobreviver, melhor descobrir aqui.</p>
+
+<h3>A acusação</h3>
+<div class="card">
+<p><strong>Primeira: o documento é quase todo Inferência.</strong> Dos selos aplicados, a maioria esmagadora marca síntese própria. Catálogos, quick wins, plano de 90 dias e 2x2: nada disso foi testado nesta casa. É um projeto vestido de anatomia.</p>
+<p><strong>Segunda: a analogia fundadora é importada sem evidência.</strong> O Click foi escrito para startups e produtos.<sup>1</sup> Não existe estudo mostrando que Foundation Sprint funda áreas internas de foresight. A lente pode ser só uma metáfora simpática.</p>
+<p><strong>Terceira: os quick wins podem canibalizar a profundidade.</strong> Dez vitórias rápidas podem viciar a área em açúcar: entregas pequenas, aplausos rápidos, e o trabalho lento de cenário sempre adiado.</p>
+<p><strong>Quarta: cem respostas curtas correm o risco de raso.</strong> Duas linhas por pergunta não resolvem pergunta difícil; resolvem a ansiedade de quem pergunta.</p>
+<p><strong>Quinta: as fontes de bench são recicladas dos documentos irmãos.</strong> A varredura das 27 casas foi feita para outro documento, no mesmo dia, pelo mesmo autor. Não houve pesquisa nova para ESTE recorte.</p>
+</div>
+
+<h3>A defesa</h3>
+<div class="card">
+<p><strong>Sobre ser quase todo Inferência.</strong> Correto, declarado no Destaque e irremediável: oferta que ainda não existe não tem como ter sido verificada. A honestidade está na separação rigorosa: o que é fato do campo carrega fonte numerada; o que é desenho carrega selo de Inferência e uma data de julgamento, o dia 90. O documento não pede fé, pede um trimestre de teste barato.</p>
+<p><strong>Sobre a analogia importada.</strong> Aceita em parte. A defesa não é que o método esteja provado para este uso, e sim que os mecanismos que ele ataca (fundação sem cliente, construção antes do teste, indiferenciação) são exatamente as causas de morte documentadas das áreas de futuros. E o custo do erro é pequeno por construção: se a lente falhar, perdeu-se um workshop de dois dias, não um ano.</p>
+<p><strong>Sobre o açúcar dos quick wins.</strong> A acusação acerta o risco e o documento o trata estruturalmente: cada quick win só entra na lista se destravar um artefato definitivo, os cenários têm vaga reservada no calendário anual, e o marco do mês 3 exige dossiê e brief, que são entregas lentas. O açúcar está dosado para viciar a casa no hábito, não a área na plateia.</p>
+<p><strong>Sobre as respostas curtas.</strong> As cem perguntas são instrumento de trabalho, não tratado: cada resposta aponta a aba onde o assunto é desenvolvido. A alternativa real a uma resposta curta não era uma resposta longa; era a pergunta sem resposta nenhuma.</p>
+<p><strong>Sobre as fontes recicladas.</strong> Verdade, e é desenho de corpus, não preguiça: as URLs foram verificadas hoje, uma a uma, para os documentos irmãos, e o protocolo da casa manda reusar corpus canônico em vez de gerar pesquisa divergente no mesmo dia. A fonte 25 declara o parentesco explicitamente.</p>
+</div>
+
+<h3>Sentença</h3>
+<div class="alerta">
+<p><strong>Como anatomia, este documento é honesto; como projeto, é falseável, e isso é o melhor que um projeto pode ser.</strong> A tese central (oferta como produto, com cliente fundador, hipótese escrita e teste em 90 dias) custa uma pessoa e um trimestre para ser julgada com os critérios que o próprio documento fixa. Recomendação: executar o mês 1 como está escrito e julgar a hipótese no dia 90 com o painel de métricas na mão. Se o balanço não mostrar nenhuma decisão tocada, o documento manda dizer isso em voz alta, e essa cláusula é a maior prova de boa-fé que ele contém. <span class="sel sel-i">Inferência</span></p>
+</div>
+
+<h3>Nota de densidade e conformidade</h3>
+<p class="note">Ataque de superficialidade aplicado aba a aba: frases genéricas e enchimento cortados na revisão; toda analogia acompanha o fato que ilustra; os 12 problemas, 12 serviços, 15 artefatos e 10 quick wins têm colunas completas sem célula vazia. Selos: juízos e agregados como Inferência; fatos com fonte numerada e URL verificada em 29 de agosto de 2026. Travessão, meia-risca e seta: zero no arquivo. Todas as 25 fontes citadas ao menos uma vez no corpo.</p>
+
+<h3>Adendo da rodada 2 (2026-09-01)</h3>
+<div class="card">
+<p><strong>O ataque.</strong> A segunda leitura adversarial procurou o que a primeira deixou passar e achou quatro coisas. Primeira: o documento mandava rodar um Foundation Sprint e uma reconstituição de surpresas sem entregar o roteiro de nenhum dos dois, a lacuna de mecanismo clássica: quem fosse executar teria de inventar a sala. Segunda: a hipótese fundadora só existia como fórmula abstrata, sem um exemplo preenchido que calibrasse o nível de concretude exigido. Terceira: o plano de 90 dias dizia o que entregar por semana, mas não como a semana do dono se organiza para caber, e agenda é onde plano de área nova morre primeiro. Quarta: um erro de grafia na semana 11.</p>
+<p><strong>A correção.</strong> As quatro entraram nesta v2: o roteiro hora a hora do sprint com a regra de decisão (aba O Clique), o roteiro de 5 perguntas da reconstituição com a leitura dos elos quebrados (aba Quick wins), o exemplo preenchido da hipótese, marcado como Especulativo por ser ilustração (aba O Clique), a semana típica do dono com a proporção 60/20/20 (aba 90 dias), e a grafia corrigida. Os roteiros são adaptação própria, não testada nesta casa, e seguem selados como Inferência: custam uma sala e dois dias para serem julgados. <span class="sel sel-i">Inferência</span></p>
+</div>
+
+<h3>Lista de verificação da oferta</h3>
+<table>
+<thead><tr><th>&nbsp;</th><th>Item</th><th>Se a resposta for não</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>A hipótese fundadora está escrita e assinada?</td><td>Rodar o Foundation Sprint antes de qualquer entrega</td></tr>
+<tr><td>2</td><td>O cliente fundador está nomeado (uma diretoria, não "a empresa")?</td><td>Aplicar os três filtros da aba Clientes</td></tr>
+<tr><td>3</td><td>As 3 últimas surpresas foram reconstituídas?</td><td>É o quick win 1; fazer nesta quinzena</td></tr>
+<tr><td>4</td><td>Existem duas datas do planejamento no calendário?</td><td>Negociar antes de produzir conteúdo</td></tr>
+<tr><td>5</td><td>Cada serviço ativo tem artefato de formato fixo?</td><td>Congelar o formato antes da segunda entrega</td></tr>
+<tr><td>6</td><td>Há um quick win girando agora?</td><td>Escolher um da lista e dar dono e data</td></tr>
+<tr><td>7</td><td>O radar tem camadas co-assinadas com a IM?</td><td>Negociar a fronteira por horizonte antes da v2</td></tr>
+<tr><td>8</td><td>Os gatilhos têm limiar numérico e dono?</td><td>Reescrever os vagos; gatilho vago não dispara</td></tr>
+<tr><td>9</td><td>A memória de decisão registra também as recusas?</td><td>Começar pelo balanço dos 90 dias</td></tr>
+<tr><td>10</td><td>O balanço do dia 90 tem data marcada desde o dia 1?</td><td>Marcar agora; julgamento sem data não acontece</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- ============================== FONTES ============================== -->
+<section id="p-fontes" class="pane">
+<h2>Fontes</h2>
+<div class="card">
+<p><strong>Nota de método.</strong> <span class="sel sel-v">Verificado</span> indica afirmação apoiada em fonte publicada e identificada, com URL acessada em 29 de agosto de 2026. <span class="sel sel-i">Inferência</span> indica raciocínio construído a partir de fontes verificadas, sem que nenhuma o afirme diretamente; todo o desenho da oferta está nesta categoria. <span class="sel sel-e">Especulativo</span> indica hipótese sem base empírica direta. Agregados calculados e juízos são sempre Inferência.</p>
+</div>
+
+<h3>Método de fundação (Click e Foundation Sprint)</h3>
+<ol>
+<li>Knapp, J.; Zeratsky, J. <em>Click: How to Make What People Want.</em> 2025. Livro e material oficial da Character Capital. <a href="https://www.character.vc/click">character.vc/click</a></li>
+<li>Entrevista de Jake Knapp e John Zeratsky sobre o Foundation Sprint: o workshop de 2 dias, o 2x2 de diferenciação e os tiny loops. Lenny's Newsletter. <a href="https://www.lennysnewsletter.com/p/the-foundation-sprint-jake-knapp-and-john-zeratsky">lennysnewsletter.com</a></li>
+<li>Estrutura do Foundation Sprint (dia 1: básico e diferenciação; dia 2: abordagem e hipótese fundadora). <a href="https://design-sprint.com/foundation-sprint/">design-sprint.com/foundation-sprint</a></li>
+</ol>
+
+<h3>Evidência do campo de foresight</h3>
+<ol start="4">
+<li>Rohrbeck, R.; Kum, M. E. <em>Corporate foresight and its impact on firm performance: A longitudinal analysis.</em> Technological Forecasting and Social Change, 2018: 83 empresas, vigilantes com 33% mais lucratividade e 75% de crescimento de valor; o grupo que percebia sem decidir encolheu 6%. <a href="https://www.sciencedirect.com/science/article/pii/S0040162517302287">sciencedirect.com</a></li>
+<li>Rohrbeck, R. <em>Corporate Foresight: Towards a Maturity Model for the Future Orientation of a Firm.</em> Springer: o valor do foresight aparece acoplado a estratégia e inovação, nunca como ilha. <a href="https://link.springer.com/book/10.1007/978-3-7908-2626-5">springer.com</a></li>
+<li>DHL. <em>Logistics Trend Radar 7.0</em> (2024): 40 tendências, taxonomia estável, cadência aproximadamente bienal, alimentado por Innovation Centers com mais de 13.000 visitantes por ano. <a href="https://www.dhl.com/content/dam/dhl/global/csi/documents/pdf/glo-csi-logistics-trend-radar-7-0.pdf">PDF oficial</a>, <a href="https://www.dhl.com/br-en/home/innovation-in-logistics/innovation-center-americas.html">Innovation Center Americas</a></li>
+<li>Swiss Re. <em>SONAR: New emerging risk insights</em>, edições anuais: sinais captados bottom-up de subscritores, especialistas e academia. <a href="https://www.swissre.com/institute/research/sonar/sonar2025.html">swissre.com</a></li>
+<li>Munich Re e ERGO. <em>Tech Trend Radar</em>, radar anual de tendências para o setor segurador, construído em conjunto pelas empresas do grupo. <a href="https://www.munichre.com/en/risks/emerging-risks.html">munichre.com</a></li>
+<li>Rohrbeck, R. et al. <em>IT Tools for Foresight: The Integrated Insight and Response System of Deutsche Telekom Innovation Laboratories.</em> Technological Forecasting and Social Change: o elo entre sinal, interpretação e gatilho de resposta organizacional. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0040162513002527">sciencedirect.com</a></li>
+</ol>
+
+<h3>Bench Brasil (varredura de 29 de agosto de 2026)</h3>
+<ol start="10">
+<li>Sicredi Pioneira. <em>Foresight, Relatório de Cenários Futuros</em>: 6 cenários, 27 tendências, 32 sinais fracos, 37 cisnes negros mundiais e 11 locais, 45 workshops com cerca de 980 participantes. <a href="https://sicredipioneira.com.br/files/estrategia-pioneira-foresight-relatorio.pdf">PDF</a></li>
+<li>Banco do Brasil. Estratégia Corporativa 2026-2030 com etapa formal de Tendências e Panoramas dentro do rito. <a href="https://contec.org.br/banco-do-brasil-apresenta-plano-de-estrategia-corporativa-bb/">contec.org.br</a></li>
+<li>Embrapa. Sistema Agropensa (desde 2013): Documento Visão alimentando o Plano Diretor; plataforma contínua desde 2022. <a href="https://www.embrapa.br/en/agropensa/sistema-agropensa">embrapa.br</a></li>
+<li>EPE e MME. Plano Nacional de Energia 2050, desdobrado em planos decenais, com painel de acompanhamento. <a href="https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/Plano-Nacional-de-Energia-2050">epe.gov.br</a></li>
+<li>BASF. BASF New Business GmbH: Industry Foresight Team como primeira etapa do funil que vai de foresight a scouting, incubação e expansão. <a href="https://www.basf.com/sa/en/careers/why-join-basf/basf-in-germany/basf-group-companies/basf-new-business-gmbh">basf.com</a>, <a href="https://4cf.eu/corporate-foresight-basf/">4cf.eu</a></li>
+<li>Siemens. <em>Pictures of the Future</em>: metodologia documentada em artigo IEEE; publicação ausente das páginas atuais da empresa, sem anúncio de encerramento. <a href="https://ieeexplore.ieee.org/document/4077462/">ieeexplore.ieee.org</a>, <a href="https://www.siemens.com/global/en/company/innovation/research-development.html">siemens.com</a></li>
+<li>Shell Brasil. Primeiro estudo de cenários dedicado a um único país em mais de 50 anos da prática: Sky 2050 e Arquipélagos, junho de 2024. <a href="https://www.shell.com.br/imprensa/press-releases-2024/cenarios-da-shell-tracam-possiveis-caminhos-para-o-brasil-atingir-metas-climaticas.html">shell.com.br</a></li>
+<li>Petrobras. Plano Estratégico 2050 e Plano de Negócios quinquenal, aprovados em novembro de 2024, com teste de resiliência em cenários de preço. <a href="https://mzgroup.com.br/fatosrelevantes/fato-relevante-petrobras-aprova-plano-estrategico-2050-e-plano-de-negocios-2025-2029/">fato relevante</a></li>
+<li>Grupo Boticário. Roadmap tecnológico <em>Futuro da Beleza</em> com a consultoria Inventta, desde 2017, ancorado em P&amp;D. <a href="https://forbes.com.br/forbes-collab/2023/06/rumo-futuro-grupo-boticario-prepara-nova-era-de-cosmeticos-personalizados/">forbes.com.br</a></li>
+<li>Bradesco. inovabra e o relatório trimestral <em>Follow the Money.</em> <a href="https://www.meioemensagem.com.br/marketing/as-ambicoes-do-inovabra-e-seu-novo-head-de-negocios-e-solucoes">meioemensagem.com.br</a></li>
+</ol>
+
+<h3>Prática e literatura de apoio</h3>
+<ol start="20">
+<li>BCG. <em>Navigating the Future with Strategic Foresight</em> (2025): cadência regular e integração ao planejamento como fatores de valor. <a href="https://www.bcg.com/publications/2025/navigating-the-future-with-strategic-foresight">bcg.com</a></li>
+<li>ITONICS. <em>Strategic Foresight Guide:</em> o ciclo scanning, análise, cenários, implicações e integração à estratégia. <a href="https://www.itonics-innovation.com/guides/strategic-foresight">itonics-innovation.com</a></li>
+<li>SENAI e CNI. <em>Mapa do Trabalho Industrial 2025-2027:</em> prospectiva com variável de decisão única (quantos formar, em quê, onde). <a href="https://www.portaldaindustria.com.br/canais/observatorio-nacional-da-industria/produtos/mapa-do-trabalho-industrial-2025-2027/">portaldaindustria.com.br</a></li>
+<li>BNDES. <em>Visão 2035: Brasil, país desenvolvido</em> (2018): exercício de cenários sem edição sucessora, o contraexemplo de cadência. <a href="https://web.bndes.gov.br/bib/jspui/bitstream/1408/16040/3/PRLiv214078_Visao_2035_compl_P.pdf">PDF</a></li>
+<li>Natura. Visão 2050 atualizada em 2025: o horizonte mais longo do bench privado brasileiro, morando em sustentabilidade. <a href="https://exame.com/esg/natura-atualiza-visao-para-2050-e-mira-negocio-100-regenerativo/">exame.com</a></li>
+<li>Documentos irmãos deste projeto, ambos de 29 de agosto de 2026, com corpus de 95 e 96 fontes verificadas: <em>Anatomia Profunda: Design de Futuros e Foresight</em> (a disciplina, o quadro CVM 193/244, o caso FTSG do fim do relatório anual de tendências, os padrões do bench de 27 casas e a estatística de horizonte de planejamento) e <em>Anatomia Profunda: Escritório de Foresight, Inteligência e Tendências</em> (o organismo, a conta da versão barata contra a cara). Pasta Pesquisas deste projeto.</li>
+</ol>
+</section>
+
+<footer>A Anatomia Profunda &middot; A Oferta do Escritório de Futuros &middot; última atualização 2026-09-01 &middot; Uso interno</footer>
+</div>
+</body>
+</html>

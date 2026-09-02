@@ -1,0 +1,6 @@
+# Acervo pesado de PDFs (5,5 GB) — fica fora do git; mora no drive
+EBF_Acervo/
+
+# Temporários
+*.tmp
+~$*
