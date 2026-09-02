@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Anatomia Profunda: A Oferta do Escritório de Futuros</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,'Times New Roman',serif;font-size:15px;line-height:1.7;color:#1a1a1a;background:#fff}
+.W{max-width:1140px;margin:0 auto;padding:2.5rem 2rem 4rem}
+h1{font-size:26px;font-weight:700;line-height:1.2;margin-bottom:6px;letter-spacing:-.5px}
+h2{font-size:19px;font-weight:700;margin:24px 0 10px;padding-bottom:6px;border-bottom:1px solid #e0e0e0}
+h3{font-size:15px;font-weight:700;margin:16px 0 6px}
+h4{font-size:14px;font-weight:700;margin:12px 0 4px;color:#333}
+.lbl{font-family:system-ui,-apple-system,sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#999;margin-bottom:2px}
+.meta{font-family:system-ui,sans-serif;font-size:12px;color:#999;margin-bottom:24px}
+a{color:#1a5276;text-decoration:none}a:hover{text-decoration:underline}
+.red{color:#b71c1c}
+.accent{border-left:3px solid #b71c1c;padding-left:12px;margin:10px 0}
+.num{font-family:system-ui,sans-serif;font-size:30px;font-weight:700;color:#b71c1c;display:block;line-height:1.1;margin:4px 0}
+.src{font-family:system-ui,sans-serif;font-size:11px;color:#999}
+.tabs{display:grid;grid-template-columns:repeat(10,max-content);justify-content:center;column-gap:22px;row-gap:3px;border-bottom:2px solid #1a1a1a;margin:0 0 28px;padding-bottom:8px;background:#fff;position:sticky;top:0;z-index:10}
+@media(max-width:900px){.tabs{grid-template-columns:repeat(5,max-content);column-gap:18px}}
+@media(max-width:560px){.tabs{grid-template-columns:repeat(3,max-content);column-gap:14px}}
+.tab{font-family:system-ui,sans-serif;font-size:13.5px;font-weight:500;padding:2px 0;background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap;color:#777;transition:.15s;display:inline-block}
+.tab:hover{color:#1a1a1a}
+.tabr{position:absolute;width:0;height:0;opacity:0;pointer-events:none}
+.pane{display:none}
+#r-dest:checked~#p-dest,#r-entenda:checked~#p-entenda,#r-click:checked~#p-click,#r-clientes:checked~#p-clientes,#r-prob:checked~#p-prob,#r-serv:checked~#p-serv,#r-ofertas:checked~#p-ofertas,#r-arte:checked~#p-arte,#r-quick:checked~#p-quick,#r-plano:checked~#p-plano,#r-dif:checked~#p-dif,#r-oper:checked~#p-oper,#r-comp:checked~#p-comp,#r-custo:checked~#p-custo,#r-met:checked~#p-met,#r-risco:checked~#p-risco,#r-cem:checked~#p-cem,#r-gloss:checked~#p-gloss,#r-check:checked~#p-check,#r-fontes:checked~#p-fontes{display:block}
+#r-dest:checked~.tabs [for=r-dest],#r-entenda:checked~.tabs [for=r-entenda],#r-click:checked~.tabs [for=r-click],#r-clientes:checked~.tabs [for=r-clientes],#r-prob:checked~.tabs [for=r-prob],#r-serv:checked~.tabs [for=r-serv],#r-ofertas:checked~.tabs [for=r-ofertas],#r-arte:checked~.tabs [for=r-arte],#r-quick:checked~.tabs [for=r-quick],#r-plano:checked~.tabs [for=r-plano],#r-dif:checked~.tabs [for=r-dif],#r-oper:checked~.tabs [for=r-oper],#r-comp:checked~.tabs [for=r-comp],#r-custo:checked~.tabs [for=r-custo],#r-met:checked~.tabs [for=r-met],#r-risco:checked~.tabs [for=r-risco],#r-cem:checked~.tabs [for=r-cem],#r-gloss:checked~.tabs [for=r-gloss],#r-check:checked~.tabs [for=r-check],#r-fontes:checked~.tabs [for=r-fontes]{color:#1a1a1a;border-bottom-color:#b71c1c;font-weight:700}
+.card{background:#f9f9f9;border:1px solid #e8e8e8;border-radius:4px;padding:10px 14px;margin-bottom:8px}
+.tl{position:relative;padding-left:24px;margin:16px 0}
+.tl::before{content:"";position:absolute;left:7px;top:0;bottom:0;width:2px;background:#ddd}
+.tl-item{position:relative;margin-bottom:12px;padding-left:4px}
+.tl-dot{position:absolute;left:-21px;top:7px;width:12px;height:12px;border-radius:6px;background:#b71c1c;border:2px solid #fff;box-shadow:0 0 0 1px #ddd}
+blockquote{border-left:3px solid #ddd;padding:8px 16px;margin:12px 0;color:#444;font-style:italic;font-size:14px}
+footer{margin-top:3rem;padding-top:1rem;border-top:1px solid #e0e0e0;font-family:system-ui,sans-serif;font-size:11px;color:#999;text-align:center}
+ul{padding-left:1.3rem;margin-bottom:10px}li{margin-bottom:6px}
+ol{padding-left:1.4rem;margin-bottom:10px}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:13px;font-family:system-ui,sans-serif;line-height:1.45}
+th,td{border:1px solid #e6e6e6;padding:6px 9px;text-align:left;vertical-align:top}
+thead th{background:#1a1a1a;color:#fff;font-weight:700;border-color:#1a1a1a}
+tbody tr:nth-child(even){background:#f9f9f9}
+.kpi{background:#fff;border:1px solid #e8e8e8;border-radius:6px;padding:12px 14px;text-align:center}
+.kpi small{font-family:system-ui,sans-serif;font-size:11px;color:#666;display:block;line-height:1.35;margin-top:2px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}
+.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+@media(max-width:600px){.g4{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}}
+.sel{display:inline-block;font-family:system-ui,sans-serif;font-size:9px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:1px 6px;border-radius:10px;vertical-align:1px;white-space:nowrap}
+.sel-v{background:#e6f2ea;color:#1b6b39}.sel-i{background:#eaf0fb;color:#28477f}.sel-e{background:#f4eee6;color:#8a5a1f}
+sup{color:#999;font-size:.72em}
+.note{font-family:system-ui,sans-serif;font-size:12px;color:#888;margin-top:4px}
+.alerta{background:#fdf6ec;border:1px solid #e8d9c0;border-left:3px solid #8a5a1f;border-radius:4px;padding:9px 13px;margin:12px 0;font-family:system-ui,sans-serif;font-size:12.5px;color:#5c4114}
+.gab{background:#f4f7f4;border:1px solid #d8e4d8;border-left:3px solid #1b6b39;border-radius:4px;padding:10px 14px;margin:10px 0}
+.gab h4{margin-top:0;color:#1b6b39}
+</style>
+</head>
+<body>
+<div class="W">
+
+<input class="tabr" type="radio" name="tab" id="r-dest" checked>
+<input class="tabr" type="radio" name="tab" id="r-entenda">
+<input class="tabr" type="radio" name="tab" id="r-click">
+<input class="tabr" type="radio" name="tab" id="r-clientes">
+<input class="tabr" type="radio" name="tab" id="r-prob">
+<input class="tabr" type="radio" name="tab" id="r-serv">
+<input class="tabr" type="radio" name="tab" id="r-ofertas">
+<input class="tabr" type="radio" name="tab" id="r-arte">
+<input class="tabr" type="radio" name="tab" id="r-quick">
+<input class="tabr" type="radio" name="tab" id="r-plano">
+<input class="tabr" type="radio" name="tab" id="r-dif">
+<input class="tabr" type="radio" name="tab" id="r-oper">
+<input class="tabr" type="radio" name="tab" id="r-comp">
+<input class="tabr" type="radio" name="tab" id="r-custo">
+<input class="tabr" type="radio" name="tab" id="r-met">
+<input class="tabr" type="radio" name="tab" id="r-risco">
+<input class="tabr" type="radio" name="tab" id="r-cem">
+<input class="tabr" type="radio" name="tab" id="r-gloss">
+<input class="tabr" type="radio" name="tab" id="r-check">
+<input class="tabr" type="radio" name="tab" id="r-fontes">
+
+<p class="lbl">A Anatomia Profunda &middot; Diagnóstico funcional &middot; Uso interno</p>
+<h1>A oferta do escritório de futuros: venda respostas com data, não métodos com sigla</h1>
+<p class="meta">Última atualização 2026-09-02 &middot; v3, reescrita profunda com pesquisa dedicada: o método do Foundation Sprint na fonte oficial, os gabaritos públicos de artefatos (Reino Unido, OCDE, Singapura, PNUD), o bench do que 11 casas de foresight vendem e por quanto, e os custos reais de montar a função no Brasil &middot; 44 fontes com URL e data &middot; Documento irmão de "Escritório de Foresight, Inteligência e Tendências" (o organismo) e de "Design de Futuros e Foresight" (a disciplina)</p>
+
+<nav class="tabs">
+  <label class="tab" for="r-dest">Destaque</label>
+  <label class="tab" for="r-entenda">Entenda</label>
+  <label class="tab" for="r-click">O Clique</label>
+  <label class="tab" for="r-clientes">Clientes</label>
+  <label class="tab" for="r-prob">Problemas</label>
+  <label class="tab" for="r-serv">Serviços</label>
+  <label class="tab" for="r-ofertas">Bench de ofertas</label>
+  <label class="tab" for="r-arte">Artefatos</label>
+  <label class="tab" for="r-quick">Quick wins</label>
+  <label class="tab" for="r-plano">90 dias</label>
+  <label class="tab" for="r-dif">Diferenciação</label>
+  <label class="tab" for="r-oper">Operação</label>
+  <label class="tab" for="r-comp">Competências</label>
+  <label class="tab" for="r-custo">Custo</label>
+  <label class="tab" for="r-met">Métricas</label>
+  <label class="tab" for="r-risco">Riscos</label>
+  <label class="tab" for="r-cem">Cem perguntas</label>
+  <label class="tab" for="r-gloss">Glossário</label>
+  <label class="tab" for="r-check">Check</label>
+  <label class="tab" for="r-fontes">Fontes</label>
+</nav>
+
+<!-- ============================== DESTAQUE ============================== -->
+<section id="p-dest" class="pane">
+<p class="accent" style="font-size:17px"><strong>A tese:</strong> uma área nova de futuros morre de dois jeitos, e os dois são silenciosos. Vira biblioteca, produzindo estudos que ninguém pediu, ou vira evento, uma palestra bonita por ano. A vacina é tratar o escritório como um produto: cliente fundador nomeado, problema doloroso escolhido, diferencial explícito frente a quem já existe, e uma hipótese fundadora testada em semanas com experimentos minúsculos. É o desenho do Foundation Sprint que Jake Knapp e John Zeratsky publicaram no livro Click (2025), depois de trabalhar com mais de 300 produtos e equipes, e que esta versão traz na fonte oficial, exercício a exercício.<sup>1, 2</sup> <span class="sel sel-i">Inferência</span> na aplicação; método <span class="sel sel-v">Verificado</span></p>
+
+<div class="g4">
+  <div class="kpi"><span class="num">18</span><small>exercícios numerados tem o Foundation Sprint oficial, em 2 dias de ~6 horas, com horário e saída de cada um (aba O Clique)<sup>1</sup></small></div>
+  <div class="kpi"><span class="num">11</span><small>casas de foresight tiveram o catálogo comercial dissecado, de Kairos e IFTF a Box1824 e W Futurismo, com preço público onde existe (aba Bench de ofertas)<sup>15 a 26</sup></small></div>
+  <div class="kpi"><span class="num">7</span><small>gabaritos de artefato extraídos de manuais oficiais: Reino Unido, OCDE, Singapura, PNUD e Finlândia, campo a campo (aba Artefatos)<sup>9 a 14</sup></small></div>
+  <div class="kpi"><span class="num">R$ 2.990</span><small>a R$ 21.103: a faixa real de formar o dono da função no Brasil, de curso de semanas a Master de 360 horas, com URL de cada preço (aba Custo)<sup>28, 30</sup></small></div>
+</div>
+
+<h2>As seis decisões da primeira semana</h2>
+<ol>
+<li><strong>Quem é o cliente fundador.</strong> Não é "a empresa". É uma diretoria específica, com dor específica, escolhida pelo critério do método: quem sente o problema com mais força e tem poder para agir.<sup>1</sup> A aba Clientes traz o mapa e os 3 filtros. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Qual problema doloroso a oferta ataca primeiro.</strong> Dos 12 do catálogo, um vira ponta de lança. O melhor candidato é a última surpresa estratégica que doeu: dispensa argumento de venda. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Qual é o diferencial que ninguém mais tem.</strong> No vocabulário do Click, a vantagem tem três componentes: capacidade, motivação e insight.<sup>1, 5</sup> A do escritório: mandato sobre o horizonte 3, assento nos dois ritos de planejamento e o conhecimento da casa. Nenhuma consultoria do bench tem os três, e o bench agora está mapeado casa a casa (aba Bench de ofertas). <span class="sel sel-i">Inferência</span></li>
+<li><strong>Qual é a hipótese fundadora.</strong> No template exato do método: se ajudarmos [cliente] a resolver [problema] com [abordagem], ele a escolherá em vez de [alternativas] porque nossa solução é [diferenciais].<sup>1, 5</sup> Escrita, datada, julgada no dia 90. <span class="sel sel-i">Inferência</span> na aplicação</li>
+<li><strong>Qual é o primeiro tiny loop.</strong> Protótipo barato testado com cliente real e pontuado num scorecard de três cores, antes de qualquer construção grande.<sup>1, 6</sup> A versão de teste de quase todo artefato desta oferta é uma planilha e uma página. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Que datas do calendário já são suas.</strong> Duas datas no ciclo de planejamento e um item fixo de pauta valem mais que qualquer software. Quem sobrevive no bench é quem tem calendário: a Embrapa amarra a Visão ao Plano Diretor, a Finlândia amarra o relatório de futuro à legislatura.<sup>14, 43</sup> <span class="sel sel-i">Inferência</span></li>
+</ol>
+
+<h2>O que mudou da v2 para a v3</h2>
+<p>A v2 confessava no próprio Check: o bench era reciclado e o método vinha de memória. A v3 fecha as duas dívidas com pesquisa dedicada de 2026-09-02: o Foundation Sprint agora vem do guia oficial da Character Capital com os 18 exercícios, horários, a mecânica de decisão e as Magic Lenses que faltavam<sup>1</sup>; os artefatos ganharam gabaritos campo a campo extraídos dos manuais públicos mais respeitados do mundo<sup>9, 10, 11, 13</sup>; a aba nova de Bench de ofertas mostra o que 11 casas vendem, como chamam e quanto cobram<sup>15 a 26</sup>; e a aba Custo saiu do qualitativo: cada número tem URL e data.<sup>27 a 34</sup> <span class="sel sel-v">Verificado</span> nas fontes; seleção e síntese <span class="sel sel-i">Inferência</span></p>
+<div class="alerta"><strong>Aviso de honestidade intelectual.</strong> Este é um documento de projeto: prescreve, não descreve. O que é fato carrega selo e fonte numerada com data de acesso; todo o desenho da oferta é síntese própria e está selado como Inferência. Nenhum número foi inventado; onde a fonte não abriu, está escrito n/d.</div>
+</section>
+
+<!-- ============================== ENTENDA ============================== -->
+<section id="p-entenda" class="pane">
+<h2>Entenda: a anatomia de uma oferta interna</h2>
+<p><strong>A frase que organiza tudo: ninguém compra cenário; compra resposta a uma dor com data de entrega.</strong> A unidade da oferta não é o método (cenários, radar, Delphi), é a cadeia completa: um problema na voz do cliente, um serviço que o ataca, um artefato de formato fixo que materializa a resposta, e um rito onde o artefato aterrissa e vira decisão. Quando um elo falta, o valor evapora: serviço sem artefato vira conversa, artefato sem rito vira arquivo, rito sem problema vira cerimônia. <span class="sel sel-i">Inferência</span></p>
+
+<h3>A cadeia da oferta, elo a elo</h3>
+<table>
+<thead><tr><th>Elo</th><th>Pergunta que responde</th><th>Onde está neste documento</th><th>Teste de qualidade</th></tr></thead>
+<tbody>
+<tr><td>Problema</td><td>Que dor, de quem, dita na voz do cliente?</td><td>Aba Problemas, catálogo de 12</td><td>O cliente reconhece a frase como dele</td></tr>
+<tr><td>Serviço</td><td>O que o escritório faz, com que esforço e cadência?</td><td>Aba Serviços, cada um com ficha e referência de mercado</td><td>Tem dono, insumo, prazo e cliente nomeado</td></tr>
+<tr><td>Artefato</td><td>O que o cliente segura na mão?</td><td>Aba Artefatos, catálogo de 15 + 7 gabaritos oficiais</td><td>Formato fixo, tamanho fixo, reconhecível de longe</td></tr>
+<tr><td>Rito</td><td>Em que sala e em que data isso vira decisão?</td><td>Aba Operação</td><td>Data no calendário antes de o trabalho começar</td></tr>
+</tbody>
+</table>
+
+<h3>A pirâmide da oferta: três andares de velocidade</h3>
+<p>A oferta opera em três andares, e o erro clássico é começar pelo de cima. <strong>O andar contínuo</strong> (scanning, alertas, respostas rápidas) roda toda semana e constrói credibilidade barata. <strong>O andar cadenciado</strong> (radar trimestral, deep dives, letramento) roda em ciclos e constrói o hábito institucional. <strong>O andar anual</strong> (cenários, túnel de vento, insumo dos ritos) é o de maior prestígio e maior risco: quem estreia por ele aposta tudo numa entrega que a casa ainda não sabe usar. O mercado confirma a pirâmide pela régua do preço: palestra e curso têm preço de tabela (CIFS cobra de €5.000 a €10.000 por palestra fora da Dinamarca<sup>17</sup>), consultoria de cenários não tem preço publicado em nenhuma das 11 casas pesquisadas<sup>15 a 26</sup>, porque o topo da pirâmide se vende por confiança, não por tabela. <span class="sel sel-i">Inferência</span> apoiada em preços <span class="sel sel-v">Verificado</span></p>
+
+<h3>Por que a lente de produto, e não a lente de departamento</h3>
+<p>Três razões. Primeira: a evidência de retorno do foresight aparece apenas quando a percepção vira aposta com dono; no estudo longitudinal de 83 empresas, o grupo que percebia muito e decidia pouco destruiu 6% de valor enquanto os vigilantes cresceram 75% em valor de mercado.<sup>35</sup> <span class="sel sel-v">Verificado</span> Segunda: os sobreviventes operam como produto com marca, formato e série: o radar da DHL mantém taxonomia estável e cadência de dois anos há mais de uma década e virou moeda dentro e fora da empresa.<sup>36</sup> <span class="sel sel-v">Verificado</span> Terceira: o próprio mercado de foresight se organiza como produto, com jornada desenhada: relatório anual gratuito como isca (FTSG, Box1824, Inova), curso com certificação como degrau (IFTF, Kairos, W Futurismo) e assinatura ou retainer como destino (Vantage do IFTF, Futures Partnership do CIFS, Futurista em Residência da W).<sup>19, 21, 23, 25, 26</sup> Quem monta uma área interna sem desenhar a própria jornada compete de improviso contra gente que vende jornada há décadas. <span class="sel sel-i">Inferência</span></p>
+
+<blockquote>O escritório de futuros que não sabe dizer em uma frase quem é seu cliente, que dor resolve e por que ele e não outro, ainda não existe: apenas ocupa uma sala.</blockquote>
+</section>
+
+<!-- ============================== O CLIQUE ============================== -->
+<section id="p-click" class="pane">
+<h2>O Clique: o Foundation Sprint na fonte, e a tradução para fundar o escritório</h2>
+<p><strong>O que é, nos fatos.</strong> Click: How to Make What People Want (Knapp e Zeratsky, Simon &amp; Schuster, abril de 2025) parte de uma constatação da dupla depois de mais de 300 produtos: a maioria falha antes de nascer, por fundação errada, não por execução ruim.<sup>2, 3</sup> A resposta é o Foundation Sprint: dois dias de cerca de 6 horas, no máximo 5 pessoas na sala incluindo o Decider (quem tem autoridade final), três fases (o básico, a diferenciação, a abordagem), e uma hipótese fundadora testável na saída. A promessa declarada: comprimir 3 a 4 meses de validação em 2 dias.<sup>1, 8</sup> <span class="sel sel-v">Verificado</span></p>
+
+<h3>A mecânica que sustenta tudo: nota e voto, com Decider</h3>
+<p>Quase todo exercício roda no mesmo protocolo, que os autores chamam de trabalhar sozinhos, juntos: o facilitador apresenta a pergunta; cada um escreve em silêncio (~5 minutos), uma resposta por nota; as notas vão ao quadro e todos leem sem discutir; votação com adesivos; e o Decider bate o martelo, explicitamente "independentemente dos votos", porque o voto informa e não vincula.<sup>1, 5</sup> O racional tem nome: o Primal Mark, a primeira ideia desenhada que ancora todas as decisões seguintes; o protocolo existe para expor divergência antes da ancoragem e calar a voz mais alta da sala.<sup>6</sup> <span class="sel sel-v">Verificado</span> Materiais: quadro, notas adesivas, adesivos de votação; há template oficial no Miro.<sup>1, 2</sup></p>
+
+<h3>Dia 1, manhã: o básico (4 exercícios, ~3 horas)</h3>
+<table>
+<thead><tr><th>Hora</th><th>Exercício</th><th>No original</th><th>Traduzido para o escritório de futuros</th></tr></thead>
+<tbody>
+<tr><td>10h00</td><td><strong>1. Cliente-alvo</strong> (~15 min)</td><td>Pessoas reais, em linguagem simples ("equipes com gente em locais diferentes", não "organizações enterprise distribuídas")<sup>1</sup></td><td>Uma diretoria nomeada, não "a empresa"; os 10 candidatos estão na aba Clientes</td></tr>
+<tr><td>10h15</td><td><strong>2. Problema importante</strong> (~15 min)</td><td>Dor grande o suficiente para justificar os custos de adoção: tempo, energia, dinheiro<sup>1</sup></td><td>Um dos 12 problemas do catálogo, escolhido pela dor; a última surpresa que custou caro vence quase sempre</td></tr>
+<tr><td>10h30</td><td><strong>3. A vantagem</strong> (~20 min)</td><td>Três componentes: <strong>capacidade</strong> (o que você faz que poucos igualam), <strong>motivação</strong> (por que VOCÊ ataca esse problema) e <strong>insight</strong> (entendimento profundo do problema e do cliente)<sup>1, 5</sup></td><td>Capacidade: mandato H3 + assento nos ritos. Motivação: a dor recente da casa. Insight: o contexto que consultoria nenhuma tem. Escrever os três, não um</td></tr>
+<tr><td>10h50</td><td><strong>4. A concorrência</strong> (~20 min)</td><td>TODAS as opções do cliente: outros produtos, gambiarras e até não fazer nada; identificar o gorila de 400 quilos, o mais difícil de bater<sup>1</sup></td><td>IM, consultoria, gestão de riscos, assinatura de relatórios, e o gorila verdadeiro: "não fazer nada", que é como a casa lidou com o futuro até hoje</td></tr>
+</tbody>
+</table>
+
+<h3>Dia 1, tarde: a diferenciação (exercícios 5 a 11)</h3>
+<p><strong>Exercício 5, os diferenciais clássicos:</strong> a equipe se pontua contra as alternativas nos 8 pares do livro: lento ou rápido; difícil ou fácil; caro ou gratuito; disperso ou focado; complicado ou simples; isolado ou integrado; manual ou automatizado; pouco inteligente ou inteligente. Instrução literal: seja muito otimista e agressivo, mas realista.<sup>1, 5</sup> <strong>Exercícios 6 a 8:</strong> a equipe escreve diferenciais customizados (critérios em que a solução brilharia e as alternativas parecem ruins), vota, e o Decider escolhe DOIS para testar primeiro.<sup>1</sup> <strong>Exercício 9, o 2x2:</strong> os dois diferenciais viram os eixos; o objetivo é a solução sozinha no quadrante superior direito, com toda a concorrência empurrada para o L dos outros três quadrantes, que Knapp chama de Loserville. Princípio-chave: a diferenciação só funciona se você entrega o que promete.<sup>1, 3</sup> <strong>Exercício 10, princípios práticos:</strong> 2 ou 3 regras derivadas dos diferenciais para guiar decisões futuras (diferencial rápido vira o princípio "rápido é melhor que lento"). <strong>Exercício 11, o mini manifesto:</strong> diferenciação e princípios numa página, pendurada na parede, guiando o primeiro protótipo.<sup>1</sup> <span class="sel sel-v">Verificado</span></p>
+<div class="card"><strong>A tradução do 2x2 para o escritório.</strong> Eixo 1: responde a uma decisão da casa, contra responde à curiosidade geral. Eixo 2: olha o plausível de 5 a 15 anos, contra olha o trimestre. Quadrante vencedor: decisão + longo prazo, e a aba Diferenciação posiciona cada alternativa interna e externa nesse mapa. A Loserville daqui é a newsletter de tendências: curiosidade + trimestre. Princípios práticos candidatos do escritório: "uma página é melhor que quarenta lâminas"; "insumo pronto antes do rito, nunca durante"; "recusa registrada vale tanto quanto aposta aprovada". Mini manifesto: meia página com o 2x2 e os princípios, na parede da sala do comitê. <span class="sel sel-i">Inferência</span></div>
+
+<h3>Dia 2: a abordagem e as Magic Lenses (exercícios 12 a 18)</h3>
+<p><strong>Exercícios 12 e 13:</strong> nota e voto para listar TODOS os caminhos possíveis de resolver o problema, cada um resumido numa página (o que é, por que é boa ideia em uma frase, um rabisco); considerar ao menos 3; o Decider seleciona até 7, cada um com cor ou letra para os padrões aparecerem depois.<sup>1, 7</sup> <strong>Exercícios 14 a 17, as Magic Lenses:</strong> cada lente é um 2x2 que representa o ponto de vista de um interessado; as mesmas opções coloridas são plotadas em todas, e os padrões revelam a aposta. As quatro clássicas, com os nomes do guia oficial: <strong>lente do cliente</strong> (o que ele sonharia; a visão do visionário), <strong>lente pragmática</strong> (barato e rápido de construir; a visão da engenharia), <strong>lente de crescimento</strong> (maior audiência; a visão do marketing) e <strong>lente do dinheiro</strong> (mais lucrativo; a visão de finanças). A maioria das equipes acrescenta 1 ou 2 customizadas; exemplos citados: dor do cliente, exclusivo nosso, entrega a missão, empolgação dos fundadores, e a própria lente de diferenciação do dia 1.<sup>1, 3, 5</sup> <strong>Exercício 18:</strong> o Decider escolhe a aposta principal (Top Bet) e um plano B (Backup Plan).<sup>1</sup> <span class="sel sel-v">Verificado</span> A chamada oficial do podcast promete "sete lentes"; a enumeração literal das 7 está atrás de assinatura e fica registrada como n/d.<sup>3</sup></p>
+<div class="card"><strong>As lentes traduzidas para escolher o primeiro serviço do escritório.</strong> Plote os candidatos (radar, cenário focal, sistema de alertas, curadoria, letramento) nas quatro clássicas: lente do cliente = o que o cliente fundador sonharia receber; pragmática = o que uma pessoa entrega em 30 dias com planilha; crescimento = o que mais gera pedido espontâneo de outras diretorias; dinheiro = o que toca decisão de capital. E duas customizadas da casa: lente do rito (o que aterrissa no rito mais próximo do calendário) e lente política (o que nenhuma área vizinha lê como invasão). Se um serviço vence em 4 das 6, é a aposta principal; o segundo vira plano B. <span class="sel sel-i">Inferência</span></div>
+
+<h3>A hipótese fundadora, no template exato</h3>
+<div class="card">
+<p><strong>O original, estilo preencha-as-lacunas:</strong> "If we help [customer] solve [problem] with [approach], they will choose it over [competitors] because our solution is [differentiators]."<sup>1, 5</sup> <span class="sel sel-v">Verificado</span></p>
+<p><strong>Traduzido e preenchido para o escritório (exemplo ilustrativo):</strong> "Se ajudarmos a diretoria de estratégia a testar as premissas do plano com um memorando de cenários de 5 páginas entregue 45 dias antes do Planejamento Estratégico, ela o escolherá em vez de contratar consultoria ou seguir sem teste, porque nossa resposta é da casa, chega antes do rito e cabe numa página por decisão." Cada lacuna vem de um exercício numerado: cliente do 1, problema do 2, abordagem do 18, alternativas do 4, diferenciais dos 5 a 8. A postura do guia diante de qualquer hipótese: prove.<sup>1</sup> <span class="sel sel-e">Especulativo</span> no exemplo (ilustração de calibre)</p>
+</div>
+
+<h3>Tiny loops: o que acontece depois do sprint</h3>
+<p>Tiny loop não é metáfora, é agenda: rodar Design Sprints (mapear na segunda, esboçar na terça, decidir na quarta, prototipar na quinta, testar com clientes reais na sexta), com protótipos que os autores chamam de fakes realistas construíveis em um dia, e pontuar cada teste num <strong>scorecard de três cores</strong>: o cliente é o certo? o problema é o certo? a abordagem é a certa? ele a escolheria contra as alternativas? os diferenciais importam?<sup>1, 5, 6</sup> O caso Latchet do livro: três protótipos testados com quatro clientes num fim de semana; primeira rodada quase toda vermelha, terceira semana quase toda verde, com a hipótese revisada entre as rodadas.<sup>6, 8</sup> <span class="sel sel-v">Verificado</span> Para o escritório, o scorecard vira o instrumento do balanço (aba Métricas), e cada quick win da aba própria é um tiny loop com nome de gente e data. <span class="sel sel-i">Inferência</span></p>
+
+<h3>O que os críticos dizem, e por que usar mesmo assim</h3>
+<p>As críticas públicas documentadas: a hipótese fundadora seria posicionamento de marca com roupagem nova, familiar a qualquer um de marketing; o livro simplificaria demais e repetiria muito; reservar dias de foco total seria inviável em empresa grande; e há viés de sobrevivência na evidência, que é a experiência da própria dupla, sem estudo externo citado para a alegação de que diferenciação é o preditor número um.<sup>6, 8</sup> <span class="sel sel-v">Verificado</span> A resposta honesta: tudo procede, e nada disso desarma o uso aqui, porque o que se importa do método não é a promessa estatística, é a mecânica barata de decisão (nota e voto, Decider, lentes, scorecard) que ataca exatamente as causas de morte documentadas de áreas de futuros: fundação sem cliente, construção antes do teste, indiferenciação. Se a lente falhar, perderam-se dois dias. <span class="sel sel-i">Inferência</span></p>
+</section>
+
+<!-- ============================== CLIENTES ============================== -->
+<section id="p-clientes" class="pane">
+<h2>Clientes: quem compra a oferta por dentro da casa</h2>
+<p><strong>A regra do método: um cliente fundador primeiro, o mercado inteiro depois.</strong><sup>1</sup> O mapa abaixo existe para escolher UM no exercício 1 do sprint, não para atender todos no dia 1. <span class="sel sel-i">Inferência</span></p>
+<table>
+<thead><tr><th>Cliente interno</th><th>A dor, na voz dele</th><th>O que ele quer de verdade</th><th>Primeiro artefato a oferecer</th><th>Sinal de que é o cliente fundador</th></tr></thead>
+<tbody>
+<tr><td><strong>Board e conselho</strong></td><td>"Podemos ser pegos de surpresa de novo"</td><td>Não passar vergonha em público e ter registro de que perguntou</td><td>Item fixo de pauta com uma página, duas vezes ao ano</td><td>Houve susto público recente no setor</td></tr>
+<tr><td><strong>Presidência</strong></td><td>"Preciso de visão de longo prazo"</td><td>Opções reais que caibam no mandato dela</td><td>Túnel de vento da estratégia vigente</td><td>Mandato novo, agenda de legado</td></tr>
+<tr><td><strong>Diretoria de estratégia</strong></td><td>"As premissas do plano envelheceram"</td><td>Plano que sobreviva à pergunta difícil do conselho</td><td>Memorando de cenários antes do ciclo</td><td>Ciclo de planejamento começando em 2 a 4 meses</td></tr>
+<tr><td><strong>Diretorias de negócio e gerentes</strong></td><td>"Isso muda alguma coisa no MEU plano?"</td><td>Implicação acionável, não tendência genérica</td><td>Memo de implicações de uma página por área</td><td>Área sob disrupção visível (canal, regulação, tecnologia)</td></tr>
+<tr><td><strong>Inovação</strong></td><td>"Não sei onde apostar além do óbvio"</td><td>Critério defensável diante do financeiro</td><td>Brief de território de oportunidade H3</td><td>Funil H3 vazio ou aleatório</td></tr>
+<tr><td><strong>Inteligência de Mercado</strong></td><td>"Me cobram futuro e meu mandato é o presente"</td><td>Fronteira clara e crédito compartilhado</td><td>Radar único com camada dela assinada</td><td>É a aliada estrutural, não a cliente fundadora</td></tr>
+<tr><td><strong>Riscos e GRC</strong></td><td>"Minhas matrizes só cobrem o que tem histórico"</td><td>Cobertura do plausível sem virar auditada pelo vizinho</td><td>Nota de riscos emergentes com fronteira combinada</td><td>Pressão de relato integrado ou de rating</td></tr>
+<tr><td><strong>Sustentabilidade</strong></td><td>"Cenário climático virou exigência e eu não tenho método"</td><td>Análise defensável ligada a negócio, não só a relato</td><td>Cenário climático acoplado a uma decisão de ativo</td><td>Nas grandes casas brasileiras, a capacidade de cenário já mora aqui<sup>44</sup></td></tr>
+<tr><td><strong>Comercial e produto</strong></td><td>"O cliente de amanhã não é o de hoje"</td><td>Perfis e jornadas do futuro que virem oferta</td><td>Deep dive de comportamento com implicações de produto</td><td>Perda de participação em segmento jovem ou canal novo</td></tr>
+<tr><td><strong>RH e cultura</strong></td><td>"Não sabemos que competências faltarão"</td><td>Mapa de competências futuras com números</td><td>Dossiê com variável de decisão única: quantos formar, em quê, quando<sup>44</sup></td><td>Plano de força de trabalho em revisão</td></tr>
+</tbody>
+</table>
+<h3>O critério de escolha do cliente fundador</h3>
+<p>Três filtros em ordem: dor aguda e recente (surpresas doem mais que teses), poder de assinatura sobre uma decisão que o escritório pode influenciar em 90 dias, e disposição para dar as duas coisas que a oferta precisa e não pode comprar: uma data no calendário e presença nas reuniões. Empatou, vence quem participa do rito de planejamento mais próximo. No sprint, essa escolha é o exercício 1, feita por nota e voto com o patrocinador como Decider.<sup>1</sup> <span class="sel sel-i">Inferência</span></p>
+<p class="note">O anti-cliente também existe: quem quer "uma palestra inspiradora para o time". O mercado cobra €5.000 a €10.000 por esse produto e sabe por quê: entretém e não muda decisão.<sup>17</sup> Aceitar o pedido no primeiro trimestre posiciona a oferta como entretenimento, e reposicionar custa um ano.</p>
+</section>
+
+<!-- ============================== PROBLEMAS ============================== -->
+<section id="p-prob" class="pane">
+<h2>Problemas: o catálogo das 12 dores que a oferta resolve</h2>
+<p><strong>Cada problema está escrito na voz do cliente, porque é assim que ele chega.</strong> A coluna final liga ao serviço e ao artefato que respondem: é a espinha que costura as abas de catálogo. No vocabulário do sprint, este catálogo é o insumo do exercício 2. <span class="sel sel-i">Inferência</span></p>
+<table>
+<thead><tr><th>#</th><th>O problema, na voz do cliente</th><th>O que o escritório faz</th><th>Serviço e artefato que respondem</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>"Fomos pegos de surpresa por regulação, tecnologia ou concorrente"</td><td>Reconstitui as últimas surpresas (o sinal existia? quem viu? por que não virou decisão?) e instala captação e alerta</td><td>S1 Scanning e alertas: ficha de sinal, nota de alerta</td></tr>
+<tr><td>2</td><td>"O planejamento parte de premissas que ninguém revisita"</td><td>Passa a estratégia vigente pelo túnel de vento e devolve a lista de premissas frágeis com veredito por cenário</td><td>S5 Cenários e túnel: matriz de túnel de vento</td></tr>
+<tr><td>3</td><td>"A Inovação não sabe onde apostar além do incremental"</td><td>Entrega territórios do horizonte 3 com hipóteses testáveis e critério de sucesso</td><td>S6 Territórios H3: brief de território</td></tr>
+<tr><td>4</td><td>"Duas diretorias brigam sobre o futuro e ninguém cede"</td><td>Usa cenários como arbitragem neutra: nos mundos onde A ganha e nos onde B ganha, o que fazemos em cada um?</td><td>S5 Cenários: memorando de cenários</td></tr>
+<tr><td>5</td><td>"O conselho pergunta sobre longo prazo e a resposta improvisa"</td><td>Instala item fixo de pauta com uma página e radar atualizado</td><td>S8 Insumo dos ritos: página do conselho</td></tr>
+<tr><td>6</td><td>"Sabemos que o mundo muda, mas não o que monitorar"</td><td>Arma gatilhos escritos com limiar e dono, no desenho de early warning que Singapura formaliza no monitoramento do SP+<sup>11</sup></td><td>S7 Alerta precoce: planilha de gatilhos</td></tr>
+<tr><td>7</td><td>"Compramos relatórios caros que ninguém lê"</td><td>Cura, traduz e devolve em uma página o que importa; cancela o resto (a régua do que existe de graça está na aba Custo)</td><td>S11 Curadoria: resenha de uma página</td></tr>
+<tr><td>8</td><td>"O time não tem vocabulário para conversar sobre futuro"</td><td>Letramento em futuros: oficinas curtas com os artefatos da própria casa como material</td><td>S9 Letramento: oficina + kit</td></tr>
+<tr><td>9</td><td>"Tenho uma decisão de capital travada há meses"</td><td>Cenário focal da decisão: os 2 ou 3 futuros que importam, com implicação e gatilho de cada um</td><td>S10 Resposta rápida: one-pager de decisão</td></tr>
+<tr><td>10</td><td>"Cenário climático virou exigência de investidor e não temos método"</td><td>Conecta a capacidade de cenário climático que já existe na casa (riscos, sustentabilidade) à decisão de portfólio, não só ao relato<sup>44</sup></td><td>S5 + S8: cenário climático de negócio</td></tr>
+<tr><td>11</td><td>"Rediscutimos o mesmo futuro todo ano e nunca sai do lugar"</td><td>Registra a memória de decisão: aceito, recusado e por quê, com data</td><td>S12 Memória: registro de decisão</td></tr>
+<tr><td>12</td><td>"A linha de frente vê coisas que nunca chegam aqui em cima"</td><td>Abre canal de captação da ponta, no modelo que a Swiss Re usa com subscritores no SONAR<sup>37</sup></td><td>S1 Scanning: canal da linha de frente</td></tr>
+</tbody>
+</table>
+<div class="alerta"><strong>Como usar o catálogo:</strong> na venda interna, nunca abrir pelo serviço ("fazemos horizon scanning") e sempre pelo problema ("da última vez que a regulação virou, quanto custou a surpresa?"). O problema 1 é a ponta de lança universal: usa a dor da própria casa, custa duas semanas e não exige método novo. É também a abertura do dia 1 do sprint.<sup>1</sup> <span class="sel sel-i">Inferência</span></div>
+</section>
+
+<!-- ============================== SERVIÇOS ============================== -->
+<section id="p-serv" class="pane">
+<h2>Serviços: o catálogo do que o escritório provê, com a referência de mercado de cada um</h2>
+<p><strong>Doze serviços, cinco de núcleo e sete de expansão, e nenhum inventado do nada:</strong> cada um tem referência viva no mercado, com o nome comercial que alguma casa dá e, quando existe, o preço que cobra. A régua serve para dois usos: calibrar a ambição de cada serviço e responder à pergunta inevitável "por que não contratar fora?". <span class="sel sel-i">Inferência</span>; referências <span class="sel sel-v">Verificado</span></p>
+
+<h3>Núcleo: os cinco do primeiro ano, em ficha</h3>
+
+<div class="card"><h4>S1. Scanning contínuo e alertas</h4>
+<p><strong>O que é:</strong> varredura semanal de sinais fracos H2 e H3 nas margens (ciência, regulação, comportamento, tecnologia), com canal aberto para a linha de frente. <strong>Passos:</strong> fontes definidas por pergunta focal; 1 sessão semanal de 2h; cada sinal vira ficha de meia página (gabarito 1 da aba Artefatos); descarte declarado; sinal que acelera vira nota de alerta de 1 página em 48h. <strong>Cliente:</strong> todos; alimenta o resto. <strong>Esforço:</strong> 30 a 40% do tempo do dono. <strong>Referência de mercado:</strong> é o que a Z_punkt vende como trend landscapes com monitoramento contínuo e ferramenta dedicada, e o que a Kairos embute no TrendWatch contínuo com atualização trimestral<sup>15, 24</sup>; a captação pela ponta é o desenho do SONAR da Swiss Re.<sup>37</sup></p></div>
+
+<div class="card"><h4>S2. Radar único da empresa</h4>
+<p><strong>O que é:</strong> consolidação trimestral dos sinais em tendências com maturidade e horizonte, em camadas: H1 da Inteligência de Mercado, H2 conjunta, H3 do escritório. <strong>Passos:</strong> comitê mensal classifica; revisão trimestral de 2h com IM consolida; publicação com 1 página por camada; passagem de bastão H2 registrada. <strong>Cliente:</strong> diretoria e gerentes. <strong>Esforço:</strong> 1 semana por versão. <strong>Referência de mercado:</strong> o gênero que a DHL transformou em moeda com taxonomia fixa e série bienal<sup>36</sup>; o baralho Driving Forces de Singapura mostra a versão de Estado, com 17 forças e 5 wildcards renovados a cada 3 a 5 anos.<sup>11</sup></p></div>
+
+<div class="card"><h4>S5. Rodada de cenários e túnel de vento</h4>
+<p><strong>O que é:</strong> incertezas críticas viram 3 ou 4 futuros; a estratégia vigente é testada contra cada um. <strong>Passos (gabaritos 3 e 4 da aba Artefatos):</strong> driver mapping na matriz importância por certeza; eixos do 2x2 a partir das incertezas críticas; narrativa e nome por cenário; oficina de túnel de 1,5 a 2h com veredito por política: robusta, redundante ou precisa de ajuste. <strong>Cliente:</strong> board, presidência, estratégia. <strong>Esforço:</strong> 8 a 12 semanas, pronto 2 a 3 meses antes do rito. <strong>Referência de mercado:</strong> Scenario Analysis e Wind Tunnel são itens de cardápio nomeados da Kairos Future<sup>15</sup>; o método aberto está no Futures Toolkit britânico e no toolkit da OCDE com guias de facilitação cronometrados<sup>9, 10</sup>; nenhuma das 11 casas publica preço deste serviço.<sup>15 a 26</sup></p></div>
+
+<div class="card"><h4>S7. Gatilhos e alerta precoce</h4>
+<p><strong>O que é:</strong> tradução de incertezas em "se X passar do limiar, fazemos Y", com dono e resposta pré-combinada. <strong>Passos:</strong> oficina de 2h por diretoria; 5 gatilhos bem escritos; revisão trimestral; disparo reabre o comitê. <strong>Cliente:</strong> gerentes e diretorias. <strong>Esforço:</strong> contínuo, leve. <strong>Referência de mercado:</strong> o elo que a Deutsche Telekom automatizou entre sinal e resposta organizacional<sup>38</sup>, e o componente de monitoramento com early warning que fecha o ciclo do Scenario Planning Plus de Singapura.<sup>11</sup></p></div>
+
+<div class="card"><h4>S8. Insumo dos dois ritos</h4>
+<p><strong>O que é:</strong> o memorando executivo para o Planejamento Estratégico e os memos de implicação por área para o Tático-Estratégico, no timing certo. <strong>Passos:</strong> memorando de 5 páginas fechado 45 dias antes; 1 página por diretoria na língua dela; página do conselho semestral de formato imutável. <strong>Cliente:</strong> board, diretoria, gerentes. <strong>Esforço:</strong> 2 a 3 semanas por ciclo. <strong>Referência de mercado:</strong> é o serviço que NÃO se terceiriza, e o bench público mostra o padrão-ouro do acoplamento: o relatório de prospectiva da Comissão Europeia alimenta as prioridades políticas do ciclo, e a Finlândia entrega o relatório de futuro uma vez por legislatura com resposta formal do parlamento.<sup>12, 14</sup></p></div>
+
+<h3>Expansão: os sete que entram com tração</h3>
+<table>
+<thead><tr><th>Serviço</th><th>O que é</th><th>Cliente</th><th>Quando ativar</th><th>Referência de mercado</th></tr></thead>
+<tbody>
+<tr><td><strong>S3. Monitoramento de sinais maduros</strong></td><td>Passagem de bastão formal: sinal maduro vai para a lista da IM com gatilho definido</td><td>Inteligência de Mercado</td><td>Após 2 versões do radar</td><td>A matriz britânica manda: menos importante e certo, estacione; incerto, rastreie<sup>9</sup></td></tr>
+<tr><td><strong>S4. Deep dive temático</strong></td><td>Varredura profunda de pergunta focal priorizada, com acervo e especialistas</td><td>Diretoria dona do tema</td><td>Trimestre 2, um por semestre</td><td>O Structural Shift Brief da FTSG, com indicadores antecedentes<sup>23</sup></td></tr>
+<tr><td><strong>S6. Territórios de oportunidade H3</strong></td><td>Brief com contexto, sinais, hipóteses testáveis e critério de sucesso para a Inovação</td><td>Inovação</td><td>Após o primeiro deep dive</td><td>O funil da BASF que dá a cada tendência um caminho até virar negócio<sup>40</sup>; strategic growth fields da Z_punkt<sup>24</sup></td></tr>
+<tr><td><strong>S9. Letramento em futuros</strong></td><td>Oficinas de 2 a 4h com os artefatos da casa; multiplica sensores</td><td>Gerências e equipes</td><td>Trimestre 2, sob demanda</td><td>O produto mais precificado do mercado: cursos de €1.350 a US$ 6.500 nas casas de referência<sup>17, 19</sup>; o Futures Literacy Lab da 4CF<sup>22</sup></td></tr>
+<tr><td><strong>S10. Resposta rápida ("e se?")</strong></td><td>One-pager sob demanda em 5 dias úteis, com cota de 2 por mês</td><td>Qualquer diretoria</td><td>Desde o trimestre 1</td><td>O Rapid Decision Support da FTSG: decision brief com cenários, pre-mortem e recomendação<sup>23</sup></td></tr>
+<tr><td><strong>S11. Curadoria de conhecimento externo</strong></td><td>Biblioteca viva: o melhor material público traduzido em implicações para a casa</td><td>Todos</td><td>Desde o trimestre 1, 2 por mês</td><td>O insumo é gratuito e de elite: toolkit britânico, OCDE, SFR europeu, Agropensa<sup>9, 10, 12, 43</sup>; a assinatura editorial do CIFS custa o preço de um livro por ano<sup>18</sup></td></tr>
+<tr><td><strong>S12. Memória de decisão</strong></td><td>Registro datado do aceito, do recusado e dos porquês</td><td>Estratégia e conselho</td><td>Desde o primeiro rito</td><td>Nenhuma casa vende isso, e é exatamente por isso que é o artefato mais defensável do escritório interno <span class="sel sel-i">Inferência</span></td></tr>
+</tbody>
+</table>
+<p class="note">A numeração S1 a S12 é estável de propósito: vira vocabulário interno, como a taxonomia fixa do radar da DHL virou moeda.<sup>36</sup> E a régua de ambição participativa existe no país: uma cooperativa singular construiu os próprios cenários em 45 workshops com cerca de 980 pessoas.<sup>39</sup></p>
+</section>
+
+<!-- ============================== BENCH DE OFERTAS ============================== -->
+<section id="p-ofertas" class="pane">
+<h2>Bench de ofertas: o que 11 casas de foresight vendem, como chamam e quanto cobram</h2>
+<p><strong>Varredura de 2026-09-02, catálogo comercial por catálogo comercial.</strong> Serve a três usos: dar nome de mercado a cada serviço interno, calibrar preço do que se compraria fora, e copiar a arquitetura de jornada que essas casas levaram décadas afinando. Preço público existe quase só em formação e palestra; consultoria não tem tabela em nenhuma das 11. <span class="sel sel-v">Verificado</span> nas páginas citadas; leituras <span class="sel sel-i">Inferência</span></p>
+
+<h3>As internacionais</h3>
+<table>
+<thead><tr><th>Casa</th><th>Catálogo (nomes comerciais)</th><th>Preços públicos</th><th>O que copiar</th></tr></thead>
+<tbody>
+<tr><td><strong>Kairos Future</strong><br>(Estocolmo)<sup>15, 16</sup></td><td>4 famílias: Future (Scenario Analysis, TrendWatch pontual ou contínuo), Strategy (Wind Tunnel/Stress Testing), Innovation (TRIM), Action; Academy com certificação; Club de comunidade</td><td>Certified Future Strategist €7.000 (6 meses, 9 dias, máx. 16); curso básico 15.200 SEK; Club 15.900 SEK/ano individual, 59.000 SEK/2 pessoas para organização</td><td>O TrendWatch vendido como contínuo (anual ou trimestral): monitoramento é assinatura, não projeto</td></tr>
+<tr><td><strong>CIFS</strong><br>(Copenhague)<sup>17, 18</sup></td><td>Advisory; Talks (200+/ano); Courses; Organisational Training; Futures Partnership (retainer anual); H3 AI Lab; Futures Membership editorial</td><td>Palestra DKK 25 a 50 mil na região, €5 a 10 mil fora; cursos €1.350 a €2.600; in-company desde €8.000; membership 700 a 800 DKK/ano</td><td>A Futures Partnership: retainer anual com avaliação de maturidade, sparring e desconto em projeto, a jornada de cliente mais explícita do bench</td></tr>
+<tr><td><strong>IFTF</strong><br>(Palo Alto)<sup>19, 20, 21</sup></td><td>Foresight Essentials (formações com certificado, framework PFIA, 25+ ferramentas); Vantage Partnership (assinatura organizacional); Advisory; Ten-Year Forecast anual</td><td>Essentials Training US$ 6.500 (4.500 para governo e sem fins lucrativos); Scenario Building US$ 3.500; Experiential Futures US$ 2.000</td><td>Preço diferenciado por tipo de cliente e Train-the-Trainer no custom: formar formadores é produto</td></tr>
+<tr><td><strong>4CF</strong><br>(Varsóvia)<sup>22</sup></td><td>Foresight; Strategy; Technology and Innovation; Research (Delphi na plataforma própria HalnyX, "4ª geração"); Two-Day Foresight Training; Futures Literacy Lab</td><td>n/d em todo o site</td><td>Plataforma proprietária como diferenciador e força em setor público e defesa: o Delphi virou ativo, não método</td></tr>
+<tr><td><strong>FTSG</strong><br>(Amy Webb)<sup>23</sup></td><td>4 serviços: Surfacing What is Changing (Structural Shift Brief); Defining Your Position (posição de 5 a 10 anos); Building The Path to Win (roadmap 3 a 5 anos + governança); Rapid Decision Support (decision brief com pre-mortem)</td><td>n/d; relatório anual Convergence Outlook gratuito mediante cadastro, sucessor do Tech Trends de 1 milhão+ de downloads</td><td>Os NOMES dos serviços: nenhum vende método, todos vendem resultado de decisão; e a isca anual gratuita</td></tr>
+<tr><td><strong>Z_punkt</strong><br>(Colônia)<sup>24</sup></td><td>4 áreas com formatos nomeados: Strategic (trend landscapes com monitoramento e ferramenta), Innovation (strategic growth fields com transferência do processo), Organisational (competence foresight, transformation journeys), Public (real-time Delphi, risk foresight de wild cards)</td><td>n/d</td><td>A cláusula embutida de transferência: o growth fields entrega o processo para o cliente rodar sozinho depois</td></tr>
+</tbody>
+</table>
+
+<h3>As brasileiras</h3>
+<table>
+<thead><tr><th>Casa</th><th>Catálogo</th><th>Preços públicos</th><th>O que copiar</th></tr></thead>
+<tbody>
+<tr><td><strong>W Futurismo</strong><br>(Jaqueline Weigel)<sup>25</sup></td><td>Palestras; estudos prospectivos com horizonte mínimo de 10 anos; workshops até 25 pessoas; Observatórios e Núcleos de Futuros in company; Futurista em Residência (desde 2018); Certificação em Foresight (24ª turma, com Inayatullah e Tamkang; 3.000 alunos, 200 certificados declarados)</td><td>n/d (páginas de preço fora do ar no acesso)</td><td>O Futurista em Residência: pessoa embarcada por meses como retainer, e a jornada completa de capacitação que vira consultoria</td></tr>
+<tr><td><strong>Box1824</strong><sup>26</sup></td><td>Consultoria de tendências comportamentais; Futures Unit (2020) para cenários; e-books gratuitos como isca (Macro Futures); cursos por turmas intermitentes (escola online fora do ar no acesso)</td><td>n/d</td><td>Conteúdo gratuito de alto padrão como porta de entrada comercial</td></tr>
+<tr><td><strong>Echos</strong><sup>26</sup></td><td>Design de Futuros (20h, online + 2 dias presenciais, com toolkit); consultoria e in-company</td><td>n/d público (inscrição por formulário)</td><td>Curso curto com toolkit próprio como produto de entrada</td></tr>
+<tr><td><strong>MJV</strong><sup>26</sup></td><td>Design de Futuro em 4 formatos: Trends &amp; Technology Reports por indústria; Strategic Planning; Portfolio Design; Customized</td><td>n/d</td><td>O relatório por indústria como formato de prateleira</td></tr>
+<tr><td><strong>Inova Consulting</strong><sup>26</sup></td><td>Pesquisa permanente de tendências; relatório What's Next Direction 2035 gratuito (desde 2012); metodologia SBB; Inova Business School (MBA TrendsInnovation, certificação de conselheiros)</td><td>n/d</td><td>Relatório anual gratuito sustentado por 14 anos: série pública como construção de marca</td></tr>
+</tbody>
+</table>
+
+<h3>Os cinco padrões do mercado, e a leitura para o escritório interno</h3>
+<ol>
+<li><strong>Preço público existe quase só em formação e palestra.</strong> Consultoria de cenários não tem tabela em nenhuma casa.<sup>15 a 26</sup> Leitura: quando a diretoria perguntar quanto custaria contratar fora, a resposta honesta é "o mercado não diz; o que ele diz é que a palestra de entrada custa até €10.000 e o curso de 2 dias, €2.600".<sup>17</sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>Três motores de receita recorrente:</strong> assinatura de comunidade (Kairos Club, Vantage, Futures Partnership), pessoa embarcada (Futurista em Residência) e monitoramento contínuo (TrendWatch, trend landscapes).<sup>15, 18, 21, 25</sup> Leitura: a moeda interna equivalente é a cadência: comitê mensal, radar trimestral, item de pauta semestral. Recorrência é o produto. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Relatório anual gratuito como isca</strong> (Convergence Outlook, Macro Futures, What's Next).<sup>23, 26</sup> Leitura: o equivalente interno é o balanço anual de acerto retrospectivo, distribuído à casa inteira. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Certificação destrava preço aberto</strong> (IFTF, Kairos, W).<sup>16, 19, 25</sup> Leitura: o letramento interno com "certificado da casa" cria os sensores multiplicados e o exército de aliados. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Plataforma proprietária como diferenciador</strong> (HalnyX, ferramentas Z_punkt, Future Factors).<sup>21, 22, 24</sup> Leitura: no ano 1 interno, a "plataforma" é uma planilha bem desenhada; comprar ferramenta antes do hábito é pagar por diferenciação que o escritório ainda não tem a quem mostrar. <span class="sel sel-i">Inferência</span></li>
+</ol>
+</section>
+
+<!-- ============================== ARTEFATOS ============================== -->
+<section id="p-arte" class="pane">
+<h2>Artefatos: o catálogo, e os gabaritos oficiais campo a campo</h2>
+<p><strong>Regra de ouro: formato fixo, tamanho fixo, nome fixo.</strong> Artefato é interface: quando o decisor reconhece o formato de longe, o custo de leitura despenca e a marca do escritório se constrói sozinha.<sup>36</sup> A novidade da v3: os gabaritos abaixo não são mais desenho meu, são a estrutura extraída dos manuais públicos mais usados do mundo, com fonte em cada um. <span class="sel sel-v">Verificado</span> nos gabaritos; adaptações <span class="sel sel-i">Inferência</span></p>
+
+<h3>O catálogo dos 15</h3>
+<table>
+<thead><tr><th>#</th><th>Artefato</th><th>Formato e tamanho</th><th>Nasce em</th><th>Cadência</th><th>Cliente</th><th>Vida útil</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>Pergunta focal</strong></td><td>Uma frase; a menor unidade da oferta</td><td>Ritos e conselho</td><td>Por ciclo</td><td>O próprio escritório</td><td>Um ciclo</td></tr>
+<tr><td>2</td><td><strong>Ficha de sinal</strong></td><td>Meia página com campos fixos (gabarito 1)</td><td>S1</td><td>Contínua</td><td>Comitê de sinais</td><td>Até classificar</td></tr>
+<tr><td>3</td><td><strong>Nota de alerta</strong></td><td>1 página: o que acelerou, implicação, recomendação</td><td>S1/S7</td><td>Ad hoc</td><td>Diretoria</td><td>Dias; é perecível</td></tr>
+<tr><td>4</td><td><strong>Radar único vN</strong></td><td>1 mapa + 1 página por camada (H1, H2, H3)</td><td>S2</td><td>Trimestral</td><td>Diretoria e gerentes</td><td>90 dias, versão data</td></tr>
+<tr><td>5</td><td><strong>Lista de monitoramento</strong></td><td>Planilha: sinal, gatilho, dono, data de revisão</td><td>S3</td><td>Trimestral</td><td>Inteligência de Mercado</td><td>Viva</td></tr>
+<tr><td>6</td><td><strong>Dossiê temático</strong></td><td>10 a 20 páginas + sumário de 1 (gabarito 5 para a espinha)</td><td>S4</td><td>Semestral</td><td>Diretoria dona do tema</td><td>12 a 24 meses</td></tr>
+<tr><td>7</td><td><strong>Brief de território H3</strong></td><td>2 a 3 páginas: contexto, sinais, hipóteses testáveis, critério de sucesso, próximo passo</td><td>S6</td><td>Por território</td><td>Inovação</td><td>Até o teste decidir</td></tr>
+<tr><td>8</td><td><strong>Memorando de cenários</strong></td><td>5 páginas + anexos (gabarito 3)</td><td>S5</td><td>Anual</td><td>Board e diretoria</td><td>1 ciclo estratégico</td></tr>
+<tr><td>9</td><td><strong>Matriz de túnel de vento</strong></td><td>1 tabela com veredito por linha (gabarito 4)</td><td>S5</td><td>Anual</td><td>Estratégia</td><td>1 ciclo</td></tr>
+<tr><td>10</td><td><strong>Mapa de apostas e opções</strong></td><td>1 página: apostas, opções, gatilho de reforço e de abandono</td><td>S5/S8</td><td>Anual</td><td>Board</td><td>1 ciclo, revisado</td></tr>
+<tr><td>11</td><td><strong>Planilha de gatilhos</strong></td><td>Linhas "se X (limiar), então Y (resposta), dono Z" (gabarito 6)</td><td>S7</td><td>Viva</td><td>Gerentes</td><td>Permanente</td></tr>
+<tr><td>12</td><td><strong>Memo de implicações por área</strong></td><td>1 página por diretoria, na língua dela</td><td>S8</td><td>Anual</td><td>Gerentes</td><td>1 ciclo tático</td></tr>
+<tr><td>13</td><td><strong>Página do conselho</strong></td><td>1 página, formato imutável (gabarito 7)</td><td>S8</td><td>Semestral</td><td>Board</td><td>6 meses</td></tr>
+<tr><td>14</td><td><strong>One-pager de decisão</strong></td><td>1 página: pergunta, 2 ou 3 futuros, implicação, recomendação com gatilho</td><td>S10</td><td>Sob demanda, 5 dias úteis</td><td>Quem pediu</td><td>A decisão</td></tr>
+<tr><td>15</td><td><strong>Memória de decisão</strong></td><td>Registro datado: decisão, alternativas, recusas e porquês</td><td>S12</td><td>Por rito</td><td>Estratégia e conselho</td><td>Permanente; é o patrimônio</td></tr>
+</tbody>
+</table>
+
+<h3>Os sete gabaritos oficiais</h3>
+
+<div class="gab"><h4>Gabarito 1. Ficha de sinal (do Futures Toolkit britânico + PNUD)</h4>
+<p>O scan britânico é um artigo de UMA página, produzido semanalmente por cada scanner, com três blocos de texto: <strong>o que é o sinal; como se relaciona com a nossa área; por que o autor acha que importa.</strong> E metadados fixos: data, autor, link da fonte, categoria PESTLE, avaliação inicial de prazo e de importância.<sup>9</sup> O PNUD acrescenta os campos de triagem: relevância para a organização, probabilidade de virar tendência, impacto e janela de tempo, com classificação STEEP+V.<sup>13</sup> <span class="sel sel-v">Verificado</span> Adaptação da casa: meia página basta; horizonte H1/H2/H3 no lugar da janela; o campo "por que importa" é o que separa ficha de recorte de notícia. <span class="sel sel-i">Inferência</span></p></div>
+
+<div class="gab"><h4>Gabarito 2. Triagem de drivers (a matriz britânica de importância por certeza)</h4>
+<p>Depois do levantamento de drivers por PESTLE, cada um cai numa matriz Importância x Certeza com QUATRO destinos, e cada destino é uma instrução: importante e certo, <strong>priorize e aja</strong>; importante e incerto, <strong>é incerteza crítica</strong>, vai virar eixo de cenário; menos importante e certo, <strong>estacione</strong>; menos importante e incerto, <strong>rastreie</strong>.<sup>9</sup> <span class="sel sel-v">Verificado</span> É a mecânica exata da passagem de bastão entre escritório e IM, com nome oficial. <span class="sel sel-i">Inferência</span></p></div>
+
+<div class="gab"><h4>Gabarito 3. Cenários 2x2 e o memorando (Reino Unido + OCDE)</h4>
+<p>O toolkit britânico constrói cenários em 5 passos: eixos a partir das incertezas críticas; descrição de cada mundo; NOME para cada cenário; apresentação plenária; escrita final, com um handout de 1 página por cenário levando a matriz e as características em tópicos.<sup>9</sup> A OCDE acrescenta a estrutura que faz o cenário aterrissar: para cada disrupção, um campo de <strong>opções de política no futuro, se acontecer</strong>, e outro de <strong>opções de política HOJE, para se preparar</strong>; e o fecho do processo separa ações à prova de cenário (no-regrets) de boas apostas com gatilho de revisão.<sup>10</sup> <span class="sel sel-v">Verificado</span> O memorando de 5 páginas da casa segue essa espinha: 1 página por cenário + 1 de apostas hoje + 1 de gatilhos. <span class="sel sel-i">Inferência</span></p></div>
+
+<div class="gab"><h4>Gabarito 4. Túnel de vento (o stress-testing britânico, minuto a minuto)</h4>
+<p>Definição oficial: testar opções de política ou estratégia contra um conjunto de cenários. Formato: 1,5 a 2 horas, até 16 pessoas em 2 grupos. Passos: apresentar os cenários (20 min, com o handout de 1 página); apresentar as opções em teste (10 min, relembrando a pergunta de escopo); testar cada opção em cada mundo (60 min), decidindo se ali ela é <strong>robusta, redundante ou precisa de ajuste</strong>, sem deformar o cenário para a opção caber; revisar numa tabela opções x cenários com semáforo (30 min).<sup>9</sup> O PNUD nomeia a saída: estratégias ranqueadas por robustez, com pontos de preparação e de pivô.<sup>13</sup> <span class="sel sel-v">Verificado</span></p></div>
+
+<div class="gab"><h4>Gabarito 5. Dossiê de disrupção (a estrutura da OCDE por capítulo)</h4>
+<p>Cada uma das 25 disrupções do toolkit da OCDE segue campos fixos: título com subtítulo narrativo; caixa "disrupção possível 2030-50" (o resumo do extremo); contexto; <strong>evidência emergente</strong> em tópicos citados; futuro possível; opções no futuro; opções hoje; etiquetas de categoria; referências.<sup>10</sup> <span class="sel sel-v">Verificado</span> É a espinha honesta de um deep dive: obriga a separar evidência de especulação e termina em opção de decisão, não em descrição. <span class="sel sel-i">Inferência</span></p></div>
+
+<div class="gab"><h4>Gabarito 6. Gatilhos e monitoramento (Singapura + PNUD)</h4>
+<p>O ciclo Scenario Planning Plus de Singapura fecha com um componente formal de <strong>monitoramento com sistemas de alerta precoce</strong>, depois de definir foco, varrer, dar sentido, criar futuros e desenhar estratégias (inclusive com war-gaming).<sup>11</sup> O desenho de scanning do PNUD começa pelo passo que quase todo mundo pula: <strong>avaliar como a liderança decide e que informação ela precisa</strong>, antes de coletar qualquer sinal.<sup>13</sup> <span class="sel sel-v">Verificado</span> A planilha de gatilhos da casa herda os dois: cada linha nasce de uma decisão que alguém pode tomar, não de um sinal que alguém achou interessante. <span class="sel sel-i">Inferência</span></p></div>
+
+<div class="gab"><h4>Gabarito 7. Página do conselho (o padrão dos ritos nacionais)</h4>
+<p>Os dois exemplos institucionais de insumo de futuro para instância máxima: o relatório de prospectiva anual da Comissão Europeia, que abastece as prioridades do ciclo político e foi seguido de perto pelo discurso de estado da União do dia seguinte<sup>12</sup>; e o relatório finlandês, entregue uma vez por legislatura, com horizonte de 20 anos e resposta formal do Comitê do Futuro do parlamento.<sup>14</sup> <span class="sel sel-v">Verificado</span> A página semestral do conselho comprime o princípio: formato imutável com três blocos (o que mudou desde a última; o que estamos monitorando com gatilho; o que pedimos), e a resposta do conselho registrada na memória de decisão. <span class="sel sel-i">Inferência</span></p></div>
+
+<h3>As três regras de fabricação</h3>
+<ol>
+<li><strong>Uma página é o formato padrão; tudo acima disso precisa justificar o tamanho.</strong> O decisor lê a página; o anexo existe para a auditoria da confiança. Os gabaritos oficiais confirmam: o scan britânico é 1 página, o handout de cenário é 1 página, o resumo de abordagem do sprint é 1 página.<sup>1, 9</sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>Todo artefato carrega selo de origem</strong> (verificado, inferência, especulação) e fonte rastreável, porque a moeda do escritório é confiança. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Versão de teste antes de versão institucional:</strong> planilha antes de plataforma, piloto para uma diretoria antes do rito completo. É o protótipo fake do método, aplicado à fabricação.<sup>1, 6</sup> <span class="sel sel-i">Inferência</span></li>
+</ol>
+</section>

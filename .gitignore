@@ -4,3 +4,6 @@ EBF_Acervo/
 # Temporários
 *.tmp
 ~$*
+
+# PDFs de evidencia das pesquisas (pesados; ficam so no disco)
+Pesquisas/_trabalho/*/pdfs/
