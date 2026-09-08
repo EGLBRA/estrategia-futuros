@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Anatomia Profunda: Foresight na Seguros Unimed, a visão contrária</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,'Times New Roman',serif;font-size:15px;line-height:1.7;color:#1a1a1a;background:#fff}
+.W{max-width:1140px;margin:0 auto;padding:2.5rem 2rem 4rem}
+h1{font-size:26px;font-weight:700;line-height:1.2;margin-bottom:6px;letter-spacing:-.5px}
+h2{font-size:19px;font-weight:700;margin:24px 0 10px;padding-bottom:6px;border-bottom:1px solid #e0e0e0}
+h3{font-size:15px;font-weight:700;margin:16px 0 6px}
+.lbl{font-family:system-ui,-apple-system,sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#999;margin-bottom:2px}
+.meta{font-family:system-ui,sans-serif;font-size:12px;color:#999;margin-bottom:24px}
+a{color:#1a5276;text-decoration:none}a:hover{text-decoration:underline}
+.red{color:#b71c1c}
+.accent{border-left:3px solid #b71c1c;padding-left:12px;margin:10px 0}
+.num{font-family:system-ui,sans-serif;font-size:30px;font-weight:700;color:#b71c1c;display:block;line-height:1.1;margin:4px 0}
+.src{font-family:system-ui,sans-serif;font-size:11px;color:#999}
+.tabs{display:grid;grid-template-columns:repeat(9,max-content);justify-content:center;column-gap:22px;row-gap:3px;border-bottom:2px solid #1a1a1a;margin:0 0 28px;padding-bottom:8px;background:#fff;position:sticky;top:0;z-index:10}
+@media(max-width:900px){.tabs{grid-template-columns:repeat(5,max-content);column-gap:18px}}
+@media(max-width:560px){.tabs{grid-template-columns:repeat(3,max-content);column-gap:14px}}
+.tab{font-family:system-ui,sans-serif;font-size:13.5px;font-weight:500;padding:2px 0;background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap;color:#777;transition:.15s;display:inline-block}
+.tab:hover{color:#1a1a1a}
+.tabr{position:absolute;width:0;height:0;opacity:0;pointer-events:none}
+.pane{display:none}
+#r-dest:checked~#p-dest,#r-entenda:checked~#p-entenda,#r-gargalo:checked~#p-gargalo,#r-datado:checked~#p-datado,#r-ciencia:checked~#p-ciencia,#r-sensores:checked~#p-sensores,#r-absorcao:checked~#p-absorcao,#r-opcoes:checked~#p-opcoes,#r-robustez:checked~#p-robustez,#r-torneio:checked~#p-torneio,#r-desenho:checked~#p-desenho,#r-plano:checked~#p-plano,#r-custo:checked~#p-custo,#r-steep:checked~#p-steep,#r-sist:checked~#p-sist,#r-bmc:checked~#p-bmc,#r-w5:checked~#p-w5,#r-risco:checked~#p-risco,#r-cenarios:checked~#p-cenarios,#r-sintese:checked~#p-sintese,#r-sut:checked~#p-sut,#r-gloss:checked~#p-gloss,#r-cem:checked~#p-cem,#r-check:checked~#p-check,#r-fontes:checked~#p-fontes{display:block}
+#r-dest:checked~.tabs [for=r-dest],#r-entenda:checked~.tabs [for=r-entenda],#r-gargalo:checked~.tabs [for=r-gargalo],#r-datado:checked~.tabs [for=r-datado],#r-ciencia:checked~.tabs [for=r-ciencia],#r-sensores:checked~.tabs [for=r-sensores],#r-absorcao:checked~.tabs [for=r-absorcao],#r-opcoes:checked~.tabs [for=r-opcoes],#r-robustez:checked~.tabs [for=r-robustez],#r-torneio:checked~.tabs [for=r-torneio],#r-desenho:checked~.tabs [for=r-desenho],#r-plano:checked~.tabs [for=r-plano],#r-custo:checked~.tabs [for=r-custo],#r-steep:checked~.tabs [for=r-steep],#r-sist:checked~.tabs [for=r-sist],#r-bmc:checked~.tabs [for=r-bmc],#r-w5:checked~.tabs [for=r-w5],#r-risco:checked~.tabs [for=r-risco],#r-cenarios:checked~.tabs [for=r-cenarios],#r-sintese:checked~.tabs [for=r-sintese],#r-sut:checked~.tabs [for=r-sut],#r-gloss:checked~.tabs [for=r-gloss],#r-cem:checked~.tabs [for=r-cem],#r-check:checked~.tabs [for=r-check],#r-fontes:checked~.tabs [for=r-fontes]{color:#1a1a1a;border-bottom-color:#b71c1c;font-weight:700}
+.card{background:#f9f9f9;border:1px solid #e8e8e8;border-radius:4px;padding:10px 14px;margin-bottom:8px}
+.card-sm{background:#f9f9f9;border:1px solid #e8e8e8;border-radius:4px;padding:8px 12px;margin-bottom:6px;font-size:14px}
+.bar-row{display:flex;align-items:center;margin-bottom:8px;font-family:system-ui,sans-serif;font-size:13px}
+.bar-label{width:210px;text-align:right;padding-right:10px;font-weight:600;flex-shrink:0}
+.bar-track{flex:1;background:#eee;border-radius:3px;height:18px;position:relative;overflow:hidden}
+.bar-fill{height:100%;border-radius:3px;background:#b71c1c}
+.bar-val{position:absolute;right:6px;top:1px;font-size:11px;font-weight:700;color:#fff}
+.dot{display:inline-block;width:8px;height:8px;border-radius:4px;margin-right:4px;vertical-align:middle}
+details{margin-top:6px}
+summary{font-family:system-ui,sans-serif;font-size:12px;font-weight:600;color:#1a5276;cursor:pointer}
+.tl{position:relative;padding-left:24px;margin:16px 0}
+.tl::before{content:"";position:absolute;left:7px;top:0;bottom:0;width:2px;background:#ddd}
+.tl-item{position:relative;margin-bottom:12px;padding-left:4px}
+.tl-dot{position:absolute;left:-21px;top:7px;width:12px;height:12px;border-radius:6px;background:#b71c1c;border:2px solid #fff;box-shadow:0 0 0 1px #ddd}
+.tl-dot.done{background:#2e7d32}.tl-dot.now{background:#e65100}.tl-dot.wait{background:#999}
+blockquote{border-left:3px solid #ddd;padding:8px 16px;margin:12px 0;color:#444;font-style:italic;font-size:14px}
+.loop{max-width:540px;margin:16px auto}
+.loop-step{background:#f9f9f9;border:1px solid #ddd;border-radius:6px;padding:9px 14px;text-align:center;margin-bottom:4px;font-size:13px}
+.loop-step strong{display:block;font-size:14px}
+.loop-arrow{text-align:center;font-size:18px;color:#999;line-height:1.1}
+.loop-return{background:#b71c1c;color:#fff;border-radius:6px;padding:8px;text-align:center;font-family:system-ui,sans-serif;font-size:13px;font-weight:700}
+footer{margin-top:3rem;padding-top:1rem;border-top:1px solid #e0e0e0;font-family:system-ui,sans-serif;font-size:11px;color:#999;text-align:center}
+ul{padding-left:1.3rem;margin-bottom:10px}li{margin-bottom:6px}
+ol{padding-left:1.4rem;margin-bottom:10px}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:13px;font-family:system-ui,sans-serif;line-height:1.45}
+th,td{border:1px solid #e6e6e6;padding:6px 9px;text-align:left;vertical-align:top}
+thead th{background:#1a1a1a;color:#fff;font-weight:700;border-color:#1a1a1a}
+tbody tr:nth-child(even){background:#f9f9f9}
+.kpi{background:#fff;border:1px solid #e8e8e8;border-radius:6px;padding:12px 14px;text-align:center}
+.kpi small{font-family:system-ui,sans-serif;font-size:11px;color:#666;display:block;line-height:1.35;margin-top:2px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}
+.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+@media(max-width:600px){.g4{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}}
+.sel{display:inline-block;font-family:system-ui,sans-serif;font-size:9px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:1px 6px;border-radius:10px;vertical-align:1px;white-space:nowrap}
+.sel-v{background:#e6f2ea;color:#1b6b39}.sel-i{background:#eaf0fb;color:#28477f}.sel-e{background:#f4eee6;color:#8a5a1f}
+sup{color:#999;font-size:.72em}
+.note{font-family:system-ui,sans-serif;font-size:12px;color:#888;margin-top:4px}
+.alerta{background:#fdf6ec;border:1px solid #e8d9c0;border-left:3px solid #8a5a1f;border-radius:4px;padding:9px 13px;margin:12px 0;font-family:system-ui,sans-serif;font-size:12.5px;color:#5c4114}
+
+sup a.cit{color:#999;text-decoration:none;border-bottom:1px dotted #ccc}
+sup a.cit:hover{color:#b71c1c;border-bottom-color:#b71c1c}
+#p-fontes li:target{background:#fff3cd;box-shadow:0 0 0 5px #fff3cd;border-radius:2px}
+@media print{
+ .tabs{display:none!important}
+ .pane{display:block!important;break-before:page;page-break-before:always}
+ .W{max-width:none;padding:0}
+ body{font-size:11.5px;line-height:1.55}
+ h2{break-after:avoid;page-break-after:avoid}
+ h3{break-after:avoid;page-break-after:avoid}
+ table,.card,.kpi,blockquote,.loop,.bar-row,.tl-item{break-inside:avoid;page-break-inside:avoid}
+ sup a.cit{border:0}
+ a{color:#1a5276;text-decoration:none}
+}
+
+.tese{font-size:16px;font-style:italic;color:#333;margin:-4px 0 14px;padding-bottom:10px;border-bottom:1px solid #e0e0e0}
+.pratica{background:#fbfaf7;border:1px solid #e8e4d8;border-radius:4px;padding:12px 16px;margin:18px 0 4px}
+.pratica h3{margin-top:2px}
+.pratica p{margin-bottom:8px}
+.pratica p:last-child{margin-top:8px;font-weight:700}
+.apex{background:#1a1a1a;color:#fff;border-radius:6px;padding:14px 18px;margin:16px 0}
+.apex .lbl{color:#bbb}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}
+@media(max-width:700px){.g3{grid-template-columns:1fr}}
+.sel-p{background:#efe9f7;color:#4b2a7a}
+.tag{display:inline-block;font-family:system-ui,sans-serif;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:1px 7px;border-radius:3px;background:#eee;color:#444;margin-right:4px}
+p{margin-bottom:10px}
+</style>
+</head>
+<body>
+<div class="W">
+<div class="lbl">A Anatomia Profunda &middot; Diagn&oacute;stico funcional &middot; Documento 3 de 3 sobre foresight corporativo &middot; A segunda perspectiva</div>
+<h1>A vis&atilde;o contr&aacute;ria: a Seguros Unimed n&atilde;o precisa enxergar mais longe; precisa decidir mais perto</h1>
+<div class="meta">2026-09-08 &middot; 32 fontes identificadas, com nota de m&eacute;todo e n&iacute;vel de confian&ccedil;a &middot; Recorte: a tese oposta &agrave; do plano de instala&ccedil;&atilde;o da fun&ccedil;&atilde;o de futuros, com as mesmas fontes; o que fazer no lugar de uma c&eacute;lula de foresight, por que e a que custo &middot; Documento irm&atilde;o de <em>A Anatomia Profunda: Foresight Corporativo</em> (a disciplina) e de <em>Foresight na Seguros Unimed, o plano</em> (a primeira perspectiva) &middot; Uso interno</div>
+<input class="tabr" type="radio" name="tab" id="r-dest" checked>
+<input class="tabr" type="radio" name="tab" id="r-entenda">
+<input class="tabr" type="radio" name="tab" id="r-gargalo">
+<input class="tabr" type="radio" name="tab" id="r-datado">
+<input class="tabr" type="radio" name="tab" id="r-ciencia">
+<input class="tabr" type="radio" name="tab" id="r-sensores">
+<input class="tabr" type="radio" name="tab" id="r-absorcao">
+<input class="tabr" type="radio" name="tab" id="r-opcoes">
+<input class="tabr" type="radio" name="tab" id="r-robustez">
+<input class="tabr" type="radio" name="tab" id="r-torneio">
+<input class="tabr" type="radio" name="tab" id="r-desenho">
+<input class="tabr" type="radio" name="tab" id="r-plano">
+<input class="tabr" type="radio" name="tab" id="r-custo">
+<input class="tabr" type="radio" name="tab" id="r-steep">
+<input class="tabr" type="radio" name="tab" id="r-sist">
+<input class="tabr" type="radio" name="tab" id="r-bmc">
+<input class="tabr" type="radio" name="tab" id="r-w5">
+<input class="tabr" type="radio" name="tab" id="r-risco">
+<input class="tabr" type="radio" name="tab" id="r-cenarios">
+<input class="tabr" type="radio" name="tab" id="r-sintese">
+<input class="tabr" type="radio" name="tab" id="r-sut">
+<input class="tabr" type="radio" name="tab" id="r-gloss">
+<input class="tabr" type="radio" name="tab" id="r-cem">
+<input class="tabr" type="radio" name="tab" id="r-check">
+<input class="tabr" type="radio" name="tab" id="r-fontes">
+<nav class="tabs">
+<label class="tab" for="r-dest">Destaque</label>
+<label class="tab" for="r-entenda">Entenda</label>
+<label class="tab" for="r-gargalo">O gargalo</label>
+<label class="tab" for="r-datado">O futuro datado</label>
+<label class="tab" for="r-ciencia">A ci&ecirc;ncia</label>
+<label class="tab" for="r-sensores">Sensores</label>
+<label class="tab" for="r-absorcao">Absor&ccedil;&atilde;o</label>
+<label class="tab" for="r-opcoes">Op&ccedil;&otilde;es</label>
+<label class="tab" for="r-robustez">Robustez</label>
+<label class="tab" for="r-torneio">Torneio</label>
+<label class="tab" for="r-desenho">O desenho</label>
+<label class="tab" for="r-plano">90 dias</label>
+<label class="tab" for="r-custo">Custo</label>
+<label class="tab" for="r-steep">STEEPLEDI</label>
+<label class="tab" for="r-sist">Sist&ecirc;mica</label>
+<label class="tab" for="r-bmc">Modelo</label>
+<label class="tab" for="r-w5">5W2H</label>
+<label class="tab" for="r-risco">Riscos</label>
+<label class="tab" for="r-cenarios">Cen&aacute;rios</label>
+<label class="tab" for="r-sintese">Encontro</label>
+<label class="tab" for="r-sut">Sutilezas</label>
+<label class="tab" for="r-gloss">Gloss&aacute;rio</label>
+<label class="tab" for="r-cem">Cem perguntas</label>
+<label class="tab" for="r-check">Check</label>
+<label class="tab" for="r-fontes">Fontes</label>
+</nav>
+<section id="p-dest" class="pane">
+<div class="accent"><p><strong>A tese:</strong> a Seguros Unimed não sofre de falta de visão de futuro. Sofre de excesso de sinal e falta de decisão. O futuro que importa para uma seguradora chega datado, de graça e pela porta da frente: a ANS publica trimestre a trimestre, a Susep lista os temas do ano, o IBGE dá a pirâmide até 2070, a atuária da própria casa precifica o amanhã todo dia. O que as atas mostram não é cegueira: é uma organização em que toda decisão relevante sobe, as mesmas pessoas ocupam todas as salas e um estudo espera quinze semanas por trinta e seis minutos de autorização. Instalar uma célula de futuros nessa casa é comprar óculos para quem está de mãos amarradas. Antes de comprar olhos, destrave as mãos: alçada, rede como sensor, decisões robustas e uma carteira de opções pequenas. Custa quase nada e mede o que importa. <sup><a class="cit" href="#f5">5</a>, <a class="cit" href="#f11">11</a>, <a class="cit" href="#f10">10</a>, <a class="cit" href="#f17">17</a>, <a class="cit" href="#f1">1</a></sup> <span class="sel sel-i">Inferência</span></p></div>
+
+<div class="g4">
+<div class="kpi"><span class="num">15 semanas</span><small>entre a retomada de um tema comercial parado havia cerca de dois anos e a autorização de um estudo, em 36 minutos de reunião<sup><a class="cit" href="#f5">5</a></sup></small></div>
+<div class="kpi"><span class="num">19%</span><small>das empresas usam planejamento de cenários hoje, contra 70% no pico; a ferramenta mais prometida das pesquisas de gestão é a que menos se adota<sup><a class="cit" href="#f26">26</a></sup></small></div>
+<div class="kpi"><span class="num">30%</span><small>mais precisos que analistas de inteligência com informação sigilosa: previsores amadores calibrados, no torneio da comunidade de inteligência dos Estados Unidos<sup><a class="cit" href="#f25">25</a></sup></small></div>
+<div class="kpi"><span class="num">R$ 715 mil</span><small>é o custo do plano irmão no ano 1 para obter, como prova de vida, seis decisões em ata; o desenho deste documento custa horas e mede o mesmo<sup><a class="cit" href="#f7">7</a></sup></small></div>
+</div>
+
+<h2>Sete verdades contrárias</h2>
+<ol>
+<li><strong>O futuro relevante para esta casa já tem data, e quem o escreve é o regulador.</strong> Dezenove temas da ANS com trimestre até 2028; 23 temas de prioridade um da Susep em 2026; a lei nova de contratos em vigor; a lei das cooperativas de seguro em regulamentação; o ORSA com horizonte de três anos; o IBGE com 2041 e 2070; o custo médico medido todo mês.<sup><a class="cit" href="#f11">11</a>, <a class="cit" href="#f10">10</a>, <a class="cit" href="#f12">12</a>, <a class="cit" href="#f13">13</a>, <a class="cit" href="#f14">14</a>, <a class="cit" href="#f17">17</a>, <a class="cit" href="#f18">18</a></sup> <span class="sel sel-v">Verificado</span> Uma célula que vá "explorar futuros" vai reescrever, com atraso e com salário, o que já está publicado. <span class="sel sel-i">Inferência</span></li>
+<li><strong>O gargalo é decisão, não informação.</strong> As atas do grupo de trabalho SUSEP registram que toda decisão de política comercial sobe para mentores, reunião de diretoria ou comitê executivo sem alçada escrita; que as mesmas pessoas estão em quase todos os fóruns; que a TI não tem equipe reservada e a operação declarou não caber objetivo novo; que a leitura de mercado chega tarde e manual.<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span> Nenhum desses sintomas melhora com mais sinal. Todos pioram. <span class="sel sel-i">Inferência</span></li>
+<li><strong>A evidência do retorno do foresight é mais frágil do que se vende.</strong> O estudo mais citado acompanhou 83 empresas europeias entre 2008 e 2015 e mede associação, não causa; o próprio modelo prevê empresas "neuróticas", que investem em foresight além do que a incerteza pede.<sup><a class="cit" href="#f27">27</a>, <a class="cit" href="#f6">6</a></sup> <span class="sel sel-v">Verificado</span> O uso de cenários caiu de 70% para 19%; a criadora do relatório anual de tendências mais famoso o aposentou em 2026 por inutilidade.<sup><a class="cit" href="#f26">26</a>, <a class="cit" href="#f23">23</a>, <a class="cit" href="#f6">6</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Uma seguradora já é uma máquina de futuro.</strong> Modelos preditivos de sinistralidade nos quatro ramos, escores de risco na aceitação, capital calculado por risco, resseguro, tábuas: a companhia precifica o amanhã todos os dias.<sup><a class="cit" href="#f1">1</a>, <a class="cit" href="#f16">16</a></sup> <span class="sel sel-v">Verificado</span> O que falta não é enxergar; é o que a literatura chama de capacidade de absorção: reconhecer, assimilar e aplicar informação nova, que depende do conhecimento prévio de quem recebe, não de quem emite.<sup><a class="cit" href="#f29">29</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>A rede vê antes de qualquer célula, e já está na folha.</strong> 340 cooperativas, 116 mil médicos, mais de 13 mil corretores, 19 escritórios regionais, uma ouvidoria com método de resolutividade. A resseguradora que publica riscos emergentes desde 2013 os capta com os próprios subscritores; a cooperativa de crédito que fez seis cenários ouviu 980 pessoas em 45 oficinas.<sup><a class="cit" href="#f9">9</a>, <a class="cit" href="#f1">1</a>, <a class="cit" href="#f2">2</a>, <a class="cit" href="#f3">3</a>, <a class="cit" href="#f21">21</a>, <a class="cit" href="#f22">22</a></sup> <span class="sel sel-v">Verificado</span> Sensor custa uma pergunta por mês. Célula custa salário. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Preparar vence prever.</strong> Decisões robustas, que se saem razoavelmente bem em muitos futuros, batem decisões ótimas para um futuro previsto; o exame prévio de fracasso eleva em 30% a identificação de causas; a estratégia como carteira de opções compra o direito de decidir depois, quando a incerteza se resolve.<sup><a class="cit" href="#f31">31</a>, <a class="cit" href="#f28">28</a>, <a class="cit" href="#f30">30</a></sup> <span class="sel sel-v">Verificado</span> A companhia tem a folga para isso: ROAE de 26,7% contra 13,5% orçados.<sup><a class="cit" href="#f1">1</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Quando a previsão importa, o que funciona é calibração, não narrativa.</strong> Previsores treinados a dar probabilidades e a ser medidos por elas superaram analistas profissionais em mais de 30%.<sup><a class="cit" href="#f25">25</a></sup> <span class="sel sel-v">Verificado</span> Um torneio interno de cinquenta perguntas com data (a norma sai no trimestre? o custo médico fecha acima de 14%?) custa uma planilha e ensina a casa a errar menos. Um cenário de 2040 não ensina nada mensurável. <span class="sel sel-i">Inferência</span></li>
+</ol>
+
+<h2>Se você só ler uma página</h2>
+<div class="card">
+<p><strong>O anti-escritório, em quatro mecanismos e noventa dias.</strong> (1) <em>Comprar o radar pronto, sem ninguém para "explorar":</em> a agenda da ANS, o plano da Susep, o IBGE, o custo médico e as duas listas globais de risco viram uma página por trimestre, lida no Comitê de Gestão, que já existe para alinhar negócios ao planejamento.<sup><a class="cit" href="#f11">11</a>, <a class="cit" href="#f10">10</a>, <a class="cit" href="#f17">17</a>, <a class="cit" href="#f18">18</a>, <a class="cit" href="#f20">20</a>, <a class="cit" href="#f21">21</a>, <a class="cit" href="#f1">1</a></sup> (2) <em>Transformar a rede em sensor:</em> uma pergunta por mês a 19 gerentes regionais, 30 corretores e 10 singulares, com devolutiva; a atuária lê as anomalias. (3) <em>Destravar a decisão:</em> alçada escrita para o Fórum de Negócio, exame prévio de fracasso em toda iniciativa acima de um valor, gatilho combinado para cada norma datada, e um torneio de previsão de cinquenta perguntas por ano. (4) <em>Comprar opções, não estudos:</em> os quatro negócios de 2028 como carteira de opções pequenas com abandono, testes de estresse reversos no método do ORSA, resseguro e capital como instrumentos de futuro. Zero contratação. Estratégia facilita; Riscos guarda o método; Atuária guarda o número; o hub de inovação guarda os experimentos. Em noventa dias, a régua é uma só: quantas decisões saíram sem subir.<sup><a class="cit" href="#f5">5</a>, <a class="cit" href="#f14">14</a>, <a class="cit" href="#f30">30</a>, <a class="cit" href="#f28">28</a>, <a class="cit" href="#f25">25</a></sup> <span class="sel sel-p">Proposta</span></p>
+</div>
+
+<h3>A síntese</h3>
+<div class="apex"><div class="lbl">A diferença que faz a diferença</div><p>Numa seguradora cooperativa de saúde, o futuro não é escasso; é abundante, datado e gratuito. O recurso escasso é a decisão com alçada e a capacidade de absorver o que já se sabe. Uma célula de futuros aumenta a oferta do que sobra e não toca no que falta. O desenho certo compra o radar pronto, faz da rede o sensor, destrava a alçada e troca cenários por opções com data de morte. Se em noventa dias isso não render decisões que antes subiam, aí sim vale discutir olhos novos.</p></div>
+
+<div class="pratica">
+<h3>Na prática</h3>
+<p>Pense no gerente de Ramos Elementares que, em maio de 2026, retomou o tema da comissão por esgotamento, apontado pelo mentor como o maior obstáculo ao crescimento do ramo. Ele sabia tudo o que precisava: a regra, o concorrente, o corretor que lia o parcelamento como amadorismo. Não faltou sinal. Faltou uma sala com alçada. O tema levou quinze semanas para chegar a uma janela de trinta e seis minutos em que alguém disse "faça o estudo".<sup><a class="cit" href="#f5">5</a></sup></p>
+<p>Agora imagine que, nesse intervalo, uma célula de futuros tivesse entregue a ele uma ficha de sinal sobre remuneração de corretores em 2030. Ele teria lido, concordado e guardado, porque a decisão que ele precisava não era sobre 2030: era sobre a próxima segunda-feira, e ela não era dele. O ramo cresceu 15,8% apesar disso; imagine com alçada.<sup><a class="cit" href="#f3">3</a></sup> É esse o argumento inteiro deste documento: a casa não precisa ver mais longe. Precisa que a distância entre ver e decidir caiba numa semana.</p>
+<p>Se amanhã soubéssemos exatamente o que vai acontecer em 2030, quantas decisões a mais sairiam esta semana?</p>
+</div>
+</section>
+
+<section id="p-entenda" class="pane">
+<h2>Entenda: o que o plano diz, e onde ele erra nesta casa</h2>
+<p class="tese">O plano irmão está certo sobre o mundo e errado sobre a Seguros Unimed: ele resolve um problema que a casa não tem e ignora o que ela tem.</p>
+
+<h3>O que o plano propõe</h3>
+<p>Uma célula de duas pessoas na Estratégia, quatro parciais, cinco encaixes no calendário, um radar datado, um túnel de vento anual, uma carteira de opções, cerca de R$ 715 mil no ano 1 sem consultoria e 980 horas da casa, com a promessa de seis decisões em ata nascidas de sinal em doze meses.<sup><a class="cit" href="#f7">7</a></sup> <span class="sel sel-v">Verificado</span> A primeira anatomia, a da disciplina, sustenta a mesma tese em versão genérica: foresight é calendário de decisão com dono, orçamento e gatilho.<sup><a class="cit" href="#f6">6</a></sup> <span class="sel sel-v">Verificado</span></p>
+
+<h3>Cinco objeções</h3>
+<table>
+<thead><tr><th>O plano afirma</th><th>A objeção</th><th>Evidência</th></tr></thead>
+<tbody>
+<tr><td>A casa enxerga só até três anos e precisa de horizonte</td><td>A casa enxerga o que consegue decidir. Oito de nove riscos no curto prazo não é miopia: é o retrato de uma organização que só registra o que cabe na alçada e no ciclo. Alongar a lente sem alargar a alçada produz uma lista de coisas que também não serão decididas.</td><td>Riscos por horizonte na Circular 666; escalada de toda decisão relevante nas atas<sup><a class="cit" href="#f2">2</a>, <a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span> Leitura: <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td>Falta circuito entre sinal e decisão; a célula cria o circuito</td><td>O circuito que falta não é de sinal, é de alçada. Inteligência de Mercado já produz painel e radar; o insumo chega "tarde e manual" porque não há hora marcada para decidir, não porque não há quem leia. Dez minutos de sinais num fórum que não decide são dez minutos de notícia.</td><td>Painel e radar existentes; "insumo tardio e manual"; ausência de alçada escrita<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span> Leitura: <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td>Oitenta por cento do insumo é gratuito; a célula organiza</td><td>Se oitenta por cento é gratuito e datado, o trabalho é ler, não explorar. Ler cabe numa página trimestral do Comitê de Gestão, que já existe. O que sobra de incerteza genuína (o desfecho do pacto intergeracional, a adesão das singulares à lei das cooperativas, a Selic) pede probabilidade calibrada e opção, não cenário narrativo.</td><td>Comitê de Gestão com mandato de alinhamento ao planejamento; agenda da ANS com estudos sem data<sup><a class="cit" href="#f1">1</a>, <a class="cit" href="#f11">11</a></sup> <span class="sel sel-v">Verificado</span> Leitura: <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td>A pesquisa mostra que empresas vigilantes lucram mais</td><td>Mostra associação em 83 empresas europeias de outro setor e de outra década, com um modelo que admite investir demais. Nesta casa, o retorno de 2025 foi quase o dobro da meta sem célula de futuros. O que a pesquisa realmente separa é perceber e decidir, e o segundo é o que falta aqui.</td><td>Desenho do estudo; ROAE de 26,7% contra 13,5%<sup><a class="cit" href="#f27">27</a>, <a class="cit" href="#f6">6</a>, <a class="cit" href="#f1">1</a></sup> <span class="sel sel-v">Verificado</span> Leitura: <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td>Nenhum rito novo; a função entra nos existentes</td><td>Correto, e por isso a função é desnecessária como pessoa: se tudo entra em ritos existentes, o que se precisa é de pauta, alçada e formato, não de salário. O plano admite isso quando diz que o formato de uma frase na ata decide entre o laço que decide e o que adia.</td><td>Regra de nenhum rito novo e a frase na ata, no próprio plano<sup><a class="cit" href="#f7">7</a></sup> <span class="sel sel-v">Verificado</span> Leitura: <span class="sel sel-i">Inferência</span></td></tr>
+</tbody>
+</table>
+
+<h3>Onde os dois documentos concordam</h3>
+<p>Que o regulador é o maior futurista da casa; que Vida é o ramo mais frágil da ambição; que a rede é o melhor sensor; que aposta sem critério de abandono envenena a carteira; que a função nunca deve ser dona da decisão. A divergência é sobre o que fazer com isso: contratar duas pessoas para organizar o que sobra, ou destravar o que falta.<sup><a class="cit" href="#f7">7</a>, <a class="cit" href="#f6">6</a></sup> <span class="sel sel-i">Inferência</span> A aba Encontro mostra como as duas visões se combinam num teste de noventa dias. <span class="sel sel-p">Proposta</span></p>
+
+<div class="pratica">
+<h3>Na prática</h3>
+<p>Uma superintendente de Estratégia lê os dois documentos na mesma semana. O plano pede que ela nomeie um dono de futuros e negocie quatro horas semanais com quatro áreas. Este documento pede que ela leve ao Fórum de Negócio uma tabela de alçadas e um formato de exame prévio de fracasso. As duas coisas cabem na agenda dela; só uma cabe na agenda da casa, que já declarou não caber objetivo novo na operação e não ter TI reservada.<sup><a class="cit" href="#f5">5</a></sup></p>
+<p>A pergunta que ela deve fazer não é "qual documento está certo". É "qual dos dois posso testar sem pedir nada a ninguém". A resposta é este. Se em noventa dias a alçada e o formato renderem decisões que antes subiam, o plano irmão ganha um terreno preparado. Se não renderem, o problema era ainda mais fundo do que os dois documentos supõem.</p>
+<p>O que a gente destrava se parar de pedir permissão para decidir o que já sabe?</p>
+</div>
+</section>
+
+<section id="p-gargalo" class="pane">
+<h2>O gargalo: a evidência de que a casa não digere o que já sabe</h2>
+<p class="tese">Cada sintoma registrado nas atas do grupo de trabalho SUSEP é um sintoma de decisão, não de informação; melhorar o que não é gargalo não melhora o sistema.</p>
+
+<h3>Os sintomas, e o que cada um diz sobre foresight</h3>
+<table>
+<thead><tr><th>Sintoma registrado</th><th>Evidência</th><th>O que uma célula de futuros faria</th><th>O que resolve de fato</th></tr></thead>
+<tbody>
+<tr><td>Toda decisão relevante sobe</td><td>Esgotamento de comissão, prestamista de prêmio único, meios de pagamento, corretora digital e modelo de canais vão a mentores, reunião de diretoria ou comitê executivo; nenhuma ata define alçada<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span></td><td>Acrescentaria itens à fila de subida <span class="sel sel-i">Inferência</span></td><td>Alçada escrita por tipo de decisão e valor <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>As mesmas pessoas em quase todos os fóruns</td><td>Agenda e quórum é o sintoma mais repetido (nove fontes); ritos comprimidos ou adiados (sete)<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span></td><td>Ocuparia dez minutos de cada uma delas <span class="sel sel-i">Inferência</span></td><td>Menos fóruns, suplente de mentor, decisão por escrito <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Quinze semanas para autorizar um estudo</td><td>Tema retomado em maio e autorizado em agosto, em 36 minutos; parado desde 2024<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span></td><td>Nada: o tema não era de horizonte <span class="sel sel-i">Inferência</span></td><td>Recomendação única em cinco dias úteis; resposta em 30 <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Braço encolhido</td><td>Três consultores a menos numa frente; liderança absorvendo o operacional; operação sem espaço para objetivo novo; TI sem equipe dedicada<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span></td><td>Pediria quatro horas semanais a quatro áreas <span class="sel sel-i">Inferência</span></td><td>Cota reservada e critério de despriorização <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Insumo de mercado tardio e manual</td><td>Painel e radar existem; chegam tarde à decisão<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span></td><td>Produziria mais insumo <span class="sel sel-i">Inferência</span></td><td>Hora marcada para decidir sobre o insumo que já existe <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Método discutido antes do problema</td><td>Receio de descrédito com mais um modelo; formato definido antes do problema, na leitura da própria reunião<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span></td><td>Seria mais um método <span class="sel sel-i">Inferência</span></td><td>Entrar pelos três problemas parados <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Vida perde na porta, não no preço</td><td>Aceitação médica lenta, documentos em excesso, pendências paradas há mais de 40 dias; concorrente aceita até R$ 1 milhão com análise automática<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span></td><td>Registraria a tendência de aceitação automática <span class="sel sel-i">Inferência</span></td><td>Decidir a régua de aceitação, que já é conhecida <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>O número da meta sem memória de cálculo</td><td>Meta de 20% acordada com mentores; grupo trabalha com o número da Controladoria; fechamento de 2024 não está nas atas<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span></td><td>Nada <span class="sel sel-i">Inferência</span></td><td>Número-base assinado, aberto por ramo <span class="sel sel-p">Proposta</span></td></tr>
+</tbody>
+</table>
+
+<h3>A lógica do gargalo</h3>
+<p>Num sistema com uma restrição, todo ganho fora dela é ilusão: aumentar a entrada de um processo cuja saída está travada só aumenta o estoque. Nesta casa, a saída é a decisão com alçada; a entrada é a informação. As atas mostram a entrada abundante (painéis, radar, diagnóstico de centenas de itens, 96 painéis técnicos entregues) e a saída rara.<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span> Uma célula de futuros aumenta a entrada. <span class="sel sel-i">Inferência</span> O redesenho proposto para a frente SUSEP entendeu isso e pediu alçada, porta única e triagem; propôs 481 encontros por ano. Este documento pede menos: que se comece pelas alçadas e se meça a saída, antes de qualquer investimento em entrada.<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-i">Inferência</span></p>
+
+<h3>A prova de que a informação não falta</h3>
+<ul>
+<li>A companhia nomeia, na mensagem da diretoria, os quatro desafios de longo prazo: envelhecimento, eficiência, clima, tecnologia.<sup><a class="cit" href="#f1">1</a></sup> <span class="sel sel-v">Verificado</span> Nomeou sem célula.</li>
+<li>O Comitê de Tecnologia tem mandato sobre tendências e novos modelos de negócio; a Comissão de ESG faz benchmarking de pares; a materialidade ouviu partes interessadas.<sup><a class="cit" href="#f1">1</a>, <a class="cit" href="#f2">2</a></sup> <span class="sel sel-v">Verificado</span> Três radares, sem célula.</li>
+<li>A atuária tem modelos preditivos nos quatro ramos e escores de aceitação.<sup><a class="cit" href="#f1">1</a></sup> <span class="sel sel-v">Verificado</span> O futuro de sinistro está calculado, sem célula.</li>
+<li>A Unimed do Brasil já disse publicamente que "o que nos trouxe até aqui não é o que vai nos levar adiante" e listou envelhecimento, custos e novos concorrentes.<sup><a class="cit" href="#f8">8</a></sup> <span class="sel sel-v">Verificado</span> O acionista já enxergou.</li>
+</ul>
+
+<div class="pratica">
+<h3>Na prática</h3>
+<p>Uma líder de frente chega à semanal de segunda com um diagnóstico de 300 itens, um painel de concorrentes e um radar de Vida. A operação diz que não cabe objetivo novo. A TI diz que a fila está cheia. O mentor está de férias sem suplente. Nada do que ela precisa decidir exige saber o que acontece em 2035; exige que alguém com assinatura diga sim ou não esta semana.<sup><a class="cit" href="#f5">5</a></sup></p>
+<p>Se a casa contratar duas pessoas para produzir sinais datados, ela vai recebê-los e guardá-los na mesma pasta do diagnóstico de 300 itens. Se a casa escrever numa página o que ela pode decidir sozinha, com que valor e com que prazo de resposta de quem está acima, a pasta esvazia. O ramo que ela toca cresceu 15,8% com a pasta cheia; a diferença entre 15,8% e a meta de dobrar até 2028 não está na pasta, está na alçada.<sup><a class="cit" href="#f3">3</a>, <a class="cit" href="#f1">1</a></sup></p>
+<p>Quantas decisões a gente toma por mês, contra quantas a gente encaminha?</p>
+</div>
+</section>
+
+<section id="p-datado" class="pane">
+<h2>O futuro datado: o regulador, o IBGE e a atuária já escreveram 2028</h2>
+<p class="tese">Para uma seguradora regulada por duas agências, o futuro de médio prazo é um documento público com trimestre; o que sobra de incerteza é pequeno e pede probabilidade, não narrativa.</p>
+
+<h3>O que já está escrito</h3>
+<table>
+<thead><tr><th>Quem escreve</th><th>O que está datado</th><th>Horizonte</th><th>Custo de obter</th></tr></thead>
+<tbody>
+<tr><td>ANS</td><td>Reajuste coletivo, novo cadastro de beneficiários e portabilidade no 4º trimestre de 2026; cuidado coordenado e reembolso no 2º trimestre de 2027; remuneração por valor, padrão TISS e franquia no 4º trimestre de 2027; doenças preexistentes no 2º trimestre de 2028; revisão do IDSS no 4º trimestre de 2028<sup><a class="cit" href="#f11">11</a></sup> <span class="sel sel-v">Verificado</span></td><td>Até 2028</td><td>Zero; um PDF de uma página</td></tr>
+<tr><td>Susep</td><td>Regulamentação das Leis 15.040 e 213; catástrofe; vida universal; sandbox; open insurance; mutualista; regras prudenciais, de governança e de conduta; sustentabilidade; divulgação financeira internacional<sup><a class="cit" href="#f10">10</a></sup> <span class="sel sel-v">Verificado</span></td><td>2026</td><td>Zero; nota oficial de dezembro</td></tr>
+<tr><td>Congresso</td><td>Lei de contratos de seguro em vigor desde dezembro de 2025; cooperativas de seguro em todos os ramos não vedados desde janeiro de 2025<sup><a class="cit" href="#f12">12</a>, <a class="cit" href="#f13">13</a></sup> <span class="sel sel-v">Verificado</span></td><td>Já</td><td>Zero</td></tr>
+<tr><td>CNSP</td><td>ORSA: avaliação prospectiva de três anos, sob estresse, ligada ao plano de negócios, com testes reversos<sup><a class="cit" href="#f14">14</a></sup> <span class="sel sel-v">Verificado</span></td><td>Três anos</td><td>Zero como método; a companhia tende a não ser obrigada<sup><a class="cit" href="#f15">15</a></sup> <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td>IBGE</td><td>Pico populacional em 2041; 37,8% com 60 anos ou mais em 2070; idade média de 48,4 anos<sup><a class="cit" href="#f17">17</a></sup> <span class="sel sel-v">Verificado</span></td><td>Até 2070</td><td>Zero</td></tr>
+<tr><td>IESS</td><td>Custo médico a 14,5% em doze meses; terapias a 30,7%<sup><a class="cit" href="#f18">18</a></sup> <span class="sel sel-v">Verificado</span></td><td>Mensal</td><td>Zero</td></tr>
+<tr><td>CNseg</td><td>Setor a 10% do PIB em 2030; cerca de 65 iniciativas<sup><a class="cit" href="#f19">19</a></sup> <span class="sel sel-v">Verificado</span></td><td>2030</td><td>Zero</td></tr>
+<tr><td>AXA, Swiss Re</td><td>Clima, geopolítica, cibernético e dados no topo; demografia entrando; calor extremo como risco emergente<sup><a class="cit" href="#f20">20</a>, <a class="cit" href="#f21">21</a></sup> <span class="sel sel-v">Verificado</span></td><td>Dez anos</td><td>Zero; dois PDFs por ano</td></tr>
+<tr><td>A própria atuária</td><td>Sinistralidade prevista nos quatro ramos; escores de aceitação; cinco modelos de anomalia<sup><a class="cit" href="#f1">1</a></sup> <span class="sel sel-v">Verificado</span></td><td>Ciclo do produto</td><td>Já pago</td></tr>
+</tbody>
+</table>
+
+<h3>O que não está escrito, e que tipo de resposta pede</h3>
+<table>
+<thead><tr><th>Incerteza genuína</th><th>Por que cenário narrativo não ajuda</th><th>O que ajuda</th></tr></thead>
+<tbody>
+<tr><td>O desfecho do estudo da ANS sobre o pacto intergeracional<sup><a class="cit" href="#f11">11</a></sup></td><td>É uma decisão binária com data desconhecida; três "mundos" não mudam o que a casa faria <span class="sel sel-i">Inferência</span></td><td>Uma probabilidade calibrada e revista a cada trimestre, e uma posição escrita pronta para as duas saídas <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Quantas singulares vão constituir cooperativas de seguro<sup><a class="cit" href="#f13">13</a></sup></td><td>Depende de dez decisões locais; o sinal chega pela rede, não por estudo <span class="sel sel-i">Inferência</span></td><td>Perguntar às singulares; uma opção de intercooperação com gatilho no primeiro pedido à Susep <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>A trajetória da Selic e do resultado financeiro (R$ 475 milhões em 2025)<sup><a class="cit" href="#f1">1</a></sup></td><td>Nenhuma casa de futuros acerta juros; o Comitê de Investimentos já opera com isso <span class="sel sel-i">Inferência</span></td><td>Teste de estresse no método do ORSA: que parte do ROAE sobrevive a um dígito<sup><a class="cit" href="#f14">14</a></sup> <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>O custo médico em 2028 (hoje 14,5%)<sup><a class="cit" href="#f18">18</a></sup></td><td>É uma série mensal com trinta anos de história; extrapolar e estressar vence imaginar <span class="sel sel-i">Inferência</span></td><td>Gatilho de reajuste e de gestão de crônicos por faixa do índice <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>A velocidade da aceitação automatizada dos concorrentes<sup><a class="cit" href="#f5">5</a></sup></td><td>Já aconteceu; não é futuro, é atraso <span class="sel sel-i">Inferência</span></td><td>Decidir a régua de aceitação esta semana <span class="sel sel-p">Proposta</span></td></tr>
+</tbody>
+</table>
+<p>A conclusão é desconfortável para quem vende futuro: numa seguradora regulada, a fatia do amanhã que não está datada e ainda assim pede cenário narrativo é pequena. O que ela pede é probabilidade, opção e alçada. <span class="sel sel-i">Inferência</span></p>
+
+<div class="pratica">
+<h3>Na prática</h3>
+<p>Dona Célia, 67 anos, beneficiária de um contrato coletivo, é o pacto intergeracional em pessoa; o plano irmão a usa para defender que alguém precisa "ler as três versões possíveis" do estudo da ANS.<sup><a class="cit" href="#f7">7</a>, <a class="cit" href="#f11">11</a></sup> Este documento discorda do remédio. O estudo terá um resultado, não três; a casa precisa de uma posição escrita para cada resultado e de uma probabilidade que a atuária revise a cada trimestre, porque é ela quem conhece a curva etária da carteira de 963 mil vidas.<sup><a class="cit" href="#f1">1</a></sup></p>
+<p>Isso não é uma função nova. É uma pergunta ao Comitê de Gestão, uma vez por trimestre: "qual a probabilidade de a ANS mudar as faixas etárias até 2028, e o que fazemos em cada caso?". A resposta vira ata. O torneio de previsão (aba Torneio) mede se a casa está calibrada. O cenário narrativo mediria aplausos.</p>
+<p>Do que a gente ainda não sabe sobre 2028, quanto é realmente incerto e quanto é só ainda não lido?</p>
+</div>
+</section>
+
+<section id="p-ciencia" class="pane">
+<h2>A ciência: o que a evidência diz sobre prever, e sobre quem prevê</h2>
+<p class="tese">A pesquisa séria sobre previsão recompensa calibração e punição do erro, não narrativa; e a pesquisa sobre foresight corporativo prova menos do que o mercado repete.</p>
+
+<h3>Quatro resultados que o campo prefere não citar</h3>
+<table>
+<thead><tr><th>Resultado</th><th>O que diz</th><th>O que implica para a Seguros Unimed</th></tr></thead>
+<tbody>
+<tr><td>Torneio de previsão da comunidade de inteligência dos Estados Unidos<sup><a class="cit" href="#f25">25</a></sup> <span class="sel sel-v">Verificado</span></td><td>Previsores amadores, treinados a dar probabilidades, a atualizá-las e a ser medidos pelo erro, foram mais de 30% mais precisos que analistas profissionais com informação sigilosa.</td><td>Quando a previsão importa (norma sai ou não, custo médico fecha acima ou abaixo), o que funciona é um processo de probabilidade medida, barato, e não um estudo de cenários. <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td>Pesquisa de ferramentas de gestão da Bain<sup><a class="cit" href="#f26">26</a></sup> <span class="sel sel-v">Verificado</span></td><td>O planejamento de cenários caiu de 70% de uso no pico para 19%; em 2014 era a ferramenta que mais se esperava crescer e não entrou no top 10.</td><td>A ferramenta que o plano irmão coloca no centro é a que as empresas mais abandonam na prática; quem usa gosta, mas poucos sustentam. <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td>Estudo longitudinal de foresight e desempenho<sup><a class="cit" href="#f27">27</a>, <a class="cit" href="#f6">6</a></sup> <span class="sel sel-v">Verificado</span></td><td>83 empresas avaliadas em 2008 e medidas até 2015: as "vigilantes" tiveram 16% de lucratividade contra 12% da média; o modelo classifica também empresas "neuróticas", com foresight acima do que a incerteza pede, e "vulneráveis".</td><td>Associação, não causa; amostra europeia, multinacional, de outra década. A lição útil é a categoria neurótica: gastar em foresight além da necessidade tem nome na própria teoria. <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td>Exame prévio de fracasso<sup><a class="cit" href="#f28">28</a></sup> <span class="sel sel-v">Verificado</span></td><td>Imaginar que a iniciativa já fracassou e listar as causas eleva em 30% a identificação correta de razões, segundo a pesquisa de 1989 que fundamenta a técnica.</td><td>Custa uma hora por iniciativa, dentro de reunião existente, e melhora a decisão que a casa já toma. <span class="sel sel-i">Inferência</span></td></tr>
+</tbody>
+</table>
+
+<h3>E o argumento do relatório de tendências</h3>
+<p>A criadora do relatório anual de tendências mais famoso do mundo o encerrou em março de 2026 com o argumento de que um compilado de tendências em PDF deixou de ser útil, e passou a organizar o material por convergências.<sup><a class="cit" href="#f23">23</a>, <a class="cit" href="#f6">6</a></sup> <span class="sel sel-v">Verificado</span> O plano irmão usa esse fato para dizer "não compre tendência, compre método". Este documento vai mais longe: se o produto mais vendido do campo morreu por inutilidade, a prova de utilidade cabe a quem propõe o próximo, e ela precisa vir em decisões medidas, não em oficinas. <span class="sel sel-i">Inferência</span></p>
+
+<h3>O que a ciência recomenda, em quatro linhas</h3>
+<ol>
+<li>Perguntas com resposta verificável e data, não temas. "A norma de remuneração por valor sai até 31 de dezembro de 2027?" é previsível e mensurável; "o futuro da saúde suplementar" não é.<sup><a class="cit" href="#f25">25</a>, <a class="cit" href="#f11">11</a></sup> <span class="sel sel-i">Inferência</span></li>
+<li>Probabilidades numéricas, revisadas, com registro do erro. A calibração se aprende em meses, com um placar.<sup><a class="cit" href="#f25">25</a></sup> <span class="sel sel-i">Inferência</span></li>
+<li>Decisões robustas a vários futuros em vez de ótimas para um: o método de análise de políticas de longo prazo da RAND parte do princípio de que não se prevê o século, mas se pode escolher o que funciona em muitos deles.<sup><a class="cit" href="#f31">31</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li>Exame prévio de fracasso antes de investir, cenário só como ensaio de decisão e nunca como produto; o próprio artigo mais citado a favor de cenários os define assim.<sup><a class="cit" href="#f28">28</a>, <a class="cit" href="#f32">32</a></sup> <span class="sel sel-v">Verificado</span></li>
+</ol>
+
+<div class="pratica">
+<h3>Na prática</h3>
+<p>Um diretor de Saúde ouve, numa oficina de futuros, três histórias sobre 2030. Sai inspirado. Na semana seguinte precisa decidir se a régua de reajuste de 2027 considera a nova regra de assimetria de informação que a ANS prometeu para o quarto trimestre de 2026.<sup><a class="cit" href="#f11">11</a></sup> As três histórias não ajudam; uma probabilidade de a norma sair no prazo, escrita pela área regulatória e revista todo mês, ajuda. Se a casa registrar essa probabilidade e depois o resultado, em um ano ela saberá se a área regulatória é calibrada ou otimista. Isso é ciência de previsão aplicada a uma seguradora; custa uma coluna numa planilha.</p>
+<p>O torneio que provou isso venceu analistas com informação sigilosa; a Seguros Unimed tem uma área regulatória, uma atuária e um jurídico que sabem mais sobre a ANS do que qualquer célula de futuros saberia. O que falta é o placar.</p>
+<p>Quantas previsões a casa fez no último ano, e quantas ela conferiu?</p>
+</div>
+</section>
+
+<section id="p-sensores" class="pane">
+<h2>Sensores: a rede como radar, sem célula no meio</h2>
+<p class="tese">Quem está na ponta vê antes do analista; a resseguradora e a cooperativa de crédito já provaram, e nesta casa a ponta tem 340 cooperativas, 116 mil médicos e 13 mil corretores.</p>
+
+<h3>O que os precedentes fizeram, e o que não fizeram</h3>
+<div class="g2">
+<div class="card"><strong>Swiss Re.</strong> Desde 2013 publica riscos emergentes captados por uma plataforma interna de colaboração que recolhe contribuições de subscritores, gestores de clientes e especialistas de risco; classifica por impacto, prazo e linha de negócio.<sup><a class="cit" href="#f21">21</a></sup> <span class="sel sel-v">Verificado</span> O que não fez: não delegou a uma célula a tarefa de imaginar; delegou aos que subscrevem a tarefa de contar o que veem. <span class="sel sel-i">Inferência</span></div>
+<div class="card"><strong>Sicredi Pioneira.</strong> Ouviu cerca de 980 pessoas em 45 oficinas, a maioria de fora da empresa (cerca de 690 parceiros e comunidade, 146 coordenadores de núcleo, 25 do poder público), condensou 4.200 linhas em 125 e só então escreveu seis cenários.<sup><a class="cit" href="#f22">22</a></sup> <span class="sel sel-v">Verificado</span> O que não fez: não começou pelo cenário; começou pela escuta. Numa cooperativa, a escuta é governança antes de ser método. <span class="sel sel-i">Inferência</span></div>
+</div>
+
+<h3>O radar de gente desta casa</h3>
+<table>
+<thead><tr><th>Sensor</th><th>Tamanho</th><th>Pergunta que ele responde antes da estatística</th><th>Mecanismo, sem célula</th></tr></thead>
+<tbody>
+<tr><td>Gerentes dos escritórios regionais</td><td>19<sup><a class="cit" href="#f3">3</a></sup> <span class="sel sel-v">Verificado</span></td><td>Que concorrente apareceu na praça; que produto o corretor pede e não existe; que evento climático bateu</td><td>Uma pergunta por mês no rito comercial que já existe; três linhas de resposta; a Estratégia consolida em uma página <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Corretores e assessorias</td><td>Mais de 13 mil<sup><a class="cit" href="#f2">2</a></sup> <span class="sel sel-v">Verificado</span></td><td>Por que 36% cotam uma vez e não voltam; qual régua de aceitação o mercado pratica<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span></td><td>Painel de 30 voluntários com pergunta quinzenal e devolutiva mensal; dono: superintendência comercial <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Cooperativas singulares</td><td>340; 116 mil cooperados<sup><a class="cit" href="#f9">9</a>, <a class="cit" href="#f1">1</a></sup> <span class="sel sel-v">Verificado</span></td><td>Quem pensa em montar cooperativa de seguros; onde o custo assistencial local explode; onde a judicialização cresce<sup><a class="cit" href="#f13">13</a></sup> <span class="sel sel-v">Verificado</span></td><td>Dez singulares piloto pela coordenação do canal Unimed; a Faculdade Unimed já faz planejamento participativo com elas<sup><a class="cit" href="#f24">24</a></sup> <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Médicos cooperados</td><td>116 mil<sup><a class="cit" href="#f1">1</a></sup> <span class="sel sel-v">Verificado</span></td><td>Que tecnologia assistencial chegou ao consultório; que proteção o profissional liberal precisa (a casa já lançou o seguro de renda por incapacidade temporária, o primeiro do gênero para profissionais liberais no país)<sup><a class="cit" href="#f1">1</a></sup> <span class="sel sel-v">Verificado</span></td><td>Uma pergunta por semestre pelos canais do sistema; o acionista falando ao braço segurador <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Ouvidoria e atendimento</td><td>Metodologia de resolutividade exigida pela RN 623<sup><a class="cit" href="#f11">11</a></sup> <span class="sel sel-v">Verificado</span></td><td>O tema novo de reclamação que ainda não virou volume</td><td>Leitura mensal dos temas novos, já feita para a materialidade; passa a alimentar o Comitê de Gestão<sup><a class="cit" href="#f1">1</a></sup> <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Atuária e sinistro</td><td>Cinco modelos de anomalia; previsão nos quatro ramos<sup><a class="cit" href="#f1">1</a></sup> <span class="sel sel-v">Verificado</span></td><td>A anomalia de hoje é a tendência de amanhã: terapias a 30,7% ao ano começaram como anomalia<sup><a class="cit" href="#f18">18</a></sup> <span class="sel sel-i">Inferência</span></td><td>Uma anomalia por mês apresentada como pergunta ao Comitê de Gestão <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Fornecedores e prestadores</td><td>Mais de 2.200; 1.113 novos em 2024<sup><a class="cit" href="#f2">2</a></sup> <span class="sel sel-v">Verificado</span></td><td>Preço de insumo, tecnologia, concentração</td><td>O encontro anual de fornecedores ganha uma pergunta de futuro; já reuniu 45 dos maiores<sup><a class="cit" href="#f2">2</a></sup> <span class="sel sel-p">Proposta</span></td></tr>
+</tbody>
+</table>
+
+<h3>A diferença para o plano irmão</h3>
+<p>O plano também propõe a rede como sensor, mas a coloca alimentando o radar de uma célula.<sup><a class="cit" href="#f7">7</a></sup> <span class="sel sel-v">Verificado</span> Aqui a rede alimenta diretamente os fóruns que decidem: a página mensal vai ao Comitê de Gestão e ao Fórum de Negócio, e o dono de cada sensor é a área que já o comanda (comercial, canal Unimed, ouvidoria, atuária). Sem célula, não há intermediário para o sinal esperar. <span class="sel sel-p">Proposta</span> O risco, que o plano também vê, é a rede virar canal de reclamação; a fronteira com a Ouvidoria vale nas duas versões. <span class="sel sel-i">Inferência</span></p>
+
+<div class="pratica">
+<h3>Na prática</h3>
+<p>Seu Anselmo, corretor em Ribeirão Preto, aparece nos dois documentos. No plano, ele responde a uma pergunta quinzenal que vai para a planilha de um analista de futuros. Aqui, a resposta dele vai, na mesma quinzena, para a mesa do superintendente comercial, que é quem pode mudar a régua de aceitação que faz o seu Anselmo cotar uma vez e não voltar.<sup><a class="cit" href="#f5">5</a></sup> A diferença é o número de mãos entre a ponta e a decisão: duas, em vez de quatro.</p>
+<p>A cooperativa gaúcha ouviu 980 pessoas e escreveu seis cenários; a resseguradora ouve os subscritores e publica oito riscos por ano.<sup><a class="cit" href="#f22">22</a>, <a class="cit" href="#f21">21</a></sup> Nenhuma das duas criou uma área para ouvir. Criaram o hábito e o formato. A Seguros Unimed tem mais gente na ponta do que as duas juntas, e cada uma dessas pessoas já tem chefe, canal e reunião. Falta só a pergunta.</p>
+<p>Se a rede já sabe, por que a gente ainda contrata para descobrir?</p>
+</div>
+</section>
+
+<section id="p-absorcao" class="pane">
+<h2>Absorção: por que mais informação não vira mais decisão</h2>
+<p class="tese">A capacidade de reconhecer, assimilar e aplicar informação nova depende do conhecimento prévio de quem recebe, é cumulativa e mora nas áreas que já operam; investir numa célula emissora é investir na ponta errada.</p>
+
+<h3>O conceito, e a evidência</h3>
+<p>Em 1990, dois pesquisadores mostraram que a capacidade de uma organização de reconhecer o valor de informação nova, assimilá-la e aplicá-la comercialmente depende do conhecimento prévio relacionado, e que essa capacidade se constrói ao longo do tempo, pela própria atividade de quem vai usar a informação.<sup><a class="cit" href="#f29">29</a></sup> <span class="sel sel-v">Verificado</span> Traduzido: a área de Saúde absorve uma norma da ANS porque já opera sob a ANS; a atuária absorve a projeção do IBGE porque já usa tábuas; o jurídico absorve a lei de contratos porque já litiga contratos. Uma célula de futuros, por definição, não opera nada: emite. <span class="sel sel-i">Inferência</span></p>
+
+<h3>A capacidade de absorção desta casa, medida pelas atas</h3>
+<table>
+<thead><tr><th>Indicador de absorção</th><th>Evidência</th><th>Leitura</th></tr></thead>
+<tbody>
+<tr><td>Tempo entre sinal e decisão</td><td>Quinze semanas para autorizar um estudo sobre tema parado desde 2024; prestamista exigido para janeiro de 2027 e discutido desde 2024<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span></td><td>A absorção é lenta mesmo quando o sinal é antigo e claro <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td>Capacidade de execução</td><td>Defasagem tecnológica estimada pelo grupo em cinco anos; TI sem equipe dedicada; automação do prestamista estimada em três anos<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span></td><td>Aplicar o que se sabe esbarra em capacidade, não em conhecimento <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td>Integração de dados</td><td>Dados do sistema de sinistros não integrados ao painel de mercado; número-base da meta desconhecido<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span></td><td>A casa não assimila nem o dado próprio; assimilar o externo é passo seguinte <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td>Uso do que as áreas já produzem</td><td>Painel e radar de Inteligência de Mercado chegam tarde e manuais; 96 painéis técnicos entregues por uma frente<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span></td><td>O estoque de informação já supera a capacidade de decisão <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td>Absorção regulatória, onde funciona</td><td>Nota máxima em qualificação da ANS por seis anos; selo de integridade por dois ciclos; capital baseado em risco com fatores reduzidos para boa governança<sup><a class="cit" href="#f4">4</a>, <a class="cit" href="#f2">2</a>, <a class="cit" href="#f16">16</a></sup> <span class="sel sel-v">Verificado</span></td><td>Onde há regra, prazo e dono, a casa absorve muito bem <span class="sel sel-i">Inferência</span></td></tr>
+</tbody>
+</table>
+<p>A última linha é a chave. A companhia absorve com excelência o que chega como norma com prazo e responsável, e absorve mal o que chega como diagnóstico sem alçada. O desenho certo, portanto, dá ao futuro a forma que a casa já digere: regra, prazo, dono. É o que os gatilhos fazem, e eles não precisam de célula: precisam de uma linha na ata. <span class="sel sel-i">Inferência</span></p>
+
+<h3>Onde investir, se o objetivo é absorver</h3>
+<ul>
+<li><strong>Na área regulatória e no jurídico,</strong> para que a agenda da ANS e o plano da Susep virem, a cada trimestre, uma página com probabilidade e decisão pedida.<sup><a class="cit" href="#f11">11</a>, <a class="cit" href="#f10">10</a></sup> <span class="sel sel-p">Proposta</span></li>
+<li><strong>Na atuária,</strong> para que a projeção do IBGE entre nas premissas de tábua e de faixa etária, com estresse.<sup><a class="cit" href="#f17">17</a></sup> <span class="sel sel-p">Proposta</span></li>
+<li><strong>Em Riscos,</strong> para adotar o método do ORSA, incluindo os testes de estresse reversos, mesmo sem obrigação.<sup><a class="cit" href="#f14">14</a></sup> <span class="sel sel-p">Proposta</span></li>
+<li><strong>Na TI,</strong> na cota reservada e no critério de despriorização que o redesenho da frente já pediu; sem isso, nenhum sinal vira produto.<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-p">Proposta</span></li>
+<li><strong>Em nenhuma célula nova.</strong> <span class="sel sel-p">Proposta</span></li>
+</ul>
+
+<div class="pratica">
+<h3>Na prática</h3>
+<p>Uma superintendente de Riscos recebe a projeção do IBGE e a agenda da ANS num só envelope. A primeira ela sabe ler, porque a matriz de risco já tem horizontes e a Circular 666 já pede clima e sociedade; a segunda ela lê ainda melhor, porque prazo com trimestre é a língua da área.<sup><a class="cit" href="#f2">2</a>, <a class="cit" href="#f11">11</a></sup> O que ela não consegue fazer é obrigar a diretoria a decidir; para isso serve o gatilho, e o gatilho é uma frase que ela mesma pode propor ao Comitê de Governança, Riscos, Conformidade e Auditoria, que já a ouve.</p>
+<p>Agora imagine o mesmo envelope entregue por uma célula nova, que não opera risco nem contrato. Ela precisaria primeiro conquistar o direito de ser ouvida pela superintendente; depois, o direito de ser ouvida pela diretoria. Dois pedágios, um ano. A capacidade de absorção mora em quem opera, e é cumulativa: cada norma absorvida torna a próxima mais fácil.<sup><a class="cit" href="#f29">29</a></sup> Investir nela é investir onde já dá certo.</p>
+<p>Em quais áreas a gente já absorve bem, e o que elas têm que as outras não têm?</p>
+</div>
+</section>
+
+<section id="p-opcoes" class="pane">
+<h2>Opções: comprar o direito de decidir depois, em vez de estudar antes</h2>
+<p class="tese">A estratégia como carteira de opções pequenas com data de morte substitui o cenário pela aposta reversível; a companhia tem a folga de capital, a pauta dos quatro negócios e os instrumentos de seguro para isso.</p>
+
+<h3>O princípio</h3>
+<p>Uma opção é o direito, não a obrigação, de agir depois, quando a incerteza tiver se resolvido; a estratégia pode ser vista como uma carteira dessas opções, que se compram, mantêm ou abandonam conforme o mundo se revela.<sup><a class="cit" href="#f30">30</a></sup> <span class="sel sel-v">Verificado</span> Onde o cenário pergunta "o que pode acontecer", a opção pergunta "quanto custa manter o direito de reagir a cada coisa que pode acontecer". A segunda pergunta tem resposta em reais e prazo. <span class="sel sel-i">Inferência</span></p>
+
+<h3>A carteira de opções desta casa, sem célula</h3>
+<table>
+<thead><tr><th>Opção</th><th>O que compra</th><th>Gatilho de exercício</th><th>Gatilho de abandono</th><th>Dono</th></tr></thead>
+<tbody>
+<tr><td>Intercooperação de seguros com as singulares</td><td>Uma proposta pronta de parceria (produto, comissão, marca) para a singular que pensar em montar cooperativa de seguros<sup><a class="cit" href="#f13">13</a></sup></td><td>Primeiro pedido de autorização de cooperativa de seguros na Susep por uma singular</td><td>Regulamentação da Susep que inviabilize o modelo para singulares</td><td>Diretoria comercial e coordenação do canal Unimed <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Vida universal para o cooperado</td><td>Estudo de produto e pesquisa com médicos, sem lançamento<sup><a class="cit" href="#f10">10</a></sup></td><td>Publicação da norma da Susep</td><td>Norma adiada para 2028 ou adesão abaixo do piso no piloto</td><td>Diretoria de produtos <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Seguro catástrofe e resseguro climático</td><td>Cotação de resseguro e desenho de cobertura para os 72,6 mil clientes de Ramos Elementares<sup><a class="cit" href="#f10">10</a>, <a class="cit" href="#f1">1</a></sup></td><td>Norma da Susep sobre catástrofe; dois eventos climáticos acima do orçado</td><td>Preço de resseguro acima do prêmio possível</td><td>Subscrição de Ramos Elementares <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Remuneração por valor com a rede própria das singulares</td><td>Um piloto contratual com dez prestadores<sup><a class="cit" href="#f11">11</a>, <a class="cit" href="#f1">1</a></sup></td><td>Consulta pública da ANS sobre parâmetros mínimos</td><td>Norma sem obrigatoriedade e custo médico abaixo de 10%</td><td>Superintendência de Saúde <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Produto de longevidade em Previdência</td><td>Desenho atuarial de renda com tábua atual e projeção do IBGE, para 91,9 mil clientes<sup><a class="cit" href="#f17">17</a>, <a class="cit" href="#f1">1</a></sup></td><td>Reserva de Previdência acima de um patamar; Selic abaixo de um dígito</td><td>Sem demanda no piloto com cooperados</td><td>Previdência e atuária <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Cota de capital de opção</td><td>Uma fatia do resultado acima da meta reservada às opções acima<sup><a class="cit" href="#f1">1</a></sup></td><td>ROAE acima de 120% da Selic no fechamento</td><td>Solvência pressionada</td><td>Comitê de Investimentos <span class="sel sel-p">Proposta</span></td></tr>
+</tbody>
+</table>
+<p>Os quatro negócios novos de 2028 do Mapa são, nesta leitura, quatro opções: cada um com direito de exercício, custo de manutenção e data de morte.<sup><a class="cit" href="#f1">1</a></sup> <span class="sel sel-i">Inferência</span> Isso é o oposto de um estudo de cenários: não pergunta em que mundo cada negócio dá certo; pergunta quanto custa manter cada um vivo até saber. <span class="sel sel-i">Inferência</span></p>
+
+<h3>Por que a folga existe</h3>
+<p>O retorno sobre o patrimônio foi de 26,7% contra 13,5% orçados; o resultado operacional superou o financeiro de R$ 475 milhões; a sinistralidade caiu 3,9 pontos.<sup><a class="cit" href="#f1">1</a>, <a class="cit" href="#f3">3</a></sup> <span class="sel sel-v">Verificado</span> Uma carteira de opções é o uso disciplinado dessa folga: pequena, reversível, com abandono. O plano irmão também pede verba de opção; a diferença é que aqui ela é o produto principal, não o quarto de cinco.<sup><a class="cit" href="#f7">7</a></sup> <span class="sel sel-i">Inferência</span></p>
+
+<div class="pratica">
+<h3>Na prática</h3>
+<p>Um diretor de produtos tem duas maneiras de tratar o vida universal que a Susep pretende regulamentar em 2026.<sup><a class="cit" href="#f10">10</a></sup> A primeira é encomendar um estudo de cenários sobre o futuro da proteção do profissional de saúde. A segunda é reservar o custo de um estudo de produto e de uma pesquisa com cooperados, escrever na carta "exerce quando a norma sair; morre se atrasar para 2028", e voltar ao trabalho.</p>
+<p>A segunda custa o mesmo, mas tem data de morte e devolve o capital se o mundo não vier. É a lógica da opção: pagar pouco pelo direito de decidir com a norma em mãos. A casa já lançou um produto desse feitio: o seguro de renda por incapacidade temporária para profissionais liberais, o primeiro do gênero no país, um produto pequeno e dirigido a quem a rede conhece de perto.<sup><a class="cit" href="#f1">1</a></sup> Tratá-lo como opção teria sido só escrever a data de morte antes.</p>
+<p>Quantos dos nossos projetos têm data de morte escrita?</p>
+</div>
+</section>
+
+<section id="p-robustez" class="pane">
+<h2>Robustez: decidir o que funciona em muitos futuros, não o melhor para um</h2>
+<p class="tese">Em vez de prever o mundo e otimizar para ele, escolher o que se sai razoavelmente bem em todos os mundos plausíveis; a ferramenta já existe na regulação da própria Susep.</p>
+
+<h3>O método</h3>
+<p>A análise de longo prazo da RAND propõe abandonar a busca da previsão certa e da decisão ótima em favor de decisões robustas: as que se saem razoavelmente bem numa faixa ampla de futuros, testadas contra muitos deles em vez de contra um.<sup><a class="cit" href="#f31">31</a></sup> <span class="sel sel-v">Verificado</span> Uma seguradora faz isso todos os dias com o capital: não prevê o sinistro, guarda o suficiente para muitos. O ORSA formaliza o raciocínio: avaliar riscos e solvência ao longo de três anos, sob estresse, inclusive com testes reversos, que perguntam "o que teria de acontecer para quebrar" em vez de "o que vai acontecer".<sup><a class="cit" href="#f14">14</a></sup> <span class="sel sel-v">Verificado</span></p>
+
+<h3>O teste de robustez das ambições do Mapa</h3>
+<table>
+<thead><tr><th>Ambição</th><th>Pergunta reversa ("o que teria de acontecer para isso falhar")</th><th>Decisão robusta (funciona em qualquer caso)</th></tr></thead>
+<tbody>
+<tr><td>Dobrar o prêmio até 2028<sup><a class="cit" href="#f1">1</a></sup></td><td>Reajuste limitado com custo médico acima de 14% por dois anos<sup><a class="cit" href="#f18">18</a></sup></td><td>Escalar a atenção primária e o programa de crônicos, que reduzem custo em qualquer regime de reajuste<sup><a class="cit" href="#f1">1</a>, <a class="cit" href="#f11">11</a></sup> <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Margem meio a meio</td><td>Vida seguir crescendo 3,3% enquanto Saúde cresce 17,3%<sup><a class="cit" href="#f3">3</a></sup></td><td>Decidir a régua de aceitação de Vida agora; é boa em todos os futuros porque a perda é na porta, não no preço<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Ser a seguradora do Sistema</td><td>Singulares constituírem cooperativas de seguro<sup><a class="cit" href="#f13">13</a></sup></td><td>Proposta de intercooperação melhor que a alternativa de montar sozinha; vale mesmo se ninguém montar <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>ROAE acima de 120% da Selic</td><td>Selic a um dígito com resultado financeiro de R$ 475 milhões encolhendo<sup><a class="cit" href="#f1">1</a></sup></td><td>Resultado operacional acima do financeiro, que já aconteceu em 2025; manter a disciplina de subscrição <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Quatro novos negócios</td><td>Capital ir para reservas de Saúde no mundo do custo alto</td><td>Tratar os quatro como opções pequenas com abandono; nenhum consome capital antes do gatilho<sup><a class="cit" href="#f30">30</a></sup> <span class="sel sel-p">Proposta</span></td></tr>
+</tbody>
+</table>
+<p>A tabela não precisa de cenário: precisa de uma pergunta reversa por ambição, feita na revisão de outubro que já existe, e de uma decisão que valha em qualquer caso. Isso é robustez; custa duas horas. <span class="sel sel-i">Inferência</span></p>
+
+<h3>O exame prévio de fracasso como rito</h3>
+<p>Toda iniciativa acima de um valor ou que consuma TI reservada passa por um exercício de uma hora: o grupo assume que a iniciativa fracassou em 2028 e lista as causas; as três mais votadas viram condições de aprovação. A técnica eleva em 30% a identificação correta de causas e funciona porque libera quem tem dúvida a falar antes, não depois.<sup><a class="cit" href="#f28">28</a></sup> <span class="sel sel-v">Verificado</span> Na Seguros Unimed, o comitê de priorização que nasce como piloto é o lugar natural.<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-p">Proposta</span></p>
+
+<div class="pratica">
+<h3>Na prática</h3>
+<p>Na revisão de outubro, em vez de passar as ambições por três mundos, a alta liderança recebe uma pergunta por ambição: o que teria de acontecer para isso falhar? Para "dobrar o prêmio", a resposta vem rápido: custo médico acima de 14% com reajuste limitado.<sup><a class="cit" href="#f18">18</a>, <a class="cit" href="#f11">11</a></sup> A pergunta seguinte é a que importa: que decisão é boa nesse caso e em todos os outros? Escalar a atenção primária, que a casa já opera com consultórios em clientes corporativos, reduz custo em qualquer regime.<sup><a class="cit" href="#f1">1</a></sup></p>
+<p>Duas horas, cinco decisões robustas, zero cenários. É o que o ORSA faz com a solvência e o que a RAND propôs para políticas de cem anos: parar de acertar o futuro e começar a escolher o que sobrevive a ele.<sup><a class="cit" href="#f14">14</a>, <a class="cit" href="#f31">31</a></sup> O plano irmão chama isso de túnel de vento e pede três mundos escritos; este documento dispensa os mundos e fica com as perguntas.</p>
+<p>Qual decisão nossa é boa em qualquer futuro, e por que ainda não foi tomada?</p>
+</div>
+</section>
+
+<section id="p-torneio" class="pane">
+<h2>Torneio: cinquenta perguntas com data e um placar de erro</h2>
+<p class="tese">Onde a previsão importa de verdade, o que funciona é calibração medida; um torneio interno custa uma planilha e ensina a casa a errar menos em doze meses.</p>
+
+<h3>Como funciona</h3>
+<ol>
+<li><strong>Cinquenta perguntas por ano, com resposta verificável e data.</strong> Exemplos: "A ANS publica a norma de remuneração por valor até 31 de dezembro de 2027?"; "O VCMH de dezembro de 2026 fica acima de 14%?"; "Alguma singular pede autorização de cooperativa de seguros até junho de 2027?"; "A Susep publica a norma do vida universal em 2026?"; "A sinistralidade consolidada de 2026 fecha abaixo de 72,8%?"; "Vida cresce mais de 8% em 2026?"<sup><a class="cit" href="#f11">11</a>, <a class="cit" href="#f18">18</a>, <a class="cit" href="#f13">13</a>, <a class="cit" href="#f10">10</a>, <a class="cit" href="#f3">3</a></sup> <span class="sel sel-p">Proposta</span></li>
+<li><strong>Quem responde:</strong> voluntários de todas as áreas, com probabilidade numérica, atualizável até a data. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Placar:</strong> erro de calibração por pessoa e por área, publicado trimestralmente; a régua é a mesma do torneio que venceu os analistas profissionais.<sup><a class="cit" href="#f25">25</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Uso:</strong> a probabilidade agregada da casa entra na página trimestral do Comitê de Gestão ao lado do sinal datado; quando ela cruza um patamar, o gatilho combinado dispara. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Custo:</strong> uma planilha, uma hora por mês de quem organiza, nenhuma contratação. <span class="sel sel-p">Proposta</span></li>
+</ol>
+
+<h3>Por que isso bate o cenário</h3>
+<table>
+<thead><tr><th>Cenário narrativo</th><th>Torneio de previsão</th></tr></thead>
+<tbody>
+<tr><td>Três mundos de uma página, sem probabilidade</td><td>Cinquenta perguntas com probabilidade e data</td></tr>
+<tr><td>Nunca se sabe se acertou</td><td>Sabe-se a cada trimestre quem acertou e quanto</td></tr>
+<tr><td>Uso caiu de 70% para 19% nas empresas<sup><a class="cit" href="#f26">26</a></sup> <span class="sel sel-v">Verificado</span></td><td>Método venceu analistas com informação sigilosa em mais de 30%<sup><a class="cit" href="#f25">25</a></sup> <span class="sel sel-v">Verificado</span></td></tr>
+<tr><td>Produz documento</td><td>Produz calibração, que é uma competência da casa e fica</td></tr>
+<tr><td>Exige célula e consultoria de método</td><td>Exige um organizador e uma planilha</td></tr>
+</tbody>
+</table>
+<p>O cenário tem um uso legítimo: ensaiar uma decisão diante de um mundo que ninguém quer, como o artigo mais citado a favor dele defende.<sup><a class="cit" href="#f32">32</a></sup> <span class="sel sel-v">Verificado</span> Para isso servem as perguntas reversas da aba Robustez, feitas em duas horas na revisão anual; não é preciso escrever mundos para ensaiar. <span class="sel sel-i">Inferência</span></p>
+
+<div class="pratica">
+<h3>Na prática</h3>
+<p>Um analista da área regulatória apostou, em janeiro, 70% de chance de a ANS entregar a regra do reajuste coletivo no quarto trimestre de 2026, como prometido.<sup><a class="cit" href="#f11">11</a></sup> Em dezembro, a norma sai ou não sai. Se sair, ele acertou com convicção moderada; se não sair, o placar registra. Em doze meses, com cinquenta perguntas, a casa descobre que a área regulatória é otimista sobre prazos da agência em quinze pontos, e passa a descontar isso nas decisões de produto. Nenhuma célula de futuros descobriria isso; nenhum cenário mediria.</p>
+<p>O torneio faz outra coisa, silenciosa: ensina a casa a falar em probabilidade em vez de em opinião. Numa organização em que método é discutido antes do problema, um placar de erro é o método mais barato e mais difícil de contestar.<sup><a class="cit" href="#f5">5</a></sup></p>
+<p>Se a gente tivesse apostado há um ano em cinquenta coisas, quantas teria acertado?</p>
+</div>
+</section>
+
+<section id="p-desenho" class="pane">
+<h2>O desenho: o anti-escritório em quatro mecanismos</h2>
+<p class="tese">Nenhuma pessoa nova, nenhum fórum novo, quatro mecanismos distribuídos entre áreas que já existem, e uma única régua: decisões que saem sem subir.</p>
+
+<h3>Os quatro mecanismos e seus donos</h3>
+<table>
+<thead><tr><th>Mecanismo</th><th>O que é</th><th>Dono (área existente)</th><th>Rito onde acontece</th><th>Régua</th></tr></thead>
+<tbody>
+<tr><td><strong>1. Radar pronto</strong></td><td>Uma página por trimestre com o que a ANS, a Susep, o IBGE, o IESS, a CNseg e as duas listas globais já publicaram, cada item com probabilidade da casa e decisão pedida<sup><a class="cit" href="#f11">11</a>, <a class="cit" href="#f10">10</a>, <a class="cit" href="#f17">17</a>, <a class="cit" href="#f18">18</a>, <a class="cit" href="#f19">19</a>, <a class="cit" href="#f20">20</a>, <a class="cit" href="#f21">21</a></sup></td><td>Área regulatória e jurídico, com Inteligência de Mercado</td><td>Comitê de Gestão, que já alinha os negócios ao planejamento<sup><a class="cit" href="#f1">1</a></sup></td><td>Itens com decisão registrada antes da data <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td><strong>2. Rede como sensor</strong></td><td>Uma pergunta por mês a 19 gerentes regionais, 30 corretores e 10 singulares; anomalias da atuária; temas novos da ouvidoria; devolutiva mensal<sup><a class="cit" href="#f3">3</a>, <a class="cit" href="#f2">2</a>, <a class="cit" href="#f9">9</a></sup></td><td>Comercial, coordenação do canal Unimed, atuária, ouvidoria</td><td>Rito comercial existente; Fórum de Negócio</td><td>Taxa de resposta; sinais que viraram decisão <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td><strong>3. Decisão destravada</strong></td><td>Alçada escrita por tipo e valor; exame prévio de fracasso em toda iniciativa acima de um valor; gatilho combinado para cada norma datada; torneio de cinquenta previsões<sup><a class="cit" href="#f5">5</a>, <a class="cit" href="#f28">28</a>, <a class="cit" href="#f25">25</a></sup></td><td>Estratégia (formato) e Diretoria Executiva (alçada)</td><td>Fórum de Negócio, comitê de priorização, planejamento integrado</td><td>Decisões que saíram sem subir; dias entre pedido e resposta <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td><strong>4. Opções, não estudos</strong></td><td>Carteira de seis opções com gatilho de exercício e de abandono; testes de estresse reversos no método do ORSA; resseguro e capital como instrumentos<sup><a class="cit" href="#f30">30</a>, <a class="cit" href="#f14">14</a>, <a class="cit" href="#f31">31</a></sup></td><td>Diretores donos de cada opção; Riscos (método); Comitê de Investimentos (capital)</td><td>Revisão anual de outubro; Conselho</td><td>Opções vivas com abandono; capital devolvido por critério <span class="sel sel-p">Proposta</span></td></tr>
+</tbody>
+</table>
+
+<h3>O que cada área ganha e o que entrega</h3>
+<table>
+<thead><tr><th>Área</th><th>Entrega</th><th>Ganha</th></tr></thead>
+<tbody>
+<tr><td>Estratégia</td><td>O formato (página trimestral, ficha de gatilho, carta de opção, tabela de alçadas) e a facilitação, que já faz<sup><a class="cit" href="#f5">5</a></sup></td><td>Deixa de ser dona de um problema que não é seu; passa a ser dona de um método que rende decisão <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td>Riscos</td><td>O método do ORSA aplicado sem obrigação; o risco de longo prazo por ramo no inventário<sup><a class="cit" href="#f14">14</a>, <a class="cit" href="#f2">2</a></sup></td><td>Preenche a faixa "acima de cinco anos" que está vazia, com a língua que já fala <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td>Atuária</td><td>Projeção do IBGE nas premissas; anomalias mensais como perguntas; probabilidades do torneio<sup><a class="cit" href="#f17">17</a></sup></td><td>Vira a fonte oficial de futuro quantitativo, que já é na prática <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td>Área regulatória e jurídico</td><td>A página trimestral do futuro datado, com probabilidade<sup><a class="cit" href="#f11">11</a>, <a class="cit" href="#f10">10</a></sup></td><td>Passa de leitor de norma a dono do calendário da casa <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td>Comercial e canal Unimed</td><td>A rede de sensores e a devolutiva</td><td>Ouve o corretor antes de ele votar com os pés; ouve o acionista antes de ele virar concorrente <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td>Hub de inovação</td><td>Os experimentos das opções e o placar do torneio (o laboratório de dados já existe)<sup><a class="cit" href="#f1">1</a></sup></td><td>Uma fila de experimentos com gatilho, em vez de ideias soltas <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td>Diretoria Executiva</td><td>A tabela de alçadas e a resposta em prazo</td><td>Menos temas subindo; recomendações únicas em vez de debates em aberto <span class="sel sel-i">Inferência</span></td></tr>
+</tbody>
+</table>
+
+<h3>O que o desenho não faz</h3>
+<ul>
+<li>Não escreve cenários narrativos; ensaia decisões com perguntas reversas. <span class="sel sel-p">Proposta</span></li>
+<li>Não contrata; redistribui formato e alçada. <span class="sel sel-p">Proposta</span></li>
+<li>Não compra plataforma, assinatura nem relatório de tendências; lê o que é público e datado. <span class="sel sel-p">Proposta</span></li>
+<li>Não cria comitê; muda a pauta de três que existem (Comitê de Gestão, Fórum de Negócio, revisão de outubro). <span class="sel sel-p">Proposta</span></li>
+<li>Não promete acerto; promete decisões robustas, opções com data de morte e um placar de calibração. <span class="sel sel-p">Proposta</span></li>
+</ul>
+
+<div class="pratica">
+<h3>Na prática</h3>
+<p>Uma gerente da área regulatória recebe, em janeiro, a tarefa nova: uma página por trimestre com os dezenove prazos da ANS e os temas da Susep, cada um com a probabilidade de sair no prazo e a decisão que pede.<sup><a class="cit" href="#f11">11</a>, <a class="cit" href="#f10">10</a></sup> Ela já lia tudo isso; agora escreve para o Comitê de Gestão, que passa a esperar a página. A superintendente de Riscos leva ao seu comitê, no mesmo trimestre, a pergunta reversa por ambição e o teste de estresse em três anos, no método que a Susep já desenhou para as grandes.<sup><a class="cit" href="#f14">14</a></sup></p>
+<p>Nenhuma das duas mudou de cargo. A Estratégia deu formato; a diretoria deu alçada. Em noventa dias, a régua é uma: quantas decisões saíram sem subir. Se a resposta for zero, o desenho falhou e vale voltar ao plano irmão com um argumento a mais: nem o barato funcionou, e o problema é ainda mais fundo. Se a resposta for cinco, a casa acaba de instalar foresight sem chamar assim.</p>
+<p>Quem, entre as áreas que já operam, seria o dono natural de cada um dos quatro mecanismos?</p>
+</div>
+</section>
+
+<section id="p-plano" class="pane">
+<h2>90 dias: o teste sem contratar ninguém</h2>
+<p class="tese">Três blocos de trinta dias, cada um com uma entrega que já cabe num rito existente e um gatilho de aborto honesto; ao fim, um número que os dois documentos aceitam como prova.</p>
+<p><strong>Datas propostas, ancoradas na cadência pública dos ritos; a validar com a Estratégia.</strong> <span class="sel sel-p">Proposta</span></p>
+
+<div class="tl">
+<div class="tl-item"><span class="tl-dot now"></span><strong>Dias 1 a 30 (setembro e outubro de 2026): alçada e página.</strong><p>A Estratégia leva ao Fórum de Negócio uma tabela de alçadas por tipo e valor de decisão, com o prazo de resposta de quem está acima (recomendação única em cinco dias úteis; resposta em até 30), o que o redesenho da frente já pediu.<sup><a class="cit" href="#f5">5</a></sup> A área regulatória escreve a primeira página do futuro datado para o Comitê de Gestão, com os prazos da ANS e da Susep do próximo trimestre e a probabilidade de cada um.<sup><a class="cit" href="#f11">11</a>, <a class="cit" href="#f10">10</a></sup> Na revisão de outubro, uma pergunta reversa por ambição do Mapa, duas horas.<sup><a class="cit" href="#f1">1</a></sup> <span class="sel sel-p">Proposta</span> <em>Gatilho de aborto:</em> se a diretoria não assinar nenhuma alçada, o teste para e o documento registra que o gargalo é de governança, não de método.</p></div>
+<div class="tl-item"><span class="tl-dot wait"></span><strong>Dias 31 a 60 (novembro de 2026): sensores e torneio.</strong><p>Primeira pergunta do mês aos 19 gerentes regionais no rito comercial; painel de 30 corretores voluntários; dez singulares piloto pela coordenação do canal Unimed.<sup><a class="cit" href="#f3">3</a>, <a class="cit" href="#f2">2</a>, <a class="cit" href="#f24">24</a></sup> Torneio de previsão lançado com 25 perguntas até junho de 2027, placar no laboratório de dados do hub de inovação.<sup><a class="cit" href="#f25">25</a>, <a class="cit" href="#f1">1</a></sup> Exame prévio de fracasso na primeira iniciativa que passar pelo comitê de priorização.<sup><a class="cit" href="#f28">28</a>, <a class="cit" href="#f5">5</a></sup> <span class="sel sel-p">Proposta</span> <em>Gatilho de aborto:</em> taxa de resposta da rede abaixo de um terço na primeira rodada; revisar a pergunta, não desistir da rede.</p></div>
+<div class="tl-item"><span class="tl-dot wait"></span><strong>Dias 61 a 90 (dezembro de 2026): opções e Conselho.</strong><p>Seis cartas de opção escritas pelos diretores donos (aba Opções), com gatilho de exercício e de abandono; a primeira, a de intercooperação de seguros com as singulares, porque a Susep regulamenta a lei complementar em 2026.<sup><a class="cit" href="#f13">13</a>, <a class="cit" href="#f10">10</a></sup> Riscos apresenta ao seu comitê a primeira pergunta reversa de solvência em três anos.<sup><a class="cit" href="#f14">14</a></sup> Página de uma folha ao Conselho de dezembro: decisões que saíram sem subir em noventa dias, taxa de resposta da rede, opções vivas.<sup><a class="cit" href="#f1">1</a></sup> <span class="sel sel-p">Proposta</span> <em>Gatilho de aborto:</em> nenhuma decisão registrada como saída sem subir; então o problema é mais fundo do que os dois documentos supõem, e a próxima conversa é sobre alçada, não sobre futuro.</p></div>
+</div>
+
+<h3>A régua de noventa dias</h3>
+<table>
+<thead><tr><th>Indicador</th><th>Meta de teste</th><th>Quem mede</th></tr></thead>
+<tbody>
+<tr><td>Decisões que saíram sem subir, registradas em ata</td><td>Ao menos cinco</td><td>Estratégia, nas atas do Fórum de Negócio <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Dias entre pedido de decisão e resposta</td><td>Abaixo de trinta na mediana</td><td>Estratégia <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Itens do futuro datado com decisão antes da data</td><td>Ao menos três dos prazos do 4º trimestre de 2026 da ANS<sup><a class="cit" href="#f11">11</a></sup></td><td>Área regulatória <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Taxa de resposta da rede</td><td>Acima de metade na segunda rodada</td><td>Comercial <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Opções escritas com abandono</td><td>Seis</td><td>Diretores donos <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Participantes do torneio</td><td>Trinta, de ao menos oito áreas</td><td>Hub de inovação <span class="sel sel-p">Proposta</span></td></tr>
+</tbody>
+</table>
+<p>O plano irmão mede seis decisões em ata nascidas de sinal em doze meses, com R$ 715 mil.<sup><a class="cit" href="#f7">7</a></sup> <span class="sel sel-v">Verificado</span> Este documento mede cinco decisões que saíram sem subir em noventa dias, com horas. Os dois números são comparáveis e a casa pode escolher com prova, não com preferência. <span class="sel sel-i">Inferência</span></p>
+
+<div class="pratica">
+<h3>Na prática</h3>
+<p>Dia 12 de outubro de 2026, Fórum de Negócio SUSEP. Na pauta, pela primeira vez, uma tabela: o que a esteira de Vida decide sozinha (régua de aceitação até tal valor, prazo de resposta ao corretor), o que sobe com recomendação única e prazo de resposta de trinta dias, o que só o comitê executivo decide.<sup><a class="cit" href="#f5">5</a></sup> Não há nada de futuro na tabela. É por isso que ela funciona: é a primeira vez que a distância entre saber e decidir ganha um número.</p>
+<p>Dia 10 de dezembro, Conselho. Uma página: sete decisões saíram sem subir; a régua de aceitação de Vida mudou em 28 dias; a rede respondeu 61%; seis opções escritas, uma delas já com gatilho armado para a norma da Susep. Custo: horas. Se essa página existir, a casa instalou foresight sem contratar. Se não existir, a casa aprendeu algo mais valioso do que qualquer cenário: que o gargalo é onde este documento disse.</p>
+<p>Que decisão a gente consegue tirar do circuito de subida ainda este mês?</p>
+</div>
+</section>
+
+<section id="p-custo" class="pane">
+<h2>Custo: o que o anti-escritório custa, contra o que o plano custa</h2>
+<p class="tese">Cerca de 300 horas de gente da casa nos primeiros noventa dias e nenhuma contratação; contra cerca de R$ 715 mil e 980 horas no plano irmão; a diferença compra a prova antes do investimento.</p>
+
+<h3>A conta dos noventa dias</h3>
+<table>
+<thead><tr><th>Mecanismo</th><th>Quem</th><th>Horas em 90 dias (estimativa)</th><th>Caixa</th></tr></thead>
+<tbody>
+<tr><td>Página trimestral do futuro datado</td><td>Área regulatória e jurídico; Inteligência de Mercado</td><td>24 h</td><td>Zero</td></tr>
+<tr><td>Tabela de alçadas e prazos de resposta</td><td>Estratégia; Diretoria Executiva</td><td>16 h de preparo; 2 h de fórum com 15 pessoas (30 h)</td><td>Zero</td></tr>
+<tr><td>Perguntas reversas na revisão de outubro</td><td>Alta liderança, 12 pessoas, 2 h</td><td>24 h</td><td>Zero</td></tr>
+<tr><td>Rede de sensores (3 rodadas)</td><td>19 gerentes, 30 corretores, 10 singulares, 15 min cada; consolidação de 8 h por rodada</td><td>cerca de 70 h internas; tempo de corretor e singular fora da conta</td><td>Zero</td></tr>
+<tr><td>Torneio de previsão</td><td>Organizador 4 h por mês; 30 participantes, 20 min por mês</td><td>42 h</td><td>Zero (planilha)</td></tr>
+<tr><td>Exame prévio de fracasso (2 iniciativas)</td><td>8 pessoas, 1 h cada</td><td>16 h</td><td>Zero</td></tr>
+<tr><td>Cartas de opção (6)</td><td>Diretor dono e uma pessoa de apoio, 4 h cada</td><td>48 h</td><td>Zero até o exercício</td></tr>
+<tr><td>Pergunta reversa de solvência (método do ORSA)</td><td>Riscos e atuária</td><td>40 h</td><td>Zero</td></tr>
+<tr><td>Página ao Conselho</td><td>Estratégia</td><td>8 h</td><td>Zero</td></tr>
+<tr><td><strong>Total</strong></td><td></td><td><strong>cerca de 300 h</strong></td><td><strong>Zero</strong></td></tr>
+</tbody>
+</table>
+<p>A R$ 125 por hora, o parâmetro do redesenho da frente SUSEP, 300 horas custam cerca de R$ 37 mil em tempo, nada em caixa.<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-e">Especulativo</span> Em doze meses, mantido o ritmo, cerca de 900 horas: a mesma ordem das 980 horas do plano irmão, sem os salários, a formação e a consultoria.<sup><a class="cit" href="#f7">7</a></sup> <span class="sel sel-i">Inferência</span></p>
+
+<h3>Lado a lado</h3>
+<table>
+<thead><tr><th></th><th>O plano</th><th>O anti-escritório</th></tr></thead>
+<tbody>
+<tr><td>Pessoas novas</td><td>Duas integrais<sup><a class="cit" href="#f7">7</a></sup></td><td>Nenhuma</td></tr>
+<tr><td>Caixa no ano 1</td><td>Cerca de R$ 715 mil sem consultoria; até R$ 1,1 milhão com<sup><a class="cit" href="#f7">7</a></sup></td><td>Zero; o capital de opção só sai no exercício</td></tr>
+<tr><td>Horas da casa</td><td>Cerca de 980 por ano<sup><a class="cit" href="#f7">7</a></sup></td><td>Cerca de 300 em 90 dias; cerca de 900 por ano</td></tr>
+<tr><td>Prova de vida</td><td>Seis decisões em ata nascidas de sinal em doze meses<sup><a class="cit" href="#f7">7</a></sup></td><td>Cinco decisões que saíram sem subir em noventa dias</td></tr>
+<tr><td>O que fica se falhar</td><td>Duas pessoas a realocar e um radar em planilha</td><td>Uma tabela de alçadas, um placar de calibração e seis cartas de opção; tudo reutilizável</td></tr>
+<tr><td>O que compra do mercado</td><td>Formação, consultoria de método, plataforma no ano 2<sup><a class="cit" href="#f7">7</a></sup></td><td>Nada; lê o que é público</td></tr>
+<tr><td>O que exige da diretoria</td><td>Patrocínio e verba</td><td>Assinar alçadas e responder em prazo; é mais difícil, e é o ponto <span class="sel sel-i">Inferência</span></td></tr>
+</tbody>
+</table>
+
+<h3>O que a comparação esconde</h3>
+<p>O anti-escritório é mais barato em caixa e mais caro em coragem: pede que a diretoria escreva o que delega e responda em trinta dias, e nada nas atas sugere que isso seja fácil.<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-i">Inferência</span> O plano é mais caro em caixa e mais fácil de aprovar, porque cria uma função sem tirar poder de ninguém. A escolha entre os dois é, no fundo, uma escolha entre gastar dinheiro e gastar alçada. <span class="sel sel-i">Inferência</span> A frase da mensagem da diretoria, "decisões de longo prazo", custa mais em alçada do que em orçamento.<sup><a class="cit" href="#f1">1</a></sup> <span class="sel sel-i">Inferência</span></p>
+
+<div class="pratica">
+<h3>Na prática</h3>
+<p>O diretor financeiro compara as duas colunas e vê zero contra R$ 715 mil. A conclusão fácil é "faça o barato". A conclusão certa é outra: o barato só é barato se a diretoria pagar em alçada. Uma tabela de alçadas que ninguém assina custa zero e vale zero. O plano irmão, com duas pessoas, ao menos produz algo mesmo que a alçada não venha: um radar bem feito. Este documento aposta que um radar sem alçada é o que a casa já tem, em Inteligência de Mercado, chegando "tarde e manual".<sup><a class="cit" href="#f5">5</a></sup></p>
+<p>Por isso a ordem: primeiro o teste de noventa dias, que custa horas e mede alçada; depois, se a alçada vier e sobrar futuro não datado, o plano com terreno preparado. O contrário, célula antes de alçada, é o que o mercado costuma fazer, e é por isso que o uso de cenários caiu de 70% para 19%.<sup><a class="cit" href="#f26">26</a></sup></p>
+<p>O que a gente prefere gastar: orçamento ou alçada?</p>
+</div>
+</section>
+
+<section id="p-steep" class="pane">
+<h2>STEEPLEDI: nove dimensões, de baixo para cima</h2>
+<p class="tese">Para cada dimensão, a fonte pública já datada, o sensor interno que vê antes e a decisão que pede; nenhuma linha precisa de célula.</p>
+<div style="overflow-x:auto">
+<table>
+<thead><tr><th>Dimensão</th><th>Fonte pública já datada</th><th>Sensor interno</th><th>Decisão que pede</th><th>Perspectiva</th></tr></thead>
+<tbody>
+<tr><td><strong>Social</strong></td><td>Estudos da ANS sobre judicialização e cartões de desconto; tensões sociais no top 5 dos especialistas<sup><a class="cit" href="#f11">11</a>, <a class="cit" href="#f20">20</a></sup> <span class="sel sel-v">Verificado</span></td><td>Ouvidoria (temas novos); jurídico (ações)</td><td>Política de reembolso e de rede; produto para pequenas empresas</td><td>O cliente compara o plano com a Justiça e com o cartão. <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td><strong>Tecnológica</strong></td><td>Padrão TISS e dados assistenciais no 4º trimestre de 2027; inteligência artificial e dados em quarto entre os riscos<sup><a class="cit" href="#f11">11</a>, <a class="cit" href="#f20">20</a></sup> <span class="sel sel-v">Verificado</span></td><td>Comitê de Tecnologia; hub de inovação; corretores (aceitação automática dos concorrentes)<sup><a class="cit" href="#f5">5</a></sup></td><td>Régua de aceitação; interoperabilidade</td><td>A vantagem migra de rede para dado. <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td><strong>Econômica</strong></td><td>Custo médico a 14,5%; setor a 10% do PIB em 2030<sup><a class="cit" href="#f18">18</a>, <a class="cit" href="#f19">19</a></sup> <span class="sel sel-v">Verificado</span></td><td>Atuária; Comitê de Investimentos (resultado financeiro de R$ 475 milhões)<sup><a class="cit" href="#f1">1</a></sup></td><td>Gatilho de reajuste; teste de estresse da Selic</td><td>Parte do retorno é juro; a folga é para opção. <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td><strong>Ecológica</strong></td><td>Clima em primeiro há cinco anos; calor extremo emergente; seguro catástrofe na pauta da Susep<sup><a class="cit" href="#f20">20</a>, <a class="cit" href="#f21">21</a>, <a class="cit" href="#f10">10</a></sup> <span class="sel sel-v">Verificado</span></td><td>Subscrição de Ramos Elementares; escritórios regionais (eventos por praça)</td><td>Resseguro climático; opção de catástrofe</td><td>Risco "curto prazo" na Circular 666, oportunidade de produto no longo.<sup><a class="cit" href="#f2">2</a></sup> <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td><strong>Política</strong></td><td>Agenda da ANS com dezenove prazos; programa federal de especialistas no ressarcimento ao SUS<sup><a class="cit" href="#f11">11</a></sup> <span class="sel sel-v">Verificado</span></td><td>Relações institucionais; Unimed do Brasil<sup><a class="cit" href="#f8">8</a></sup></td><td>Posição da companhia por norma</td><td>A política pública redesenha a suplementar por dentro. <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td><strong>Legal</strong></td><td>Lei 15.040 em vigor; Lei Complementar 213 em regulamentação; ORSA; capital baseado em risco<sup><a class="cit" href="#f12">12</a>, <a class="cit" href="#f13">13</a>, <a class="cit" href="#f14">14</a>, <a class="cit" href="#f16">16</a></sup> <span class="sel sel-v">Verificado</span></td><td>Jurídico; Riscos</td><td>Condições gerais; alçada; intercooperação</td><td>Duas leis novas mudam contrato, sinistro e concorrente. <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td><strong>Ética</strong></td><td>Resolutividade da ouvidoria exigida pela ANS; escores de aceitação em produção<sup><a class="cit" href="#f11">11</a>, <a class="cit" href="#f1">1</a></sup> <span class="sel sel-v">Verificado</span></td><td>Governança e conformidade (selo de integridade por dois ciclos)<sup><a class="cit" href="#f2">2</a></sup></td><td>Regra de uso de escores na aceitação</td><td>Velocidade na aceitação é também risco de discriminação. <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td><strong>Demográfica</strong></td><td>Pico em 2041; 37,8% com 60 anos ou mais em 2070; pacto intergeracional em estudo<sup><a class="cit" href="#f17">17</a>, <a class="cit" href="#f11">11</a></sup> <span class="sel sel-v">Verificado</span></td><td>Atuária (curva etária da carteira)</td><td>Posição sobre faixas etárias; produto de longevidade</td><td>A única dimensão com certeza; a atuária já a domina. <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td><strong>Indústria</strong></td><td>Cooperativas de seguro em todos os ramos; concorrentes com aceitação automática; "o que nos trouxe até aqui não é o que vai nos levar adiante"<sup><a class="cit" href="#f13">13</a>, <a class="cit" href="#f5">5</a>, <a class="cit" href="#f8">8</a></sup> <span class="sel sel-v">Verificado</span></td><td>Singulares piloto; corretores; escritórios regionais</td><td>Proposta de intercooperação com gatilho</td><td>O acionista pode virar concorrente; a rede avisa antes da Susep. <span class="sel sel-i">Inferência</span></td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Voz da Indústria</h3>
+<p>A CNseg e as federações escrevem a agenda setorial até 2030; a Unimed do Brasil articula 340 cooperativas com hub de inovação e núcleo de avaliação de tecnologias.<sup><a class="cit" href="#f19">19</a>, <a class="cit" href="#f8">8</a>, <a class="cit" href="#f9">9</a></sup> <span class="sel sel-v">Verificado</span> Na leitura deste documento, a indústria não precisa ser vigiada por uma célula: ela fala com a companhia todos os dias, pela Susep, pela ANS, pelo acionista e pelo corretor. O que ela pede é resposta, não observação. <span class="sel sel-i">Inferência</span></p>
+
+<div class="pratica">
+<h3>Na prática</h3>
+<p>A grade acima tem a mesma forma da grade do plano irmão e uma diferença de coluna: onde o plano põe "dono sugerido" de uma célula, esta põe "sensor interno" de uma área que já existe.<sup><a class="cit" href="#f7">7</a></sup> Na dimensão demográfica, a atuária conhece a curva etária das 963 mil vidas de Saúde melhor do que qualquer projeção nacional; a projeção do IBGE serve para estressar a curva, não para descobri-la.<sup><a class="cit" href="#f1">1</a>, <a class="cit" href="#f17">17</a></sup></p>
+<p>Um atuário sênior, em janeiro, recebe a pergunta "o que acontece com a sinistralidade de Saúde se a idade média da carteira subir dois anos até 2030?". Ele responde em uma semana, com número. Nenhuma dimensão da grade precisa de mais do que isso: uma pergunta a quem já sabe, com data.</p>
+<p>Em qual das nove dimensões a nossa área que já sabe nunca foi perguntada?</p>
+</div>
+</section>
+
+<section id="p-sist" class="pane">
+<h2>Sistêmica: os três laços da visão contrária</h2>
+<p class="tese">Um laço vicioso que a célula reforçaria, um virtuoso que a alçada dispara e um vicioso que o cenário bonito alimenta.</p>
+
+<h3>Laço 1, vicioso: mais insumo, mesma alçada, mais estoque</h3>
+<div class="loop">
+<div class="loop-step"><strong>A casa produz mais leitura de futuro</strong>painéis, radar, diagnóstico de centenas de itens, célula nova</div>
+<div class="loop-arrow">&#8595;</div>
+<div class="loop-step"><strong>A decisão continua subindo sem alçada</strong>mentores, reunião de diretoria, comitê executivo</div>
+<div class="loop-arrow">&#8595;</div>
+<div class="loop-step"><strong>O estoque de temas parados cresce</strong>comissão desde 2024, prestamista desde 2024</div>
+<div class="loop-arrow">&#8595;</div>
+<div class="loop-step"><strong>A resposta é pedir mais diagnóstico</strong>"método discutido antes do problema"</div>
+<div class="loop-return">volta ao início, com mais insumo</div>
+</div>
+<p>Evidência: entradas abundantes e saídas raras nas atas; o receio de mais um modelo.<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span> Uma célula de futuros é uma nova seta no primeiro elo. <span class="sel sel-i">Inferência</span></p>
+
+<h3>Laço 2, virtuoso: decisão pequena que sai gera confiança para delegar mais</h3>
+<div class="loop">
+<div class="loop-step"><strong>Alçada escrita para um tipo de decisão</strong>régua de aceitação de Vida até um valor</div>
+<div class="loop-arrow">&#8595;</div>
+<div class="loop-step"><strong>A decisão sai em dias, com exame prévio de fracasso</strong>registrada, com dono e indicador</div>
+<div class="loop-arrow">&#8595;</div>
+<div class="loop-step"><strong>O resultado aparece e é medido</strong>corretor volta; placar do torneio calibra</div>
+<div class="loop-arrow">&#8595;</div>
+<div class="loop-step"><strong>A diretoria delega o próximo tipo</strong>menos temas sobem</div>
+<div class="loop-return">volta ao início, com mais alçada</div>
+</div>
+<p>É o laço da capacidade de absorção: cumulativo, construído pela prática de quem decide.<sup><a class="cit" href="#f29">29</a></sup> <span class="sel sel-i">Inferência</span> O que o dispara é uma assinatura na tabela de alçadas; o que o quebra é uma decisão delegada e depois revertida sem critério. <span class="sel sel-i">Inferência</span></p>
+
+<h3>Laço 3, vicioso: o cenário bonito adia a decisão feia</h3>
+<div class="loop">
+<div class="loop-step"><strong>Oficina de cenários produz três mundos</strong>energia de plateia, documento de qualidade</div>
+<div class="loop-arrow">&#8595;</div>
+<div class="loop-step"><strong>A decisão difícil é adiada "até o próximo ciclo"</strong>porque o futuro ficou mais complexo</div>
+<div class="loop-arrow">&#8595;</div>
+<div class="loop-step"><strong>O concorrente decide com informação pior</strong>aceitação automática, agenciamento agressivo</div>
+<div class="loop-arrow">&#8595;</div>
+<div class="loop-step"><strong>A casa encomenda um cenário mais detalhado</strong>e o uso da ferramenta cai no mercado</div>
+<div class="loop-return">volta ao início, com mais páginas</div>
+</div>
+<p>Evidência indireta: a queda de 70% para 19% no uso de cenários e o fim do relatório de tendências mais famoso; evidência interna: concorrentes que decidem mais rápido com o mesmo mercado.<sup><a class="cit" href="#f26">26</a>, <a class="cit" href="#f23">23</a>, <a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span> O corte é substituir o cenário pela pergunta reversa e pela opção com data. <span class="sel sel-p">Proposta</span></p>
+
+<div class="pratica">
+<h3>Na prática</h3>
+<p>Pense na superintendente comercial que precisa decidir a régua de aceitação de Vida, o tema em que a companhia perde na porta e não no preço.<sup><a class="cit" href="#f5">5</a></sup> No laço 1, ela recebe mais um painel e o tema sobe. No laço 3, ela participa de uma oficina e o tema espera o próximo ciclo. No laço 2, ela tem alçada até um valor, faz o exame prévio de fracasso com a subscrição numa hora, decide, e três meses depois o placar mostra se o corretor voltou.</p>
+<p>Os três laços usam a mesma informação. A diferença está em quem pode assinar e em quanto tempo. Vida cresceu 3,3% no laço 1; é prioridade do Mapa; e a régua de aceitação dos concorrentes é conhecida há mais de um ano.<sup><a class="cit" href="#f3">3</a>, <a class="cit" href="#f1">1</a>, <a class="cit" href="#f5">5</a></sup></p>
+<p>Em qual dos três laços a nossa decisão mais cara está presa hoje?</p>
+</div>
+</section>
+
+<section id="p-bmc" class="pane">
+<h2>Modelo: o negócio do anti-escritório</h2>
+<p class="tese">Vende velocidade de decisão a quem hoje espera; paga com formato e alçada; é medido por decisões que saem sem subir.</p>
+<div class="g3">
+<div class="card"><strong>Segmentos de cliente.</strong> Líderes de frente e esteira que hoje escalam tudo; mentores que decidem em janelas de trinta minutos; Diretoria Executiva que recebe debates em aberto; Conselho que aprova o planejamento. Cliente fundador: a esteira de Vida, que perde na porta.<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-p">Proposta</span></div>
+<div class="card"><strong>Proposta de valor.</strong> "Você vai decidir esta semana o que hoje espera quinze semanas, com o futuro datado na mesa, uma opção com data de morte e um placar que diz se acertou." Em uma frase: mãos livres. <span class="sel sel-p">Proposta</span></div>
+<div class="card"><strong>Canais.</strong> Comitê de Gestão (página trimestral), Fórum de Negócio (alçadas e sensores), comitê de priorização (exame prévio de fracasso), revisão de outubro (perguntas reversas), Conselho (página de noventa dias).<sup><a class="cit" href="#f1">1</a>, <a class="cit" href="#f5">5</a></sup> <span class="sel sel-p">Proposta</span></div>
+<div class="card"><strong>Relacionamento.</strong> Devolutiva mensal à rede; placar trimestral do torneio; carta de opção assinada pelo diretor dono. <span class="sel sel-p">Proposta</span></div>
+<div class="card"><strong>Fontes de receita (o que devolve).</strong> Decisões que saem sem subir; dias de espera eliminados; capital devolvido por abandono; calibração da casa; corretor que volta. <span class="sel sel-p">Proposta</span></div>
+<div class="card"><strong>Recursos-chave.</strong> As áreas que já sabem (regulatório, jurídico, atuária, Riscos, comercial, ouvidoria); a rede de 19 escritórios, 13 mil corretores e 340 cooperativas; o futuro público datado; a folga de resultado.<sup><a class="cit" href="#f3">3</a>, <a class="cit" href="#f2">2</a>, <a class="cit" href="#f9">9</a>, <a class="cit" href="#f1">1</a></sup> <span class="sel sel-v">Verificado</span></div>
+<div class="card"><strong>Atividades-chave.</strong> Página trimestral; tabela de alçadas; pergunta do mês à rede; torneio; exame prévio de fracasso; cartas de opção; pergunta reversa de solvência; página ao Conselho. <span class="sel sel-p">Proposta</span></div>
+<div class="card"><strong>Parcerias-chave.</strong> Coordenação do canal Unimed e Faculdade Unimed (singulares); hub de inovação (placar e experimentos); ressegurador (opção climática).<sup><a class="cit" href="#f24">24</a>, <a class="cit" href="#f1">1</a></sup> <span class="sel sel-p">Proposta</span></div>
+<div class="card"><strong>Estrutura de custo.</strong> Cerca de 300 horas em 90 dias, cerca de 900 por ano; caixa zero até o exercício de uma opção; nenhuma contratação, formação ou plataforma. <span class="sel sel-i">Inferência</span></div>
+</div>
+<p><strong>A hipótese fundadora.</strong> "Se a diretoria assinar alçadas e a Estratégia der formato ao futuro datado, então em noventa dias ao menos cinco decisões que hoje sobem sairão nas esteiras, registradas em ata, e a mediana entre pedido e resposta ficará abaixo de trinta dias. Se nenhuma decisão sair, a hipótese falhou e o gargalo é de governança, acima do que método ou célula resolvem." <span class="sel sel-p">Proposta</span></p>
+
+<div class="pratica">
+<h3>Na prática</h3>
+<p>O modelo do plano irmão vende tempo de decisão; este vende mãos livres. Parece a mesma coisa e não é: o primeiro entrega informação antes; o segundo entrega permissão antes. Na esteira de Vida, a informação sobre a régua de aceitação dos concorrentes existe há mais de um ano; a permissão para mudar a régua não existe em nenhuma ata.<sup><a class="cit" href="#f5">5</a></sup></p>
+<p>Por isso o cliente fundador é a esteira que mais perde por esperar, e a prova é a mais simples possível: a data em que ela decidiu sozinha. Se essa data chegar, o modelo se paga no primeiro corretor que volta. Se não chegar, nenhum radar teria mudado nada.</p>
+<p>Quem, na casa, mais ganharia com permissão antes de ganhar com informação?</p>
+</div>
+</section>
+
+<section id="p-w5" class="pane">
+<h2>5W2H: a visão contrária em sete perguntas</h2>
+<p class="tese">A versão de uma página para levar ao mesmo patrocinador que vai ler o plano.</p>
+<table>
+<thead><tr><th>Pergunta</th><th>Resposta</th></tr></thead>
+<tbody>
+<tr><td><strong>O quê</strong></td><td>Não instalar uma célula de futuros; instalar quatro mecanismos em áreas existentes: radar pronto, rede como sensor, decisão destravada (alçada, exame prévio de fracasso, gatilho, torneio) e opções em vez de estudos. <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td><strong>Por quê</strong></td><td>O futuro relevante já é público e datado; o gargalo da casa é decisão e absorção, não informação; a evidência a favor de cenários é fraca e a favor de calibração e robustez é forte.<sup><a class="cit" href="#f11">11</a>, <a class="cit" href="#f10">10</a>, <a class="cit" href="#f5">5</a>, <a class="cit" href="#f26">26</a>, <a class="cit" href="#f25">25</a>, <a class="cit" href="#f31">31</a>, <a class="cit" href="#f29">29</a></sup> <span class="sel sel-v">Verificado</span></td></tr>
+<tr><td><strong>Quem</strong></td><td>Estratégia (formato); Diretoria Executiva (alçada); área regulatória e jurídico (página trimestral); atuária e Riscos (número e estresse); comercial e canal Unimed (rede); hub de inovação (placar e experimentos); diretores donos (opções). Nenhuma pessoa nova. <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td><strong>Quando</strong></td><td>Noventa dias: alçada e página em setembro e outubro de 2026; sensores e torneio em novembro; opções e Conselho em dezembro. <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td><strong>Onde</strong></td><td>Nos ritos que existem: Comitê de Gestão, Fórum de Negócio, comitê de priorização, revisão de outubro, Conselho.<sup><a class="cit" href="#f1">1</a>, <a class="cit" href="#f5">5</a></sup> <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td><strong>Como</strong></td><td>Uma tabela de alçadas assinada; uma página trimestral com probabilidade; uma pergunta por mês à rede com devolutiva; cinquenta previsões com placar; uma hora de exame prévio de fracasso por iniciativa; seis cartas de opção com abandono; pergunta reversa de solvência no método do ORSA.<sup><a class="cit" href="#f28">28</a>, <a class="cit" href="#f25">25</a>, <a class="cit" href="#f30">30</a>, <a class="cit" href="#f14">14</a></sup> <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td><strong>Quanto</strong></td><td>Cerca de 300 horas em noventa dias, cerca de 900 por ano; caixa zero; contra cerca de R$ 715 mil e 980 horas do plano irmão.<sup><a class="cit" href="#f7">7</a></sup> <span class="sel sel-i">Inferência</span></td></tr>
+</tbody>
+</table>
+
+<div class="pratica">
+<h3>Na prática</h3>
+<p>Os dois documentos vão para a mesma mesa. O patrocinador vai perguntar qual escolher, e a resposta honesta é "os dois, nesta ordem": noventa dias deste, que custam horas e medem alçada; depois, se sobrar futuro não datado e a alçada tiver vindo, o plano com terreno preparado. Escolher o plano primeiro é o caminho que o mercado inteiro seguiu, e o resultado é a queda de 70% para 19% no uso de cenários.<sup><a class="cit" href="#f26">26</a></sup></p>
+<p>Escolher este primeiro custa uma coisa que não aparece na tabela: a diretoria terá de escrever o que delega. É a pergunta que os dois documentos, no fundo, fazem à casa.</p>
+<p>Se a gente só puder fazer uma coisa até dezembro, é assinar alçadas ou contratar futuros?</p>
+</div>
+</section>
+
+<section id="p-risco" class="pane">
+<h2>Riscos: o que pode dar errado na visão contrária, e a oportunidade em cada um</h2>
+<p class="tese">Seis famílias de risco, todas reais; a maior delas é a própria tese: apostar que o regulador e a rede bastam pode deixar a casa cega para o que não tem data.</p>
+
+<h3>1. Risco regulatório: tratar o regulador como único futurista</h3>
+<p><strong>O risco.</strong> A agenda da ANS muda, atrasa ou é reescrita; o plano da Susep de 2026 vira o de 2027 com outras prioridades; a casa que só lê o regulador chega junto com todo mundo, nunca antes.<sup><a class="cit" href="#f11">11</a>, <a class="cit" href="#f10">10</a></sup> <span class="sel sel-i">Inferência</span> <strong>Implicação.</strong> O futuro datado é vantagem só para quem decide antes da data; se a alçada não vier, ler cedo não adianta. <span class="sel sel-i">Inferência</span> <strong>A oportunidade no risco.</strong> O torneio de previsão mede exatamente o atraso do regulador; em um ano a casa saberá quanto descontar dos prazos da ANS, algo que nenhuma concorrente mede.<sup><a class="cit" href="#f25">25</a></sup> <span class="sel sel-i">Inferência</span></p>
+
+<h3>2. Risco financeiro: opções que não morrem</h3>
+<p><strong>O risco.</strong> As cartas de opção viram projetos permanentes; o gatilho de abandono não é acionado porque ninguém quer assinar a morte; o capital de opção é consumido. <strong>Implicação.</strong> O mesmo veneno que o plano irmão teme: aposta sem critério de abandono.<sup><a class="cit" href="#f7">7</a>, <a class="cit" href="#f6">6</a></sup> <span class="sel sel-v">Verificado</span> <strong>A oportunidade no risco.</strong> O Comitê de Investimentos já opera com critérios de segurança, rentabilidade e liquidez; entregar a ele o abandono das opções transforma uma decisão política numa decisão de carteira.<sup><a class="cit" href="#f1">1</a></sup> <span class="sel sel-i">Inferência</span></p>
+
+<h3>3. Risco comercial: sensores que viram reclamação</h3>
+<p><strong>O risco.</strong> A pergunta do mês aos corretores e às singulares vira canal de queixa; a devolutiva falha; a relação piora. <strong>Implicação.</strong> O canal corretor é 65% da operação SUSEP e já vota com os pés.<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span> <strong>A oportunidade no risco.</strong> A fronteira com a Ouvidoria é regra nos dois documentos; e a devolutiva, quando funciona, é o que a cooperativa gaúcha transformou em governança com 980 pessoas.<sup><a class="cit" href="#f22">22</a></sup> <span class="sel sel-i">Inferência</span></p>
+
+<h3>4. Risco estratégico: a miopia do "já está tudo datado"</h3>
+<p><strong>O risco.</strong> A tese desta anatomia exagera; existe futuro relevante sem data (uma tecnologia assistencial que muda o custo, um novo entrante de fora do setor, um cisne negro sanitário como a pandemia, que a própria Circular 666 lista) e a casa sem célula não o vê. <strong>Implicação.</strong> É o risco de miopia clássico; o plano irmão o resolve com cenários.<sup><a class="cit" href="#f2">2</a>, <a class="cit" href="#f7">7</a></sup> <span class="sel sel-v">Verificado</span> <strong>A oportunidade no risco.</strong> A rede vê o que não tem data antes de qualquer célula; e a pergunta reversa de solvência ("o que teria de acontecer para quebrar") cobre o cisne negro pelo lado da robustez, não da previsão.<sup><a class="cit" href="#f31">31</a>, <a class="cit" href="#f14">14</a></sup> <span class="sel sel-i">Inferência</span> Se em doze meses a rede e o torneio não capturarem nada fora da agenda dos reguladores, a aba Encontro diz quando chamar o plano. <span class="sel sel-p">Proposta</span></p>
+
+<h3>5. Risco operacional: alçada assinada e não praticada</h3>
+<p><strong>O risco.</strong> A tabela de alçadas é aprovada e, na primeira decisão delegada que dá errado, revertida; o laço virtuoso morre no primeiro elo. <strong>Implicação.</strong> As atas registram decisões de canal tomadas fora do circuito e revisões sem critério; a delegação precisa de regra de reversão.<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span> <strong>A oportunidade no risco.</strong> O exame prévio de fracasso antes da decisão delegada é o seguro da delegação: quem delegou sabe o que pode dar errado antes de dar.<sup><a class="cit" href="#f28">28</a></sup> <span class="sel sel-i">Inferência</span></p>
+
+<h3>6. Risco de governança: o torneio vira jogo, o placar vira ranking de pessoas</h3>
+<p><strong>O risco.</strong> O placar de calibração é usado para constranger áreas; a participação cai; ou o torneio vira passatempo sem ligação com decisão. <strong>Implicação.</strong> Numa casa com receio de descrédito por mais um modelo, um placar mal usado é combustível.<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span> <strong>A oportunidade no risco.</strong> Placar por área e agregado, nunca por pessoa em público; a probabilidade agregada entra na página trimestral, e o torneio deixa de ser jogo no dia em que dispara o primeiro gatilho. <span class="sel sel-p">Proposta</span></p>
+
+<h3>Matriz resumida</h3>
+<table>
+<thead><tr><th>Risco</th><th>Probabilidade</th><th>Impacto</th><th>Sinal de alerta</th><th>Resposta</th></tr></thead>
+<tbody>
+<tr><td>Regulador como único futurista</td><td>Média</td><td>Médio</td><td>Página trimestral sem nenhum item fora das agendas</td><td>Rede e torneio com perguntas fora da agenda</td></tr>
+<tr><td>Opções que não morrem</td><td>Alta</td><td>Alto</td><td>Nenhum abandono em doze meses</td><td>Abandono decidido no Comitê de Investimentos</td></tr>
+<tr><td>Sensores viram reclamação</td><td>Média</td><td>Médio</td><td>Respostas sobre atendimento</td><td>Fronteira com a Ouvidoria; devolutiva</td></tr>
+<tr><td>Miopia do datado</td><td>Média</td><td>Alto</td><td>Surpresa sem data em doze meses</td><td>Pergunta reversa; chamar o plano (aba Encontro)</td></tr>
+<tr><td>Alçada revertida</td><td>Alta</td><td>Alto</td><td>Primeira decisão delegada desfeita</td><td>Regra de reversão; exame prévio de fracasso</td></tr>
+<tr><td>Placar como ranking</td><td>Média</td><td>Médio</td><td>Queda de participação</td><td>Placar por área; ligação com gatilho</td></tr>
+</tbody>
+</table>
+<p>Probabilidade e impacto são juízo deste documento. <span class="sel sel-i">Inferência</span></p>
+
+<div class="pratica">
+<h3>Na prática</h3>
+<p>O risco mais provável desta lista é uma reversão. Um líder de esteira, com alçada nova, muda a régua de aceitação de Vida; três semanas depois um sinistro grande entra e alguém acima desfaz a decisão. A partir daí ninguém mais usa a alçada, e o laço virtuoso morre sem que nenhuma ata registre a morte.<sup><a class="cit" href="#f5">5</a></sup></p>
+<p>O antídoto não é coragem; é regra escrita de reversão: uma decisão delegada só volta se cruzar o gatilho combinado, e a reversão também vai para a ata com o nome de quem reverteu. É o mesmo formato de gatilho que o plano irmão propõe para o futuro, aplicado ao presente. Se a casa não conseguir escrever essa regra, nenhum dos dois documentos vai funcionar, e é melhor saber isso em noventa dias do que em doze meses.</p>
+<p>Qual foi a última decisão delegada que a gente desfez, e com que critério?</p>
+</div>
+</section>
+
+<section id="p-cenarios" class="pane">
+<h2>Cenários: forças, fraquezas e os três futuros que a casa deve sobreviver sem prever</h2>
+<p class="tese">A visão contrária não desenha mundos para escolher entre eles; usa três futuros feios só para testar se as decisões de hoje sobrevivem a todos.</p>
+
+<h3>SWOT da visão contrária</h3>
+<div class="g2">
+<div class="card"><strong>Forças.</strong> Regulação datada e abundante; atuária com modelos nos quatro ramos; rede maior que a de qualquer precedente; folga de resultado; excelência comprovada em absorver norma com prazo (nota máxima na ANS por seis anos).<sup><a class="cit" href="#f11">11</a>, <a class="cit" href="#f1">1</a>, <a class="cit" href="#f4">4</a></sup> <span class="sel sel-v">Verificado</span></div>
+<div class="card"><strong>Fraquezas.</strong> Toda decisão sobe; mesmas pessoas em todos os fóruns; TI sem capacidade reservada; risco de descrédito com mais um modelo; a diretoria terá de escrever o que delega.<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span></div>
+<div class="card"><strong>Oportunidades.</strong> Cinquenta previsões com placar viram competência que fica; seis opções com abandono viram disciplina de capital; o método do ORSA está pronto na regulação; a rede como governança cooperativa.<sup><a class="cit" href="#f25">25</a>, <a class="cit" href="#f30">30</a>, <a class="cit" href="#f14">14</a>, <a class="cit" href="#f22">22</a></sup> <span class="sel sel-v">Verificado</span></div>
+<div class="card"><strong>Ameaças.</strong> O futuro sem data (cisne negro sanitário, tecnologia assistencial, novo entrante); reversão de alçada; opções que não morrem; a tese ser usada como desculpa para não olhar longe.<sup><a class="cit" href="#f2">2</a></sup> <span class="sel sel-i">Inferência</span></div>
+</div>
+
+<h3>Três futuros feios e a decisão que sobrevive a todos</h3>
+<table>
+<thead><tr><th>Futuro</th><th>O que acontece</th><th>Decisão de hoje que sobrevive</th><th>Decisão de hoje que morre</th></tr></thead>
+<tbody>
+<tr><td><strong>O regulador dita</strong></td><td>A ANS entrega remuneração por valor obrigatória, reajuste limitado, dados assistenciais abertos; a Susep abre catástrofe e vida universal a todos ao mesmo tempo<sup><a class="cit" href="#f11">11</a>, <a class="cit" href="#f10">10</a></sup> <span class="sel sel-e">Especulativo</span></td><td>Escalar a atenção primária; ter a carta de opção do vida universal pronta; régua de aceitação decidida <span class="sel sel-p">Proposta</span></td><td>Crescer por reajuste; esperar a norma para começar a estudar <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td><strong>A rede vira concorrente</strong></td><td>Singulares grandes constituem cooperativas de seguro; corretoras cativas se multiplicam; a intercooperação vira negociação caso a caso<sup><a class="cit" href="#f13">13</a>, <a class="cit" href="#f5">5</a></sup> <span class="sel sel-e">Especulativo</span></td><td>Proposta de intercooperação melhor que montar sozinha, já escrita; sensores nas singulares <span class="sel sel-p">Proposta</span></td><td>Tratar o acionista só como canal <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td><strong>O choque sem data</strong></td><td>Uma emergência sanitária, listada como risco social na Circular 666, ou uma tecnologia que muda o custo de terapias, hoje a 30,7% ao ano<sup><a class="cit" href="#f2">2</a>, <a class="cit" href="#f18">18</a></sup> <span class="sel sel-e">Especulativo</span></td><td>Capital robusto pela pergunta reversa de solvência; resseguro; opções pequenas que não consumiram caixa <span class="sel sel-p">Proposta</span></td><td>Quatro negócios novos financiados de uma vez antes do gatilho <span class="sel sel-i">Inferência</span></td></tr>
+</tbody>
+</table>
+<p>A tabela é o inverso do túnel de vento do plano: não pergunta em qual futuro a estratégia quebra; pergunta quais decisões de hoje não quebram em nenhum.<sup><a class="cit" href="#f31">31</a>, <a class="cit" href="#f7">7</a></sup> <span class="sel sel-i">Inferência</span> As decisões da terceira coluna são as mesmas nos três futuros, o que é a definição de robustez. <span class="sel sel-i">Inferência</span></p>
+
+<div class="pratica">
+<h3>Na prática</h3>
+<p>Na revisão de outubro, a alta liderança recebe os três futuros feios numa página cada, sem indicador de aproximação, porque a pergunta não é "qual vem". A pergunta é "o que a gente já decidiu que sobrevive aos três". A resposta, na leitura deste documento, tem quatro itens: atenção primária escalada, régua de aceitação decidida, proposta de intercooperação pronta, capital testado pela pergunta reversa.<sup><a class="cit" href="#f1">1</a>, <a class="cit" href="#f5">5</a>, <a class="cit" href="#f13">13</a>, <a class="cit" href="#f14">14</a></sup></p>
+<p>Duas horas. A casa sai com quatro decisões robustas e nenhum cenário para manter. O plano irmão sairia da mesma sala com três mundos e vinte sinais para vigiar; os dois resultados cabem na mesma reunião, e a aba Encontro sugere como.</p>
+<p>Das nossas decisões deste ano, quais sobrevivem aos três futuros?</p>
+</div>
+</section>
+
+<section id="p-sintese" class="pane">
+<h2>Encontro: onde as duas visões se combinam, e quem decide o quê</h2>
+<p class="tese">As duas anatomias concordam no diagnóstico e discordam no remédio; a ordem certa é testar a alçada em noventa dias e só depois, se sobrar futuro não datado, instalar a célula.</p>
+
+<h3>O mapa da concordância e da divergência</h3>
+<table>
+<thead><tr><th>Tema</th><th>O plano</th><th>A visão contrária</th><th>Encontro</th></tr></thead>
+<tbody>
+<tr><td>O regulador como futurista</td><td>É o maior da casa; a célula organiza o que ele publica<sup><a class="cit" href="#f7">7</a></sup></td><td>É o maior da casa; ler não exige célula</td><td>Página trimestral do futuro datado, feita pela área regulatória, nos dois casos <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>A rede como sensor</td><td>Alimenta o radar da célula<sup><a class="cit" href="#f7">7</a></sup></td><td>Alimenta diretamente os fóruns</td><td>Rede com dono nas áreas que já a comandam; a célula, se existir, consolida, não intermedeia <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Cenários</td><td>Três mundos de uma página com indicadores, uma vez por ano<sup><a class="cit" href="#f7">7</a></sup></td><td>Perguntas reversas e decisões robustas; nenhum mundo escrito</td><td>Perguntas reversas primeiro; mundos escritos só para o que sobrar sem data <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Opções</td><td>Carteira com gatilhos, quarto de cinco produtos<sup><a class="cit" href="#f7">7</a></sup></td><td>Carteira com gatilhos, produto principal</td><td>Idêntico no formato; diferente na prioridade <span class="sel sel-i">Inferência</span></td></tr>
+<tr><td>Previsão</td><td>Acerto retrospectivo anual dos sinais<sup><a class="cit" href="#f7">7</a></sup></td><td>Torneio de cinquenta perguntas com placar</td><td>O torneio é o acerto retrospectivo feito direito; vale nos dois <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Alçada</td><td>Assume que os fóruns decidem<sup><a class="cit" href="#f7">7</a></sup></td><td>Diz que não decidem e começa por aí<sup><a class="cit" href="#f5">5</a></sup></td><td>A tabela de alçadas é pré-requisito dos dois <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Pessoas</td><td>Duas integrais e quatro parciais<sup><a class="cit" href="#f7">7</a></sup></td><td>Nenhuma</td><td>Nenhuma por noventa dias; depois, pela prova <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Custo</td><td>Cerca de R$ 715 mil e 980 horas por ano<sup><a class="cit" href="#f7">7</a></sup></td><td>Cerca de 300 horas em 90 dias, caixa zero</td><td>Gastar alçada antes de gastar caixa <span class="sel sel-p">Proposta</span></td></tr>
+<tr><td>Prova de vida</td><td>Seis decisões em ata nascidas de sinal em doze meses<sup><a class="cit" href="#f7">7</a></sup></td><td>Cinco decisões que saíram sem subir em noventa dias</td><td>As duas réguas no mesmo painel; a casa decide com número <span class="sel sel-p">Proposta</span></td></tr>
+</tbody>
+</table>
+
+<h3>A sequência proposta</h3>
+<ol>
+<li><strong>Setembro a dezembro de 2026:</strong> o teste de noventa dias desta anatomia, sem contratar. Régua: decisões que saíram sem subir; itens do futuro datado decididos antes da data; taxa de resposta da rede; opções escritas. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Dezembro de 2026, Conselho:</strong> a página de noventa dias. Três saídas: (a) alçada veio e sobrou futuro não datado que a rede e o torneio não capturam: instalar a célula do plano em janeiro, com terreno preparado; (b) alçada veio e o futuro datado mais a rede bastaram: seguir sem célula e rever em junho; (c) alçada não veio: a conversa seguinte é sobre governança, e nenhum dos dois documentos resolve. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Em qualquer saída:</strong> a página trimestral, a tabela de alçadas, o torneio e as cartas de opção ficam; são reutilizáveis e não dependem de célula. <span class="sel sel-p">Proposta</span></li>
+</ol>
+
+<h3>O que a diretoria decide, em três linhas</h3>
+<ul>
+<li>Assinar a tabela de alçadas do Fórum de Negócio e o prazo de resposta de trinta dias.<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-p">Proposta</span></li>
+<li>Nomear os seis diretores donos das seis opções e o Comitê de Investimentos como dono do abandono. <span class="sel sel-p">Proposta</span></li>
+<li>Marcar a página de noventa dias no Conselho de dezembro e decidir ali, com número, se a célula do plano entra em 2027. <span class="sel sel-p">Proposta</span></li>
+</ul>
+
+<div class="pratica">
+<h3>Na prática</h3>
+<p>A superintendente de Estratégia que leu as duas anatomias na mesma semana volta à sala com uma proposta só: noventa dias do anti-escritório e, em dezembro, a decisão sobre a célula com número na mão. Ela não precisa escolher entre os documentos; precisa escolher a ordem. E a ordem tem uma lógica que os dois aceitam: alçada antes de olhos, porque olhos sem alçada é o que a casa já tem em Inteligência de Mercado, chegando tarde e manual.<sup><a class="cit" href="#f5">5</a></sup></p>
+<p>Se em dezembro a página mostrar sete decisões que saíram sem subir e uma rede que responde, a célula do plano nasce em janeiro com um terreno que nenhuma célula de mercado costuma ter. Se mostrar zero, a casa economizou R$ 715 mil e descobriu o que precisa consertar primeiro. Nos dois casos, o projeto de foresight cumpriu a única promessa que a disciplina deveria fazer: ajudar a decidir.</p>
+<p>Qual dos dois números a gente quer ver no Conselho de dezembro, e o que a gente faz com cada um?</p>
+</div>
+</section>
+
+<section id="p-sut" class="pane">
+<h2>Sutilezas: o que a visão contrária sabe e não gosta de dizer</h2>
+<p class="tese">Dez observações que não cabem em tabela e que a tese contrária precisa admitir para ser honesta.</p>
+<ol>
+<li><strong>A tese contrária é mais barata em dinheiro e mais cara em poder.</strong> Ela pede que a diretoria escreva o que delega; o plano pede verba. Verba se aprova; delegação se pratica. <span class="sel sel-i">Inferência</span></li>
+<li><strong>"Já está tudo datado" é verdade para o médio prazo e falso para o choque.</strong> A pandemia está listada como risco social na Circular 666 sem data; a tese cobre isso pela robustez do capital, não pela previsão, e precisa dizer isso em voz alta.<sup><a class="cit" href="#f2">2</a>, <a class="cit" href="#f31">31</a></sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>O torneio de previsão só funciona com placar público por área e privado por pessoa.</strong> Numa casa que teme mais um modelo, um ranking de nomes mata o método no primeiro trimestre.<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>O plano irmão também pede alçada; só não começa por ela.</strong> A diferença entre os dois é de ordem, não de conteúdo; por isso o Encontro é possível.<sup><a class="cit" href="#f7">7</a></sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>A evidência de Tetlock é sobre geopolítica; a de Bain, sobre gestão em geral; a de Rohrbeck, sobre multinacionais europeias.</strong> Nenhuma é sobre seguradora cooperativa brasileira. A tese as usa como faróis, não como provas locais.<sup><a class="cit" href="#f25">25</a>, <a class="cit" href="#f26">26</a>, <a class="cit" href="#f27">27</a></sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>A atuária é a célula de futuros que a casa já tem e não chama assim.</strong> Modelos preditivos nos quatro ramos e escores de aceitação são foresight quantitativo em produção; dar-lhe a pergunta demográfica é mais barato que contratar quem a faria por fora.<sup><a class="cit" href="#f1">1</a></sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>A ouvidoria é o sinal fraco mais barato da casa e o menos lido pela estratégia.</strong> Ela já alimenta a materialidade; passar a alimentar o Comitê de Gestão é uma linha de pauta.<sup><a class="cit" href="#f1">1</a></sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>A rede como sensor só vale com devolutiva, e devolutiva exige que alguém decida.</strong> Se nada for decidido, a rede descobre em dois meses que respondeu para uma planilha; é o risco comum às duas anatomias. <span class="sel sel-i">Inferência</span></li>
+<li><strong>A opção mais valiosa da carteira é a que ninguém quer escrever: a intercooperação de seguros com as singulares.</strong> Porque escrever a carta é admitir que o acionista pode virar concorrente sob a lei complementar.<sup><a class="cit" href="#f13">13</a></sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>Se o teste de noventa dias falhar por falta de alçada, este documento terá provado a própria tese da pior maneira.</strong> E o plano irmão, nesse caso, também não funcionaria; a casa deve saber isso antes de aprovar qualquer um dos dois. <span class="sel sel-i">Inferência</span></li>
+</ol>
+</section>
+
+<section id="p-gloss" class="pane">
+<h2>Glossário</h2>
+<p class="tese">O vocabulário da visão contrária, com uma linha simples abaixo de cada termo.</p>
+<ul>
+<li><strong>Anti-escritório.</strong> O desenho que instala foresight sem célula: radar pronto, rede como sensor, decisão destravada e opções.<br><span class="note">Fazer o trabalho do escritório de futuros sem abrir o escritório.</span></li>
+<li><strong>Gargalo.</strong> A etapa que limita a saída de um sistema; melhorar as outras não melhora o todo.<br><span class="note">O funil: não adianta despejar mais água se o buraco é o mesmo.</span></li>
+<li><strong>Alçada.</strong> O que cada nível pode decidir sozinho, com que valor e em que prazo.<br><span class="note">Até onde você pode dizer sim sem perguntar.</span></li>
+<li><strong>Capacidade de absorção.</strong> A capacidade de reconhecer, assimilar e aplicar informação nova, que depende do conhecimento prévio e é cumulativa.<sup><a class="cit" href="#f29">29</a></sup><br><span class="note">Só aprende o que já sabe um pouco; e quanto mais sabe, mais aprende.</span></li>
+<li><strong>Futuro datado.</strong> Acontecimentos anunciados com trimestre, ano ou década por regulador, instituto ou lei.<br><span class="note">O amanhã que já está no calendário.</span></li>
+<li><strong>Calibração.</strong> Quando as probabilidades que alguém dá batem com a frequência com que acerta.<br><span class="note">Quem diz "70%" e acerta sete em dez.</span></li>
+<li><strong>Torneio de previsão.</strong> Perguntas com resposta verificável e data, respondidas com probabilidade e medidas por placar de erro.<sup><a class="cit" href="#f25">25</a></sup><br><span class="note">Um bolão sério, com nota.</span></li>
+<li><strong>Superprevisor.</strong> Previsor amador com histórico de acerto acima dos profissionais no torneio da comunidade de inteligência.<sup><a class="cit" href="#f25">25</a></sup><br><span class="note">A pessoa comum que erra menos que o especialista.</span></li>
+<li><strong>Decisão robusta.</strong> A que se sai razoavelmente bem em muitos futuros, em vez de ótima em um.<sup><a class="cit" href="#f31">31</a></sup><br><span class="note">A escolha que não depende de acertar o amanhã.</span></li>
+<li><strong>Pergunta reversa.</strong> "O que teria de acontecer para isso falhar", em vez de "o que vai acontecer".<br><span class="note">Procurar o que quebra, não o que vem.</span></li>
+<li><strong>Teste de estresse reverso.</strong> Versão do ORSA que parte da quebra e procura o cenário que a causaria.<sup><a class="cit" href="#f14">14</a></sup><br><span class="note">Começar pelo pior e perguntar como se chega lá.</span></li>
+<li><strong>Exame prévio de fracasso.</strong> Assumir que a iniciativa fracassou e listar as causas antes de começar.<sup><a class="cit" href="#f28">28</a></sup><br><span class="note">Fingir que deu errado para evitar que dê.</span></li>
+<li><strong>Opção real.</strong> O direito, sem obrigação, de agir depois, quando a incerteza se resolver.<sup><a class="cit" href="#f30">30</a></sup><br><span class="note">Pagar pouco para poder decidir mais tarde.</span></li>
+<li><strong>Gatilho de exercício e de abandono.</strong> O número que dispara a opção e o número que a mata.<br><span class="note">O "vai" e o "para" combinados antes.</span></li>
+<li><strong>Sensor.</strong> Quem, na ponta, vê a mudança antes da estatística.<br><span class="note">O corretor, o médico, a ouvidoria.</span></li>
+<li><strong>Devolutiva.</strong> Contar à rede o que a companhia fez com o que ela disse.<br><span class="note">Responder a quem respondeu.</span></li>
+<li><strong>Cenário narrativo.</strong> Uma história coerente de futuro; útil como ensaio de decisão, inútil como produto.<sup><a class="cit" href="#f32">32</a></sup><br><span class="note">Um conto sobre o amanhã, bom para treinar, ruim para guardar.</span></li>
+<li><strong>Empresa neurótica.</strong> Na teoria do foresight corporativo, a que investe em futuros além do que a incerteza pede.<sup><a class="cit" href="#f27">27</a></sup><br><span class="note">Quem compra óculos demais.</span></li>
+<li><strong>ORSA.</strong> Autoavaliação prospectiva de riscos e solvência em três anos, sob estresse, exigida dos maiores.<sup><a class="cit" href="#f14">14</a></sup><br><span class="note">A seguradora provar que aguenta o pior por três anos.</span></li>
+<li><strong>Circular Susep 666/2022.</strong> Norma do relatório de sustentabilidade com riscos por horizonte.<sup><a class="cit" href="#f2">2</a></sup><br><span class="note">A regra que faz a seguradora listar clima e sociedade.</span></li>
+<li><strong>Lei Complementar 213/2025.</strong> Permite cooperativas de seguro em todos os ramos não vedados.<sup><a class="cit" href="#f13">13</a></sup><br><span class="note">A lei que deixa a cooperativa vender seguro, inclusive a nossa acionista.</span></li>
+<li><strong>Lei 15.040/2024.</strong> Marco legal dos contratos de seguro, em vigor desde dezembro de 2025.<sup><a class="cit" href="#f12">12</a></sup><br><span class="note">A lei nova do contrato de seguro.</span></li>
+<li><strong>VCMH.</strong> Índice de variação do custo médico-hospitalar.<sup><a class="cit" href="#f18">18</a></sup><br><span class="note">Quanto o custo da saúde subiu no ano.</span></li>
+<li><strong>Pacto intergeracional.</strong> Jovens pagando mais do que usam para financiar os mais velhos.<br><span class="note">O acordo entre gerações que sustenta o plano.</span></li>
+<li><strong>Comitê de Gestão.</strong> Comitê que monitora os negócios e o alinhamento ao planejamento e ao orçamento.<sup><a class="cit" href="#f1">1</a></sup><br><span class="note">A sala onde a página trimestral do futuro datado deve ser lida.</span></li>
+<li><strong>Fórum de Negócio.</strong> Rito proposto em 2026 para receber as entregas das esteiras, em três camadas.<sup><a class="cit" href="#f5">5</a></sup><br><span class="note">A reunião em que a tabela de alçadas deve valer.</span></li>
+<li><strong>Radar pronto.</strong> O que a ANS, a Susep, o IBGE, o IESS, a CNseg, a AXA e a Swiss Re já publicam.<br><span class="note">O futuro que outros pagaram para escrever.</span></li>
+</ul>
+</section>
+
+<section id="p-cem" class="pane">
+<h2>Cem perguntas com resposta</h2>
+<p class="tese">As perguntas que a tese contrária provoca, respondidas em uma ou duas linhas, com selo.</p>
+
+<h3>A tese</h3>
+<ol>
+<li><strong>Qual é a tese?</strong> A casa não precisa enxergar mais longe; precisa decidir mais perto. O gargalo é alçada e absorção, não informação. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Isso nega o valor do foresight?</strong> Não; nega a prioridade de uma célula nesta casa, neste momento. <span class="sel sel-i">Inferência</span></li>
+<li><strong>O que muda em relação ao plano irmão?</strong> A ordem: alçada antes de olhos; opções antes de cenários; rede direta aos fóruns, sem intermediário.<sup><a class="cit" href="#f7">7</a></sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>Em que os dois concordam?</strong> Regulador como futurista, rede como sensor, aposta com abandono, função que nunca decide.<sup><a class="cit" href="#f7">7</a></sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>Por que "mãos amarradas"?</strong> Porque as atas registram que toda decisão relevante sobe sem alçada escrita.<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Isso é crítica às pessoas?</strong> Não; é diagnóstico de desenho, a mesma leitura do redesenho da frente SUSEP.<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>Qual a prova em noventa dias?</strong> Cinco decisões que saíram sem subir, registradas em ata. <span class="sel sel-p">Proposta</span></li>
+<li><strong>E se falhar?</strong> O gargalo é de governança e nenhum dos dois documentos resolve; a próxima conversa é sobre alçada. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Quanto custa?</strong> Cerca de 300 horas em noventa dias; caixa zero. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Quem lidera?</strong> A Estratégia dá formato; a Diretoria Executiva dá alçada; as áreas que já sabem executam. <span class="sel sel-p">Proposta</span></li>
+</ol>
+
+<h3>O gargalo</h3>
+<ol start="11">
+<li><strong>Quanto tempo levou o tema da comissão?</strong> Quinze semanas entre a retomada e a autorização de um estudo, após cerca de dois anos parado.<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Qual o sintoma mais repetido nas atas?</strong> Agenda e quórum, em nove fontes.<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>A TI tem equipe para a frente SUSEP?</strong> Não, pelas atas; a defasagem tecnológica é estimada em cinco anos.<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>A operação cabe objetivo novo?</strong> Declarou que não.<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>O insumo de mercado chega a tempo?</strong> Chega "tarde e manual", segundo as atas, apesar de painel e radar existirem.<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Vida perde por quê?</strong> Na porta: aceitação lenta, documentos, pendências; não no preço.<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Quanto Vida cresceu?</strong> 3,3% em 2025, contra 17,3% de Saúde.<sup><a class="cit" href="#f3">3</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Qual a lógica do gargalo?</strong> Melhorar o que não é restrição só aumenta estoque; a restrição aqui é a decisão com alçada. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Uma célula piora?</strong> Aumenta a entrada de um sistema com saída travada. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Onde a casa absorve bem?</strong> Onde há norma com prazo e dono: nota máxima na ANS por seis anos, selo de integridade, capital com fatores reduzidos.<sup><a class="cit" href="#f4">4</a>, <a class="cit" href="#f2">2</a>, <a class="cit" href="#f16">16</a></sup> <span class="sel sel-v">Verificado</span></li>
+</ol>
+
+<h3>O futuro datado</h3>
+<ol start="21">
+<li><strong>Quantos prazos a ANS publicou?</strong> Dezenove temas com trimestre até 2028, mais seis estudos.<sup><a class="cit" href="#f11">11</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Quantos temas de prioridade um a Susep listou para 2026?</strong> Vinte e três.<sup><a class="cit" href="#f10">10</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Quando a lei de contratos entrou em vigor?</strong> Dezembro de 2025.<sup><a class="cit" href="#f12">12</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>O que a lei complementar permite?</strong> Cooperativas de seguro em todos os ramos não vedados.<sup><a class="cit" href="#f13">13</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Qual o horizonte do ORSA?</strong> Três anos, sob estresse, ligado ao plano de negócios; obrigatório para S1 e S2.<sup><a class="cit" href="#f14">14</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>A companhia é obrigada?</strong> Tende a não ser, pelos critérios de porte; confirmar com Riscos.<sup><a class="cit" href="#f15">15</a></sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>Quando o país para de crescer?</strong> Em 2041; 37,8% de idosos em 2070.<sup><a class="cit" href="#f17">17</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Qual o custo médico?</strong> 14,5% em doze meses; terapias a 30,7%.<sup><a class="cit" href="#f18">18</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>O que sobra sem data?</strong> Desfecho do pacto intergeracional, adesão das singulares à lei, Selic, choque sanitário. <span class="sel sel-i">Inferência</span></li>
+<li><strong>O que isso pede?</strong> Probabilidade, opção e robustez, não cenário. <span class="sel sel-i">Inferência</span></li>
+</ol>
+
+<h3>A ciência</h3>
+<ol start="31">
+<li><strong>O que o torneio da inteligência mostrou?</strong> Previsores calibrados foram mais de 30% mais precisos que analistas com informação sigilosa.<sup><a class="cit" href="#f25">25</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>O uso de cenários nas empresas?</strong> Caiu de 70% para 19%.<sup><a class="cit" href="#f26">26</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Quem usa gosta?</strong> Sim: 30% muito satisfeitos, 6% insatisfeitos.<sup><a class="cit" href="#f26">26</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>O estudo de Rohrbeck prova causa?</strong> Não; mede associação em 83 empresas entre 2008 e 2015.<sup><a class="cit" href="#f27">27</a></sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>O que é empresa neurótica?</strong> A que investe em foresight além do que a incerteza pede, na própria tipologia do estudo.<sup><a class="cit" href="#f27">27</a>, <a class="cit" href="#f6">6</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>O que o exame prévio de fracasso rende?</strong> 30% a mais de causas corretamente identificadas.<sup><a class="cit" href="#f28">28</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>O que é decisão robusta?</strong> A que se sai bem em muitos futuros; método da RAND para políticas de longo prazo.<sup><a class="cit" href="#f31">31</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>O que é capacidade de absorção?</strong> Reconhecer, assimilar e aplicar informação nova; depende do conhecimento prévio.<sup><a class="cit" href="#f29">29</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Cenário serve para quê?</strong> Para ensaiar uma decisão; não para ser produto.<sup><a class="cit" href="#f32">32</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>O relatório de tendências morreu?</strong> O mais famoso foi encerrado em março de 2026 por inutilidade.<sup><a class="cit" href="#f23">23</a>, <a class="cit" href="#f6">6</a></sup> <span class="sel sel-v">Verificado</span></li>
+</ol>
+
+<h3>Sensores</h3>
+<ol start="41">
+<li><strong>Quantos sensores a casa tem?</strong> 19 escritórios, mais de 13 mil corretores, 340 cooperativas, 116 mil médicos, ouvidoria, atuária.<sup><a class="cit" href="#f3">3</a>, <a class="cit" href="#f2">2</a>, <a class="cit" href="#f9">9</a>, <a class="cit" href="#f1">1</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Como a Swiss Re faz?</strong> Plataforma interna com subscritores e gestores de clientes, desde 2013.<sup><a class="cit" href="#f21">21</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Como a Sicredi Pioneira fez?</strong> 980 pessoas, 45 oficinas, 4.200 linhas em 125, seis cenários.<sup><a class="cit" href="#f22">22</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Precisa de célula para ouvir?</strong> Não; precisa de pergunta, dono e devolutiva. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Quem é o dono da rede de corretores?</strong> A superintendência comercial. <span class="sel sel-p">Proposta</span></li>
+<li><strong>E das singulares?</strong> A coordenação do canal Unimed, com a Faculdade Unimed.<sup><a class="cit" href="#f24">24</a></sup> <span class="sel sel-p">Proposta</span></li>
+<li><strong>Sensor é reclamação?</strong> Não; reclamação vai à Ouvidoria. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Qual a primeira pergunta?</strong> "O que você viu neste mês que ainda não apareceu em número?" <span class="sel sel-p">Proposta</span></li>
+<li><strong>E a atuária?</strong> Uma anomalia por mês vira pergunta ao Comitê de Gestão. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Qual a diferença para o plano?</strong> A rede alimenta os fóruns direto, sem intermediário.<sup><a class="cit" href="#f7">7</a></sup> <span class="sel sel-i">Inferência</span></li>
+</ol>
+
+<h3>Opções e robustez</h3>
+<ol start="51">
+<li><strong>O que é a carteira de opções?</strong> Seis apostas pequenas com gatilho de exercício e de abandono e diretor dono. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Qual a primeira?</strong> Intercooperação de seguros com as singulares, disparada pelo primeiro pedido à Susep.<sup><a class="cit" href="#f13">13</a></sup> <span class="sel sel-p">Proposta</span></li>
+<li><strong>De onde vem a folga?</strong> ROAE de 26,7% contra 13,5% orçados; operacional acima do financeiro.<sup><a class="cit" href="#f1">1</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Quem mata uma opção?</strong> O Comitê de Investimentos, pelo critério. <span class="sel sel-p">Proposta</span></li>
+<li><strong>O que é pergunta reversa?</strong> "O que teria de acontecer para isso falhar", por ambição do Mapa. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Qual decisão sobrevive a tudo?</strong> Escalar atenção primária; decidir a régua de aceitação de Vida; proposta de intercooperação; capital testado. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Quanto tempo leva?</strong> Duas horas na revisão de outubro. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Precisa escrever mundos?</strong> Não; só o que sobrar sem data, e só depois dos noventa dias. <span class="sel sel-p">Proposta</span></li>
+<li><strong>O ORSA serve mesmo sem obrigação?</strong> Como método, sim; é o mais próximo de foresight que a regulação oferece.<sup><a class="cit" href="#f14">14</a></sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>O que é teste reverso?</strong> Partir da quebra e achar o cenário que a causa.<sup><a class="cit" href="#f14">14</a></sup> <span class="sel sel-v">Verificado</span></li>
+</ol>
+
+<h3>Torneio</h3>
+<ol start="61">
+<li><strong>Quantas perguntas?</strong> Cinquenta por ano, com data e resposta verificável. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Exemplo?</strong> "A ANS publica a norma de remuneração por valor até 31 de dezembro de 2027?"<sup><a class="cit" href="#f11">11</a></sup> <span class="sel sel-p">Proposta</span></li>
+<li><strong>Quem participa?</strong> Voluntários de todas as áreas; trinta no primeiro ciclo. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Como se mede?</strong> Erro de calibração por área, trimestral. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Placar por pessoa?</strong> Privado; por área, público. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Para que serve?</strong> Para descontar o otimismo da casa e disparar gatilhos com probabilidade agregada. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Quanto custa?</strong> Uma planilha e uma hora por mês de quem organiza. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Onde fica o placar?</strong> No laboratório de dados do hub de inovação.<sup><a class="cit" href="#f1">1</a></sup> <span class="sel sel-p">Proposta</span></li>
+<li><strong>Substitui o acerto retrospectivo do plano?</strong> É o acerto retrospectivo feito direito.<sup><a class="cit" href="#f7">7</a></sup> <span class="sel sel-i">Inferência</span></li>
+<li><strong>E se virar jogo?</strong> Deixa de ser jogo no dia em que dispara o primeiro gatilho. <span class="sel sel-p">Proposta</span></li>
+</ol>
+
+<h3>O desenho e o plano de 90 dias</h3>
+<ol start="71">
+<li><strong>Quais os quatro mecanismos?</strong> Radar pronto, rede como sensor, decisão destravada, opções. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Quem faz a página trimestral?</strong> Área regulatória e jurídico, para o Comitê de Gestão. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Quem assina alçadas?</strong> A Diretoria Executiva, no Fórum de Negócio. <span class="sel sel-p">Proposta</span></li>
+<li><strong>O que acontece nos dias 1 a 30?</strong> Alçada, página e perguntas reversas na revisão de outubro. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Dias 31 a 60?</strong> Sensores e torneio. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Dias 61 a 90?</strong> Cartas de opção, pergunta reversa de solvência e página ao Conselho. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Qual o gatilho de aborto do bloco 1?</strong> Nenhuma alçada assinada. <span class="sel sel-p">Proposta</span></li>
+<li><strong>E do bloco 3?</strong> Nenhuma decisão registrada como saída sem subir. <span class="sel sel-p">Proposta</span></li>
+<li><strong>O que fica se falhar?</strong> Tabela de alçadas, placar, cartas; tudo reutilizável. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Precisa de consultoria?</strong> Não. <span class="sel sel-p">Proposta</span></li>
+</ol>
+
+<h3>Custo e comparação</h3>
+<ol start="81">
+<li><strong>Quanto custa o plano irmão?</strong> Cerca de R$ 715 mil sem consultoria e 980 horas por ano.<sup><a class="cit" href="#f7">7</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>E este?</strong> Cerca de 300 horas em noventa dias, caixa zero. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Qual o custo escondido?</strong> Alçada: a diretoria escreve o que delega. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Qual dos dois é mais fácil de aprovar?</strong> O plano, porque não tira poder de ninguém. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Qual mede mais rápido?</strong> Este, em noventa dias. <span class="sel sel-i">Inferência</span></li>
+<li><strong>As réguas são comparáveis?</strong> Sim: decisões em ata, nos dois. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Vale o parâmetro de R$ 125 por hora?</strong> É o do redesenho da frente SUSEP; outro valor muda a conta, não a conclusão.<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-e">Especulativo</span></li>
+<li><strong>O capital de opção é custo?</strong> Só no exercício; até lá é reserva. <span class="sel sel-i">Inferência</span></li>
+<li><strong>E a formação?</strong> Nenhuma; o método é ler, perguntar e registrar. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Plataforma?</strong> Nenhuma. <span class="sel sel-p">Proposta</span></li>
+</ol>
+
+<h3>Riscos e encontro</h3>
+<ol start="91">
+<li><strong>Qual o maior risco desta tese?</strong> Miopia: o futuro sem data que a rede e o torneio não capturam. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Como se cobre?</strong> Pela robustez do capital e da pergunta reversa; e chamando o plano se sobrar futuro não datado. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Qual o risco mais provável?</strong> Alçada assinada e revertida na primeira decisão que dá errado. <span class="sel sel-i">Inferência</span></li>
+<li><strong>Antídoto?</strong> Regra escrita de reversão, com gatilho e nome em ata. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Quando instalar a célula do plano?</strong> Em janeiro de 2027, se a alçada vier e sobrar futuro não datado. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Quando não instalar?</strong> Se o futuro datado e a rede bastarem; rever em junho. <span class="sel sel-p">Proposta</span></li>
+<li><strong>E se a alçada não vier?</strong> A conversa é sobre governança; nenhum dos dois documentos resolve. <span class="sel sel-p">Proposta</span></li>
+<li><strong>O que fica em qualquer caso?</strong> Página trimestral, alçadas, torneio, cartas. <span class="sel sel-p">Proposta</span></li>
+<li><strong>O que a diretoria decide?</strong> Assinar alçadas, nomear seis donos de opção, marcar a página de dezembro no Conselho. <span class="sel sel-p">Proposta</span></li>
+<li><strong>Qual a única promessa que foresight deveria fazer?</strong> Ajudar a decidir. <span class="sel sel-i">Inferência</span></li>
+</ol>
+</section>
+
+<section id="p-check" class="pane">
+<h2>Check: o veredito do advogado sobre a visão contrária</h2>
+<p class="tese">Uma tese contrária precisa ser atacada com mais força que a tese original; aqui está o que resistiu, o que foi corrigido e o que ela não pode afirmar.</p>
+
+<h3>O que resistiu</h3>
+<ul>
+<li><strong>O gargalo de decisão.</strong> Escalada sem alçada, mesmas pessoas, quinze semanas, TI sem capacidade, insumo tardio: todos registrados no documento que consolidou 24 atas; nenhum foi criado aqui.<sup><a class="cit" href="#f5">5</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>O futuro datado.</strong> Os prazos da ANS e os temas da Susep foram lidos nos documentos oficiais; o ORSA, a segmentação, o IBGE e o VCMH, nas fontes primárias.<sup><a class="cit" href="#f11">11</a>, <a class="cit" href="#f10">10</a>, <a class="cit" href="#f14">14</a>, <a class="cit" href="#f15">15</a>, <a class="cit" href="#f17">17</a>, <a class="cit" href="#f18">18</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>A evidência científica.</strong> Os 30% do torneio, a queda de 70% para 19%, o desenho do estudo de 83 empresas, os 30% do exame prévio de fracasso, a capacidade de absorção e as decisões robustas estão nas fontes citadas, com seus limites declarados.<sup><a class="cit" href="#f25">25</a>, <a class="cit" href="#f26">26</a>, <a class="cit" href="#f27">27</a>, <a class="cit" href="#f28">28</a>, <a class="cit" href="#f29">29</a>, <a class="cit" href="#f31">31</a></sup> <span class="sel sel-v">Verificado</span></li>
+<li><strong>Os precedentes.</strong> SONAR desde 2013 e a cooperativa gaúcha com 980 pessoas: lidos nas páginas e no PDF originais.<sup><a class="cit" href="#f21">21</a>, <a class="cit" href="#f22">22</a></sup> <span class="sel sel-v">Verificado</span></li>
+</ul>
+
+<h3>O que foi corrigido durante a construção</h3>
+<ul>
+<li>A afirmação de que o seguro de renda por incapacidade nasceu "de ouvir a ponta" foi retirada; o relatório só diz que foi o primeiro do gênero para profissionais liberais.<sup><a class="cit" href="#f1">1</a></sup></li>
+<li>A comparação de custos passou a declarar o custo escondido da tese (alçada) para não vender "caixa zero" como grátis.</li>
+<li>O risco de miopia, que a tese tende a minimizar, ganhou a maior nota de impacto na matriz e uma saída explícita para o plano irmão.</li>
+<li>A contagem dos riscos da Circular 666 herdada do plano foi corrigida junto com ele: nove riscos, oito no curto prazo.<sup><a class="cit" href="#f2">2</a></sup></li>
+<li>A lógica do gargalo é apresentada como raciocínio deste documento, sem citar teoria de gestão como se fosse prova local.</li>
+<li>Toda referência a pessoas das atas é por função; o tom é de diagnóstico de desenho.</li>
+</ul>
+
+<h3>Limitações honestas</h3>
+<ul>
+<li>A tese usa evidência de outros setores e países (geopolítica, gestão em geral, multinacionais europeias) como farol, não como prova local. <span class="sel sel-i">Inferência</span></li>
+<li>"Cinco decisões em noventa dias" é meta de teste, sem base histórica; a casa pode calibrá-la. <span class="sel sel-p">Proposta</span></li>
+<li>A estimativa de 300 horas é conta por cima com o parâmetro de R$ 125 por hora herdado. <span class="sel sel-e">Especulativo</span></li>
+<li>O segmento Susep da companhia não foi confirmado; o ORSA é tratado como método, não como obrigação. <span class="sel sel-i">Inferência</span></li>
+<li>A tese pode ser usada como desculpa para não olhar longe; a aba Encontro existe para impedir isso, e o plano irmão deve ser lido junto. <span class="sel sel-i">Inferência</span></li>
+<li>Se o teste de noventa dias falhar por falta de alçada, o documento terá provado sua tese da pior forma, e nenhum dos dois desenhos funcionará sem governança. <span class="sel sel-i">Inferência</span></li>
+</ul>
+
+<h3>Nota de densidade</h3>
+<p>Autoavaliação de densidade: 8,5 de 10. Cortes feitos: repetição do "quinze semanas" em mais de quatro abas, reduzida; parágrafos de teoria sem número; a metáfora do funil ficou só no glossário. Aprofundamentos feitos: a carteira de seis opções com gatilhos, a tabela de robustez por ambição, o torneio com exemplos verificáveis e a régua de noventa dias comparável à do plano. O que ficou raso: a regra de reversão de alçada, que precisa de desenho jurídico e de governança fora do escopo deste documento. <span class="sel sel-i">Inferência</span></p>
+</section>
+
+<section id="p-fontes" class="pane">
+<h2>Fontes</h2>
+<div class="card">
+<p><strong>Nota de método.</strong> Este documento defende a tese contrária à do plano de instalação da função de futuros e usa, de propósito, as mesmas fontes internas e regulatórias daquele documento, para que a divergência esteja na leitura e não no dado. <span class="sel sel-v">Verificado</span> indica afirmação apoiada em documento publicado e identificado, acessado em 8 de setembro de 2026 salvo indicação. <span class="sel sel-i">Inferência</span> indica raciocínio sobre fontes verificadas sem afirmação direta nelas; toda a tese e todo o desenho alternativo estão nesta categoria. <span class="sel sel-e">Especulativo</span> indica hipótese sem base direta. <span class="sel sel-p">Proposta</span> marca desenho a validar.</p>
+<p><strong>Sobre as fontes internas.</strong> As atas do grupo de trabalho SUSEP Vida e Ramos Elementares são citadas pelo documento interno que as consolidou, por função e em tom de diagnóstico. O que aqui se chama de "gargalo de decisão" é leitura deste documento sobre aquele material, não conclusão dele.</p>
+<p><strong>Sobre a evidência acadêmica.</strong> Os estudos de previsão e de capacidade de absorção são citados nos seus resultados principais; os limites de cada um estão declarados no texto e na aba Check.</p>
+</div>
+<h3>A Seguros Unimed, o Sistema e os documentos do projeto</h3>
+<ol>
+<li id="f1">Seguros Unimed. <em>Relatório de Sustentabilidade 2025</em> (padrão GRI, 200 páginas): Mapa Estratégico 2025-2028 e seus oito temas, modelo de execução (semanal, mensal, trimestral), 1º ciclo de Planejamento Integrado Estratégico em agosto de 2025 e início da revisão 2026-2028 em outubro de 2025, comitês e comissões, receita de R$ 8,53 bilhões (GRI 201-1), carteira por segmento, números do Sistema Unimed, Lei Complementar 213/2025 e horizontes de risco. <a href="https://midias.segurosunimed.com.br/content/UMD_Relatorio_Sustentabilidade_25_Final__.pdf">midias.segurosunimed.com.br (PDF)</a></li>
+<li id="f2">Seguros Unimed. <em>Relatório de Sustentabilidade, Circular SUSEP 666/22, edição 2025</em> (data-base 31 de dezembro de 2024, 39 páginas): nove riscos de sustentabilidade classificados por horizonte, critérios de curto, médio e longo prazo, governança de riscos (COSO ERM e ISO 31000), matriz de materialidade 2023-2024, 1.973 colaboradores, prêmio emitido de R$ 1,18 bilhão nas sociedades SUSEP e mais de 13 mil corretores. <a href="https://midias.segurosunimed.com.br/content/Relatorio-de-Sustentabilidade_Seguros-Unimed_Circular-666-22.pdf">midias.segurosunimed.com.br (PDF)</a></li>
+<li id="f3">Unimed do Brasil, portal institucional. <em>Diversificação de negócios impulsiona Seguros Unimed a R$ 8,5 bilhões de faturamento em 2025</em>, 13 de março de 2026: crescimento de 14,5%, lucro líquido de R$ 737,6 milhões, sinistralidade consolidada de 72,8%, ROAE de 26,7%, 7 milhões de segurados, 19 escritórios regionais, crescimento por linha. <a href="https://www.unimed.coop.br/site/-/diversifica%C3%A7%C3%A3o-de-neg%C3%B3cios-impulsiona-seguros-unimed-a-r-8-5-bilh%C3%B5es-de-faturamento-em-2025">unimed.coop.br</a></li>
+<li id="f4">Seguros Unimed, área de relações com acionistas. <em>Sobre a Seguros Unimed</em>, atualizado em 10 de julho de 2026: origem em 1989 pela incorporação do Montecooper, posições de mercado por ramo (8ª em seguro saúde pelo Valor 1000; 21ª em previdência, 14ª em vida, 7ª em odonto e 20ª em ramos elementares pela Susep), cerca de 6 milhões de segurados. <a href="https://ra.segurosunimed.com.br/ACompanhia/SobreASegurosUnimed">ra.segurosunimed.com.br</a></li>
+<li id="f5">Projeto Estratégia (documento interno). <em>Anatomia Profunda: GT Susep Vida e RE</em>, 1º de setembro de 2026, consolidação de 24 documentos do grupo de trabalho (março a agosto de 2026) e duas transcrições: ritos existentes e cadências, escalada de decisões, capacidade das esteiras, Inteligência de Mercado (painel V4 e radar), 338 cooperativas no canal Unimed, 36% dos corretores de São Paulo que cotam uma vez e não voltam. Pasta Pesquisas do projeto.</li>
+<li id="f6">Projeto Estratégia (documento irmão). <em>A Anatomia Profunda: Foresight Corporativo</em>, 25 de agosto de 2026, 63 fontes: a tese do calendário de decisão, o roteiro genérico de doze meses, a governança, os produtos do mercado e os cinco erros de montagem. Página publicada no repositório do projeto. <a href="https://eglbra.github.io/estrategia-futuros/AnatomiaProfundaForesight.html">eglbra.github.io</a></li>
+<li id="f7">Projeto Estratégia (documento irmão). <em>A Anatomia Profunda: Foresight na Seguros Unimed, o plano</em>, 8 de setembro de 2026, 50 fontes: a proposta de célula de duas pessoas, cinco encaixes no calendário, carteira de opções e custo de cerca de R$ 715 mil no ano 1. Mesma pasta deste documento.</li>
+<li id="f8">Revista Ampla. <em>O futuro e o Sistema Unimed: como buscar a perenidade?</em>, 28 de outubro de 2024: fala do presidente da Unimed do Brasil ("o que nos trouxe até aqui não é o que vai nos levar adiante"), envelhecimento, custos, novos concorrentes, hub de inovação com mais de 300 Unimeds e núcleo de avaliação de tecnologias em saúde. <a href="https://revistaampla.com.br/o-futuro-e-o-sistema-unimed-como-buscar-perenidade/">revistaampla.com.br</a></li>
+<li id="f9">Exame. <em>"O cooperativismo coloca as pessoas no centro das decisões", diz presidente da Unimed do Brasil</em>: 340 cooperativas e mais de 20,9 milhões de beneficiários em planos médicos e odontológicos. <a href="https://exame.com/negocios/cooperativismo-pessoas-centro-decisoes-unimed/">exame.com</a></li>
+</ol>
+<h3>Regulação e demografia: o futuro que já tem data</h3>
+<ol start="10">
+<li id="f10">Susep. <em>Susep aprova Plano de Regulação para 2026</em>, 22 de dezembro de 2025 (Resolução Susep nº 72, de 17 de dezembro de 2025): temas de prioridade 1 e 2, entre eles a regulamentação da Lei 15.040/2024 e da Lei Complementar 213/2025, seguro catástrofe, seguro de vida universal, sandbox, open insurance, regras prudenciais, de governança e de conduta, sustentabilidade e divulgação financeira em padrão internacional. <a href="https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/2025/dezembro/susep-aprova-plano-de-regulacao-para-2026">gov.br/susep</a></li>
+<li id="f11">ANS. <em>Agenda Regulatória 2026-2028: temas regulatórios</em> (quadro oficial com prazos por trimestre): reajuste coletivo (4º trimestre de 2026), novo Sistema de Informações de Beneficiários (4º trimestre de 2026), portabilidade (4º trimestre de 2026), modelos assistenciais coordenados com base na Atenção Primária (2º trimestre de 2027), remuneração baseada em valor (4º trimestre de 2027), padrão TISS e dados assistenciais (4º trimestre de 2027), doenças preexistentes (2º trimestre de 2028), revisão do IDSS (4º trimestre de 2028) e estudos preliminares sobre pacto intergeracional, judicialização e cartões de desconto. <a href="https://www.gov.br/ans/pt-br/acesso-a-informacao/participacao-da-sociedade/agenda-regulatoria/Agenda_Regulatria_20262028_B.pdf">gov.br/ans (PDF)</a></li>
+<li id="f12">Brasil. <em>Lei nº 15.040, de 9 de dezembro de 2024</em>, que dispõe sobre normas de seguro privado (marco legal dos contratos de seguro), em vigor desde dezembro de 2025. <a href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l15040.htm">planalto.gov.br</a></li>
+<li id="f13">Brasil. <em>Lei Complementar nº 213, de 15 de janeiro de 2025</em>, que dispõe sobre cooperativas de seguros e grupos de proteção patrimonial mutualista; e Susep, nota de 17 de janeiro de 2025 sobre a publicação. <a href="https://www.planalto.gov.br/ccivil_03/leis/lcp/Lcp213.htm">planalto.gov.br</a> , <a href="https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/2025/janeiro/publicada-lei-que-trata-das-cooperativas-de-seguros-e-dos-grupos-de-protecao-patrimonial-mutualistas">gov.br/susep</a></li>
+<li id="f14">Susep. <em>Publicada a Resolução CNSP que dispõe sobre o ORSA e a gestão de capital</em> (Resolução CNSP nº 471, de 25 de setembro de 2024): autoavaliação prospectiva de riscos e solvência ao longo do horizonte de planejamento de três anos, sob estresse, obrigatória para os segmentos S1 e S2, com prazos em 31 de dezembro de 2025 e, para testes de estresse reversos do S1, 31 de dezembro de 2026. <a href="https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/2024/outubro/publicada-a-resolucao-cnsp-que-dispoe-sobre-o-orsa-e-a-gestao-de-capital">gov.br/susep</a></li>
+<li id="f15">CNSP. <em>Resolução CNSP nº 388, de 8 de setembro de 2020</em>: segmentação das supervisionadas (S1 a S4) por provisões técnicas e prêmios; S2 exige provisões de ao menos 0,2% e prêmios de ao menos 0,9% do total do mercado. <a href="https://www.legisweb.com.br/legislacao/?id=401177">legisweb.com.br</a></li>
+<li id="f16">ANS. <em>Capital regulatório</em>: capital baseado em riscos das operadoras (Resolução Normativa nº 569/2022) e fatores reduzidos para quem cumpre as práticas mínimas de governança da RN 518/2022. <a href="https://www.gov.br/ans/pt-br/assuntos/operadoras/regulacao-prudencial-acompanhamento-assistencial-e-economico-financeiro/regulacao-prudencial-1/capital-regulatorio">gov.br/ans</a></li>
+<li id="f17">IBGE, Agência de Notícias. <em>População do país vai parar de crescer em 2041</em>, 22 de agosto de 2024 (Projeções da População, revisão 2024): pico de 220,4 milhões em 2041, 199,2 milhões em 2070, 37,8% de pessoas com 60 anos ou mais em 2070, idade média de 48,4 anos em 2070. <a href="https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/41056-populacao-do-pais-vai-parar-de-crescer-em-2041">agenciadenoticias.ibge.gov.br</a></li>
+<li id="f18">IESS. <em>VCMH/IESS</em>, índice de variação do custo médico-hospitalar, edição de julho de 2026 (publicada em agosto de 2026): 14,5% em doze meses, com terapias em 30,7%, consultas em 12,8% e internações em 12,6%. <a href="https://www.iess.org.br/vcmhiess">iess.org.br</a></li>
+<li id="f19">CNseg. <em>Plano de Desenvolvimento do Mercado de Seguros (PDMS) vai impulsionar setor a atingir a marca de 10% do PIB em 2030</em>, plano lançado em 16 de março de 2023 com cerca de 65 iniciativas. <a href="https://cnseg.org.br/noticias/plano-de-desenvolvimento-do-mercado-de-seguros-pdms-vai-impulsionar-setor-a-atingir-a-marca-de-10-do-pib-em-2030.html">cnseg.org.br</a></li>
+</ol>
+<h3>O radar pronto e os precedentes</h3>
+<ol start="20">
+<li id="f20">AXA e Ipsos. <em>Future Risks Report 2025</em>, 12ª edição, outubro de 2025: 3.600 especialistas de 57 países e 23 mil cidadãos de 18 países; mudança climática em primeiro pelo quinto ano, instabilidade geopolítica em segundo, segurança cibernética em terceiro, inteligência artificial e dados em quarto, mudança demográfica entra no top 10. Relatório gratuito. <a href="https://www.axa.com/en/news/future-risks-report-2025">axa.com</a> , <a href="https://www.ipsos.com/sites/default/files/ct/news/documents/2025-10/axa-future-risks-report-2025-rapport-complet.pdf">ipsos.com (PDF)</a></li>
+<li id="f21">Swiss Re Institute. <em>SONAR</em>, série anual desde 2013 de riscos emergentes captados por plataforma interna de colaboração de subscritores, gestores de clientes e especialistas; edição 2025 com oito riscos emergentes, calor extremo à frente. <a href="https://www.swissre.com/institute/research/sonar.html">swissre.com</a> , <a href="https://www.swissre.com/institute/research/sonar/sonar2025.html">SONAR 2025</a></li>
+<li id="f22">Sicredi Pioneira. <em>Foresight: Relatório de Cenários Futuros</em> (69 páginas): 45 oficinas com cerca de 980 pessoas (associados, colaboradores, parceiros, poder público, fornecedores), 4.200 linhas condensadas em 125, 12 desejos, 16 medos, 27 tendências, 32 sinais fracos, 48 cisnes negros e seis cenários para 2030 e 2050. <a href="https://sicredipioneira.com.br/files/estrategia-pioneira-foresight-relatorio.pdf">sicredipioneira.com.br (PDF)</a></li>
+<li id="f23">Future Today Strategy Group. Serviços nomeados e o Convergence Outlook gratuito, que substituiu o relatório anual de tendências (acesso em 2 de setembro de 2026). <a href="https://ftsg.com/convergence/">ftsg.com</a></li>
+<li id="f24">Faculdade Unimed. <em>Assessoria para implantação de Planejamento Estratégico</em> em cooperativas do sistema, participativa e alinhada à ANS e às acreditadoras. <a href="https://www.faculdadeunimed.edu.br/solucoes-corporativas/planejamento-estrategico/">faculdadeunimed.edu.br</a></li>
+</ol>
+<h3>A ciência da previsão e da decisão</h3>
+<ol start="25">
+<li id="f25">Good Judgment. <em>The Superforecasters' Track Record</em>: no torneio de previsão da IARPA, o projeto liderado por Philip Tetlock e Barbara Mellers na Universidade da Pensilvânia foi mais de 30% mais preciso que analistas de inteligência com acesso a informação sigilosa; os melhores previsores amadores receberam o nome de superprevisores. <a href="https://goodjudgment.com/resources/the-superforecasters-track-record/">goodjudgment.com</a></li>
+<li id="f26">Bain &amp; Company. <em>Management Tools &amp; Trends 2023</em>: o uso de planejamento de cenários e contingência caiu do pico de 70% para 19%, com satisfação de 30% muito satisfeitos e 6% insatisfeitos. <a href="https://www.bain.com/insights/management-tools-and-trends-2023/">bain.com</a></li>
+<li id="f27">Rohrbeck, R.; Kum, M. E. <em>Corporate foresight and its impact on firm performance: a longitudinal analysis</em>. Technological Forecasting and Social Change, v. 129, 2018: 83 empresas avaliadas em 2008 e medidas até 2015; as vigilantes com 16% de lucratividade contra 12% da média e crescimento de valor de mercado 200% acima da média. <a href="https://www.sciencedirect.com/science/article/pii/S0040162517302287">sciencedirect.com</a></li>
+<li id="f28">Klein, G. <em>Performing a Project Premortem</em>. Harvard Business Review, setembro de 2007: a técnica do exame prévio de fracasso, apoiada na pesquisa de Mitchell, Russo e Pennington (1989) sobre retrospectiva prospectiva, que eleva em 30% a identificação correta de causas. <a href="https://hbr.org/2007/09/performing-a-project-premortem">hbr.org</a></li>
+<li id="f29">Cohen, W. M.; Levinthal, D. A. <em>Absorptive Capacity: A New Perspective on Learning and Innovation</em>. Administrative Science Quarterly, v. 35, n. 1, 1990, p. 128-152: a capacidade de uma organização reconhecer o valor de informação nova, assimilá-la e aplicá-la depende do conhecimento prévio relacionado e é cumulativa. <a href="https://www.jstor.org/stable/2393553">jstor.org</a></li>
+<li id="f30">Luehrman, T. A. <em>Strategy as a Portfolio of Real Options</em>. Harvard Business Review, setembro e outubro de 1998: a estratégia como sequência de opções que se compram, se mantêm ou se abandonam conforme a incerteza se resolve. <a href="https://hbr.org/1998/09/strategy-as-a-portfolio-of-real-options">hbr.org</a></li>
+<li id="f31">Lempert, R. J.; Popper, S. W.; Bankes, S. C. <em>Shaping the Next One Hundred Years: New Methods for Quantitative, Long-Term Policy Analysis</em>. RAND, 2003 (MR-1626): decisões robustas, que se saem razoavelmente bem em muitos futuros, em vez de decisões ótimas para um futuro previsto. <a href="https://www.rand.org/pubs/monograph_reports/MR1626.html">rand.org</a></li>
+<li id="f32">Scoblic, J. P. <em>Learning from the Future</em>. Harvard Business Review, julho e agosto de 2020: cenários como ensaio de decisão. <a href="https://hbr.org/2020/07/learning-from-the-future">hbr.org</a></li>
+</ol>
+</section>
+<footer>A Anatomia Profunda &middot; Foresight na Seguros Unimed, a vis&atilde;o contr&aacute;ria &middot; documento interno do projeto Estrat&eacute;gia &middot; &uacute;ltima atualiza&ccedil;&atilde;o 2026-09-08 &middot; selos por extenso em cada afirma&ccedil;&atilde;o; cita&ccedil;&otilde;es numeradas levam &agrave; lista &uacute;nica de Fontes</footer>
+</div>
+<script>
+document.addEventListener("click",function(e){
+ var a=e.target.closest?e.target.closest("a.cit"):null;
+ if(!a)return;
+ var r=document.getElementById("r-fontes");
+ if(r)r.checked=true;
+});
+</script>
+</body>
+</html>

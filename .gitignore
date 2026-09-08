@@ -7,3 +7,4 @@ EBF_Acervo/
 
 # PDFs de evidencia das pesquisas (pesados; ficam so no disco)
 Pesquisas/_trabalho/*/pdfs/
+__pycache__/
