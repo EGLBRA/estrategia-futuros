@@ -1,5 +1,15 @@
 # Log de Sessões — Estratégia
 
+## [2026-09-08 10:15] AnatomiaProfundaForesight PDF + citacoes clicaveis — v1
+- Pedido: gerar PDF da pagina AnatomiaProfundaForesight (do jeito que esta, sem reestruturar) para rabiscar; no meio do caminho, corrigir os indices de referencia que eram so numero, sem link.
+- Feito: os 63 itens da lista de Fontes ganharam id (f1..f63) e as 174 marcas de citacao viraram links para o item correspondente (174 sups, 275 links no PDF); script de 5 linhas abre a aba Fontes ao clicar na citacao; CSS @media print revela as 25 abas em sequencia com quebra de pagina; PDF gerado com Chrome headless e conferido pagina a pagina (48 paginas, nenhuma vazia).
+- Arquivos: AnatomiaProfundaForesight.html (alterado), AnatomiaProfundaForesight.pdf (novo)
+
+## [2026-09-02 18:44] Pesquisa Futuristas Corporativos e IA no Foresight — v1
+- Pedido: pesquisa web (sem sub-agentes) sobre futuristas corporativos reais (Connelly/Ford, Johnson/Intel, Arup Foresight, outros nomeados) + IA na operação de foresight 2024-2026 (CIFS H3 AI Lab, Kairos VICTORIA, FIBRES, ITONICS, crítica publicada), com URL, data de acesso e selos Verificado/Inferência.
+- Feito: ~15 buscas + fetches de fontes primárias (ASU, SciAm, The Current, MediaPost, cifs.dk, kairosfuture.com, fibresonline.com, EPRS); relatório devolvido no chat com fatos datados, divergências apontadas (aposentadoria Connelly 2022 vs 2023; saída de Brandt n/d) e lista final de URLs. Nenhum fato inventado; lacunas marcadas n/d.
+- Arquivos: -
+
 ## [2026-09-02] Anatomia Profunda Oferta do Escritorio de Futuros — v4
 - Pedido: crítica do Eric à v3 ("extremamente rasa"): faltavam stakeholders (o que diretor/VP/gerente esperam, formato, o que muda o jogo), respostas ao negócio, arquitetura funcional, etapas de tendências e futuros, montar do zero, práticas e livros de referência, e entregáveis de mais valor que o radar.
 - Feito: 6 abas novas (Perguntas do negócio: contrato de 24 com dono/artefato/horizonte; Stakeholders: matriz por nível + regra das 3 altitudes + roteamento artefato x persona x canal; Arquitetura: 6 camadas com SVG e tabela camada a camada; As etapas: equivalência TAIDA/PFIA/SP+/OCDE/UK + funil da casa detalhado; Do zero: 10 decisões de desenho + 5 erros de fundação; Referências: 8 práticas com dono verificado + biblioteca de ~16 obras + seriados gratuitos) + escada de valor de 5 degraus na aba Artefatos (radar = piso). 20 para 26 abas, 187 KB, fonte 45 (biblioteca). Adendo rodada 4 no Check. QA: 26 casadas, 45/45 fontes, travessão/seta-texto zero.
